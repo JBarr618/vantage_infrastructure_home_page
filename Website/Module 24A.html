@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 24A - What is Automatic Train Protection?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 24A - What is Automatic Train Protection?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Automatic Train Protection (ATP)
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Automatic Train Protection (ATP) is a railway safety overlay system
+        designed to prevent accidents caused by human error. ATP continuously
+        monitors train operation and intervenes when necessary to prevent unsafe
+        conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATP serves as an important safety backup to the train operator. It helps
+        prevent collisions, derailments caused by excessive speed, and situations
+        where a train passes a stop signal without authorization.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the primary objectives of ATP is to prevent a Signal Passed At
+        Danger (SPAD). A SPAD occurs when a train passes a stop indication without
+        proper authority, creating a potentially hazardous situation.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATP systems continuously monitor train speed, location, movement authority,
+        and compliance with signal indications. This information is compared
+        against the safe operating limits established for the railway.
+    </p>
+
+    <p style="font-size: 22px;">
+        When the ATP system detects an unsafe condition, it normally provides a
+        warning to the train operator. The warning may be visual, audible, or both,
+        depending on the design of the system.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the train operator does not respond appropriately within the required
+        time period, the ATP system automatically applies the train's brakes to
+        restore safe operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATP systems use various technologies to communicate information between
+        trackside equipment and onboard train equipment. These technologies may
+        include balises, beacons, inductive loops, inductive cables, and radio
+        communication systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some ATP systems provide only basic protection against signal violations,
+        while more advanced systems continuously supervise train speed and calculate
+        braking curves based on speed limits, gradients, and signal locations.
+    </p>
+
+    <p style="font-size: 22px;">
+        By reducing the likelihood of accidents caused by human error, ATP greatly
+        improves railway safety and reliability. In some cases, ATP can also allow
+        railroads to increase capacity while maintaining safe train separation.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATP is an important component of modern railway operations and serves as a
+        critical layer of protection within the overall train control system.
+    </p>
+
+    <!-- Suggested Images
+
+    <img src="images/atp-safety-net.jpg"
+    alt="Diagram showing ATP as a safety net for train operations"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/atp-data-flow.jpg"
+    alt="Data flow between trackside and onboard ATP equipment"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/atp-cab-display.jpg"
+    alt="Cab display showing ATP information and warnings"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/atp-accident-prevention.jpg"
+    alt="Infographic showing accidents prevented by ATP"
+    style="width:350px; border-radius:10px;">
+
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary type of accident that ATP is designed to help prevent?</p>
+        <label><input type="radio" name="q1" value="wrong"> Passenger ticketing errors</label><br>
+        <label><input type="radio" name="q1" value="correct"> Accidents caused by human error, including SPADs and overspeed conditions</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Weather-related delays</label><br><br>
+
+        <p>2. What is the typical sequence of actions taken by an ATP system when it detects an unsafe condition?</p>
+        <label><input type="radio" name="q2" value="correct"> Warning to the operator followed by automatic brake application if no corrective action is taken</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Immediate train shutdown without warning</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Automatic acceleration to clear the area</label><br><br>
+
+        <p>3. Which of the following are technologies commonly used for ATP data transmission?</p>
+        <label><input type="radio" name="q3" value="wrong"> Traffic signals and highway sensors</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Satellite television and Wi-Fi routers</label><br>
+        <label><input type="radio" name="q3" value="correct"> Balises, beacons, inductive loops, and radio communication systems</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 24B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 24.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

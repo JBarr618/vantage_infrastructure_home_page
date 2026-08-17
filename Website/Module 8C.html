@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 8C - Setting Up a Phase Shift Overlay Track Circuit</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 8C - Setting Up a Phase Shift Overlay Track Circuit</h1>
+
+    <h2 style="color: darkblue;">
+        Setting Up a Phase Shift Overlay Track Circuit
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Setting up a Phase Shift Overlay, or PSO, track circuit is more detailed than setting up a traditional
+        amplitude-based AC track circuit because the system must establish and monitor the phase relationship of the
+        signal.
+    </p>
+
+    <p style="font-size: 22px;">
+        The first step is defining the track block. PSO systems may not always require insulated joints for the PSO
+        signal itself, but the electrical limits of the block must still be clearly established.
+    </p>
+
+    <p style="font-size: 22px;">
+        A specialized AC transmitter is installed at one end of the block. The transmitter sends a continuous AC signal
+        at a specific frequency and phase through the rails.
+    </p>
+
+    <p style="font-size: 22px;">
+        A phase-sensitive receiver is installed at the opposite end of the block. The receiver compares the received
+        signal against a reference signal and detects phase changes that indicate occupancy or a fault condition.
+    </p>
+
+    <p style="font-size: 22px;">
+        Tuned circuits or impedance matching units may be installed at the block boundaries. These devices help define
+        the electrical length of the track circuit and reduce signal reflection or signal loss.
+    </p>
+
+    <p style="font-size: 22px;">
+        The system must be carefully calibrated. This includes setting transmitter output, adjusting tuning equipment,
+        and setting the receiver phase detection threshold.
+    </p>
+
+    <p style="font-size: 22px;">
+        After setup, testing verifies that the receiver detects phase shifts caused by train shunts at different
+        locations in the block. Broken rail detection should also be tested by confirming that major impedance changes
+        produce the proper receiver response.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. How can a PSO track block differ from a traditional AC track circuit block?</p>
+        <label><input type="radio" name="q1" value="correct"> PSO blocks may not require insulated joints for the PSO signaling current</label><br>
+        <label><input type="radio" name="q1" value="wrong"> PSO blocks use shorter rail sections only</label><br>
+        <label><input type="radio" name="q1" value="wrong"> PSO blocks rely entirely on axle counters</label><br><br>
+
+        <p>2. What is the role of tuned circuits or impedance matching units?</p>
+        <label><input type="radio" name="q2" value="wrong"> To insulate the receiver from high voltage only</label><br>
+        <label><input type="radio" name="q2" value="correct"> To define electrical length and reduce signal reflection</label><br>
+        <label><input type="radio" name="q2" value="wrong"> To replace all testing procedures</label><br><br>
+
+        <p>3. What must be carefully calibrated in a PSO system?</p>
+        <label><input type="radio" name="q3" value="correct"> The phase detection threshold of the receiver</label><br>
+        <label><input type="radio" name="q3" value="wrong"> The length of the rail joint</label><br>
+        <label><input type="radio" name="q3" value="wrong"> The ballast resistance across the track only</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 8D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 8B.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

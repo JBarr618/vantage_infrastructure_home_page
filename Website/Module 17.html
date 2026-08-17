@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 17 - Introduction to Gate Mechanisms</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 17 - Introduction to Gate Mechanisms</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Highway Grade Crossing Gate Mechanisms
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Automatic gates are an important part of many active highway grade crossing warning
+        systems. Their primary purpose is to provide a physical barrier that prevents
+        vehicles and pedestrians from entering the crossing when a train is approaching
+        or occupying the tracks.
+    </p>
+
+    <p style="font-size: 22px;">
+        The gate mechanism is the electromechanical system responsible for lowering and
+        raising the gate arm. These mechanisms are designed for reliable operation in
+        many different weather conditions and must withstand constant use over long
+        periods of time.
+    </p>
+
+    <p style="font-size: 22px;">
+        Most gate mechanisms contain several major components, including an electric
+        motor, a gear reduction unit, and a linkage system. These components work together
+        to convert the motor's rotary motion into the controlled vertical movement of
+        the gate arm.
+    </p>
+
+    <p style="font-size: 22px;">
+        The operation of the gate mechanism is controlled by the highway grade crossing
+        controller. When train detection equipment senses an approaching train, the
+        controller sends a signal to lower the gate arm.
+    </p>
+
+    <p style="font-size: 22px;">
+        After the train clears the crossing, the controller reverses the motor and raises
+        the gate arm to allow roadway traffic to continue moving safely across the tracks.
+    </p>
+
+    <p style="font-size: 22px;">
+        Safety is a major concern in gate mechanism design. Many systems include obstruction
+        detection that can stop or reverse the gate if it encounters an object during lowering.
+        Breakaway mechanisms allow the gate arm to detach during vehicle impact to reduce
+        damage and improve safety.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some gate mechanisms also include manual override features that allow railroad
+        personnel to manually raise or lower the gate during power failures or equipment
+        malfunctions.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/highway-crossing-gate-mechanism.png"
+    alt="Automatic gate mechanism at a highway grade crossing"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/gate-mechanism-components.png"
+    alt="Diagram showing motor gearbox and linkage components of a gate mechanism"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/gate-arm-movement.png"
+    alt="Diagram showing lowering and raising movement of gate arm"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/gate-breakaway-closeup.png"
+    alt="Close-up view of gate arm breakaway mechanism"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the main purpose of automatic gates at a highway grade crossing?</p>
+        <label><input type="radio" name="q1" value="wrong"> To increase train speed through the crossing</label><br>
+        <label><input type="radio" name="q1" value="correct"> To prevent vehicles and pedestrians from entering the crossing when a train approaches</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To replace all flashing lights and bells</label><br><br>
+
+        <p>2. What are the primary electromechanical components found in a gate mechanism?</p>
+        <label><input type="radio" name="q2" value="correct"> Electric motor, gear reduction unit, and linkage system</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Track circuits, relays, and batteries only</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Signal bridges and wayside signals</label><br><br>
+
+        <p>3. Which are common safety features used in automatic gate mechanisms?</p>
+        <label><input type="radio" name="q3" value="wrong"> Paint markings and warning stickers only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Fuel tanks and cooling fans</label><br>
+        <label><input type="radio" name="q3" value="correct"> Obstruction detection, breakaway mechanisms, and manual override systems</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 17A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 16F.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

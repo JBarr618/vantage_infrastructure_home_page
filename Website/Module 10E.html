@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 10E - Testing Impedance Bonds</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 10E - Testing Impedance Bonds</h1>
+
+    <h2 style="color: darkblue;">
+        Inspecting and Verifying Impedance Bonds
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Testing impedance bonds is important because they affect both traction
+        return current and railroad signal operation. A failed or poorly
+        connected impedance bond can cause traction power problems, track
+        circuit problems, or unsafe signal conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        One common test is a DC resistance measurement. This test verifies that
+        the impedance bond provides a low-resistance path for traction return
+        current through the rails.
+    </p>
+
+    <p style="font-size: 22px;">
+        Low resistance is important because traction return current can be high.
+        If the resistance is too high, the bond or rail connection may heat up,
+        create voltage drop, or fail to carry current properly.
+    </p>
+
+    <p style="font-size: 22px;">
+        A low-resistance ohmmeter is commonly used to check the resistance of
+        the bond and its rail connections. Loose, dirty, corroded, or damaged
+        connections can cause poor readings.
+    </p>
+
+    <p style="font-size: 22px;">
+        Inductance may also be measured to verify that the impedance bond has
+        the proper electrical characteristics. An LCR meter or frequency-capable
+        impedance tester may be used for this type of test.
+    </p>
+
+    <p style="font-size: 22px;">
+        The bond must have the correct impedance at the frequencies used by the
+        railroad system. It should allow traction return current to pass while
+        helping block or limit the signaling current used by the track circuit.
+    </p>
+
+    <p style="font-size: 22px;">
+        Insulation resistance testing may also be required. This helps verify
+        that there are no unwanted leakage paths, shorts, or insulation failures
+        between windings, terminals, frame, or ground.
+    </p>
+
+    <p style="font-size: 22px;">
+        Visual inspection is just as important as electrical testing. The
+        technician should look for corrosion, broken cables, loose hardware,
+        burned terminals, overheating, water damage, damaged insulation, or
+        signs that the bond has been physically struck.
+    </p>
+
+    <p style="font-size: 22px;">
+        Proper documentation should be completed after testing. Test results help
+        compare present readings to previous readings and identify problems
+        before they become service-affecting failures.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/impedance-bond-testing-meter.png"
+    alt="Technician testing impedance bond resistance with a meter"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/impedance-bond-visual-inspection.png"
+    alt="Visual inspection of impedance bond cables and terminals"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/impedance-bond-lcr-test.png"
+    alt="LCR meter used to test impedance bond inductance"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Why is low DC resistance important in an impedance bond?</p>
+        <label><input type="radio" name="q1" value="wrong"> To make the signal lights brighter</label><br>
+        <label><input type="radio" name="q1" value="correct"> To provide an efficient path for traction return current</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To check relay activation time only</label><br><br>
+
+        <p>2. What instrument may be used to measure inductance or impedance characteristics?</p>
+        <label><input type="radio" name="q2" value="wrong"> Megger only</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Standard flashlight</label><br>
+        <label><input type="radio" name="q2" value="correct"> LCR meter or frequency-specific impedance tester</label><br><br>
+
+        <p>3. What should be checked during a visual inspection of an impedance bond?</p>
+        <label><input type="radio" name="q3" value="correct"> Corrosion, overheating, loose connections, and damaged cables</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Optical fiber light leakage</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Signal mast paint color only</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 10F.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 10D.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

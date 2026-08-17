@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 19C - How Are Trains Governed in Moveable Block?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 19C - How Are Trains Governed in Moveable Block?</h1>
+
+    <h2 style="color: darkblue;">
+        Train Governance in Moveable Block Signaling
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        In a moveable block signaling system, train movements are governed
+        continuously by a central control system using real-time information
+        received from every train operating within the territory.
+    </p>
+
+    <p style="font-size: 22px;">
+        Each train constantly transmits its location and speed through the
+        communication network. This information is continuously updated and
+        monitored by the central control system.
+    </p>
+
+    <p style="font-size: 22px;">
+        Using this information, the central control system calculates a safe
+        braking distance for each train. The calculation considers train speed,
+        braking performance, track gradient, and other operating conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Based on these calculations, the central control system establishes a
+        movement authority for each train. Movement authority defines the maximum
+        distance a train is permitted to travel under current operating conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Unlike traditional fixed block systems, the movement authority is not
+        based on predetermined blocks of track. Instead, it is dynamically
+        adjusted as trains move and conditions change.
+    </p>
+
+    <p style="font-size: 22px;">
+        The movement authority and any necessary speed commands are transmitted
+        continuously to the train's onboard control system through the CBTC
+        communication network.
+    </p>
+
+    <p style="font-size: 22px;">
+        The onboard train control system continuously compares the train's actual
+        speed and position against the authorized limits received from central
+        control.
+    </p>
+
+    <p style="font-size: 22px;">
+        Automatic Train Protection (ATP) functions are integrated into the
+        onboard equipment. ATP continuously monitors train operation to ensure
+        safe compliance with movement authority and speed restrictions.
+    </p>
+
+    <p style="font-size: 22px;">
+        If a train exceeds its authorized speed or approaches the limit of its
+        movement authority, the ATP system can automatically intervene and apply
+        the brakes to prevent unsafe operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        As trains accelerate, decelerate, or change position, the central control
+        system continuously recalculates safe braking distances and updates movement
+        authorities in real time. This creates a moving safety envelope that travels
+        with each train.
+    </p>
+
+    <p style="font-size: 22px;">
+        This dynamic process allows trains to operate safely with shorter headways,
+        improving railway capacity while maintaining a high level of operational
+        safety.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/moving-safety-envelope.png"
+    alt="Moving safety envelope surrounding a train in a moveable block system"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/cbtc-movement-authority-display.png"
+    alt="Central control display showing train locations and movement authorities"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/train-central-control-communication.png"
+    alt="Continuous communication loop between train and central control"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/dynamic-braking-calculation.png"
+    alt="Dynamic braking distance calculation based on train speed and track profile"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the role of the central control system in governing train movement in a moveable block system?</p>
+        <label><input type="radio" name="q1" value="wrong"> It only records train schedules</label><br>
+        <label><input type="radio" name="q1" value="correct"> It continuously monitors train locations, calculates safe braking distances, and issues movement authorities</label><br>
+        <label><input type="radio" name="q1" value="wrong"> It manually operates every train from a station platform</label><br><br>
+
+        <p>2. How is movement authority established and communicated to trains?</p>
+        <label><input type="radio" name="q2" value="correct"> The central control system calculates and continuously transmits movement authority and speed commands to the train</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Train crews determine movement authority without communication</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Movement authority is permanently fixed and never changes</label><br><br>
+
+        <p>3. What safety mechanisms are integrated into the onboard train control system?</p>
+        <label><input type="radio" name="q3" value="wrong"> Manual train orders only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Signal flags and lanterns</label><br>
+        <label><input type="radio" name="q3" value="correct"> Automatic Train Protection (ATP), overspeed protection, movement authority enforcement, and automatic braking</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 19D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 19B.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

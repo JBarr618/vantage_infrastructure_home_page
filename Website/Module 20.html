@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 20 - Introduction to Fixed Wayside Signals</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 20 - Introduction to Fixed Wayside Signals</h1>
+
+    <h2 style="color: darkblue;">
+        What Are Fixed Wayside Signals?
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Fixed wayside signals are one of the most important components of railway
+        signaling systems. They are permanently installed at specific locations
+        alongside or above the track and provide train crews with information
+        regarding train movement authority and track conditions ahead.
+    </p>
+
+    <p style="font-size: 22px;">
+        Fixed wayside signals are commonly used in both manual block and automatic
+        block signaling systems. Their primary purpose is to ensure safe train
+        separation and regulate the movement of rail traffic.
+    </p>
+
+    <p style="font-size: 22px;">
+        Unlike cab signaling systems, where signal information is displayed inside
+        the locomotive cab, fixed wayside signals must be visually observed and
+        interpreted by train crews as they travel along the railway.
+    </p>
+
+    <p style="font-size: 22px;">
+        The indications displayed by fixed wayside signals inform train crews whether
+        they may proceed, must stop, or must operate under specific restrictions.
+        These indications are commonly displayed through colors, lights, or the
+        position of mechanical signal arms.
+    </p>
+
+    <p style="font-size: 22px;">
+        Fixed wayside signals are strategically located at important locations such
+        as the entrance to signal blocks, interlockings, control points, junctions,
+        crossings, and other areas where train movements must be regulated.
+    </p>
+
+    <p style="font-size: 22px;">
+        Several different types of fixed wayside signals have been used throughout
+        railroad history. One of the earliest forms was the semaphore signal, which
+        used a movable arm to display signal indications.
+    </p>
+
+    <p style="font-size: 22px;">
+        The most common signal type used today is the color light signal. These
+        signals use colored lights such as red, yellow, and green to communicate
+        operating instructions to train crews.
+    </p>
+
+    <p style="font-size: 22px;">
+        Other signal types include position light signals, which use patterns of
+        lights to display indications, and searchlight signals, which use a single
+        lens with an internal mechanism to display different colors.
+    </p>
+
+    <p style="font-size: 22px;">
+        Understanding fixed wayside signals is essential for signal maintainers,
+        dispatchers, train operators, engineers, conductors, and anyone involved
+        in railroad operations.
+    </p>
+
+    <p style="font-size: 22px;">
+        Fixed wayside signals continue to form the backbone of many railway signaling
+        systems throughout the world and remain a critical part of safe railroad
+        operations.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/color-light-proceed-signal.jpg"
+    alt="Color light signal displaying a proceed indication"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/semaphore-stop-and-proceed.jpg"
+    alt="Semaphore signal displaying stop and proceed positions"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/position-light-signal.jpg"
+    alt="Position light signal displaying a signal indication"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/fixed-signal-placement-diagram.png"
+    alt="Diagram showing placement of fixed wayside signals along a railroad"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary function of fixed wayside signals?</p>
+        <label><input type="radio" name="q1" value="correct"> To provide movement authority information and ensure safe train separation</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To provide passenger ticket information</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To control locomotive engines directly</label><br><br>
+
+        <p>2. Where are fixed wayside signals commonly located?</p>
+        <label><input type="radio" name="q2" value="wrong"> Only inside signal houses</label><br>
+        <label><input type="radio" name="q2" value="correct"> At block entrances, interlockings, junctions, control points, and other critical locations</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Only at railroad stations</label><br><br>
+
+        <p>3. Which of the following are types of fixed wayside signals?</p>
+        <label><input type="radio" name="q3" value="wrong"> GPS Signals, Cellular Signals, and Wi-Fi Signals</label><br>
+        <label><input type="radio" name="q3" value="wrong"> CBTC Signals, ATP Signals, and RFID Signals</label><br>
+        <label><input type="radio" name="q3" value="correct"> Semaphore Signals, Color Light Signals, Position Light Signals, and Searchlight Signals</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 20A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 19F.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

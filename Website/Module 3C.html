@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3C - Setting Up a DC Track Circuit</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 3C - Setting Up a DC Track Circuit</h1>
+
+    <h2 style="color: darkblue;">
+        Direct Current Track Circuits - Setting Up a DC Track Circuit
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Setting up a DC track circuit involves a precise and systematic process to ensure reliable train detection. The first crucial step is defining the track block that the circuit will protect. This is achieved by installing insulated rail joints at the beginning and end of the desired section. These joints must be properly installed and tested to guarantee electrical isolation from adjacent track sections. The length of a track circuit can vary depending on factors such as train speed, signal spacing, and the sensitivity requirements of the system.
+    </p>
+
+    <img src="images/Installing a glued Insulated Joint.jpeg"
+    alt="Track crew installing an insulated joint into the track."
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <p style="font-size: 22px;">
+        Once the block is defined, the power source needs to be connected to the rails at one end of the section. The polarity of the connection is important and must be consistent with the relay connection at the other end. Secure and reliable connections are essential to minimize voltage drops and ensure consistent current flow. Similarly, the track relay is installed at the opposite end of the track section and connected across the rails. The relay's coil must be compatible with the voltage and current characteristics of the power source and the expected resistance of the track circuit.
+    </p>
+
+ 
+    <img src="images/DC relay.jpeg"
+    alt="DC track relay."
+    style="width:350px; border-radius:10px;">
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the first crucial step in setting up a DC track circuit?</p>
+        <label><input type="radio" name="q1" value="wrong"> Clean and polish the rails before setup</label><br>
+        <label><input type="radio" name="q1" value="correct"> Define the block using insulated joints at the beginning and end of the section</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Count the number of crossties and track clips</label><br><br>
+
+        <p>2. Where are the power source and track relay typically connected?</p>
+        <label><input type="radio" name="q2" value="wrong"> Both are connected at the same end of the track circuit</label><br>
+        <label><input type="radio" name="q2" value="wrong"> The rectifier is connected at one end and metal flags are placed at the other</label><br>
+        <label><input type="radio" name="q2" value="correct"> The power source is connected to one end and the relay is connected to the other end</label><br><br>
+
+        <p>3. Why is testing and calibration critical after setting up a DC track circuit?</p>
+        <label><input type="radio" name="q3" value="correct"> To verify relay operation, shunt response, insulation performance, and proper documentation</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To test only the resistor placement and tolerance levels</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To verify AC outlet operation for the AC track circuit</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 3D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <!-- <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 3B.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+-->
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

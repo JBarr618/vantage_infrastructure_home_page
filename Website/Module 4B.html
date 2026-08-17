@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4B - Setting Up an Interlocking</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 4B - Setting Up an Interlocking</h1>
+
+    <h2 style="color: darkblue;">
+        Setting Up a Railroad Interlocking
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Setting up an interlocking is a complex process that requires careful planning, design, installation,
+        testing, and commissioning. The first step is to design the interlocking layout based on the track
+        configuration, signal locations, switch locations, and operating requirements.
+    </p>
+
+    <p style="font-size: 22px;">
+        The design process often includes detailed drawings, route charts, control tables, software logic,
+        and simulations. These documents help verify that the interlocking will safely control train movements
+        before any field equipment is placed into service.
+    </p>
+
+    <p style="font-size: 22px;">
+        Once the design is approved, the physical installation begins. This includes installing switches,
+        switch machines, signals, track circuits, cables, power equipment, cases, houses, and communication
+        equipment needed for the interlocking system.
+    </p>
+
+    <p style="font-size: 22px;">
+        Proper alignment, wiring, grounding, bonding, and equipment placement are critical. Each piece of
+        equipment must be installed correctly so the interlocking logic can safely monitor and control the
+        field devices.
+    </p>
+
+    <p style="font-size: 22px;">
+        After installation, thorough testing and commissioning are required. This includes verifying switch
+        correspondence, signal indications, route locking, approach locking, traffic locking, track occupancy,
+        and interlocking logic.
+    </p>
+
+    <p style="font-size: 22px;">
+        Testing must confirm that conflicting routes cannot be established and that trains can only be
+        authorized through safe routes. Once testing is complete and all issues are corrected, the interlocking
+        can be placed into service.
+    </p>
+
+    <p style="font-size: 22px;">
+        After being placed in service, regular maintenance and inspections are needed to ensure continued
+        reliability and safety. This includes equipment checks, periodic tests, inspections, software reviews,
+        and documentation updates.
+    </p>
+
+    <!-- Image placeholder for later -->
+    <!--
+    <img src="../../pictures/Module 4/interlocking-setup.png"
+    alt="Railroad interlocking setup with switches signals track circuits and control logic"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What are the key steps involved in setting up a new interlocking system?</p>
+        <label><input type="radio" name="q1" value="wrong"> Drawing plans, waiting, and observing train behavior</label><br>
+        <label><input type="radio" name="q1" value="correct"> Design, installation, testing, and commissioning</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Laying ballast and painting signals only</label><br><br>
+
+        <p>2. Why is testing and commissioning essential before placing an interlocking in service?</p>
+        <label><input type="radio" name="q2" value="wrong"> To validate only the color of signal lights</label><br>
+        <label><input type="radio" name="q2" value="correct"> To verify operation and prevent conflicting routes</label><br>
+        <label><input type="radio" name="q2" value="wrong"> To determine train weight limits</label><br><br>
+
+        <p>3. What maintenance is needed to keep an interlocking reliable?</p>
+        <label><input type="radio" name="q3" value="correct"> Regular inspections, logic testing, and equipment checks</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Painting rails and replacing signs only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Switching track configurations randomly</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 4C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+                    <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 4A.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

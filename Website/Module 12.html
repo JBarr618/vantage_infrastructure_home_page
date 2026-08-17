@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 12 - Introduction to Computer Based Train Control</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 12 - Introduction to Computer Based Train Control</h1>
+
+    <h2 style="color: darkblue;">
+        Computer Based Train Control (CBTC)
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Computer Based Train Control, commonly called CBTC, represents a
+        significant advancement in railway signaling technology.
+    </p>
+
+    <p style="font-size: 22px;">
+        Unlike traditional signaling systems that rely primarily on fixed
+        blocks and wayside equipment, CBTC is a modern, high-capacity train
+        control system that uses continuous, two-way digital communication
+        between trains and a central control system.
+    </p>
+
+    <p style="font-size: 22px;">
+        This continuous communication allows the CBTC system to determine train
+        locations more precisely, dynamically adjust train speeds and
+        separation, and increase the capacity and efficiency of railway lines.
+    </p>
+
+    <h3>1. Real-Time Train Location and Speed</h3>
+
+    <p style="font-size: 22px;">
+        The core principle of CBTC is knowing the exact location and speed of
+        every train on the railway network in real time.
+    </p>
+
+    <p style="font-size: 22px;">
+        Train location information is typically obtained through onboard train
+        positioning systems. These systems may use transponders, radar,
+        odometry, balises, or other positioning equipment.
+    </p>
+
+    <p style="font-size: 22px;">
+        The train continuously transmits its location, speed, direction, and
+        operating status to the central CBTC control system through a wireless
+        communication network.
+    </p>
+
+    <h3>2. Central Control System</h3>
+
+    <p style="font-size: 22px;">
+        The central control system receives information from every train
+        operating within the CBTC territory.
+    </p>
+
+    <p style="font-size: 22px;">
+        The system calculates the safe operating speed, Movement Authority, and
+        braking curve for each train based on the train's location, speed,
+        direction, track profile, and the movement of other trains.
+    </p>
+
+    <p style="font-size: 22px;">
+        This information is then transmitted back to the train and displayed or
+        used by the onboard train control equipment.
+    </p>
+
+    <h3>3. Automatic Train Protection</h3>
+
+    <p style="font-size: 22px;">
+        The Automatic Train Protection system, commonly called ATP, uses the
+        information received from the CBTC system to ensure that the train
+        operates safely.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATP monitors the train's actual speed and location against the permitted
+        speed and Movement Authority calculated by the CBTC system.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the train exceeds its permitted speed or approaches the end of its
+        Movement Authority, ATP can command a brake application to prevent an
+        unsafe movement.
+    </p>
+
+    <h3>4. Cab-Based Movement Information</h3>
+
+    <p style="font-size: 22px;">
+        CBTC systems can reduce or eliminate the need for traditional wayside
+        signals because Movement Authorities and speed commands can be
+        communicated directly to equipment inside the train cab.
+    </p>
+
+    <p style="font-size: 22px;">
+        The train operator may receive permitted speed, target speed, braking
+        information, and Movement Authority information through a cab display.
+    </p>
+
+    <p style="font-size: 22px;">
+        Reducing the number of wayside signal components may lower
+        infrastructure costs and improve reliability by reducing the amount of
+        trackside equipment that must be inspected and maintained.
+    </p>
+
+    <h3>5. Moving Block Operation</h3>
+
+    <p style="font-size: 22px;">
+        One of the major advantages of CBTC is its ability to support moving
+        block operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        In a traditional fixed-block system, the railway is divided into
+        predetermined sections called blocks. Train separation is controlled by
+        preventing more than one train from occupying a protected block.
+    </p>
+
+    <p style="font-size: 22px;">
+        In moving block operation, the safe separation between trains is
+        dynamically calculated using each train's real-time location, speed,
+        direction, braking capability, and operating conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because train separation is not limited by fixed block lengths, trains
+        may safely operate closer together. This can reduce headways and
+        significantly increase the number of trains that can operate on a
+        railway line.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p style="font-size: 20px;">
+            <strong>1. What is a key difference between CBTC and traditional fixed-block signaling?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q1" value="wrong">
+            A. CBTC does not monitor train location.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="correct">
+            B. CBTC uses real-time train information to dynamically manage train location and separation.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="wrong">
+            C. CBTC requires every train to remain inside one fixed block.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="wrong">
+            D. CBTC can only be used on freight railroads.
+        </label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>2. What information is typically exchanged through CBTC's continuous two-way communication?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q2" value="wrong">
+            A. Only passenger announcements and station names.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q2" value="wrong">
+            B. Only electrical power readings from the third rail.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q2" value="correct">
+            C. Train location, speed, direction, Movement Authority, speed commands, and braking information.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q2" value="wrong">
+            D. Only maintenance schedules for wayside signals.
+        </label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>3. What is moving block operation?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q3" value="wrong">
+            A. A system that physically moves track circuits along the railway.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q3" value="correct">
+            B. A system that dynamically calculates safe train separation using real-time train location, speed, and braking information.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q3" value="wrong">
+            C. A system that allows multiple trains to occupy the same location.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q3" value="wrong">
+            D. A manual system that does not use train communication.
+        </label><br><br>
+
+        <button type="button"
+        onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if (password === "signal2026") {
+            window.location.href = "Module 12A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+            answer.disabled = true;
+
+            if (answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if (answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if (answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+                answer.parentElement.style.fontWeight = "bold";
+            }
+        });
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 11G.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

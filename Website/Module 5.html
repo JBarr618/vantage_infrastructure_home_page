@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 5 - Introduction to Control Points</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 5 - Introduction to Control Points</h1>
+
+    <h2 style="color: darkblue;">
+        Introduction to Railroad Control Points
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Control points are important parts of railroad signaling systems. They provide a location where switches,
+        signals, track circuits, and other interlocking functions can be controlled and monitored.
+    </p>
+
+    <p style="font-size: 22px;">
+        A control point helps manage train movements through complex track layouts such as junctions, crossovers,
+        terminals, sidings, and interlockings. Its purpose is to support safe and efficient train movement.
+    </p>
+
+    <p style="font-size: 22px;">
+        A control point may include equipment such as control panels, signal equipment, switch machines, track
+        circuits, communication devices, power supplies, relays, cables, and control logic.
+    </p>
+
+    <p style="font-size: 22px;">
+        The primary function of a control point is to allow authorized train routes to be established and monitored.
+        Operators or dispatchers can line routes, monitor signal indications, verify switch positions, and observe
+        track occupancy.
+    </p>
+
+    <p style="font-size: 22px;">
+        Older control points may use physical switches, levers, buttons, relays, and indication lights. Modern control
+        points often use computer-based control systems with graphical displays, event logs, diagnostics, and remote
+        monitoring.
+    </p>
+
+    <p style="font-size: 22px;">
+        These systems help operators and maintainers quickly understand the condition of the railroad and respond to
+        problems. Control points are therefore both safety devices and operational control locations.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary purpose of a control point in a railroad signaling system?</p>
+        <label><input type="radio" name="q1" value="wrong"> To perform track maintenance only</label><br>
+        <label><input type="radio" name="q1" value="correct"> To control and monitor interlocking operations</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To house train crews during layovers</label><br><br>
+
+        <p>2. What equipment may be found at a control point?</p>
+        <label><input type="radio" name="q2" value="wrong"> Passenger seats and ticket machines</label><br>
+        <label><input type="radio" name="q2" value="correct"> Control panels, signal equipment, switch machines, and communication devices</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Vending machines and newspapers</label><br><br>
+
+        <p>3. How do operators interact with a control point to set routes?</p>
+        <label><input type="radio" name="q3" value="wrong"> By placing trackside flags manually</label><br>
+        <label><input type="radio" name="q3" value="correct"> By using control panels, switches, levers, buttons, or computer displays</label><br>
+        <label><input type="radio" name="q3" value="wrong"> By calling train engineers on the radio only</label><br><br>
+
+        <p>4. What is one benefit of computer-based control systems?</p>
+        <label><input type="radio" name="q4" value="correct"> They improve monitoring, diagnostics, automation, and operator displays</label><br>
+        <label><input type="radio" name="q4" value="wrong"> They eliminate the need for electricity</label><br>
+        <label><input type="radio" name="q4" value="wrong"> They slow down train traffic for better safety</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 5A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 4E.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

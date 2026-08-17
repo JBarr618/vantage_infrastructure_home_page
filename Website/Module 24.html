@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 24 - Automatic Train Protection</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 24 - Introduction to Automatic Train Protection</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Automatic Train Protection
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Automatic Train Protection, also called ATP, is a vital railway safety
+        system designed to prevent accidents caused by human error. ATP helps
+        prevent trains from passing stop signals, exceeding permitted speeds,
+        or operating unsafely within a signal system.
+    </p>
+
+    <p style="font-size: 22px;">
+        The main purpose of ATP is to provide a safety backup for the train crew.
+        If the crew fails to respond properly to a signal indication or speed
+        restriction, the ATP system can automatically intervene.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATP systems continuously monitor train speed, signal information, and
+        movement authority. The system compares the train's actual operation
+        against the safe limits allowed for that location.
+    </p>
+
+    <p style="font-size: 22px;">
+        Trackside equipment is used to transmit information to the train. This
+        equipment may include balises, beacons, inductive loops, or continuous
+        inductive cables installed along the track.
+    </p>
+
+    <p style="font-size: 22px;">
+        The trackside equipment can provide information about signal aspects,
+        speed restrictions, movement limits, gradients, or other operating
+        conditions that affect safe train movement.
+    </p>
+
+    <p style="font-size: 22px;">
+        Onboard equipment receives the information from the trackside equipment.
+        An onboard computer processes this data and compares it with the train's
+        current speed, location, and braking capability.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the ATP system detects an unsafe condition, it may first warn the train
+        crew. If the crew does not respond correctly within the required time,
+        the system can automatically apply the brakes.
+    </p>
+
+    <p style="font-size: 22px;">
+        Basic ATP systems may only enforce stopping at red signals. More advanced
+        ATP systems provide continuous speed supervision and calculate braking
+        curves to ensure the train can stop before reaching a danger point.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATP is an important part of defense-in-depth railway safety. It does not
+        replace the train crew, but it provides an additional layer of protection
+        when human error, distraction, or delayed reaction could create an unsafe
+        condition.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary purpose of Automatic Train Protection?</p>
+        <label><input type="radio" name="q1" value="correct"> To prevent unsafe train movements by automatically intervening when necessary</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To replace all train crews</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To control passenger announcements</label><br><br>
+
+        <p>2. What does onboard ATP equipment do?</p>
+        <label><input type="radio" name="q2" value="wrong"> It paints the signal aspects</label><br>
+        <label><input type="radio" name="q2" value="correct"> It receives trackside information and compares it with train speed and location</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It controls the station lighting system</label><br><br>
+
+        <p>3. What happens if the ATP system detects an unsafe condition and the crew does not respond properly?</p>
+        <label><input type="radio" name="q3" value="wrong"> The system ignores the condition</label><br>
+        <label><input type="radio" name="q3" value="wrong"> The train automatically speeds up</label><br>
+        <label><input type="radio" name="q3" value="correct"> The system can automatically apply the train's brakes</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 24A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 23B.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

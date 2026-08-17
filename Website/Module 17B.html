@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 17B - Full Assembly of a Gate Mechanism</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 17B - Full Assembly of a Gate Mechanism</h1>
+
+    <h2 style="color: darkblue;">
+        What is the Full Assembly of a Gate Mechanism?
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        The full assembly of a highway grade crossing gate mechanism includes both the
+        internal electromechanical components and the external structures that work
+        together to create a complete crossing barrier system.
+    </p>
+
+    <p style="font-size: 22px;">
+        One major component is the gate mechanism housing. This protective enclosure
+        contains the electric motor, gearbox, linkage system, braking components,
+        and electrical control devices. The housing protects the mechanism from
+        weather, debris, and physical damage.
+    </p>
+
+    <p style="font-size: 22px;">
+        Another important part of the assembly is the gate arm itself. The gate arm
+        acts as the physical barrier that blocks roadway traffic when a train approaches.
+        Gate arms are commonly made from lightweight but durable materials such as
+        aluminum or fiberglass.
+    </p>
+
+    <p style="font-size: 22px;">
+        Gate arm mounting hardware securely connects the gate arm to the mechanism.
+        This hardware includes brackets, hinges, and support components that allow
+        smooth movement during gate operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        The entire gate assembly is mounted on a strong concrete foundation and
+        mounting base. This foundation provides stability, supports the equipment,
+        and helps resist wind forces, vibration, and vehicle impacts.
+    </p>
+
+    <p style="font-size: 22px;">
+        Electrical wiring and connections are also essential parts of the assembly.
+        Wiring provides electrical power to the motor and carries control signals
+        between the gate mechanism and the crossing controller.
+    </p>
+
+    <p style="font-size: 22px;">
+        Additional optional features may include gate arm lights, reflective markings,
+        obstruction detection sensors, and manual override handles for emergency
+        operation during power failures or equipment malfunctions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Together, all of these electrical, mechanical, and structural components
+        create a complete gate mechanism assembly that safely controls roadway
+        traffic at highway grade crossings.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/full-gate-assembly.png"
+    alt="Complete highway grade crossing gate mechanism assembly"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/gate-assembly-diagram.png"
+    alt="Labeled diagram of highway crossing gate mechanism assembly"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/gate-arm-mounting-hardware.png"
+    alt="Close-up of gate arm mounting hardware"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/gate-arm-lights-reflectors.png"
+    alt="Gate arm lights and reflective markings on crossing gate"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What are important external components of a full gate mechanism assembly?</p>
+        <label><input type="radio" name="q1" value="wrong"> Signal bridges and overhead catenary only</label><br>
+        <label><input type="radio" name="q1" value="correct"> Gate arms, mounting hardware, foundation, and electrical wiring</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Ballast and rail anchors only</label><br><br>
+
+        <p>2. Why is a strong foundation important for a gate mechanism assembly?</p>
+        <label><input type="radio" name="q2" value="correct"> It provides stability and helps resist vibration, wind, and impacts</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It increases train speed through the crossing</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It powers the flashing lights and bells</label><br><br>
+
+        <p>3. Which are examples of optional features that may be added to a gate mechanism assembly?</p>
+        <label><input type="radio" name="q3" value="wrong"> Steam whistles and fuel tanks</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Rail joints and insulated bonds</label><br>
+        <label><input type="radio" name="q3" value="correct"> Gate arm lights, reflectors, obstruction sensors, and manual override handles</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 17C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 17A.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

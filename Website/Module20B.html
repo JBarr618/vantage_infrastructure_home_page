@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 20B - Where Are Fixed Signals Used?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 20B - Where Are Fixed Signals Used?</h1>
+
+    <h2 style="color: darkblue;">
+        Locations Where Fixed Signals Are Used
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Fixed wayside signals are installed throughout railway systems wherever
+        train movements must be controlled, protected, or directed. Their placement
+        is carefully planned to ensure safe and efficient railroad operations.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most common locations for fixed signals is at the entrance to
+        signal blocks. These signals indicate whether the next block is clear,
+        occupied, or subject to restrictions before a train is allowed to enter.
+    </p>
+
+    <p style="font-size: 22px;">
+        Fixed signals are also found at interlockings, where tracks cross, merge,
+        diverge, or connect through switches. These signals establish safe routes
+        and prevent conflicting train movements.
+    </p>
+
+    <p style="font-size: 22px;">
+        Station areas frequently contain signals that control train movements
+        approaching, entering, and departing passenger platforms, sidings, and
+        station tracks.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signals are commonly installed near sidings and turnouts to govern train
+        movements between main tracks and auxiliary tracks. These signals help
+        maintain safe routing through switches and control points.
+    </p>
+
+    <p style="font-size: 22px;">
+        Fixed signals may also be used in advance of permanent speed restriction
+        areas. These signals warn train crews of upcoming speed reductions caused
+        by curves, bridges, track conditions, or other operating requirements.
+    </p>
+
+    <p style="font-size: 22px;">
+        During maintenance or construction activities, temporary signals may be
+        installed to protect work crews and safely control train movements through
+        work zones.
+    </p>
+
+    <p style="font-size: 22px;">
+        In some specialized applications, signals may be located in advance of
+        highway grade crossings or other high-risk locations to provide additional
+        operating instructions or warnings.
+    </p>
+
+    <p style="font-size: 22px;">
+        Railway terminals and yards also use signals extensively to manage train
+        movements between tracks, through ladder tracks, and into or out of storage
+        areas.
+    </p>
+
+    <p style="font-size: 22px;">
+        Fixed signals are placed wherever there is a need to regulate train
+        movement, provide movement authority, ensure safe separation, control
+        speed, or establish routing through complex track arrangements.
+    </p>
+
+    <p style="font-size: 22px;">
+        The presence of fixed signals is often a clear indication that train
+        movements within that territory are governed by a formal signaling system.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/interlocking-aerial-view.jpg"
+    alt="Aerial view of complex railway interlocking with numerous signals"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/block-entrance-signal.jpg"
+    alt="Signal located at the entrance to a signal block"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/station-platform-signal.jpg"
+    alt="Signal controlling train entry into a station platform"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/work-zone-temporary-signals.jpg"
+    alt="Temporary railway signals protecting a work zone"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Why are fixed signals located at the entrances of blocks?</p>
+        <label><input type="radio" name="q1" value="wrong"> To identify railroad ownership</label><br>
+        <label><input type="radio" name="q1" value="correct"> To indicate whether a train is authorized to enter the next block based on its condition and occupancy</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To display train schedules only</label><br><br>
+
+        <p>2. What is the primary role of signals at interlockings?</p>
+        <label><input type="radio" name="q2" value="correct"> To establish safe routes and prevent conflicting train movements</label><br>
+        <label><input type="radio" name="q2" value="wrong"> To provide passenger information</label><br>
+        <label><input type="radio" name="q2" value="wrong"> To control crossing gates only</label><br><br>
+
+        <p>3. In what situation might temporary fixed signals be used?</p>
+        <label><input type="radio" name="q3" value="wrong"> During normal office operations</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To replace all permanent signals permanently</label><br>
+        <label><input type="radio" name="q3" value="correct"> During track maintenance or construction work to protect crews and control train movements</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 20C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 20A.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

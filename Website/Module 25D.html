@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 25D - Troubleshooting Automatic Train Stop</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 25D - Troubleshooting Automatic Train Stop</h1>
+
+    <h2 style="color: darkblue;">
+        How to Troubleshoot ATS Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Troubleshooting Automatic Train Stop (ATS) systems requires a systematic
+        approach because ATS must reliably stop a train during specific unsafe
+        conditions. The troubleshooting method depends on whether the system is
+        mechanical, inductive, or electronic.
+    </p>
+
+    <p style="font-size: 22px;">
+        In a mechanical trip ATS system, one common problem is failure to engage.
+        This may occur if the trackside trip arm does not rise properly or if the
+        onboard trip cock does not contact the trip arm as required.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the trackside trip arm fails to operate, the maintainer should inspect
+        the mechanism for obstructions, damage, binding, incorrect adjustment, or
+        misalignment. The control system that raises and lowers the trip arm must
+        also be checked.
+    </p>
+
+    <p style="font-size: 22px;">
+        Onboard mechanical problems may include a damaged trip cock, incorrect
+        height adjustment, loose mounting, restricted movement, or binding in the
+        trip mechanism.
+    </p>
+
+    <p style="font-size: 22px;">
+        Unintended mechanical engagement can cause unexpected brake applications.
+        This may be caused by obstructions near the trackside trip arm, improper
+        trip arm position, or an onboard trip cock that is loose, overly sensitive,
+        or incorrectly adjusted.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the ATS brake application is weak or ineffective, the maintainer should
+        inspect the connection between the trip cock and the brake valve. The brake
+        valve itself must also be tested for proper operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        In an inductive ATS system, loss of signal reception is a common problem.
+        Trackside inductors, cables, power supplies, and transmitters should be
+        inspected for damage, loss of power, or failed signal transmission.
+    </p>
+
+    <p style="font-size: 22px;">
+        Onboard reception problems may involve a damaged antenna, misaligned
+        receiver, loose cable, failed processing unit, or poor connection between
+        the receiver and onboard ATS equipment.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the system receives incorrect data, technicians should verify trackside
+        encoding, signal status inputs, speed limit data, onboard software
+        configuration, and how the onboard system interprets the received data.
+    </p>
+
+    <p style="font-size: 22px;">
+        Overspeed enforcement problems may be caused by inaccurate speed sensors,
+        incorrect speed threshold settings, wrong speed limit data, or onboard
+        calibration errors.
+    </p>
+
+    <p style="font-size: 22px;">
+        False brake applications may be caused by signal interference, faulty speed
+        sensor readings, onboard processor faults, receiver problems, or incorrect
+        system configuration.
+    </p>
+
+    <p style="font-size: 22px;">
+        System manuals, diagnostic tools, status indicators, event logs, and
+        approved troubleshooting procedures are essential when working on ATS.
+        Because ATS interacts with the train braking system, all troubleshooting
+        must follow railway safety rules and be performed by qualified personnel.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What are some potential causes if a mechanical trip ATS system fails to engage?</p>
+        <label><input type="radio" name="q1" value="wrong"> Passenger announcements and station lighting</label><br>
+        <label><input type="radio" name="q1" value="correct"> Trip arm obstruction, damage, misalignment, control failure, or onboard trip cock problems</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Incorrect ticket prices</label><br><br>
+
+        <p>2. If an inductive ATS system applies brakes unexpectedly, what should be investigated onboard?</p>
+        <label><input type="radio" name="q2" value="correct"> Signal interference, speed sensor readings, onboard processor faults, receiver issues, or configuration errors</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Passenger seat cushions</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Station platform signs</label><br><br>
+
+        <p>3. Why is it important to consult system manuals when troubleshooting ATS?</p>
+        <label><input type="radio" name="q3" value="wrong"> Manuals replace all safety procedures</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Manuals are only used for painting equipment</label><br>
+        <label><input type="radio" name="q3" value="correct"> ATS systems vary by design and require approved diagnostic procedures and configuration information</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 26.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 25C.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <h3>Built From Real Railroad Experience</h3>
+        <p>Signal School 2026 Professional Railroad Signal Training</p>
+        <p>© 2026 Vantage Infrastructure LLC</p>
+    </footer>
+
+</body>
+
+</html>

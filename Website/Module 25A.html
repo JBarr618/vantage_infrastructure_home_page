@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 25A - What is Automatic Train Stop?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 25A - What is Automatic Train Stop?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Automatic Train Stop (ATS)
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Automatic Train Stop (ATS) is a railway safety system designed to
+        automatically stop a train under specific unsafe conditions. It acts as
+        a backup safety layer for the train operator.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATS is primarily designed to prevent trains from passing stop signals
+        without authority and to enforce speed restrictions at specific monitored
+        locations.
+    </p>
+
+    <p style="font-size: 22px;">
+        One major unsafe condition addressed by ATS is a Signal Passed At Danger,
+        also called a SPAD. This occurs when a train passes a stop signal without
+        proper authorization.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATS may also enforce speed limits at critical locations such as curves,
+        station approaches, work zones, or other areas where overspeed could create
+        a hazardous condition.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATS usually operates intermittently. This means it acts at specific points
+        along the railway, such as signal locations or designated speed restriction
+        points, rather than continuously supervising the train along the entire
+        route.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATS systems use both trackside and onboard equipment. Trackside equipment
+        may include trip arms, inductors, beacons, or other devices. Onboard
+        equipment may include trip cocks, receivers, control units, and brake
+        interfaces.
+    </p>
+
+    <p style="font-size: 22px;">
+        When a train passes a restrictive signal without authority, the onboard
+        ATS equipment interacts with the trackside equipment. This interaction
+        triggers an automatic brake application.
+    </p>
+
+    <p style="font-size: 22px;">
+        The automatic brake application is intended to bring the train to a stop
+        before an unsafe movement results in a collision, derailment, or other
+        serious incident.
+    </p>
+
+    <p style="font-size: 22px;">
+        Compared with continuous Automatic Train Protection systems, ATS is usually
+        simpler and less expensive. However, it provides a more limited level of
+        supervision because it normally acts only at defined locations.
+    </p>
+
+    <p style="font-size: 22px;">
+        Even though ATS is simpler than some advanced train control systems, it
+        remains an important safety technology for preventing critical operating
+        errors.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What are the two primary unsafe conditions ATS is designed to address?</p>
+        <label><input type="radio" name="q1" value="correct"> Passing a stop signal without authority and exceeding speed limits at monitored locations</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Passenger fare disputes and station lighting failures</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Track painting and signal numbering</label><br><br>
+
+        <p>2. How does the intermittent nature of ATS differ from continuous train protection systems?</p>
+        <label><input type="radio" name="q2" value="wrong"> ATS continuously controls the train for the entire route</label><br>
+        <label><input type="radio" name="q2" value="correct"> ATS usually acts only at specific points such as signals or speed restriction locations</label><br>
+        <label><input type="radio" name="q2" value="wrong"> ATS only works when passengers are onboard</label><br><br>
+
+        <p>3. What happens when onboard ATS equipment interacts with trackside equipment during an unauthorized movement?</p>
+        <label><input type="radio" name="q3" value="wrong"> The train automatically accelerates</label><br>
+        <label><input type="radio" name="q3" value="wrong"> The station lights turn on</label><br>
+        <label><input type="radio" name="q3" value="correct"> The ATS system triggers an automatic brake application</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 25B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 25.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <h3>Built From Real Railroad Experience</h3>
+        <p>Signal School 2026 Professional Railroad Signal Training</p>
+        <p>© 2026 Vantage Infrastructure LLC</p>
+    </footer>
+
+</body>
+
+</html>

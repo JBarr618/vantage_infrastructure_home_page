@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 16F - Troubleshooting Highway Grade Crossing Warning Systems</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 16F - Troubleshooting Highway Grade Crossing Warning Systems</h1>
+
+    <h2 style="color: darkblue;">
+        How to Troubleshoot Highway Grade Crossing Warning Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Troubleshooting highway grade crossing warning systems requires a systematic and
+        organized approach to identify the cause of failures and restore safe operation.
+        Technicians must understand electrical, electronic, and mechanical systems while
+        following all safety procedures.
+    </p>
+
+    <p style="font-size: 22px;">
+        One common problem is a failure to activate when a train approaches. Possible causes
+        include power failures, broken wires, train detection problems, faulty motion
+        detectors, or control logic failures.
+    </p>
+
+    <p style="font-size: 22px;">
+        Troubleshooting steps include checking the main power supply and battery backup,
+        inspecting train detection circuits, examining control cabinets for blown fuses
+        or tripped breakers, and testing wiring continuity between field devices and
+        controllers.
+    </p>
+
+    <p style="font-size: 22px;">
+        Another issue is premature or delayed activation. This may occur if train detection
+        devices are improperly calibrated, timing settings are incorrect, or electrical
+        interference affects the circuits.
+    </p>
+
+    <p style="font-size: 22px;">
+        Warning devices may also malfunction individually. Technicians check flashing lights
+        for burned-out bulbs or faulty flashers, inspect bells for damage or obstructions,
+        and examine gates for mechanical problems, damaged arms, or motor failures.
+    </p>
+
+    <p style="font-size: 22px;">
+        Intermittent operation can result from loose wiring, corroded connections, damaged
+        components, or environmental conditions. Careful inspection and electrical testing
+        are required to locate these types of faults.
+    </p>
+
+    <p style="font-size: 22px;">
+        False activations occur when warning devices activate without a train present.
+        Possible causes include faulty train detection equipment, moisture intrusion,
+        electrical interference, or control logic problems.
+    </p>
+
+    <p style="font-size: 22px;">
+        General troubleshooting procedures include reviewing system documentation,
+        performing visual inspections, using multimeters for electrical testing,
+        isolating the faulty section of the system, replacing defective components,
+        and conducting complete operational tests after repairs are finished.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/troubleshooting-control-cabinet.png"
+    alt="Technician using multimeter inside highway grade crossing control cabinet"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/corroded-wiring-connection.png"
+    alt="Corroded wiring connection causing crossing system problems"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/troubleshooting-process-diagram.png"
+    alt="Diagram showing systematic troubleshooting process for crossing warning systems"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/gate-mechanism-inspection.png"
+    alt="Technician inspecting highway crossing gate mechanism"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What are some common causes of a highway grade crossing warning system failing to activate?</p>
+        <label><input type="radio" name="q1" value="wrong"> Fresh paint on the gate arm</label><br>
+        <label><input type="radio" name="q1" value="correct"> Power failures, train detection problems, faulty motion detectors, and broken wires</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Excessive train speed only</label><br><br>
+
+        <p>2. What could cause a false activation at a highway grade crossing?</p>
+        <label><input type="radio" name="q2" value="correct"> Faulty train detection equipment, electrical interference, or moisture intrusion</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Clean wiring and proper calibration</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Properly functioning gates and lights</label><br><br>
+
+        <p>3. What are general troubleshooting steps for a malfunctioning highway grade crossing warning system?</p>
+        <label><input type="radio" name="q3" value="wrong"> Ignore alarms and wait for the system to reset itself</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Replace all equipment immediately without testing</label><br>
+        <label><input type="radio" name="q3" value="correct"> Review documentation, inspect components, test electrically, isolate faults, and retest after repairs</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 17.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 16E.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

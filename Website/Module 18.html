@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 18 - Introduction to Manual Block Signaling</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 18 - Introduction to Manual Block Signaling</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Manual Block Signaling
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Manual Block Signaling is a method of railway train operation where the movement
+        of trains through sections of track, called blocks, is controlled manually by
+        signal personnel such as block operators or signalmen.
+    </p>
+
+    <p style="font-size: 22px;">
+        Unlike automatic block signaling systems that use track circuits and electronic
+        detection equipment, manual block signaling relies heavily on communication
+        between operators at adjacent block stations.
+    </p>
+
+    <p style="font-size: 22px;">
+        In a manual block system, a block is typically the section of railroad track
+        located between two consecutive block stations. Before a train may enter a block,
+        the block operator must confirm that the block is clear of all other trains.
+    </p>
+
+    <p style="font-size: 22px;">
+        Communication between block operators may involve telephones, telegraph systems,
+        block bells, or other signaling instruments used to exchange information regarding
+        train movements and block occupancy.
+    </p>
+
+    <p style="font-size: 22px;">
+        Once the receiving block operator confirms the block is clear, permission is
+        granted for the train to proceed into the block. The block is then considered
+        occupied, and no other train may enter until the first train clears the block.
+    </p>
+
+    <p style="font-size: 22px;">
+        After the train exits the block, the operator at the far end communicates back
+        to the previous block station confirming the block is once again clear for
+        another train movement.
+    </p>
+
+    <p style="font-size: 22px;">
+        Manual block signaling was one of the earliest methods used to maintain train
+        separation and prevent collisions. While it has largely been replaced on busy
+        main lines by automatic signaling systems, it may still be used on low-density
+        rail lines, sidings, industrial tracks, or as a backup operating method.
+    </p>
+
+    <p style="font-size: 22px;">
+        Understanding manual block signaling helps explain the historical development
+        of railway signaling and reinforces the importance of safe train separation
+        principles used in modern railroad operations.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/manual-block-diagram.png"
+    alt="Railway line divided into manual block sections with block stations"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/traditional-block-station.png"
+    alt="Traditional manual block station with telegraph and signaling equipment"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/block-operator-communication.png"
+    alt="Communication process between manual block operators"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/manual-block-clear-signal.png"
+    alt="Signal mast displaying clear indication in manual block territory"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the fundamental principle of manual block signaling?</p>
+        <label><input type="radio" name="q1" value="correct"> Only one train is allowed to occupy a block at a time</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Multiple trains may occupy the same block simultaneously</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Trains operate without communication between stations</label><br><br>
+
+        <p>2. How do block operators communicate in a manual block signaling system?</p>
+        <label><input type="radio" name="q2" value="wrong"> Only by hand signals from the trackside</label><br>
+        <label><input type="radio" name="q2" value="correct"> Using telephones, telegraphs, block bells, or signaling instruments</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Through automatic track circuits only</label><br><br>
+
+        <p>3. Why has manual block signaling largely been replaced on main railway lines?</p>
+        <label><input type="radio" name="q3" value="wrong"> Because manual systems require no operators</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Because trains no longer need signaling systems</label><br>
+        <label><input type="radio" name="q3" value="correct"> Because automatic systems improve capacity and reduce the potential for human error</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 18A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 17H.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

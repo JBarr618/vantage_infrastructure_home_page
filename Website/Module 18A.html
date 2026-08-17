@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 18A - What is Manual Block Used For?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 18A - What is Manual Block Used For?</h1>
+
+    <h2 style="color: darkblue;">
+        Uses of Manual Block Signaling
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Manual block signaling is used to control train movements and maintain safe
+        separation between trains operating on the same track. Although modern automatic
+        signaling systems are more common today, manual block signaling still serves
+        several important purposes in railway operations.
+    </p>
+
+    <p style="font-size: 22px;">
+        The primary purpose of manual block signaling is to prevent collisions by ensuring
+        that only one train occupies a block of track at any given time. Block operators
+        communicate with each other to confirm a block is clear before authorizing a train
+        to enter.
+    </p>
+
+    <p style="font-size: 22px;">
+        Manual block signaling is often used in non-signaled territory where automatic
+        block signaling systems are not installed. These areas may include branch lines,
+        industrial sidings, secondary tracks, or rail lines with low train traffic.
+    </p>
+
+    <p style="font-size: 22px;">
+        Manual block can also serve as a backup system when automatic signaling equipment
+        fails or is removed from service for maintenance or testing. During these situations,
+        train movements continue safely under the authority of block operators.
+    </p>
+
+    <p style="font-size: 22px;">
+        Special operating conditions may also require manual block procedures. Examples
+        include track maintenance activities, reverse train movements, or unusual train
+        operations outside normal traffic patterns.
+    </p>
+
+    <p style="font-size: 22px;">
+        One advantage of manual block signaling is that it can provide a simpler and more
+        cost-effective method of train control for low-density rail lines where installing
+        complex automatic systems may not be practical.
+    </p>
+
+    <p style="font-size: 22px;">
+        Manual block signaling is also important from a historical and educational
+        perspective because it demonstrates the basic principles of train separation
+        and the development of modern railway signaling systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        While manual block systems can operate safely, they depend heavily on accurate
+        communication and strict adherence to procedures, making them more vulnerable
+        to human error compared to automatic signaling systems.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/manual-block-territory-map.png"
+    alt="Map showing areas where manual block signaling may still be used"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/manual-block-backup-system.png"
+    alt="Manual block signaling used during automatic signal failure"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/train-under-manual-block-authority.png"
+    alt="Train operating under manual block authority in non-signaled territory"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/block-operator-equipment.png"
+    alt="Traditional communication equipment used by block operators"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary safety purpose of manual block signaling?</p>
+        <label><input type="radio" name="q1" value="wrong"> To increase train speed through crossings</label><br>
+        <label><input type="radio" name="q1" value="correct"> To ensure only one train occupies a block at a time</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To eliminate communication between operators</label><br><br>
+
+        <p>2. Where is manual block signaling most commonly used as the primary train control method?</p>
+        <label><input type="radio" name="q2" value="correct"> On branch lines, sidings, and low-traffic non-signaled territory</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Only on high-speed passenger rail systems</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Only inside large interlockings with automatic signals</label><br><br>
+
+        <p>3. How can manual block signaling work together with automatic block signaling?</p>
+        <label><input type="radio" name="q3" value="wrong"> Manual block permanently replaces all automatic systems</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Manual block is only used for freight car inspections</label><br>
+        <label><input type="radio" name="q3" value="correct"> Manual block can serve as a backup during automatic signal failures or maintenance</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 18B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 18.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

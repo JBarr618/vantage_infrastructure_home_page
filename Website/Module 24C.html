@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 24C - Testing Automatic Train Protection</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 24C - Testing Automatic Train Protection</h1>
+
+    <h2 style="color: darkblue;">
+        How to Test Automatic Train Protection Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Testing Automatic Train Protection (ATP) systems is essential to ensure
+        that all safety functions operate correctly and reliably. ATP testing
+        verifies the interaction between trackside equipment, onboard systems,
+        train braking systems, and train crews.
+    </p>
+
+    <p style="font-size: 22px;">
+        Trackside equipment testing begins by verifying that balises, beacons,
+        inductive loops, radio transmitters, and other devices are transmitting
+        the correct information. This information may include signal aspects,
+        speed restrictions, movement authority limits, and location data.
+    </p>
+
+    <p style="font-size: 22px;">
+        Trackside devices must also be installed at the correct locations and
+        calibrated according to design specifications. Testing confirms that
+        signal strength, transmission power, and data integrity meet system
+        requirements.
+    </p>
+
+    <p style="font-size: 22px;">
+        Onboard ATP equipment testing verifies that antennas and receivers
+        correctly receive information from the trackside infrastructure.
+        Diagnostic tools are often used to monitor incoming data and system
+        performance.
+    </p>
+
+    <p style="font-size: 22px;">
+        The onboard computer must correctly process the received information and
+        calculate the permitted speed, movement authority, and braking curve for
+        the train's current operating conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Train speed sensors must be calibrated and tested to ensure accurate
+        speed information is provided to the ATP system. Incorrect speed data
+        can lead to unsafe operation or unnecessary brake applications.
+    </p>
+
+    <p style="font-size: 22px;">
+        Testing also includes verification of the brake interface. The ATP
+        system must be able to command service braking and emergency braking
+        when operating limits are exceeded or unsafe conditions are detected.
+    </p>
+
+    <p style="font-size: 22px;">
+        The Driver-Machine Interface (DMI) must be tested to confirm that
+        warnings, alarms, permitted speeds, movement authorities, and other
+        information are correctly displayed to the train operator.
+    </p>
+
+    <p style="font-size: 22px;">
+        Dynamic testing is one of the most important ATP tests. During dynamic
+        testing, trains operate under real-world conditions while engineers
+        verify braking curves, speed enforcement, signal adherence, and overall
+        system performance.
+    </p>
+
+    <p style="font-size: 22px;">
+        Failure mode testing is equally important. Engineers intentionally
+        simulate failures of trackside equipment, onboard systems, sensors,
+        communications links, and power supplies to ensure the ATP system
+        responds safely and defaults to a protective state.
+    </p>
+
+    <p style="font-size: 22px;">
+        Thorough testing during commissioning and routine maintenance helps
+        ensure ATP systems continue to provide the highest level of railway
+        safety throughout their service life.
+    </p>
+
+    <!-- Suggested Images
+
+    <img src="images/atp-diagnostic-testing.jpg"
+    alt="Technicians testing onboard ATP equipment"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/atp-dynamic-test-train.jpg"
+    alt="Test train performing ATP validation"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/atp-diagnostic-software.jpg"
+    alt="ATP diagnostic software display"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/atp-trackside-inspection.jpg"
+    alt="Inspection of ATP trackside equipment"
+    style="width:350px; border-radius:10px;">
+
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What are some key aspects of testing the trackside equipment of an ATP system?</p>
+        <label><input type="radio" name="q1" value="wrong"> Checking locomotive paint and passenger seating</label><br>
+        <label><input type="radio" name="q1" value="correct"> Verifying signal transmission, equipment location, calibration, and data integrity</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Measuring rail temperatures only</label><br><br>
+
+        <p>2. Why is dynamic testing with a moving train important?</p>
+        <label><input type="radio" name="q2" value="correct"> It verifies ATP performance under actual operating conditions including braking and speed enforcement</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It reduces the need for track inspections</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It eliminates the need for onboard equipment</label><br><br>
+
+        <p>3. What is the purpose of failure mode testing in ATP systems?</p>
+        <label><input type="radio" name="q3" value="wrong"> To increase train speed limits</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To reduce maintenance costs</label><br>
+        <label><input type="radio" name="q3" value="correct"> To verify the system responds safely when equipment failures occur</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 24D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 24B.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 7E - Equipment Used for AC Single Rail Track Circuits</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 7E - Equipment Used for AC Single Rail Track Circuits</h1>
+
+    <h2 style="color: darkblue;">
+        Type of Equipment Used to Set Up an AC Single Rail Track Circuit
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Setting up an AC single rail track circuit requires equipment that supports the single rail design, where only
+        one rail is insulated and the other rail remains continuous.
+    </p>
+
+    <p style="font-size: 22px;">
+        <b>Insulated rail joints</b> are installed on only one of the two running rails. These joints electrically
+        isolate the track block from adjacent sections and define the limits of the track circuit.
+    </p>
+
+    <p style="font-size: 22px;">
+        The <b>AC power source</b>, usually a transformer or oscillator, supplies the alternating current signal to the
+        track circuit. The voltage and frequency must match the requirements of the receiver.
+    </p>
+
+    <p style="font-size: 22px;">
+        The <b>AC receiver</b> may be an AC-sensitive relay or electronic detection unit. It detects whether the proper
+        AC signal is present or absent and changes state when a train shunts the circuit.
+    </p>
+
+    <p style="font-size: 22px;">
+        <b>Connecting wires and cables</b> connect the power source and receiver to the insulated rail and the continuous
+        rail. Proper wire size, insulation, and secure connections are important for reliable operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        <b>Bonding straps</b> may be used to maintain good electrical continuity of the continuous rail. Test and
+        calibration equipment such as multimeters, oscilloscopes, and shunt testing devices are used to verify the
+        circuit operates correctly.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is different about insulated rail joints in an AC single rail track circuit?</p>
+        <label><input type="radio" name="q1" value="correct"> Only one rail is insulated in single rail circuits</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Both rails are insulated in single rail circuits</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Insulated joints are not needed</label><br><br>
+
+        <p>2. What is the role of the AC receiver?</p>
+        <label><input type="radio" name="q2" value="correct"> It detects the presence or absence of the AC signal</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It only amplifies incoming voltage</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It blocks all return current</label><br><br>
+
+        <p>3. What other equipment is needed for setup and verification?</p>
+        <label><input type="radio" name="q3" value="correct"> Test tools and proper cabling</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Overhead line detectors only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Axle counters only</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 7F.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 7D.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

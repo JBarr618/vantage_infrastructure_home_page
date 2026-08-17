@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 12G - Testing Computer Based Train Control</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 12G - Testing Computer Based Train Control</h1>
+
+    <h2 style="color: darkblue;">
+        Introduction to Computer Based Train Control (CBTC) - Page 10
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Testing a Computer Based Train Control system, commonly called CBTC, is
+        a rigorous process that occurs throughout design, installation,
+        commissioning, and ongoing maintenance.
+    </p>
+
+    <p style="font-size: 22px;">
+        The main goal of CBTC testing is to verify that the system operates
+        safely, reliably, and correctly under normal, degraded, and failure
+        conditions.
+    </p>
+
+    <h3>1. Simulation and Laboratory Testing</h3>
+
+    <p style="font-size: 22px;">
+        Before the CBTC system is installed and tested on the railway,
+        extensive testing is performed in laboratories and simulated
+        environments.
+    </p>
+
+    <p style="font-size: 22px;">
+        Individual components are tested, including onboard units, wayside
+        controllers, communication equipment, central control software, and
+        their interfaces.
+    </p>
+
+    <p style="font-size: 22px;">
+        Simulation testing allows engineers to test the system logic under many
+        different operating conditions without placing trains, employees, or
+        passengers at risk.
+    </p>
+
+    <p style="font-size: 22px;">
+        Test scenarios may include normal train operation, degraded operation,
+        communication failures, equipment failures, incorrect data, and
+        emergency conditions.
+    </p>
+
+    <h3>2. Static Testing</h3>
+
+    <p style="font-size: 22px;">
+        Static testing is performed after the onboard and wayside equipment has
+        been installed, while the trains remain stationary.
+    </p>
+
+    <p style="font-size: 22px;">
+        Technicians verify that the hardware is correctly installed, wired,
+        configured, and communicating with the other CBTC components.
+    </p>
+
+    <p style="font-size: 22px;">
+        Static testing may include checking communication links, train
+        positioning sensors, balise readers, onboard computers, antennas,
+        Automatic Train Protection equipment, and control-center interfaces.
+    </p>
+
+    <p style="font-size: 22px;">
+        The purpose is to identify installation or configuration problems
+        before moving trains are used for testing.
+    </p>
+
+    <h3>3. Dynamic Testing (On-Track Testing)</h3>
+
+    <p style="font-size: 22px;">
+        Dynamic testing is performed with trains moving on the actual railway.
+    </p>
+
+    <p style="font-size: 22px;">
+        This is one of the most important testing phases because it verifies
+        how the complete CBTC system performs under real operating conditions.
+    </p>
+
+    <h3>Train Localization Accuracy</h3>
+
+    <p style="font-size: 22px;">
+        Testing verifies that the CBTC system accurately determines the train's
+        location at different speeds and under different track conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Odometers, balises, radar, RFID, and other train-positioning equipment
+        must provide accurate and consistent location information.
+    </p>
+
+    <h3>Communication Reliability</h3>
+
+    <p style="font-size: 22px;">
+        Testing verifies continuous and reliable two-way communication between
+        the train, wayside equipment, and central control system.
+    </p>
+
+    <p style="font-size: 22px;">
+        Communication performance must be checked throughout the route,
+        including tunnels, curves, stations, yards, and other areas where radio
+        coverage may be difficult.
+    </p>
+
+    <h3>Automatic Train Protection (ATP) Testing</h3>
+
+    <p style="font-size: 22px;">
+        Automatic Train Protection, commonly called ATP, must be tested to
+        verify that it correctly enforces speed restrictions and Movement
+        Authorities.
+    </p>
+
+    <p style="font-size: 22px;">
+        Test scenarios may include exceeding the permitted speed, approaching
+        the end of Movement Authority, failing to brake properly, or attempting
+        to enter an unauthorized section of track.
+    </p>
+
+    <p style="font-size: 22px;">
+        The ATP system must provide warnings and automatically apply the brakes
+        when required to maintain safe train operation.
+    </p>
+
+    <h3>Automatic Train Operation (ATO) Testing</h3>
+
+    <p style="font-size: 22px;">
+        When Automatic Train Operation, commonly called ATO, is included, it
+        must be tested to verify smooth and accurate train control.
+    </p>
+
+    <p style="font-size: 22px;">
+        Testing includes automatic acceleration, speed regulation, braking,
+        station stopping accuracy, and train departure.
+    </p>
+
+    <h3>Interface Testing</h3>
+
+    <p style="font-size: 22px;">
+        Dynamic testing also verifies the CBTC system's interaction with other
+        railway systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        These systems may include interlockings, switches, platform screen
+        doors, traffic management systems, station equipment, and emergency
+        systems.
+    </p>
+
+    <h3>Degraded Mode Testing</h3>
+
+    <p style="font-size: 22px;">
+        Degraded mode testing verifies how the system responds when normal CBTC
+        operation is unavailable.
+    </p>
+
+    <p style="font-size: 22px;">
+        This may include communication loss, onboard equipment failure,
+        wayside equipment failure, sensor failure, or central control system
+        failure.
+    </p>
+
+    <p style="font-size: 22px;">
+        The system must transition safely into the proper fallback mode and
+        provide clear information to operators and control personnel.
+    </p>
+
+    <h3>4. Integration Testing</h3>
+
+    <p style="font-size: 22px;">
+        Integration testing verifies that all CBTC components work correctly
+        together as one complete system.
+    </p>
+
+    <p style="font-size: 22px;">
+        It also confirms that the CBTC system properly interfaces with existing
+        signaling, interlocking, communication, power, and operational systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        Incorrect system interfaces can create unsafe commands, communication
+        failures, route conflicts, or improper train-control responses.
+    </p>
+
+    <h3>5. Performance Testing</h3>
+
+    <p style="font-size: 22px;">
+        Performance testing evaluates whether the CBTC system meets the
+        railway's operating and capacity requirements.
+    </p>
+
+    <p style="font-size: 22px;">
+        Testing may measure minimum achievable headways, communication response
+        times, station stopping accuracy, system processing speed, train
+        throughput, and overall operating efficiency.
+    </p>
+
+    <p style="font-size: 22px;">
+        The system must perform correctly during light traffic, normal service,
+        peak service, and abnormal operating conditions.
+    </p>
+
+    <h3>6. Safety Validation</h3>
+
+    <p style="font-size: 22px;">
+        Safety validation provides independent confirmation that the CBTC
+        system meets all required safety standards.
+    </p>
+
+    <p style="font-size: 22px;">
+        Safety assessments identify possible hazards, evaluate the effects of
+        failures, and verify that adequate protections have been included in
+        the system design.
+    </p>
+
+    <p style="font-size: 22px;">
+        Formal safety-analysis methods may include Failure Mode and Effects
+        Analysis, commonly called FMEA, hazard analysis, fault-tree analysis,
+        and verification of safety requirements.
+    </p>
+
+    <p style="font-size: 22px;">
+        Every identified safety hazard must be eliminated, controlled, or
+        reduced to an acceptable level before the system enters service.
+    </p>
+
+    <h3>7. Acceptance Testing</h3>
+
+    <p style="font-size: 22px;">
+        Before the CBTC system is placed into full passenger service, the
+        railway operator performs comprehensive acceptance testing.
+    </p>
+
+    <p style="font-size: 22px;">
+        Acceptance testing verifies that the system meets the contract
+        requirements, technical specifications, safety requirements, and
+        required operating performance.
+    </p>
+
+    <p style="font-size: 22px;">
+        Any problems identified during acceptance testing must be documented,
+        corrected, retested, and formally accepted before final commissioning.
+    </p>
+
+    <h3>8. Ongoing Monitoring and Maintenance Testing</h3>
+
+    <p style="font-size: 22px;">
+        CBTC testing does not end after the system is commissioned.
+    </p>
+
+    <p style="font-size: 22px;">
+        The system must be continuously monitored and regularly tested to
+        ensure that it continues to operate safely and reliably.
+    </p>
+
+    <p style="font-size: 22px;">
+        Maintenance testing may include checking communication links, train
+        positioning accuracy, onboard equipment, wayside equipment, software
+        integrity, system logs, alarms, and diagnostic information.
+    </p>
+
+    <p style="font-size: 22px;">
+        Testing may also be required after software updates, equipment
+        replacement, track changes, communication-system modifications, or
+        other changes that could affect CBTC operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        Continuous monitoring and maintenance testing help identify developing
+        problems before they create unsafe conditions or service disruptions.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p style="font-size: 20px;">
+            <strong>1. Why is simulation and laboratory testing an important first step in CBTC testing?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q1" value="correct">
+            A. It allows components, interfaces, and system logic to be tested safely under normal, degraded, and failure conditions before on-track operation.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="wrong">
+            B. It eliminates the need for all future on-track testing.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="wrong">
+            C. It is only used to train passengers how to ride the train.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="wrong">
+            D. It is performed only after the CBTC system has been in service for several years.
+        </label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>2. Which activities are evaluated during dynamic on-track CBTC testing?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q2" value="wrong">
+            A. Only the train's exterior paint and passenger seating
+        </label><br>
+
+        <label>
+            <input type="radio" name="q2" value="correct">
+            B. Train localization, communication reliability, ATP and ATO operation, system interfaces, and degraded mode behavior
+        </label><br>
+
+        <label>
+            <input type="radio" name="q2" value="wrong">
+            C. Only the control-center office lighting
+        </label><br>
+
+        <label>
+            <input type="radio" name="q2" value="wrong">
+            D. Only station announcements and ticket machines
+        </label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>3. What is the purpose of safety validation during CBTC testing?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q3" value="wrong">
+            A. To determine how many passengers can fit inside each train
+        </label><br>
+
+        <label>
+            <input type="radio" name="q3" value="wrong">
+            B. To eliminate the need for system testing and documentation
+        </label><br>
+
+        <label>
+            <input type="radio" name="q3" value="correct">
+            C. To verify that safety requirements are met, hazards are identified and controlled, and failures have been properly analyzed
+        </label><br>
+
+        <label>
+            <input type="radio" name="q3" value="wrong">
+            D. To test only the normal operating schedule
+        </label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>4. Which formal safety-analysis method may be used during CBTC safety validation?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q4" value="wrong">
+            A. Passenger satisfaction survey
+        </label><br>
+
+        <label>
+            <input type="radio" name="q4" value="correct">
+            B. Failure Mode and Effects Analysis (FMEA)
+        </label><br>
+
+        <label>
+            <input type="radio" name="q4" value="wrong">
+            C. Train cleaning inspection
+        </label><br>
+
+        <label>
+            <input type="radio" name="q4" value="wrong">
+            D. Employee vacation schedule
+        </label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>5. Why does CBTC testing continue after the system has been commissioned?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q5" value="wrong">
+            A. Because commissioning means the system has not yet been installed
+        </label><br>
+
+        <label>
+            <input type="radio" name="q5" value="wrong">
+            B. Because the system must be completely redesigned every day
+        </label><br>
+
+        <label>
+            <input type="radio" name="q5" value="correct">
+            C. To verify continued safe and reliable operation and identify problems caused by equipment failures, wear, software changes, or system modifications
+        </label><br>
+
+        <label>
+            <input type="radio" name="q5" value="wrong">
+            D. To prevent maintenance personnel from reviewing system diagnostics
+        </label><br><br>
+
+        <button type="button"
+        onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if (password === "signal2026") {
+            window.location.href = "Module 12H.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+            answer.disabled = true;
+
+            if (answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if (answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if (answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+                answer.parentElement.style.fontWeight = "bold";
+            }
+        });
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 12FF.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

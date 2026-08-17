@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 22E - What Are Automatic Block Signals?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 22E - What Are Automatic Block Signals?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Automatic Block Signals (ABS)
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Automatic Block Signals (ABS) are a type of railway signaling system in
+        which signal aspects are automatically controlled by the occupancy of the
+        track ahead. Unlike systems that rely on direct human control, ABS uses
+        electrical detection equipment to determine signal indications.
+    </p>
+
+    <p style="font-size: 22px;">
+        The defining characteristic of ABS is its automatic operation. Signal
+        aspects change automatically as trains move through the territory and
+        occupy or clear blocks. This allows the system to continuously provide
+        information to train crews without requiring manual intervention for
+        each train movement.
+    </p>
+
+    <p style="font-size: 22px;">
+        ABS relies primarily on track circuits. These electrical circuits are
+        installed within each block and continuously monitor whether a train is
+        present. When a train occupies a block, the track circuit detects the
+        train and automatically causes signal aspects to become more restrictive.
+    </p>
+
+    <p style="font-size: 22px;">
+        When the train clears the block and the track circuit returns to its
+        normal condition, the signals can automatically return to less restrictive
+        aspects if the blocks ahead are also clear.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most important features of ABS is its fail-safe design.
+        Railway signaling systems are designed so that failures result in safer,
+        more restrictive signal indications rather than unsafe conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        For example, a broken rail, power loss, damaged wiring, or track circuit
+        malfunction will often cause the signal system to display a stop or
+        approach indication. This forces trains to stop or proceed cautiously
+        until the problem can be investigated.
+    </p>
+
+    <p style="font-size: 22px;">
+        ABS signals frequently provide information about more than just the next
+        block. Signal aspects may indicate the condition of multiple blocks ahead,
+        allowing train crews to anticipate speed changes and stopping requirements.
+    </p>
+
+    <p style="font-size: 22px;">
+        This advance information helps improve train handling, increases safety,
+        and allows railroads to move trains more efficiently through the territory.
+    </p>
+
+    <p style="font-size: 22px;">
+        Most ABS systems use fixed wayside signals, such as color light signals,
+        to display automatically generated aspects to approaching trains.
+    </p>
+
+    <p style="font-size: 22px;">
+        By continuously monitoring track occupancy and automatically adjusting
+        signal indications, ABS systems provide safe train separation while
+        maximizing the efficient use of railroad infrastructure.
+    </p>
+
+    <!-- Suggested Images
+
+    <img src="images/abs-track-circuit-diagram.jpg"
+    alt="Diagram showing automatic signal control using track circuits"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/wayside-abs-signal.jpg"
+    alt="Automatic block signal in railway territory"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/abs-flow-chart.jpg"
+    alt="Flow chart showing train occupancy affecting signal aspects"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/fail-safe-signaling.jpg"
+    alt="Illustration of fail-safe signaling principles"
+    style="width:350px; border-radius:10px;">
+
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the defining characteristic of Automatic Block Signals (ABS)?</p>
+        <label><input type="radio" name="q1" value="wrong"> Signals are manually operated by dispatchers for every train</label><br>
+        <label><input type="radio" name="q1" value="correct"> Signal aspects change automatically based on train movements and track occupancy</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Signals only operate during daylight hours</label><br><br>
+
+        <p>2. What is the primary technology that enables the automatic operation of ABS?</p>
+        <label><input type="radio" name="q2" value="correct"> Track circuits that monitor train occupancy</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Radio communication between train crews</label><br>
+        <label><input type="radio" name="q2" value="wrong"> GPS satellites only</label><br><br>
+
+        <p>3. What does the fail-safe design principle mean in ABS?</p>
+        <label><input type="radio" name="q3" value="wrong"> The system ignores equipment failures</label><br>
+        <label><input type="radio" name="q3" value="wrong"> The system automatically repairs itself</label><br>
+        <label><input type="radio" name="q3" value="correct"> Failures result in more restrictive signal indications to maintain safety</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 23.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 22D.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

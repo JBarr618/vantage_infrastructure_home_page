@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 17E - Factors Influencing Warning Systems at Crossings</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 17E - Factors Influencing Warning Systems at Crossings</h1>
+
+    <h2 style="color: darkblue;">
+        Factors Influencing the Type of Warning System Used at a Crossing
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        The type of warning system installed at a highway-rail grade crossing depends
+        on many different factors. Transportation agencies and railroad companies evaluate
+        these conditions to determine the level of protection needed to safely control
+        roadway and train traffic.
+    </p>
+
+    <p style="font-size: 22px;">
+        One important factor is train traffic volume and speed. Crossings with frequent
+        train movements or higher train speeds usually require more active warning systems
+        such as flashing lights and automatic gates.
+    </p>
+
+    <p style="font-size: 22px;">
+        Roadway traffic volume and roadway type are also major considerations. Crossings
+        with heavy vehicle traffic, school buses, emergency vehicles, or hazardous material
+        transportation often need stronger protection systems to reduce accident risks.
+    </p>
+
+    <p style="font-size: 22px;">
+        Crossing geometry and visibility are critical safety factors. Sharp crossing
+        angles, multiple tracks, trees, buildings, or other obstructions that limit
+        visibility may require more advanced warning devices to compensate for poor
+        sight distance.
+    </p>
+
+    <p style="font-size: 22px;">
+        Accident history also influences warning system selection. Crossings with previous
+        accidents or near-miss incidents are often upgraded with additional warning
+        equipment to improve safety.
+    </p>
+
+    <p style="font-size: 22px;">
+        Federal and state regulations establish minimum safety requirements for crossing
+        protection. Engineering studies and risk assessments are also conducted to
+        evaluate the specific hazards present at individual crossings.
+    </p>
+
+    <p style="font-size: 22px;">
+        Funding availability, public concerns, and community feedback may also affect
+        decisions regarding warning system improvements and upgrades.
+    </p>
+
+    <p style="font-size: 22px;">
+        By carefully evaluating all of these factors, transportation agencies can
+        determine the most appropriate warning system needed to provide safe operation
+        at highway-rail grade crossings.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/train-speed-traffic-volume.png"
+    alt="Graphic showing relationship between train speed roadway traffic and crossing warning systems"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/limited-visibility-crossing.png"
+    alt="Highway grade crossing with limited visibility caused by trees and buildings"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/crossing-accident-history-map.png"
+    alt="Map highlighting highway grade crossings with accident history"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/engineering-study-crossing.png"
+    alt="Engineering study being conducted at a highway grade crossing"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Which factors commonly influence the type of warning system used at a highway-rail grade crossing?</p>
+        <label><input type="radio" name="q1" value="wrong"> Paint color and railroad logo design only</label><br>
+        <label><input type="radio" name="q1" value="correct"> Train speed, roadway traffic volume, visibility, and accident history</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Weather forecasts only</label><br><br>
+
+        <p>2. Why do crossings with high train speeds or heavy roadway traffic often require more active warning systems?</p>
+        <label><input type="radio" name="q2" value="correct"> Because stronger warning systems help reduce collision risks and improve safety</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Because active systems eliminate the need for train crews</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Because active systems allow vehicles to cross faster</label><br><br>
+
+        <p>3. How do accident history and visibility affect the warning system selected for a crossing?</p>
+        <label><input type="radio" name="q3" value="wrong"> They do not affect crossing safety decisions</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Only train schedules determine the warning system type</label><br>
+        <label><input type="radio" name="q3" value="correct"> Poor visibility and accident history may require upgraded active warning systems</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 17F.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 17D.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

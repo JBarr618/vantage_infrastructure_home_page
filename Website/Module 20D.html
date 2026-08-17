@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 20D - How to Troubleshoot Fixed Signals</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 20D - How to Troubleshoot Fixed Signals</h1>
+
+    <h2 style="color: darkblue;">
+        Troubleshooting Fixed Wayside Signals
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Troubleshooting fixed wayside signals requires a systematic approach to
+        identify and correct signal malfunctions while maintaining safe railroad
+        operations. Signal maintainers use wiring diagrams, test equipment, and
+        operating knowledge to locate faults and restore proper signal operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most common signal problems is lamp or LED failure. A signal
+        lamp may fail to illuminate, appear dim, or display the wrong intensity.
+        The first step is typically to inspect and replace the lamp or LED module
+        if necessary.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the lamp is functioning properly, maintainers inspect sockets, terminals,
+        wiring, and power supply circuits to verify proper voltage is reaching the
+        signal unit.
+    </p>
+
+    <p style="font-size: 22px;">
+        Another common issue occurs when the signal displays an incorrect aspect.
+        In these situations, maintainers investigate relay circuits, control logic,
+        track circuits, interlocking controls, and associated wiring to determine
+        why the incorrect indication is being displayed.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signals may occasionally fail to respond to changes in track occupancy or
+        dispatcher commands. Troubleshooting these conditions often involves checking
+        fuses, circuit breakers, relays, power supplies, control wiring, and field
+        equipment associated with the signal.
+    </p>
+
+    <p style="font-size: 22px;">
+        Intermittent signal failures can be especially difficult to diagnose.
+        These faults are often caused by loose connections, moisture intrusion,
+        corroded terminals, temperature-related component failures, or unstable
+        power supplies.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signal visibility issues must also be addressed. A signal that cannot be
+        clearly seen by train crews may create unsafe operating conditions. Signal
+        heads are checked for proper alignment, damaged lenses, dirt accumulation,
+        and obstructions such as vegetation growth.
+    </p>
+
+    <p style="font-size: 22px;">
+        Power supply problems can affect multiple signal functions. Maintainers
+        verify proper incoming voltage, transformer operation, voltage regulation,
+        battery backup systems, and continuity throughout the power distribution
+        network.
+    </p>
+
+    <p style="font-size: 22px;">
+        Wiring diagrams and schematics are essential troubleshooting tools because
+        they show how the signal system is interconnected and how electrical current
+        flows through the control circuits.
+    </p>
+
+    <p style="font-size: 22px;">
+        Test equipment such as multimeters is commonly used to measure voltage,
+        current, resistance, and continuity. These measurements help isolate the
+        location of faults within the signal system.
+    </p>
+
+    <p style="font-size: 22px;">
+        Successful troubleshooting requires maintainers to isolate the problem,
+        verify the root cause, make repairs, and test the system afterward to
+        confirm proper operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        Safety remains the highest priority throughout the troubleshooting process.
+        Signal circuits must be properly protected, de-energized when required,
+        and all railroad safety procedures must be followed.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/signal-troubleshooting-wiring-diagram.jpg"
+    alt="Signal maintainer using wiring diagrams to troubleshoot a signal"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/signal-components-closeup.jpg"
+    alt="Close-up view of relays, wiring, and signal components"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/multimeter-signal-testing.jpg"
+    alt="Technician using a multimeter to check signal voltage"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/damaged-signal-lens.jpg"
+    alt="Damaged signal lens affecting visibility"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is typically the first step when troubleshooting a signal lamp failure?</p>
+        <label><input type="radio" name="q1" value="correct"> Inspect and replace the lamp or LED unit if necessary</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Replace the entire signal mast immediately</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Remove all relays from service</label><br><br>
+
+        <p>2. If a signal is displaying an incorrect aspect, what areas should be investigated?</p>
+        <label><input type="radio" name="q2" value="wrong"> Passenger information systems only</label><br>
+        <label><input type="radio" name="q2" value="correct"> Relay circuits, control logic, track circuits, interlocking controls, and wiring</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Locomotive fuel systems</label><br><br>
+
+        <p>3. Why are wiring diagrams and schematics important when troubleshooting signals?</p>
+        <label><input type="radio" name="q3" value="wrong"> They show train schedules</label><br>
+        <label><input type="radio" name="q3" value="wrong"> They identify employee assignments</label><br>
+        <label><input type="radio" name="q3" value="correct"> They show circuit connections and current flow, helping maintainers isolate faults</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 20E.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 20C.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

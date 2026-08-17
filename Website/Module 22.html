@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 22 - Aspects and Indications</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 22 - Aspects and Indications of a Signal</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Aspect Versus Indication
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        In railway signaling, the terms aspect and indication are closely related,
+        but they have different meanings. Understanding this difference is important
+        for correctly interpreting signal information and operating trains safely.
+    </p>
+
+    <p style="font-size: 22px;">
+        The aspect of a signal is its visual appearance. This is what the train crew
+        sees in the field. An aspect may be a steady green light, a flashing yellow
+        light, a red light over a yellow light, or the position of a mechanical
+        semaphore arm.
+    </p>
+
+    <p style="font-size: 22px;">
+        The indication of a signal is the meaning or instruction conveyed by that
+        aspect. It tells the train crew what action must be taken based on the signal
+        they observe.
+    </p>
+
+    <p style="font-size: 22px;">
+        For example, a steady green aspect may have the indication “Proceed,” while
+        a red aspect may have the indication “Stop.” A flashing yellow aspect may
+        instruct the crew to approach the next signal at a reduced or specified speed,
+        depending on the railroad’s operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        Simply stated, the aspect is what the signal looks like, and the indication
+        is what that signal means. The visual display must be interpreted according
+        to the railroad rulebook.
+    </p>
+
+    <p style="font-size: 22px;">
+        A single color can sometimes be part of different aspects with different
+        indications. For example, a yellow light may be part of an Approach aspect
+        or part of a diverging route aspect depending on the number, arrangement,
+        and combination of signal lights.
+    </p>
+
+    <p style="font-size: 22px;">
+        The complete aspect, including color, position, number of lights, and whether
+        the lights are steady or flashing, determines the correct indication.
+    </p>
+
+    <p style="font-size: 22px;">
+        The relationship between aspects and indications is defined in the railroad’s
+        operating rulebook. Train crews must understand these rules so they can
+        respond correctly to each signal.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signals are designed to provide clear and unambiguous instructions. Safe
+        operation depends on the crew correctly recognizing the aspect and applying
+        the proper indication.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the difference between the aspect and the indication of a railway signal?</p>
+        <label><input type="radio" name="q1" value="wrong"> The aspect is the train speed, and the indication is the track name</label><br>
+        <label><input type="radio" name="q1" value="correct"> The aspect is what the signal looks like, and the indication is what it means</label><br>
+        <label><input type="radio" name="q1" value="wrong"> The aspect is the dispatcher, and the indication is the locomotive</label><br><br>
+
+        <p>2. Can a single color of light be part of different aspects with different indications?</p>
+        <label><input type="radio" name="q2" value="correct"> Yes, the full arrangement and combination of lights determines the indication</label><br>
+        <label><input type="radio" name="q2" value="wrong"> No, each color always means only one thing on every railroad</label><br>
+        <label><input type="radio" name="q2" value="wrong"> No, yellow lights are never used in railroad signaling</label><br><br>
+
+        <p>3. Where does a train crew find the official meaning of a specific signal aspect?</p>
+        <label><input type="radio" name="q3" value="wrong"> In the weather report</label><br>
+        <label><input type="radio" name="q3" value="wrong"> On the side of the locomotive fuel tank</label><br>
+        <label><input type="radio" name="q3" value="correct"> In the railroad’s operating rulebook</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 22A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 21F.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

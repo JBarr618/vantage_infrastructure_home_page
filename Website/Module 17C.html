@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 17C - Types of Gate Mechanisms</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 17C - Types of Gate Mechanisms</h1>
+
+    <h2 style="color: darkblue;">
+        What Types of Gate Mechanisms are There?
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Highway grade crossing gate mechanisms all perform the same basic function of
+        raising and lowering the gate arm, but different types of mechanisms are used
+        depending on design requirements, operating conditions, and maintenance needs.
+    </p>
+
+    <p style="font-size: 22px;">
+        The most common type is the electromechanical gate mechanism. These systems use
+        an electric motor, a gearbox, and a linkage system to move the gate arm. They
+        are usually powered by commercial AC power with battery backup systems for
+        emergency operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        Hydraulic gate mechanisms use hydraulic pressure to move the gate arm. A hydraulic
+        pump driven by an electric motor sends pressurized fluid to hydraulic cylinders
+        or actuators that control gate movement. Hydraulic systems provide high torque
+        and smooth operation, especially for heavier gate arms.
+    </p>
+
+    <p style="font-size: 22px;">
+        Pneumatic gate mechanisms use compressed air to operate cylinders that move the
+        gate arm. These systems are less common but may still be found in specialized
+        or older crossing installations.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some newer systems use direct drive gate mechanisms. In these designs, the motor
+        may connect directly to the gate arm with little or no gearbox reduction.
+        Advanced motors such as brushless DC motors may provide precise control and
+        improved efficiency.
+    </p>
+
+    <p style="font-size: 22px;">
+        Different drive linkage systems may also be used to transfer motion from the
+        motor to the gate arm. Common linkage systems include crank and lever systems,
+        worm gear and sector gear arrangements, and chain or belt drive systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        The type of gate mechanism selected depends on factors such as gate arm length,
+        weight, operating speed, environmental conditions, maintenance requirements,
+        and overall cost.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/electromechanical-hydraulic-pneumatic-diagram.png"
+    alt="Diagram comparing electromechanical hydraulic and pneumatic gate mechanisms"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/electromechanical-gate-unit.png"
+    alt="Electromechanical highway crossing gate mechanism"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/hydraulic-gate-cylinder.png"
+    alt="Hydraulic cylinder used in highway crossing gate mechanism"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/gate-linkage-types.png"
+    alt="Different drive linkage systems including crank lever worm gear and chain drive"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the most common type of gate mechanism used at highway grade crossings?</p>
+        <label><input type="radio" name="q1" value="wrong"> Pneumatic gate mechanism powered only by compressed air</label><br>
+        <label><input type="radio" name="q1" value="correct"> Electromechanical gate mechanism powered by electric motors and AC power</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Steam-powered gate mechanism</label><br><br>
+
+        <p>2. How do hydraulic gate mechanisms differ from electromechanical systems?</p>
+        <label><input type="radio" name="q2" value="correct"> Hydraulic systems use pressurized fluid and cylinders to move the gate arm</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Hydraulic systems use flashing lights instead of gate arms</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Hydraulic systems do not require motors or actuators</label><br><br>
+
+        <p>3. Which are examples of drive linkage systems used in gate mechanisms?</p>
+        <label><input type="radio" name="q3" value="wrong"> Track circuits and insulated joints</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Signal bridges and relay racks</label><br>
+        <label><input type="radio" name="q3" value="correct"> Crank and lever, worm gear and sector gear, and chain or belt drive systems</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 17D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 17B.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 24D - Troubleshooting Automatic Train Protection</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 24D - Troubleshooting Automatic Train Protection</h1>
+
+    <h2 style="color: darkblue;">
+        How to Troubleshoot ATP Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Troubleshooting Automatic Train Protection (ATP) systems requires a
+        systematic approach because ATP is a safety-critical system. Problems may
+        occur in onboard equipment, trackside equipment, software, configuration
+        files, sensors, brake interfaces, or communication links.
+    </p>
+
+    <p style="font-size: 22px;">
+        If there is no ATP functionality onboard the train, the first step is to
+        check the power supply to the onboard ATP unit. The technician should also
+        verify system status indicators, inspect connections, check the Driver-
+        Machine Interface, and review diagnostic logs.
+    </p>
+
+    <p style="font-size: 22px;">
+        Incorrect speed enforcement may occur when the ATP system intervenes too
+        early, too late, or not at all. Possible causes include miscalibrated speed
+        sensors, incorrect route data, faulty speed restriction information, or
+        improper onboard configuration parameters.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the ATP system fails to recognize signal aspects, the onboard receiver
+        and antenna should be inspected. The technician must verify that the train
+        is receiving data from balises, loops, radio equipment, or other trackside
+        transmitters.
+    </p>
+
+    <p style="font-size: 22px;">
+        Data integrity is also important. The maintainer should confirm that signal
+        locations, speed limits, route information, and software data files are
+        current and correctly loaded into the ATP system.
+    </p>
+
+    <p style="font-size: 22px;">
+        Unintended brake applications can be caused by faulty speed sensor readings,
+        communication interference, incorrect train configuration, bad route data,
+        or errors recorded in the onboard ATP logs.
+    </p>
+
+    <p style="font-size: 22px;">
+        Communication problems between trackside and onboard equipment may cause
+        intermittent or complete loss of ATP data. Trackside transmitters, onboard
+        antennas, receivers, cables, connectors, and communication logs should all
+        be inspected.
+    </p>
+
+    <p style="font-size: 22px;">
+        Event recorder data can be very helpful when troubleshooting ATP problems.
+        It allows technicians to review train speed, braking activity, warnings,
+        operator actions, and ATP responses leading up to the event.
+    </p>
+
+    <p style="font-size: 22px;">
+        System documentation is essential because ATP systems are complex and vary
+        by manufacturer and application. Technical manuals, configuration records,
+        test procedures, and troubleshooting guides help technicians isolate faults
+        correctly.
+    </p>
+
+    <p style="font-size: 22px;">
+        Specialized diagnostic tools are often required to read error codes, view
+        logs, test communication links, verify configuration data, and confirm
+        proper operation of onboard and trackside ATP equipment.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because ATP is safety-critical, troubleshooting must always follow approved
+        railway safety procedures. Complex problems may require coordination with
+        vendors, engineering staff, and experienced technicians.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the first step when troubleshooting a complete lack of ATP functionality onboard a train?</p>
+        <label><input type="radio" name="q1" value="wrong"> Replace all trackside equipment immediately</label><br>
+        <label><input type="radio" name="q1" value="correct"> Check the power supply and status of the onboard ATP unit</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Increase the train speed</label><br><br>
+
+        <p>2. What might cause an ATP system to enforce speed incorrectly?</p>
+        <label><input type="radio" name="q2" value="correct"> Miscalibrated speed sensors, incorrect route data, or improper configuration</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Dirty passenger windows</label><br>
+        <label><input type="radio" name="q2" value="wrong"> A missing station sign</label><br><br>
+
+        <p>3. Why is it important to consult system documentation and use specialized tools when troubleshooting ATP?</p>
+        <label><input type="radio" name="q3" value="wrong"> ATP systems are simple and do not require technical references</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Documentation is only used for painting signal equipment</label><br>
+        <label><input type="radio" name="q3" value="correct"> ATP systems are complex and safety-critical, requiring proper procedures, logs, diagnostics, and configuration checks</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 25.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 24C.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+                </a>
+    </div>
+
+    <hr>
+
+    <footer>
+        <h3>Built From Real Railroad Experience</h3>
+        <p>Signal School 2026 Professional Railroad Signal Training</p>
+        <p>© 2026 Vantage Infrastructure LLC</p>
+    </footer>
+
+</body>
+
+</html>

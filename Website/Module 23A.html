@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 23A - Testing Automatic Block Signals</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 23A - Testing Automatic Block Signals</h1>
+
+    <h2 style="color: darkblue;">
+        How to Test Automatic Block Signal Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Testing Automatic Block Signal (ABS) systems is essential for ensuring
+        reliable train detection, proper signal operation, and safe train
+        separation. Regular testing verifies that the track circuits, signal
+        equipment, and control logic are functioning correctly.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most important ABS tests is track circuit shunt sensitivity.
+        This test confirms that the track circuit can reliably detect the presence
+        of a train when wheels and axles shunt the rails together. Maintainers
+        often use test shunts to simulate train occupancy.
+    </p>
+
+    <p style="font-size: 22px;">
+        Broken rail detection testing is another critical function. Since many
+        track circuits depend on rail continuity, a broken rail should interrupt
+        the electrical circuit and cause signals to display a restrictive aspect.
+    </p>
+
+    <p style="font-size: 22px;">
+        Insulation resistance testing helps ensure that the rails are properly
+        insulated from the ground. Poor insulation can result in false occupancies
+        or unreliable operation of the signaling system.
+    </p>
+
+    <p style="font-size: 22px;">
+        Voltage and current measurements are taken throughout the track circuit
+        to verify that equipment is operating within established specifications.
+        Proper electrical values are necessary for dependable train detection.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signal aspect verification ensures that wayside signals display the
+        correct aspects for the occupancy conditions ahead. Maintainers occupy
+        and clear blocks while observing signal changes to confirm proper
+        operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signal lamps or LED modules are inspected for proper brightness, color,
+        and flashing characteristics. Signal alignment and visibility are also
+        checked to ensure train crews can clearly see the indications.
+    </p>
+
+    <p style="font-size: 22px;">
+        ABS control logic must be tested to verify proper relay operation,
+        timing circuits, and interactions with interlockings or other signal
+        systems. Every component must respond correctly to changing track
+        conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Power supply testing confirms that all equipment receives stable voltage
+        and that backup power systems are available during commercial power
+        failures.
+    </p>
+
+    <p style="font-size: 22px;">
+        Fail-safe testing is especially important. Maintainers intentionally
+        simulate equipment failures, power losses, and circuit faults to verify
+        that the signaling system defaults to a safe and restrictive condition.
+    </p>
+
+    <p style="font-size: 22px;">
+        Thorough documentation of all tests, measurements, and maintenance
+        activities helps ensure long-term reliability and compliance with
+        railroad safety requirements.
+    </p>
+
+    <!-- Suggested Images
+
+    <img src="images/test-shunt-track-circuit.jpg"
+    alt="Signal maintainer placing a test shunt across the rails"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/track-circuit-testing-equipment.jpg"
+    alt="Equipment measuring track circuit voltage and current"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/broken-rail-detection-diagram.jpg"
+    alt="Diagram illustrating broken rail detection"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/abs-test-checklist.jpg"
+    alt="ABS testing checklist"
+    style="width:350px; border-radius:10px;">
+
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the purpose of testing the shunt sensitivity of a track circuit?</p>
+        <label><input type="radio" name="q1" value="wrong"> To verify signal paint colors</label><br>
+        <label><input type="radio" name="q1" value="correct"> To ensure the track circuit reliably detects train occupancy</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To increase train speed limits</label><br><br>
+
+        <p>2. Why is it important to test the fail-safe operation of an ABS system?</p>
+        <label><input type="radio" name="q2" value="correct"> To verify the system defaults to a safe restrictive condition when failures occur</label><br>
+        <label><input type="radio" name="q2" value="wrong"> To improve locomotive fuel economy</label><br>
+        <label><input type="radio" name="q2" value="wrong"> To eliminate the need for maintenance</label><br><br>
+
+        <p>3. What are some things checked when verifying signal aspects in an ABS system?</p>
+        <label><input type="radio" name="q3" value="wrong"> Track ballast color and rail weight</label><br>
+        <label><input type="radio" name="q3" value="correct"> Signal response to occupancy, lamp or LED operation, alignment, and visibility</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Dispatcher work schedules</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 23B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 23.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

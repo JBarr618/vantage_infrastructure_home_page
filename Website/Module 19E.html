@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 19E - Testing Moveable Block Signaling</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 19E - Testing Moveable Block Signaling</h1>
+
+    <h2 style="color: darkblue;">
+        Testing Moveable Block Signaling Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Testing a moveable block signaling system, commonly known as Communications-
+        Based Train Control (CBTC), is one of the most important phases of system
+        development and maintenance. Because CBTC directly governs train movement,
+        extensive testing is required to ensure safety and reliability.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the first areas tested is the communication system. Engineers verify
+        that reliable wireless communication exists between trains and the central
+        control system throughout the entire operating territory.
+    </p>
+
+    <p style="font-size: 22px;">
+        Communication testing includes measuring signal strength, identifying dead
+        zones, checking for interference, and verifying the integrity and speed of
+        data transmission between onboard and wayside equipment.
+    </p>
+
+    <p style="font-size: 22px;">
+        Train positioning accuracy is also critical. Testing ensures that transponders,
+        balises, wheel speed sensors, GPS equipment, and inertial measurement units
+        provide accurate location information.
+    </p>
+
+    <p style="font-size: 22px;">
+        Calibration tests are performed to verify that train position calculations
+        remain within acceptable tolerances required for safe operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        The central control system is tested by simulating train movements under
+        various operating conditions. Engineers verify that movement authorities,
+        safe braking distances, and speed commands are calculated correctly.
+    </p>
+
+    <p style="font-size: 22px;">
+        Conflict resolution testing is conducted to ensure that the system can
+        identify potential train conflicts and respond appropriately before unsafe
+        conditions develop.
+    </p>
+
+    <p style="font-size: 22px;">
+        The onboard train control system undergoes extensive testing to verify
+        movement authority compliance, speed control accuracy, and proper response
+        to commands received from central control.
+    </p>
+
+    <p style="font-size: 22px;">
+        Automatic Train Protection (ATP) functions receive special attention because
+        they are safety-critical. Overspeed protection, emergency braking functions,
+        collision avoidance features, and authority limit enforcement are thoroughly
+        tested under multiple operating scenarios.
+    </p>
+
+    <p style="font-size: 22px;">
+        Integration testing verifies that all system components operate together
+        correctly. This includes communication systems, onboard equipment, control
+        centers, interlockings, and trackside devices.
+    </p>
+
+    <p style="font-size: 22px;">
+        Failure mode testing is also performed by intentionally simulating equipment
+        failures, communication interruptions, and degraded operating conditions to
+        verify that the system enters a safe state and continues operating according
+        to design requirements.
+    </p>
+
+    <p style="font-size: 22px;">
+        Most testing begins in laboratory simulation environments before progressing
+        to field testing with actual trains operating under carefully controlled
+        conditions.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/cbtc-testing-laboratory.jpg"
+    alt="Technician performing CBTC system testing in laboratory environment"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/cbtc-simulation-software.jpg"
+    alt="Simulation software used for CBTC testing and validation"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/cbtc-testing-process-diagram.png"
+    alt="Diagram showing stages of CBTC system testing"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/onboard-cbtc-test-equipment.jpg"
+    alt="Onboard testing equipment connected to train control systems"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Why is thorough testing particularly important for moveable block signaling systems?</p>
+        <label><input type="radio" name="q1" value="wrong"> Because testing only affects passenger comfort</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Because CBTC systems do not control train movement</label><br>
+        <label><input type="radio" name="q1" value="correct"> Because the system directly governs train movement and safety-critical functions</label><br><br>
+
+        <p>2. What communication system characteristics are commonly tested in a moveable block environment?</p>
+        <label><input type="radio" name="q2" value="correct"> Signal strength, communication reliability, interference, and data transmission integrity</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Paint color and signal mast height</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Train seating capacity only</label><br><br>
+
+        <p>3. What safety-critical functions are tested in the onboard train control system?</p>
+        <label><input type="radio" name="q3" value="wrong"> Passenger announcement volume and lighting controls</label><br>
+        <label><input type="radio" name="q3" value="correct"> Automatic Train Protection, overspeed protection, emergency braking, collision avoidance, and movement authority enforcement</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Ticket vending machine operation</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 19F.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 19D.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

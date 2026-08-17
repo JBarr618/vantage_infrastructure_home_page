@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 6 - Introduction to AC Double Rail Track Circuits</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 6 - Introduction to AC Double Rail Track Circuits</h1>
+
+    <h2 style="color: darkblue;">
+        Introduction to AC Double Rail Track Circuits
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        As railway systems evolved, especially with electric traction, the limitations of DC track circuits became
+        more noticeable. AC propulsion return currents can interfere with DC track circuits, so alternating current
+        track circuits were developed to help reduce that interference.
+    </p>
+
+    <p style="font-size: 22px;">
+        Like DC track circuits, AC track circuits use the rails as conductors to detect the presence of a train
+        within a defined track block. Instead of direct current, they use an alternating current signal, usually at
+        a frequency selected to avoid interference from traction power.
+    </p>
+
+    <p style="font-size: 22px;">
+        In an AC double rail track circuit, both rails are insulated from adjacent track sections using insulated
+        rail joints. An AC power source is connected to the rails at one end of the block, and an AC-sensitive relay
+        or receiver is connected at the other end.
+    </p>
+
+    <p style="font-size: 22px;">
+        When the track section is clear, AC current flows through the rails to the receiver, energizing it and
+        indicating that the track is unoccupied.
+    </p>
+
+    <p style="font-size: 22px;">
+        When a train enters the block, the wheels and axles create a low-impedance shunt across the rails. This shunt
+        diverts current away from the receiver, causing it to de-energize and indicate that the track is occupied.
+    </p>
+
+    <p style="font-size: 22px;">
+        A key component in AC double rail track circuits, especially in electrified territory, is the impedance bond.
+        Impedance bonds allow traction return current to continue flowing through the rails while helping prevent the
+        track circuit signal from being shorted or interfered with.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is one reason AC track circuits are used instead of DC track circuits in some railway applications?</p>
+        <label><input type="radio" name="q1" value="wrong"> To enhance braking response</label><br>
+        <label><input type="radio" name="q1" value="correct"> To help avoid interference from AC propulsion return currents</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To provide backup lighting</label><br><br>
+
+        <p>2. In an AC double rail track circuit, are both rails insulated from adjacent track sections?</p>
+        <label><input type="radio" name="q2" value="wrong"> No, only one rail is insulated</label><br>
+        <label><input type="radio" name="q2" value="correct"> Yes, both rails are insulated with insulated joints</label><br>
+        <label><input type="radio" name="q2" value="wrong"> No, both rails are permanently grounded</label><br><br>
+
+        <p>3. What is the function of an impedance bond in an AC double rail track circuit?</p>
+        <label><input type="radio" name="q3" value="wrong"> To convert AC power to DC power</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To bypass all high-frequency signals completely</label><br>
+        <label><input type="radio" name="q3" value="correct"> To allow traction return current to pass while protecting the track circuit signal</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 6A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 5C.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 15B - Software Used for Electrologixs Units</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 15B - Software Used for Electrologixs Units</h1>
+
+    <h2 style="color: darkblue;">
+        Programming and Diagnostic Software for Electrologixs Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        The software used for programming and managing Electrologixs units is proprietary
+        and specific to the manufacturer. Over time, manufacturers such as Safetran and
+        Siemens Mobility have developed software environments designed specifically for
+        configuring, testing, and maintaining Electrologixs interlocking systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because Electrologixs systems perform vital railway signaling functions, the software
+        is engineered with a strong emphasis on safety, reliability, and system integrity.
+        The software provides a secure environment for developing and managing the interlocking
+        logic that controls signals, switches, and other field devices.
+    </p>
+
+    <p style="font-size: 22px;">
+        Electrologixs programming software typically uses high-level, safety-oriented logic
+        languages familiar to signaling engineers. These may include ladder logic, Boolean
+        equations, graphical logic representations, or other specialized programming methods
+        used to define safe train movement rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        The software environment also includes tools for compiling logic, simulating system
+        behavior, testing operating conditions, and verifying the safety integrity of the
+        programmed logic before it is installed in the live railway system.
+    </p>
+
+    <p style="font-size: 22px;">
+        In addition to programming tools, Electrologixs software commonly includes diagnostic
+        and maintenance utilities. These tools allow authorized personnel to monitor system
+        status, review alarms, troubleshoot faults, and maintain the health of the interlocking
+        system.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because these systems are safety-critical, access to the software is strictly
+        controlled. Only trained and authorized personnel are permitted to modify or maintain
+        the vital logic to ensure that railway safety is not compromised.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/electrologixs-programming-software.png"
+    alt="Electrologixs programming software showing ladder logic and interlocking logic"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/electrologixs-diagnostic-laptop.png"
+    alt="Technician using Electrologixs diagnostic software connected to an interlocking unit"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/electrologixs-training-manual.png"
+    alt="Electrologixs software training documentation and user manual"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Is the software used for Electrologixs units proprietary or standardized?</p>
+        <label><input type="radio" name="q1" value="wrong"> It is a public off-the-shelf software package used by everyone</label><br>
+        <label><input type="radio" name="q1" value="correct"> It is proprietary software developed specifically for Electrologixs systems</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Electrologixs systems do not require software</label><br><br>
+
+        <p>2. What functions are typically included in Electrologixs software?</p>
+        <label><input type="radio" name="q2" value="correct"> Programming, simulation, testing, diagnostics, monitoring, and maintenance tools</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Only passenger ticket printing functions</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Only signal lamp replacement tracking</label><br><br>
+
+        <p>3. Why is access to Electrologixs software restricted?</p>
+        <label><input type="radio" name="q3" value="wrong"> Because the software is used only for entertainment purposes</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Because anyone can safely modify vital logic without training</label><br>
+        <label><input type="radio" name="q3" value="correct"> Because unauthorized changes could compromise railway safety and vital interlocking functions</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Module 15C
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 15C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 15A.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

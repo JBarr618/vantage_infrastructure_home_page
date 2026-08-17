@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 17D - Operation Lifesaver and Highway Grade Crossings</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 17D - Operation Lifesaver and Highway Grade Crossings</h1>
+
+    <h2 style="color: darkblue;">
+        What Does Operation Lifesaver Do for Crossings?
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Operation Lifesaver (OLI) is a non-profit public safety organization dedicated
+        to reducing collisions, injuries, and fatalities at highway-rail grade crossings
+        and along railroad rights-of-way.
+    </p>
+
+    <p style="font-size: 22px;">
+        Although Operation Lifesaver does not directly install or maintain crossing
+        warning systems, the organization plays an important role in improving railroad
+        crossing safety through education, enforcement, and engineering, commonly called
+        the "3 Es."
+    </p>
+
+    <p style="font-size: 22px;">
+        Education is one of Operation Lifesaver’s primary focuses. The organization
+        provides public safety presentations, educational programs, videos, brochures,
+        and online resources that teach drivers and pedestrians how to safely approach
+        and cross railroad tracks.
+    </p>
+
+    <p style="font-size: 22px;">
+        Operation Lifesaver also works with law enforcement agencies to support
+        enforcement of crossing safety laws. This includes discouraging dangerous
+        actions such as driving around lowered gates or ignoring flashing warning lights.
+    </p>
+
+    <p style="font-size: 22px;">
+        Through engineering support and advocacy, Operation Lifesaver encourages
+        improvements such as better crossing visibility, installation of flashing
+        lights and gates, and safer roadway designs at crossings with increased risk.
+    </p>
+
+    <p style="font-size: 22px;">
+        The organization also supports programs such as Operation Clear Track,
+        which focuses on railroad crossing safety enforcement and reducing trespassing
+        incidents near railroad property.
+    </p>
+
+    <p style="font-size: 22px;">
+        Overall, Operation Lifesaver serves as an important safety resource that
+        promotes awareness, encourages safer driver behavior, and supports improvements
+        that reduce accidents at highway-rail grade crossings.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/operation-lifesaver-logo.png"
+    alt="Operation Lifesaver logo"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/operation-lifesaver-presentation.png"
+    alt="Operation Lifesaver safety presentation for drivers"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/crossing-safety-psa.png"
+    alt="Public service announcement promoting railroad crossing safety"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/three-es-operation-lifesaver.png"
+    alt="Graphic showing Education Enforcement and Engineering"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary mission of Operation Lifesaver?</p>
+        <label><input type="radio" name="q1" value="wrong"> To build railroad tracks and locomotives</label><br>
+        <label><input type="radio" name="q1" value="correct"> To reduce collisions, injuries, and fatalities at highway-rail grade crossings</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To operate highway traffic signals</label><br><br>
+
+        <p>2. What are the "3 Es" used by Operation Lifesaver to improve crossing safety?</p>
+        <label><input type="radio" name="q2" value="wrong"> Electricity, Equipment, and Energy</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Expansion, Efficiency, and Economics</label><br>
+        <label><input type="radio" name="q2" value="correct"> Education, Enforcement, and Engineering</label><br><br>
+
+        <p>3. Does Operation Lifesaver directly install or maintain crossing warning systems?</p>
+        <label><input type="radio" name="q3" value="correct"> No, but it supports safety improvements and advocates for safer crossing designs</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Yes, Operation Lifesaver installs all crossing gates and lights</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Yes, Operation Lifesaver performs all crossing maintenance inspections</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 17E.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 17C.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

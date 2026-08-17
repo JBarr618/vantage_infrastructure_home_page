@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 9C - Setting Up a Type C Track Circuit</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 9C - Setting Up a Type C Track Circuit</h1>
+
+    <h2 style="color: darkblue;">
+        Setting Up a Type C Track Circuit
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Setting up a Type C track circuit requires careful installation, tuning, and calibration because the system uses
+        two separate AC frequencies for train detection and broken rail detection.
+    </p>
+
+    <p style="font-size: 22px;">
+        The track block is typically defined using insulated rail joints on both rails. These joints help electrically
+        isolate the block for the signaling currents.
+    </p>
+
+    <p style="font-size: 22px;">
+        A dual-frequency transmitter is installed to generate both required AC frequencies at the same time. The output
+        levels and frequency stability must be carefully adjusted.
+    </p>
+
+    <p style="font-size: 22px;">
+        A dual-frequency receiver is installed at the opposite end of the block. The receiver separates the two
+        frequencies using filters and detection circuits.
+    </p>
+
+    <p style="font-size: 22px;">
+        Proper wiring and connections are important because poor connections or incorrect impedance can cause signal loss,
+        distortion, or unreliable operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        The receiver filters and detection circuits must be tuned to the transmitted frequencies. Baseline values and
+        thresholds are established under clear track conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Final testing verifies that the Type C track circuit detects train shunts, simulated rail breaks, and unwanted
+        AC traction interference correctly.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is different about the transmitter used in a Type C track circuit?</p>
+        <label><input type="radio" name="q1" value="correct"> It transmits two AC frequencies simultaneously</label><br>
+        <label><input type="radio" name="q1" value="wrong"> It transmits only at high voltage</label><br>
+        <label><input type="radio" name="q1" value="wrong"> It only includes a battery backup system</label><br><br>
+
+        <p>2. What does the dual-frequency receiver do?</p>
+        <label><input type="radio" name="q2" value="wrong"> It boosts both frequencies equally</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It ignores the broken rail frequency unless triggered</label><br>
+        <label><input type="radio" name="q2" value="correct"> It isolates and analyzes each frequency independently using filters and detection circuits</label><br><br>
+
+        <p>3. Why is tuning and calibration important?</p>
+        <label><input type="radio" name="q3" value="wrong"> To reduce installation cost only</label><br>
+        <label><input type="radio" name="q3" value="correct"> To ensure accurate detection of train shunts and rail breaks</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To increase battery life of the receiver only</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 10.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 9B.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

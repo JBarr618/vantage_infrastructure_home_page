@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 8E - Testing AC Phase Shift Overlay Track Circuits</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 8E - Testing AC Phase Shift Overlay Track Circuits</h1>
+
+    <h2 style="color: darkblue;">
+        Testing AC Phase Shift Overlay Track Circuits
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Testing AC Phase Shift Overlay track circuits requires specialized procedures and equipment to verify train
+        detection and broken rail detection through phase analysis.
+    </p>
+
+    <p style="font-size: 22px;">
+        The first key test is the baseline phase measurement. Under clear track conditions, the phase relationship
+        between the transmitted signal and the received signal is measured and recorded.
+    </p>
+
+    <p style="font-size: 22px;">
+        This baseline becomes the reference point for comparing changes caused by train occupancy, rail breaks, or other
+        track circuit problems.
+    </p>
+
+    <p style="font-size: 22px;">
+        Shunt testing is performed by applying a calibrated shunt at different locations within the track block. The
+        receiver should detect a phase shift that exceeds the required occupancy threshold.
+    </p>
+
+    <p style="font-size: 22px;">
+        Broken rail detection is tested by simulating an open circuit or rail break at different locations in the block.
+        A significant phase shift should be detected at the receiver, indicating a fault condition.
+    </p>
+
+    <p style="font-size: 22px;">
+        The transmitter frequency must also be checked for stability. A drifting or unstable frequency can affect phase
+        comparison and cause unreliable detection.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signal level is also monitored. Although phase is the primary detection method, low signal amplitude can indicate
+        cable problems, track circuit losses, poor connections, or equipment issues.
+    </p>
+
+    <p style="font-size: 22px;">
+        Environmental conditions such as temperature, moisture, ballast condition, and other field conditions may also
+        affect performance. Test results should be documented and compared with previous readings.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the first critical measurement taken when testing a PSO track circuit?</p>
+        <label><input type="radio" name="q1" value="wrong"> Voltage drop across transmitter terminals only</label><br>
+        <label><input type="radio" name="q1" value="correct"> Baseline phase between transmitted and received signals</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Frequency spectrum analysis of rail current only</label><br><br>
+
+        <p>2. How is broken rail detection typically verified in a PSO system?</p>
+        <label><input type="radio" name="q2" value="wrong"> Phase lag is reduced to zero at the transmitter</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Voltage polarity reverses</label><br>
+        <label><input type="radio" name="q2" value="correct"> A significant phase shift is detected at the receiver</label><br><br>
+
+        <p>3. Besides phase, what other signal parameter may be monitored during PSO testing?</p>
+        <label><input type="radio" name="q3" value="correct"> Signal amplitude to help detect circuit faults</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Wire color to confirm polarity</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Track ballast temperature for safety certification</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 9.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 8D.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 8A - What is a Phase Shift Overlay Track Circuit?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 8A - What is a Phase Shift Overlay Track Circuit?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Phase Shift Overlay Track Circuits
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        A Phase Shift Overlay, or PSO, track circuit is an advanced AC track circuit that detects trains by monitoring
+        changes in the phase of an alternating current signal transmitted through the rails.
+    </p>
+
+    <p style="font-size: 22px;">
+        Unlike traditional AC track circuits that mainly depend on signal amplitude, PSO systems compare the phase of
+        the received signal to a reference signal. A change in phase can indicate that the track circuit condition has
+        changed.
+    </p>
+
+    <p style="font-size: 22px;">
+        PSO systems continuously transmit a low-power AC signal at a specific frequency through a defined track block.
+        The receiver at the other end measures the phase of the signal and determines whether the block is clear or
+        occupied.
+    </p>
+
+    <p style="font-size: 22px;">
+        A PSO track block may use tuned circuits or impedance matching units at the boundaries instead of relying only
+        on insulated rail joints. These devices help define the electrical limits of the PSO signal while allowing other
+        currents or frequencies to pass where required.
+    </p>
+
+    <p style="font-size: 22px;">
+        When a train enters the block, the wheels and axles change the impedance of the track circuit. This impedance
+        change causes a phase shift in the received AC signal, and the receiver detects that shift as an occupied track
+        condition.
+    </p>
+
+    <p style="font-size: 22px;">
+        PSO circuits can also support broken rail detection. A break in either rail can significantly change the
+        impedance of the track circuit, creating a detectable phase shift and indicating a potentially unsafe condition.
+    </p>
+
+    <p style="font-size: 22px;">
+        Phase shift overlay circuits can often be used over longer distances and may be overlaid on existing signaling
+        systems, making them useful in complex railroad environments.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What does a Phase Shift Overlay track circuit monitor to detect train occupancy?</p>
+        <label><input type="radio" name="q1" value="wrong"> Amplitude of the signal only</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Frequency of the signal only</label><br>
+        <label><input type="radio" name="q1" value="correct"> Phase shift of the AC signal</label><br><br>
+
+        <p>2. How may PSO circuits define electrical boundaries for the signaling current?</p>
+        <label><input type="radio" name="q2" value="correct"> They may use tuned circuits or impedance matching units instead of only insulated joints</label><br>
+        <label><input type="radio" name="q2" value="wrong"> They use battery isolation instead of relays</label><br>
+        <label><input type="radio" name="q2" value="wrong"> They rely on mechanical switches to isolate signals</label><br><br>
+
+        <p>3. How can a broken rail affect a PSO circuit?</p>
+        <label><input type="radio" name="q3" value="wrong"> The break only reduces wheel detection range</label><br>
+        <label><input type="radio" name="q3" value="correct"> It changes track impedance and causes a detectable phase shift</label><br>
+        <label><input type="radio" name="q3" value="wrong"> It generates a short circuit that disables the receiver only</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 8B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+        
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 8.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

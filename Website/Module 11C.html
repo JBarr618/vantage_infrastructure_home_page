@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 11C - What are Relays?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 11C - What are Relays?</h1>
+
+    <h2 style="color: darkblue;">
+        Relays as Electrically Operated Switches
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Relays are electrically operated switches. They allow one electrical
+        circuit to control another circuit without the operator having to
+        physically open or close the switch by hand.
+    </p>
+
+    <p style="font-size: 22px;">
+        A relay uses a small electrical current applied to a coil to control a
+        separate circuit. This separate circuit may carry a higher voltage,
+        higher current, or perform a safety-related function.
+    </p>
+
+    <p style="font-size: 22px;">
+        When current flows through the relay coil, the coil creates a magnetic
+        field. This magnetic field moves the relay armature and changes the
+        position of the contacts.
+    </p>
+
+    <p style="font-size: 22px;">
+        The contacts are the switching part of the relay. They may open a
+        circuit, close a circuit, or transfer a circuit from one path to another
+        depending on the relay design.
+    </p>
+
+    <p style="font-size: 22px;">
+        A simple way to think of a relay is as a remote-controlled switch.
+        Instead of pushing the switch by hand, electricity energizes the coil
+        and the relay performs the switching action.
+    </p>
+
+    <p style="font-size: 22px;">
+        Relays provide several advantages. They allow remote control, electrical
+        isolation between circuits, control of larger loads with smaller control
+        currents, and the ability to build logic circuits.
+    </p>
+
+    <p style="font-size: 22px;">
+        Electrical isolation is very important because the coil circuit and the
+        contact circuit can remain separate. This helps protect equipment,
+        personnel, and signal circuits.
+    </p>
+
+    <p style="font-size: 22px;">
+        In railway signaling, relays are used for signal aspect control, track
+        circuit indication, switch control, route locking, approach locking, and
+        interlocking logic.
+    </p>
+
+    <p style="font-size: 22px;">
+        Relays are important in safety circuits because their operation is
+        predictable and easy to prove. Railroad signal systems often depend on
+        relay contacts proving that the correct safe conditions exist.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because railroad signaling is safety-critical, relays must be reliable,
+        properly maintained, correctly wired, and designed so that failures move
+        the system toward a safer condition whenever possible.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/relay-basic-switch.png"
+    alt="Basic relay showing coil and switch contacts"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/relay-remote-control.png"
+    alt="Relay acting as a remote controlled electrical switch"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/railway-relay-logic.png"
+    alt="Railway signaling relay logic used for safe train movements"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. In simple terms, what does a relay do?</p>
+        <label><input type="radio" name="q1" value="wrong"> It stores energy like a capacitor and releases it slowly</label><br>
+        <label><input type="radio" name="q1" value="correct"> It uses a small electrical current to switch another circuit on or off</label><br>
+        <label><input type="radio" name="q1" value="wrong"> It measures resistance in control circuits only</label><br><br>
+
+        <p>2. What are advantages of using relays?</p>
+        <label><input type="radio" name="q2" value="wrong"> Temperature regulation, energy generation, and pressure control</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Wire twisting, light dimming, and radio communication only</label><br>
+        <label><input type="radio" name="q2" value="correct"> Remote control, electrical isolation, and control of larger loads</label><br><br>
+
+        <p>3. Why are relays important for safety in railway signaling?</p>
+        <label><input type="radio" name="q3" value="correct"> They provide predictable operation, circuit isolation, and fail-safe design</label><br>
+        <label><input type="radio" name="q3" value="wrong"> They replace all signal lights with digital indicators</label><br>
+        <label><input type="radio" name="q3" value="wrong"> They automatically send Bluetooth maintenance alerts</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 11D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 11B.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

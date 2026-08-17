@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4 - Introduction to Interlockings</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 4 - Introduction to Interlockings</h1>
+
+    <h2 style="color: darkblue;">
+        Introduction to Railroad Interlockings
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Interlockings are extremely important to railroad safety and efficiency. They help prevent train collisions at
+        locations where train routes intersect, cross, merge, or diverge. Without interlockings, the risk of conflicting
+        train movements would be much higher, especially in busy areas with frequent train traffic.
+    </p>
+    <img src="images/Interlocking inner city.png"
+    alt="Railroad interlocking with signals and switches"
+    style="float: right; width: 400px; margin-left: 25px; margin-bottom: 15px; border-radius: 8px;">
+    
+    <p style="font-size: 22px;">
+        An interlocking provides a controlled system for managing switches, signals, and routes so that unsafe or
+        conflicting movements cannot be authorized at the same time. This reduces the possibility of human error and
+        helps ensure that only safe train movements are allowed.
+    </p>
+
+    <p style="font-size: 22px;">
+        Beyond safety, interlockings also improve traffic flow. By allowing multiple trains to move through a complex
+        area without interfering with each other, interlockings help increase the capacity of a railway network.
+    </p>
+
+    <p style="font-size: 22px;">
+        This is especially important in busy terminals, junctions, crossovers, and crossings where trains must move
+        efficiently to maintain schedules and reduce delays. A properly designed interlocking can greatly improve the
+        movement of trains through a congested area.
+    </p>
+
+    <p style="font-size: 22px;">
+        Interlockings also provide flexible train routing. Dispatchers can direct trains along different paths based on
+        traffic conditions, maintenance work, service disruptions, or operational needs.
+    </p>
+
+    <p style="font-size: 22px;">
+        In simple terms, an interlocking is not just a safety device. It is also an important operating tool that helps
+        maximize railroad efficiency, flexibility, and reliability.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary purpose of an interlocking in a railroad signaling system?</p>
+        <label><input type="radio" name="q1" value="wrong"> To increase train speed through stations</label><br>
+        <label><input type="radio" name="q1" value="correct"> To prevent conflicting train movements</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To communicate with onboard train radios</label><br><br>
+
+        <p>2. What does route locking do in an interlocking?</p>
+        <label><input type="radio" name="q2" value="wrong"> Locks the train doors during movement</label><br>
+        <label><input type="radio" name="q2" value="correct"> Locks switches and signals to prevent conflicting movements</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Locks the train speed at a fixed rate</label><br><br>
+
+        <p>3. Why are safety standards and regulations important for interlockings?</p>
+        <label><input type="radio" name="q3" value="wrong"> To simplify dispatcher duties only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To reduce maintenance costs only</label><br>
+        <label><input type="radio" name="q3" value="correct"> To help ensure safe and efficient train movement</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 4A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 3F.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

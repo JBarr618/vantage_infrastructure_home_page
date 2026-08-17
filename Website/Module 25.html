@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 25 - Automatic Train Stop</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 25 - Introduction to Automatic Train Stop</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Automatic Train Stop
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Automatic Train Stop, also called ATS, is a railway safety system designed
+        to prevent certain accidents caused by trains passing stop signals or
+        exceeding speed limits at specific locations.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATS shares a similar safety goal with Automatic Train Protection, but it
+        usually uses simpler technology and provides less continuous supervision
+        than more advanced ATP systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the primary purposes of ATS is to help prevent a Signal Passed At
+        Danger, also known as a SPAD. This occurs when a train passes a stop signal
+        without proper authority.
+    </p>
+
+    <p style="font-size: 22px;">
+        A common ATS design uses a mechanical or inductive trip system. Trackside
+        equipment, such as a trip arm or inductor, is installed near signals or
+        other critical locations.
+    </p>
+
+    <p style="font-size: 22px;">
+        When a signal displays a restrictive aspect, the trackside ATS device is
+        activated. If a train passes that signal without authorization, onboard
+        equipment interacts with the trackside device and triggers an automatic
+        brake application.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some ATS systems use inductive loops or radio beacons to transmit speed
+        information at specific locations, such as curves, stations, or areas with
+        permanent speed restrictions.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATS is often described as an intermittent system because it usually acts
+        only at fixed points, such as signals or speed restriction locations.
+        It does not always provide continuous speed supervision throughout the
+        entire route.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATS is mainly focused on stopping trains that pass signals at danger and
+        enforcing speed restrictions at critical locations.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because ATS systems are generally simpler than full ATP systems, they may
+        be less expensive to install and maintain. However, they also provide a
+        more limited level of protection.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATS remains an important backup safety layer for train crews and signal
+        systems. In many places, ATS has served as a foundation for more advanced
+        train protection systems.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary type of accident ATS is designed to help prevent?</p>
+        <label><input type="radio" name="q1" value="correct"> A train passing a signal at danger or exceeding a specific speed limit</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Passenger ticketing errors</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Station lighting failures</label><br><br>
+
+        <p>2. How does a mechanical trip ATS system typically function?</p>
+        <label><input type="radio" name="q2" value="wrong"> It changes the color of the locomotive headlights</label><br>
+        <label><input type="radio" name="q2" value="correct"> A trackside trip device interacts with onboard equipment to automatically apply the brakes</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It sends passenger announcements to the train</label><br><br>
+
+        <p>3. What is a key difference between ATS and some ATP systems?</p>
+        <label><input type="radio" name="q3" value="wrong"> ATS eliminates the need for signals</label><br>
+        <label><input type="radio" name="q3" value="wrong"> ATS controls railroad payroll systems</label><br>
+        <label><input type="radio" name="q3" value="correct"> ATS often acts at fixed points, while some ATP systems provide continuous supervision</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 25A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 24D.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <h3>Built From Real Railroad Experience</h3>
+        <p>Signal School 2026 Professional Railroad Signal Training</p>
+        <p>© 2026 Vantage Infrastructure LLC</p>
+    </footer>
+
+</body>
+
+</html>

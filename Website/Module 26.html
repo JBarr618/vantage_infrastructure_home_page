@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 26 - Introduction to Automatic Train Control</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 26 - Introduction to Automatic Train Control</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Automatic Train Control (ATC)
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Automatic Train Control (ATC) is a railway safety and train management
+        system that provides a higher level of protection than Automatic Train
+        Stop (ATS). ATC continuously monitors train operation and helps ensure
+        compliance with signal indications, speed restrictions, and movement
+        authorities.
+    </p>
+
+    <p style="font-size: 22px;">
+        Unlike ATS, which typically acts only at specific locations, ATC provides
+        continuous or near-continuous supervision of train movement. This allows
+        the system to monitor train performance throughout the route rather than
+        only at selected points.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATC systems continuously exchange information between trackside equipment
+        and onboard train equipment. This communication provides the train with
+        information about signal conditions, speed limits, movement authority,
+        track gradients, and other operating requirements.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most important functions of ATC is continuous speed
+        supervision. The system constantly compares the train's actual speed
+        against the maximum permitted speed for the current operating conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the train exceeds the permitted speed profile, the ATC system can
+        provide warnings to the train operator. If corrective action is not
+        taken, the system can automatically apply the brakes.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATC also enforces signal compliance. If a train approaches a restrictive
+        signal too quickly or attempts to pass a signal without authority, the
+        system can intervene to prevent unsafe operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        Many ATC systems integrate cab signaling. Instead of relying solely on
+        wayside signals, signal information is displayed directly inside the
+        locomotive cab where it is continuously visible to the train crew.
+    </p>
+
+    <p style="font-size: 22px;">
+        Advanced ATC systems calculate dynamic braking curves. These calculations
+        consider train speed, train weight, track grade, braking performance, and
+        distance to restrictions to determine when braking must begin.
+    </p>
+
+    <p style="font-size: 22px;">
+        Various technologies are used for ATC communications, including coded
+        track circuits, inductive loops, transponders, balises, and radio-based
+        communication systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        By continuously supervising train movement and automatically enforcing
+        operating limits, ATC significantly improves railway safety while allowing
+        railroads to operate trains more efficiently and with greater capacity.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. How does Automatic Train Control (ATC) differ from Automatic Train Stop (ATS)?</p>
+        <label><input type="radio" name="q1" value="wrong"> ATC only works at station platforms</label><br>
+        <label><input type="radio" name="q1" value="correct"> ATC provides continuous supervision while ATS usually acts only at specific locations</label><br>
+        <label><input type="radio" name="q1" value="wrong"> ATC does not use train brakes</label><br><br>
+
+        <p>2. What is meant by continuous speed supervision?</p>
+        <label><input type="radio" name="q2" value="correct"> The system continuously compares train speed to the permitted speed profile and intervenes if necessary</label><br>
+        <label><input type="radio" name="q2" value="wrong"> The train remains at one constant speed all day</label><br>
+        <label><input type="radio" name="q2" value="wrong"> The dispatcher manually calculates speed every minute</label><br><br>
+
+        <p>3. How does cab signaling enhance the functionality of an ATC system?</p>
+        <label><input type="radio" name="q3" value="wrong"> It replaces the train brakes</label><br>
+        <label><input type="radio" name="q3" value="wrong"> It eliminates the need for communication systems</label><br>
+        <label><input type="radio" name="q3" value="correct"> It displays signal information directly in the cab, providing continuous visibility to the crew</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 26A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 25D.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <h3>Built From Real Railroad Experience</h3>
+        <p>Signal School 2026 Professional Railroad Signal Training</p>
+        <p>© 2026 Vantage Infrastructure LLC</p>
+    </footer>
+
+</body>
+
+</html>

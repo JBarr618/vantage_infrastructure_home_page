@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 25B - Where is Automatic Train Stop Used?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 25B - Where is Automatic Train Stop Used?</h1>
+
+    <h2 style="color: darkblue;">
+        Applications of Automatic Train Stop Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Automatic Train Stop (ATS) systems have been used throughout the world
+        on many different types of railway operations. ATS provides an additional
+        layer of safety by helping prevent trains from passing stop signals and
+        exceeding speed restrictions at critical locations.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATS has historically been used on main line railways carrying both
+        passenger and freight traffic. These systems provide protection against
+        Signal Passed At Danger (SPAD) incidents and help improve overall railway
+        safety.
+    </p>
+
+    <p style="font-size: 22px;">
+        Many commuter rail systems adopted ATS because of the high frequency of
+        train operations and the need to provide additional protection in areas
+        with frequent stops and dense traffic.
+    </p>
+
+    <p style="font-size: 22px;">
+        Older commuter rail networks often installed ATS as a practical and
+        cost-effective method of improving safety before more advanced train
+        control technologies became available.
+    </p>
+
+    <p style="font-size: 22px;">
+        Urban transit systems, including subway, metro, and light rail systems,
+        have also used ATS. In many cases, ATS was employed to prevent trains
+        from entering stations at excessive speed or operating unsafely through
+        sharp curves and restricted areas.
+    </p>
+
+    <p style="font-size: 22px;">
+        Freight railroads have used ATS on selected routes, particularly where
+        freight and passenger trains share track or where specific safety concerns
+        have been identified.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATS may also be installed at locations with elevated safety risks, such
+        as steep grades, busy junctions, areas with limited visibility, or
+        locations with a history of signal violations.
+    </p>
+
+    <p style="font-size: 22px;">
+        In some situations, ATS serves as an interim safety measure while a
+        railroad plans, designs, or installs a more advanced train protection
+        system such as Automatic Train Protection (ATP) or Positive Train Control
+        (PTC).
+    </p>
+
+    <p style="font-size: 22px;">
+        Many railroads have gradually upgraded from ATS to more advanced systems.
+        However, ATS continues to operate in some locations as a legacy safety
+        system because it still provides valuable protection against critical
+        operating errors.
+    </p>
+
+    <p style="font-size: 22px;">
+        Although ATS remains an important safety tool, it is generally considered
+        less comprehensive than ATP because ATS typically provides protection only
+        at specific locations rather than continuously supervising train movement.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Why might older commuter rail systems have implemented ATS?</p>
+        <label><input type="radio" name="q1" value="wrong"> To replace train operators completely</label><br>
+        <label><input type="radio" name="q1" value="correct"> To improve safety in high-traffic areas before more advanced systems became available</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To reduce station lighting costs</label><br><br>
+
+        <p>2. In what situations might ATS be used as an interim safety measure?</p>
+        <label><input type="radio" name="q2" value="correct"> While planning or implementing more advanced systems such as ATP or PTC</label><br>
+        <label><input type="radio" name="q2" value="wrong"> While repainting locomotives</label><br>
+        <label><input type="radio" name="q2" value="wrong"> During passenger ticket inspections</label><br><br>
+
+        <p>3. Is ATS generally considered more or less comprehensive than ATP?</p>
+        <label><input type="radio" name="q3" value="wrong"> More comprehensive because it continuously supervises trains</label><br>
+        <label><input type="radio" name="q3" value="correct"> Less comprehensive because it usually acts only at specific locations</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Equal in every way to ATP</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 25C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 25A.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <h3>Built From Real Railroad Experience</h3>
+        <p>Signal School 2026 Professional Railroad Signal Training</p>
+        <p>© 2026 Vantage Infrastructure LLC</p>
+    </footer>
+
+</body>
+
+</html>

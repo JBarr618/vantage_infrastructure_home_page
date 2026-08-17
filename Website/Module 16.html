@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 16 - Introduction to Highway Grade Crossing Warning Systems</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 16 - Introduction to Highway Grade Crossing Warning Systems</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Highway Grade Crossing Warning Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Highway grade crossings are locations where railroad tracks intersect with roadways
+        at the same level. These crossings present a significant safety concern because trains,
+        vehicles, and pedestrians may occupy the same area.
+    </p>
+
+    <p style="font-size: 22px;">
+        To reduce the risk of collisions, different types of warning systems are used to alert
+        motorists and pedestrians when a train is approaching the crossing. These systems help
+        provide safe interaction between railroad traffic and roadway traffic.
+    </p>
+
+    <p style="font-size: 22px;">
+        Grade crossing warning systems can vary in complexity depending on train speed,
+        train frequency, roadway traffic volume, and the physical layout of the crossing.
+        Some crossings use passive warning devices, while others use active warning devices.
+    </p>
+
+    <p style="font-size: 22px;">
+        Passive warning systems include signs such as crossbucks, STOP signs, and other
+        roadway warning signs. These devices do not activate when a train approaches, so
+        drivers and pedestrians must observe and respond to the signs.
+    </p>
+
+    <p style="font-size: 22px;">
+        Active warning systems include flashing red lights, bells, and automatic gates.
+        These systems activate when a train is detected approaching the crossing and provide
+        visual and audible warnings to road users.
+    </p>
+
+    <p style="font-size: 22px;">
+        The primary goal of a highway grade crossing warning system is to provide enough
+        warning time for road users to stop safely before the train reaches the crossing.
+        This requires train detection at the proper distance and timely activation of the
+        warning devices.
+    </p>
+
+    <p style="font-size: 22px;">
+        Highway grade crossing warning systems are designed and maintained according to
+        strict safety standards and regulations. Understanding these systems is important
+        for railroad operations, signal maintenance, transportation safety, and public safety.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/highway-grade-crossing-gates.png"
+    alt="Highway grade crossing with flashing red lights bell and automatic gates lowered as a train approaches"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/crossbuck-sign.png"
+    alt="Typical railroad crossbuck sign used at a passive highway grade crossing"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/active-crossing-warning-system-diagram.png"
+    alt="Diagram showing train detection control logic and warning devices for an active grade crossing warning system"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary safety concern associated with highway grade crossings?</p>
+        <label><input type="radio" name="q1" value="wrong"> They only require railroad employees to slow down</label><br>
+        <label><input type="radio" name="q1" value="correct"> Trains, vehicles, and pedestrians may occupy the same crossing area</label><br>
+        <label><input type="radio" name="q1" value="wrong"> They are only used in railroad yards</label><br><br>
+
+        <p>2. What are the two main categories of grade crossing warning systems?</p>
+        <label><input type="radio" name="q2" value="correct"> Passive systems and active systems</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Manual systems and passenger systems</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Yard systems and freight systems</label><br><br>
+
+        <p>3. What is the primary timing objective of a highway grade crossing warning system?</p>
+        <label><input type="radio" name="q3" value="wrong"> To activate only after the train enters the crossing</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To stop all trains permanently before the crossing</label><br>
+        <label><input type="radio" name="q3" value="correct"> To provide enough warning time for road users to stop safely before the train arrives</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 16A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 15D.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

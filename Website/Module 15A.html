@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 15A - What is an Electrologixs Unit?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 15A - What is an Electrologixs Unit?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding the Core Hardware of Electrologixs Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        An Electrologixs unit is the main hardware component of the Electrologixs family
+        of electronic interlocking systems used in railway signaling. It is a microprocessor-based
+        controller designed to execute the vital safety logic that controls signals, switches,
+        and other railway infrastructure within an interlocking area.
+    </p>
+
+    <p style="font-size: 22px;">
+        Electrologixs units are engineered to meet strict Safety Integrity Levels (SIL),
+        meaning they are designed to operate safely and reliably while preventing hazardous
+        train movements. These systems are considered fail-safe and are built to detect faults
+        and place the system into a safe condition if problems occur.
+    </p>
+
+    <p style="font-size: 22px;">
+        The Electrologixs unit receives inputs from field devices such as track circuits,
+        switch position detectors, and signal status indicators. The unit processes these
+        inputs using programmed interlocking logic developed with proprietary safety-oriented
+        software.
+    </p>
+
+    <p style="font-size: 22px;">
+        After processing the information, the Electrologixs unit generates outputs that
+        control field equipment. These outputs may clear or stop signals, move switches,
+        establish safe train routes, and perform other vital railway signaling functions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Common features of Electrologixs units include modular design, redundancy,
+        self-diagnostics, and communication interfaces for integration with other railway
+        systems such as dispatching systems or Communication Based Train Control (CBTC).
+    </p>
+
+    <p style="font-size: 22px;">
+        Different Electrologixs models are used throughout the railway industry depending
+        on the size and complexity of the interlocking territory being controlled.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/electrologixs-unit.png"
+    alt="Electrologixs unit installed inside a railway signal equipment cabinet"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/electrologixs-input-output.png"
+    alt="Diagram showing Electrologixs inputs from track circuits and outputs to field devices"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/electrologixs-cbtc-interface.png"
+    alt="Electrologixs system communicating with CBTC and dispatch systems"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary role of an Electrologixs unit?</p>
+        <label><input type="radio" name="q1" value="wrong"> To provide lighting for signal houses</label><br>
+        <label><input type="radio" name="q1" value="correct"> To execute vital interlocking logic and safely control railway infrastructure</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To operate passenger ticket machines</label><br><br>
+
+        <p>2. How does an Electrologixs unit control railway infrastructure safely?</p>
+        <label><input type="radio" name="q2" value="correct"> By processing field inputs using programmed interlocking logic and generating safe outputs</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By manually moving switches without logic processing</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By allowing all routes to clear automatically</label><br><br>
+
+        <p>3. Which feature helps improve reliability and integration in Electrologixs units?</p>
+        <label><input type="radio" name="q3" value="wrong"> Removal of diagnostics and communications</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Elimination of redundancy and fail-safe operation</label><br>
+        <label><input type="radio" name="q3" value="correct"> Modular design, redundancy, self-diagnostics, and communication interfaces</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Module 15B
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 15B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 15.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

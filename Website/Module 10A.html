@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 10A - What is an Impedance Bond?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 10A - What is an Impedance Bond?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Impedance Bonds
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        An impedance bond is a specially designed electrical component used in
+        railway signaling systems, especially in electrified territory where the
+        running rails carry traction return current.
+    </p>
+
+    <p style="font-size: 22px;">
+        The impedance bond is primarily an inductor, which means it uses a coil
+        of wire to create inductance. This inductance allows the bond to react
+        differently to different frequencies of electrical current.
+    </p>
+
+    <p style="font-size: 22px;">
+        Impedance bonds are connected across the two running rails at track
+        circuit boundaries, insulated rail joints, or other locations where
+        traction return current must continue to flow while the track circuit
+        must remain separated.
+    </p>
+
+    <p style="font-size: 22px;">
+        The main job of an impedance bond is to provide a low-resistance path
+        for high-magnitude traction return current while presenting higher
+        impedance to the signaling current used by the track circuit.
+    </p>
+
+    <p style="font-size: 22px;">
+        In simple terms, the impedance bond works like a selective gate for
+        electrical current. It allows traction current to pass but helps keep
+        signaling current within its own track circuit.
+    </p>
+
+    <p style="font-size: 22px;">
+        The reason this works is because traction current and signaling current
+        operate differently. The difference in frequency allows the impedance
+        bond to pass one type of current while opposing another.
+    </p>
+
+    <p style="font-size: 22px;">
+        The construction of an impedance bond usually includes a coil wound
+        around an iron core. This core improves the inductive properties of the
+        bond and helps it perform its electrical function.
+    </p>
+
+    <p style="font-size: 22px;">
+        Each impedance bond is designed for a specific railway system. Its
+        current carrying capacity, impedance value, and frequency response must
+        match the traction power system and the type of track circuit being used.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/impedance-bond-basic.png"
+    alt="Basic impedance bond connected across two running rails"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/impedance-bond-coil-core.png"
+    alt="Impedance bond coil and iron core construction"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/impedance-bond-frequency-path.png"
+    alt="Diagram showing traction current passing and signaling current being blocked"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What primary electrical component forms the basis of an impedance bond?</p>
+        <label><input type="radio" name="q1" value="wrong"> Transformer</label><br>
+        <label><input type="radio" name="q1" value="correct"> Inductor</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Capacitor</label><br><br>
+
+        <p>2. What allows an impedance bond to treat traction current and signaling current differently?</p>
+        <label><input type="radio" name="q2" value="wrong"> Rail color</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Ballast depth</label><br>
+        <label><input type="radio" name="q2" value="correct"> The difference in frequency between the currents</label><br><br>
+
+        <p>3. Where are impedance bonds typically located?</p>
+        <label><input type="radio" name="q3" value="correct"> Across the running rails at track circuit boundaries or insulated joints</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Between the signal mast and bungalow only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Under relay racks inside control rooms</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 10B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 10.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

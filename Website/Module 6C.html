@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 6C - Equipment Used for AC Double Rail Track Circuits</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 6C - Equipment Used for AC Double Rail Track Circuits</h1>
+
+    <h2 style="color: darkblue;">
+        Type of Equipment Used to Set Up an AC Double Rail Track Circuit
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Setting up an AC double rail track circuit requires several key pieces of equipment. Each component has a
+        specific purpose and must work together to provide reliable train detection.
+    </p>
+
+    <p style="font-size: 22px;">
+        <b>Insulated rail joints</b> are used to electrically isolate the track circuit from adjacent track sections.
+        These joints define the limits of the track block and help keep the track circuit signal within the intended
+        section.
+    </p>
+
+    <p style="font-size: 22px;">
+        <b>Impedance bonds</b> are used in electrified territory to allow traction return current to pass through the
+        rails while helping protect the AC track circuit signal. They are an important part of many AC double rail
+        track circuit installations.
+    </p>
+
+    <p style="font-size: 22px;">
+        An <b>AC power source</b>, usually supplied through a transformer or similar device, provides the alternating
+        current signal for the track circuit. The voltage and frequency must match the requirements of the receiver or
+        relay.
+    </p>
+
+    <p style="font-size: 22px;">
+        An <b>AC receiver</b> or AC-sensitive relay detects the track circuit signal. When the track is clear, the
+        receiver remains energized. When a train shunts the rails, the signal drops and the receiver indicates
+        occupancy.
+    </p>
+
+    <p style="font-size: 22px;">
+        <b>Feeder cables</b>, <b>bonding wires</b>, surge protection, lightning arrestors, and calibration equipment may
+        also be used. These components help maintain a reliable electrical path, protect equipment, and support proper
+        setup and testing.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Which component creates the electrical isolation needed in an AC double rail track circuit?</p>
+        <label><input type="radio" name="q1" value="wrong"> Bonding wires only</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Track feeder cables only</label><br>
+        <label><input type="radio" name="q1" value="correct"> Insulated rail joints</label><br><br>
+
+        <p>2. What is the purpose of impedance bonds?</p>
+        <label><input type="radio" name="q2" value="wrong"> They amplify the AC signal for all long distances</label><br>
+        <label><input type="radio" name="q2" value="correct"> They allow traction return current to pass while helping protect the track circuit signal</label><br>
+        <label><input type="radio" name="q2" value="wrong"> They power the signals directly</label><br><br>
+
+        <p>3. What specialized equipment may also be used with AC double rail track circuits?</p>
+        <label><input type="radio" name="q3" value="wrong"> Ticket printers and clocks</label><br>
+        <label><input type="radio" name="q3" value="correct"> Surge protectors, lightning arrestors, and calibration devices</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Signal flags and loudspeakers</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 6D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 6B.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

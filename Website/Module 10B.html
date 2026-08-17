@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 10B - Why are Impedance Bonds Used?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 10B - Why are Impedance Bonds Used?</h1>
+
+    <h2 style="color: darkblue;">
+        Purpose of Impedance Bonds
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Impedance bonds are important components in railway signaling systems,
+        especially in electrified territory where the running rails are used as
+        part of the traction return current path.
+    </p>
+
+    <p style="font-size: 22px;">
+        In electrified railways, traction return current must travel back to the
+        power substation. The running rails often provide this return path, so
+        the current must be able to pass through track circuit areas safely and
+        continuously.
+    </p>
+
+    <p style="font-size: 22px;">
+        Track circuits are also connected to the rails for train detection. This
+        means the rails may carry both traction current and signaling current at
+        the same time.
+    </p>
+
+    <p style="font-size: 22px;">
+        Impedance bonds allow these two systems to share the rails without
+        interfering with each other. They allow traction return current to pass
+        while helping keep signaling current within the correct track circuit.
+    </p>
+
+    <p style="font-size: 22px;">
+        One major reason impedance bonds are used is to provide a path around
+        insulated rail joints. Insulated joints separate track circuits, but
+        traction return current still needs a continuous path through the rails.
+    </p>
+
+    <p style="font-size: 22px;">
+        Without impedance bonds, traction return current could be interrupted at
+        insulated joints. This could reduce traction power efficiency, create
+        unsafe current paths, or cause interference with signal equipment.
+    </p>
+
+    <p style="font-size: 22px;">
+        Impedance bonds also help prevent traction current from interfering with
+        track circuit operation. They present low impedance to traction current
+        and higher impedance to signaling frequencies.
+    </p>
+
+    <p style="font-size: 22px;">
+        This allows adjacent track circuits to remain electrically isolated for
+        signaling purposes while still allowing traction return current to flow
+        through the railroad system.
+    </p>
+
+    <p style="font-size: 22px;">
+        In simple terms, impedance bonds make it possible for high-power traction
+        systems and low-power signaling systems to safely use the same rails.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/impedance-bond-purpose.png"
+    alt="Diagram showing why impedance bonds are used in electrified railway territory"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/traction-return-path.png"
+    alt="Traction return current flowing through rails and impedance bonds"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/track-circuit-isolation.png"
+    alt="Impedance bonds maintaining track circuit isolation at insulated joints"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Why are impedance bonds used at insulated rail joints in electrified railway territory?</p>
+        <label><input type="radio" name="q1" value="wrong"> To reroute traction current through signal relays</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To reverse the polarity of the locomotive</label><br>
+        <label><input type="radio" name="q1" value="correct"> To allow traction return current to continue across track circuit boundaries</label><br><br>
+
+        <p>2. How do impedance bonds help prevent interference with track circuits?</p>
+        <label><input type="radio" name="q2" value="correct"> By presenting high impedance to signaling frequencies and low impedance to traction current</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By converting all signal current to DC</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By shorting both signals through a common resistor</label><br><br>
+
+        <p>3. What role do impedance bonds play between adjacent track circuits?</p>
+        <label><input type="radio" name="q3" value="wrong"> They bypass both circuits using a grounded return wire</label><br>
+        <label><input type="radio" name="q3" value="correct"> They help maintain signaling isolation while allowing traction current flow</label><br>
+        <label><input type="radio" name="q3" value="wrong"> They switch polarity between circuit boundaries</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 10C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 10A.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 7B - AC Single Rail Track Circuit Operation</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 7B - AC Single Rail Track Circuit Operation</h1>
+
+    <h2 style="color: darkblue;">
+        How an AC Single Rail Track Circuit Works
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        An AC single rail track circuit uses alternating current and insulated rail joints on only one of the two
+        running rails to define the limits of a track block.
+    </p>
+
+    <p style="font-size: 22px;">
+        The other rail remains electrically continuous through multiple track circuit blocks. This continuous rail
+        serves as a common return path for the AC track circuit current and may also carry AC traction return current
+        in electrified territory.
+    </p>
+
+    <p style="font-size: 22px;">
+        In this arrangement, the AC power source is connected between the insulated rail and the continuous rail at
+        one end of the block. The AC receiver is connected between the same two rails at the opposite end.
+    </p>
+
+    <p style="font-size: 22px;">
+        When the track is clear, the AC signal travels along the insulated rail, through the receiver, and returns by
+        way of the continuous rail. This keeps the receiver energized and indicates that the track section is clear.
+    </p>
+
+    <p style="font-size: 22px;">
+        When a train occupies the block, the wheels and axles bridge the insulated rail and the continuous rail. This
+        creates a low-impedance shunt that diverts current away from the receiver.
+    </p>
+
+    <p style="font-size: 22px;">
+        The drop in current or change at the receiver causes the receiver to indicate that the track section is
+        occupied. The single rail design is different from a double rail circuit because only one rail is segmented by
+        insulated joints.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What distinguishes an AC single rail track circuit from an AC double rail track circuit?</p>
+        <label><input type="radio" name="q1" value="correct"> Only one rail has insulated joints</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Both rails are continuously insulated</label><br>
+        <label><input type="radio" name="q1" value="wrong"> All rails are bonded together with no insulation</label><br><br>
+
+        <p>2. What is the role of the continuous rail?</p>
+        <label><input type="radio" name="q2" value="correct"> It acts as a common return path for the current</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It provides DC isolation from track power</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It serves as a voltage amplifier circuit</label><br><br>
+
+        <p>3. What happens when a train occupies the block?</p>
+        <label><input type="radio" name="q3" value="correct"> Wheels and axles shunt the circuit, diverting current away from the receiver</label><br>
+        <label><input type="radio" name="q3" value="wrong"> An onboard sensor activates a switch in the signal house</label><br>
+        <label><input type="radio" name="q3" value="wrong"> The locomotive emits a frequency pulse detected by sensors</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 7C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 7A.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

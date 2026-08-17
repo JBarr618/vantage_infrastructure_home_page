@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 20C - How to Test Fixed Signals</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 20C - How to Test Fixed Signals</h1>
+
+    <h2 style="color: darkblue;">
+        Testing Fixed Wayside Signals
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Testing fixed wayside signals is an essential part of railroad signal
+        maintenance. Proper testing ensures that signals display the correct
+        indications to train crews and continue to operate safely and reliably.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most common tests involves checking the lamps or LED units
+        within the signal head. Each signal color must illuminate correctly,
+        display the proper brightness, and maintain the correct color indication.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signals that display flashing aspects must also be tested to verify that
+        the flash rate and duty cycle meet railroad standards and operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        Mechanical signals, such as semaphore signals, require inspection of
+        moving parts. Signal maintainers verify that arms move freely, stop in
+        the correct positions, and that all linkages and counterweights are
+        properly adjusted.
+    </p>
+
+    <p style="font-size: 22px;">
+        Electrical inspections include checking wiring, terminals, relays,
+        contacts, grounding systems, and power supplies. Loose connections,
+        corrosion, and damaged wiring must be identified and corrected.
+    </p>
+
+    <p style="font-size: 22px;">
+        Voltage and current measurements are often taken to verify that the
+        signal equipment is receiving the proper electrical supply and operating
+        within design specifications.
+    </p>
+
+    <p style="font-size: 22px;">
+        Control circuit testing is performed by simulating different operating
+        conditions. Signal maintainers verify that the signal displays the
+        correct aspect for occupied tracks, clear tracks, switch positions,
+        and other operating scenarios.
+    </p>
+
+    <p style="font-size: 22px;">
+        For signals connected to interlockings, testing ensures that signal
+        indications properly correspond to switch positions and route locking
+        requirements. This helps prevent conflicting train movements.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signal visibility is another important part of testing. The signal must
+        be clearly visible to train crews from the required distance and viewing
+        angle. Signal heads are checked for proper alignment, lens condition,
+        cleanliness, and obstructions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Backup power systems, battery systems, and emergency power supplies are
+        also tested to ensure signals remain operational during commercial power
+        failures.
+    </p>
+
+    <p style="font-size: 22px;">
+        All testing activities must be documented. Records typically include the
+        date of testing, equipment tested, results obtained, corrective actions
+        taken, and the maintainer performing the work.
+    </p>
+
+    <p style="font-size: 22px;">
+        Regular testing helps ensure that fixed signals continue to provide safe
+        and accurate information to train crews throughout the railroad system.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/signal-maintainer-multimeter.jpg"
+    alt="Signal maintainer using a multimeter to test signal circuits"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/signal-visibility-test.jpg"
+    alt="Testing signal visibility from an approaching train location"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/color-light-control-circuit.png"
+    alt="Diagram showing control circuitry for a color light signal"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/semaphore-maintenance.jpg"
+    alt="Inspection of semaphore signal mechanical components"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What should be checked when testing the lamps or LEDs of a color light signal?</p>
+        <label><input type="radio" name="q1" value="wrong"> Only whether the signal is painted correctly</label><br>
+        <label><input type="radio" name="q1" value="correct"> Proper illumination, brightness, color, and flashing characteristics where applicable</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Only the signal mast foundation</label><br><br>
+
+        <p>2. Why is it important to test signal control circuits under different operating conditions?</p>
+        <label><input type="radio" name="q2" value="correct"> To verify the signal displays the correct aspect for various track, switch, and operating conditions</label><br>
+        <label><input type="radio" name="q2" value="wrong"> To reduce signal visibility</label><br>
+        <label><input type="radio" name="q2" value="wrong"> To eliminate the need for train crews</label><br><br>
+
+        <p>3. What factors are checked to ensure a signal is properly visible to train crews?</p>
+        <label><input type="radio" name="q3" value="wrong"> Payroll records and inspection schedules</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Train speeds only</label><br>
+        <label><input type="radio" name="q3" value="correct"> Signal alignment, lens condition, cleanliness, visibility distance, and obstructions</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 20D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module20B.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

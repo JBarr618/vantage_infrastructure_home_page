@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 17G - Testing Gate Mechanisms</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 17G - Testing Gate Mechanisms</h1>
+
+    <h2 style="color: darkblue;">
+        Testing Highway Grade Crossing Gate Mechanisms
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Regular testing of highway grade crossing gate mechanisms is critical to ensure
+        reliable and safe operation. Testing verifies that the electrical and mechanical
+        systems function correctly and safely protect motorists and pedestrians.
+    </p>
+
+    <p style="font-size: 22px;">
+        One important test is the operational cycle test. Technicians measure the time
+        required for the gate arm to lower completely from the raised position to the
+        fully lowered position. Raising time is also measured to ensure the gate returns
+        properly to the vertical position after the train clears the crossing.
+    </p>
+
+    <p style="font-size: 22px;">
+        During operation, the gate arm should move smoothly without excessive jerking,
+        vibration, or binding. Any abnormal movement may indicate mechanical wear,
+        linkage problems, or improper lubrication.
+    </p>
+
+    <p style="font-size: 22px;">
+        Limit switches are tested to confirm they correctly detect the fully raised
+        and fully lowered positions of the gate arm. Proper limit switch operation
+        ensures the crossing system accurately recognizes the gate status.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some gate mechanisms include obstruction detection systems. These systems
+        are tested by placing a simulated obstruction in the path of the lowering
+        gate arm to verify the gate stops or reverses direction when contact occurs.
+    </p>
+
+    <p style="font-size: 22px;">
+        Brake holding tests verify that the gate remains securely in both the raised
+        and lowered positions without unwanted movement. Manual override systems are
+        also tested to ensure the gate can be manually operated during power failures
+        or equipment malfunctions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Visual inspections are performed on gate arms, linkage systems, mounting
+        hardware, electrical wiring, and mechanical components to check for damage,
+        corrosion, loose hardware, or excessive wear.
+    </p>
+
+    <p style="font-size: 22px;">
+        Power supply and battery backup systems are also tested to verify proper
+        voltage levels and confirm the gate can complete operation during a power
+        outage.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/testing-gate-lowering-time.png"
+    alt="Technician measuring lowering time of crossing gate arm"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/testing-limit-switch.png"
+    alt="Limit switch being checked on gate mechanism"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/testing-obstruction-detection.png"
+    alt="Testing obstruction detection system on gate mechanism"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/manual-gate-override.png"
+    alt="Technician manually operating crossing gate mechanism"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What timing measurements are commonly checked during gate mechanism testing?</p>
+        <label><input type="radio" name="q1" value="wrong"> Train arrival and departure schedules only</label><br>
+        <label><input type="radio" name="q1" value="correct"> Gate lowering time and gate raising time</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Signal painting and maintenance timing</label><br><br>
+
+        <p>2. Why is it important to verify the operation of limit switches?</p>
+        <label><input type="radio" name="q2" value="correct"> They confirm the gate has reached the full up and full down positions</label><br>
+        <label><input type="radio" name="q2" value="wrong"> They increase train speed through the crossing</label><br>
+        <label><input type="radio" name="q2" value="wrong"> They replace the gate motor during operation</label><br><br>
+
+        <p>3. How is an obstruction detection system commonly tested?</p>
+        <label><input type="radio" name="q3" value="wrong"> By removing the gate arm completely</label><br>
+        <label><input type="radio" name="q3" value="wrong"> By shutting off all warning devices</label><br>
+        <label><input type="radio" name="q3" value="correct"> By placing a simulated obstruction in the path of the lowering gate arm</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 17H.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 17F.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

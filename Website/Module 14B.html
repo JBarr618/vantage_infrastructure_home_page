@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 14B - VPI Software</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 14B - VPI Software</h1>
+
+    <h2 style="color: darkblue;">
+        Proprietary Software Used in Vital Processor Interlocking Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        The software used for Vital Processor Interlocking, or VPI, systems is proprietary
+        and specific to the manufacturer of the VPI unit. Different manufacturers, such as
+        Siemens and CASCO, use their own software platforms and programming tools for the
+        development, configuration, testing, and maintenance of their systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        These software environments are designed with a strong emphasis on safety and
+        reliability because VPI systems perform vital interlocking functions. The software
+        is typically used to create interlocking logic with high-level, safety-oriented
+        methods such as Boolean logic or other formal logic approaches.
+    </p>
+
+    <p style="font-size: 22px;">
+        VPI software may also include tools for offline simulation, verification, testing,
+        diagnostics, system monitoring, and troubleshooting. These tools help confirm that
+        the programmed logic performs safely before it is placed into service.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because VPI systems are safety-critical, the details of the software platforms,
+        programming languages, and internal system architecture are generally not publicly
+        disclosed. Access to these tools is usually restricted to authorized personnel who
+        have completed manufacturer-specific training.
+    </p>
+
+    <p style="font-size: 22px;">
+        This controlled access helps protect the integrity of the railway signaling system
+        and reduces the risk of unauthorized changes, programming errors, or unsafe software
+        modifications.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/vpi-software-interface.png"
+    alt="Generic railway signaling software interface showing interlocking tools"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/vpi-diagnostics-screen.png"
+    alt="Technician screen displaying diagnostic information from VPI software"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/vpi-software-training-manual.png"
+    alt="Training manual or documentation for a VPI software platform"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Is VPI software standardized across all manufacturers?</p>
+        <label><input type="radio" name="q1" value="correct"> No, it is usually proprietary and specific to each manufacturer</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Yes, all VPI systems use the exact same public software</label><br>
+        <label><input type="radio" name="q1" value="wrong"> No, because VPI systems do not use software</label><br><br>
+
+        <p>2. What are some key functions of VPI software beyond writing logic?</p>
+        <label><input type="radio" name="q2" value="wrong"> Painting signal houses and repairing rail defects</label><br>
+        <label><input type="radio" name="q2" value="correct"> Simulation, verification, diagnostics, monitoring, testing, and troubleshooting</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Selling tickets and assigning passenger seats</label><br><br>
+
+        <p>3. Why is access to VPI software usually restricted?</p>
+        <label><input type="radio" name="q3" value="wrong"> Because the software is only used for entertainment</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Because anyone can safely change vital signal logic without training</label><br>
+        <label><input type="radio" name="q3" value="correct"> Because unauthorized changes could affect safety-critical railway signaling functions</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Module 14B
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 14C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 14A.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

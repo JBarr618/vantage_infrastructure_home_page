@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 14 - Introduction to VPI</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 14 - Introduction to VPI</h1>
+
+    <h2 style="color: darkblue;">
+        Vital Processor Interlocking Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        VPI, which stands for Vital Processor Interlocking, is a type of electronic
+        interlocking system used in railway signaling to ensure the safe movement of trains.
+        It is a fail-safe, microprocessor-based system designed to prevent conflicting train
+        movements by controlling signals and switches based on track status and routes set.
+    </p>
+
+    <p style="font-size: 22px;">
+        Unlike traditional relay-based interlockings that rely on physical wiring to enforce
+        safety logic, VPI systems use software programmed with Boolean equations or other
+        high-level logic to define interlocking rules. This provides flexibility because
+        changes can often be made through software instead of extensive rewiring.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because VPI logic is software-based, rigorous validation and verification are required
+        to ensure the programmed logic is safe and reliable. VPI systems interface with trackside
+        equipment such as signals, switches, and track circuits, receiving inputs and sending
+        outputs according to the established interlocking rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        Several manufacturers have developed VPI systems, including Siemens and CASCO.
+        These systems are key components of modern railway signaling infrastructure and help
+        improve safety, reliability, and efficiency in train operations.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/vpi-cabinet.png"
+    alt="VPI electronic interlocking cabinet in a railway signal equipment room"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/vpi-block-diagram.png"
+    alt="Block diagram showing VPI processors, input output interfaces, and communication links"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/vpi-trackside-interface.png"
+    alt="Diagram showing VPI system interfacing with signals, switches, and track circuits"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the fundamental purpose of a VPI system in railway signaling?</p>
+
+        <label>
+            <input type="radio" name="q1" value="wrong">
+            To provide power to locomotives
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="correct">
+            To safely control signals and switches and prevent conflicting train movements
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="wrong">
+            To replace train crews with automatic ticketing
+        </label><br><br>
+
+        <p>2. How does VPI software logic differ from traditional relay-based interlocking?</p>
+
+        <label>
+            <input type="radio" name="q2" value="correct">
+            VPI uses programmed logic that can be modified through software, but requires strict validation and verification
+        </label><br>
+
+        <label>
+            <input type="radio" name="q2" value="wrong">
+            VPI uses only mechanical levers and no electronics
+        </label><br>
+
+        <label>
+            <input type="radio" name="q2" value="wrong">
+            VPI removes the need for safety testing
+        </label><br><br>
+
+        <p>3. Which two manufacturers are examples of companies that produce VPI interlocking systems?</p>
+
+        <label>
+            <input type="radio" name="q3" value="wrong">
+            Ford and Caterpillar
+        </label><br>
+
+        <label>
+            <input type="radio" name="q3" value="wrong">
+            Apple and Microsoft
+        </label><br>
+
+        <label>
+            <input type="radio" name="q3" value="correct">
+            Siemens and CASCO
+        </label><br><br>
+
+        <button type="button"
+        onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if (password === "signal2026") {
+            window.location.href = "Module 14A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+            answer.disabled = true;
+
+            if (answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if (answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if (answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+                answer.parentElement.style.fontWeight = "bold";
+            }
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 13D.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

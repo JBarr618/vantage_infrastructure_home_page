@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 14C - Troubleshooting VPI Units</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 14C - Troubleshooting VPI Units</h1>
+
+    <h2 style="color: darkblue;">
+        Diagnosing and Repairing Vital Processor Interlocking Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Troubleshooting a Vital Processor Interlocking, or VPI, unit requires a methodical
+        approach, specialized diagnostic tools, and a strong understanding of both the
+        hardware and the programmed interlocking logic. When a VPI system malfunctions,
+        it can cause operational problems such as incorrect signal displays, switch failures,
+        communication issues, or even a shutdown of the interlocking area.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the first steps in troubleshooting a VPI system is examining system status
+        indicators and reviewing alarms or error codes using diagnostic software. These
+        internal diagnostics help technicians identify the possible location and nature
+        of the problem.
+    </p>
+
+    <p style="font-size: 22px;">
+        Problems with VPI systems can originate from several sources. Hardware failures
+        may involve power supplies, processors, communication modules, or input/output cards.
+        Software problems may include errors in the vital logic or issues within the operating
+        system. Communication failures may occur between the VPI system, control centers,
+        adjacent interlockings, or field devices.
+    </p>
+
+    <p style="font-size: 22px;">
+        Faults can also occur in connected field equipment such as track circuits, point
+        machines, signals, or field wiring. These external problems may cause improper
+        indications or prevent the VPI from operating correctly.
+    </p>
+
+    <p style="font-size: 22px;">
+        Manufacturer-specific diagnostic software allows technicians to monitor system
+        status in real time, review error logs, and test individual input and output
+        channels. Technicians use this information together with field observations to
+        locate the root cause of the failure and determine the proper corrective action.
+    </p>
+
+    <p style="font-size: 22px;">
+        Corrective actions may include replacing failed hardware modules, repairing field
+        wiring, restoring communications, or correcting vital logic programming through
+        approved change control procedures. Proper documentation and specialized training
+        are essential for safe and effective troubleshooting of VPI systems.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/vpi-troubleshooting-diagnostics.png"
+    alt="Technician troubleshooting a VPI unit using diagnostic software"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/vpi-error-logs.png"
+    alt="Diagnostic software displaying VPI alarms and error logs"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/vpi-field-equipment-testing.png"
+    alt="Testing field equipment connected to a VPI interlocking system"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What are common first steps when troubleshooting a VPI system?</p>
+        <label><input type="radio" name="q1" value="correct"> Checking status indicators, alarms, error codes, and diagnostic software</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Immediately replacing every field device without testing</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Disconnecting all track circuits from the interlocking</label><br><br>
+
+        <p>2. Which of the following can cause problems in a VPI system?</p>
+        <label><input type="radio" name="q2" value="wrong"> Only signal lamp failures</label><br>
+        <label><input type="radio" name="q2" value="correct"> Hardware failures, software issues, communication problems, and field equipment faults</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Paint damage on relay room walls</label><br><br>
+
+        <p>3. How does manufacturer diagnostic software help troubleshoot VPI systems?</p>
+        <label><input type="radio" name="q3" value="wrong"> It automatically replaces all hardware modules</label><br>
+        <label><input type="radio" name="q3" value="wrong"> It removes the need for trained technicians</label><br>
+        <label><input type="radio" name="q3" value="correct"> It allows technicians to monitor system status, review logs, and test inputs and outputs</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 15.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 14B.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

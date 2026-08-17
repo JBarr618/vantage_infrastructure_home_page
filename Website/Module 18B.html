@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 18B - What Does Manual Block Consist Of?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 18B - What Does Manual Block Consist Of?</h1>
+
+    <h2 style="color: darkblue;">
+        Components of Manual Block Signaling
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Manual block signaling depends on several important components, communication
+        methods, and operating procedures that work together to safely control train
+        movements and maintain train separation.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most important parts of the system is the block station. Railway
+        lines are divided into blocks, and each block station is responsible for
+        controlling train movements entering and leaving its assigned section of track.
+    </p>
+
+    <p style="font-size: 22px;">
+        Block operators or signal personnel work inside these stations and communicate
+        with operators at adjacent block stations to determine whether a block is
+        occupied or clear for train movement.
+    </p>
+
+    <p style="font-size: 22px;">
+        Reliable communication systems are essential in manual block territory.
+        Traditional communication methods included telegraph systems, telephones,
+        block bells, and other specialized signaling instruments used to exchange
+        train movement information.
+    </p>
+
+    <p style="font-size: 22px;">
+        Manual block systems also use block signals that are controlled by the block
+        operator. These signals provide authority for trains to enter and travel
+        through a block safely.
+    </p>
+
+    <p style="font-size: 22px;">
+        Block operators maintain written train movement records using block registers
+        or train sheets. These records document train movements into and out of each
+        block and help prevent operational mistakes.
+    </p>
+
+    <p style="font-size: 22px;">
+        Strict operating rules and procedures govern all communication and train
+        movements in manual block territory. Operators and train crews must carefully
+        follow these procedures to ensure safe operation and avoid collisions.
+    </p>
+
+    <p style="font-size: 22px;">
+        The physical limits of each block are identified by signals or marker boards.
+        Train crews may not proceed beyond a block limit without proper authority
+        from the block operator.
+    </p>
+
+    <p style="font-size: 22px;">
+        Manual block signaling is highly dependent on human communication, accurate
+        record keeping, and strict rule compliance to safely manage train operations.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/manual-block-stations-diagram.png"
+    alt="Diagram showing railway blocks and communication between block stations"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/traditional-block-instruments.png"
+    alt="Traditional telegraph and block bell communication equipment"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/block-register-train-sheet.png"
+    alt="Block operator recording train movements in train sheet"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/manual-block-stop-signal.png"
+    alt="Stop signal displayed in manual block territory"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the role of a block station and block operator in a manual block system?</p>
+        <label><input type="radio" name="q1" value="wrong"> To repair locomotives and railcars</label><br>
+        <label><input type="radio" name="q1" value="correct"> To control train movements into and out of blocks and communicate block status</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To automatically detect train occupancy using track circuits only</label><br><br>
+
+        <p>2. Which are traditional communication methods used between block operators?</p>
+        <label><input type="radio" name="q2" value="correct"> Telegraphs, telephones, and block bells</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Satellite GPS systems only</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Highway traffic signals and radios only</label><br><br>
+
+        <p>3. Why is strict adherence to operating rules important in manual block signaling?</p>
+        <label><input type="radio" name="q3" value="wrong"> Because trains operate without communication</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Because manual block systems do not require record keeping</label><br>
+        <label><input type="radio" name="q3" value="correct"> Because the system depends heavily on accurate communication and human operation for safety</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 18C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 18A.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

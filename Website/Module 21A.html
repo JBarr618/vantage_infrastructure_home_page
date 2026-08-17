@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 21A - What Are Color Signals?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 21A - What Are Color Signals?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Color Signals
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Color signals are a type of fixed wayside signal that communicate
+        instructions and information to train crews through the display of
+        colored lights. They are one of the most common signaling methods used
+        throughout the railway industry today.
+    </p>
+
+    <p style="font-size: 22px;">
+        The primary method of communication is the color of the light displayed.
+        Red, yellow, and green are the most common colors used, although some
+        systems also use lunar white, blue, or purple for specialized indications.
+    </p>
+
+    <p style="font-size: 22px;">
+        Color signals are designed to provide train crews with clear, visible,
+        and unambiguous information regarding movement authority, speed
+        restrictions, route selection, and conditions ahead.
+    </p>
+
+    <p style="font-size: 22px;">
+        The colored lights are housed within a signal head that contains lenses
+        and light sources. Modern systems typically use LED technology because
+        of its reliability, brightness, and reduced maintenance requirements.
+    </p>
+
+    <p style="font-size: 22px;">
+        Different signal aspects are created by illuminating specific colors or
+        combinations of colors. A single color may convey one instruction while
+        a combination of colors can convey more complex operating information.
+    </p>
+
+    <p style="font-size: 22px;">
+        For example, a single green aspect may indicate that a train is authorized
+        to proceed, while a combination of lights may provide information about
+        speed restrictions or diverging routes ahead.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some color signal systems use flashing lights to provide additional
+        information. A flashing aspect may indicate a less restrictive condition
+        or modify the meaning of the displayed color.
+    </p>
+
+    <p style="font-size: 22px;">
+        Color signals are specifically designed for excellent visibility during
+        both daytime and nighttime operations. Their brightness and lens design
+        allow train crews to recognize signal indications from considerable
+        distances.
+    </p>
+
+    <p style="font-size: 22px;">
+        The operation of color signals is controlled by the railroad's signaling
+        system. Signals may respond automatically to track conditions, track
+        occupancy, and switch positions, or they may be controlled through
+        interlockings and dispatching systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        Every signal aspect has a specific meaning defined by the railroad's
+        operating rules. Train crews must understand and correctly interpret
+        every signal indication they encounter.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because train safety depends upon proper signal interpretation, signal
+        aspects and operating rules are a critical part of railroad training and
+        qualification programs.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/color-signal-components.png"
+    alt="Diagram showing lenses and light sources inside a color signal head"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/color-signal-aspects.jpg"
+    alt="Examples of color signal aspects using different combinations of lights"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/day-night-signal-visibility.jpg"
+    alt="Color signal visibility during daytime and nighttime operations"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/signal-rulebook-reference.png"
+    alt="Railroad operating rulebook defining color signal aspects"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary method by which color signals communicate with train crews?</p>
+        <label><input type="radio" name="q1" value="wrong"> Through radio transmissions only</label><br>
+        <label><input type="radio" name="q1" value="correct"> Through the display of colored lights and signal aspects</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Through printed instructions attached to the signal mast</label><br><br>
+
+        <p>2. How are different signal aspects created in color signal systems?</p>
+        <label><input type="radio" name="q2" value="correct"> By illuminating specific colors, combinations of colors, or flashing light patterns</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By physically moving the signal mast</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By changing track gauge measurements</label><br><br>
+
+        <p>3. Why must train crews thoroughly understand the railroad's signal rulebook?</p>
+        <label><input type="radio" name="q3" value="wrong"> To perform accounting duties</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To repair signal equipment</label><br>
+        <label><input type="radio" name="q3" value="correct"> Because each signal aspect has a specific meaning that governs safe train operation</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 21B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 21.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

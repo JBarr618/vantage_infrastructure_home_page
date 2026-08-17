@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 25C - Testing Automatic Train Stop</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 25C - Testing Automatic Train Stop</h1>
+
+    <h2 style="color: darkblue;">
+        How to Test Automatic Train Stop Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Testing Automatic Train Stop (ATS) systems is essential to ensure the
+        system will properly protect train movements when unsafe conditions occur.
+        Testing verifies the operation of both trackside and onboard equipment,
+        as well as the effectiveness of the automatic brake application.
+    </p>
+
+    <p style="font-size: 22px;">
+        For mechanical trip ATS systems, the trackside trip arm must be inspected
+        to ensure it raises and lowers correctly based on the signal aspect.
+        Maintainers should check for proper movement, correct height, and any
+        mechanical binding or obstructions.
+    </p>
+
+    <p style="font-size: 22px;">
+        The onboard trip cock must also be inspected to verify proper installation,
+        alignment, and freedom of movement. The trip cock must be capable of
+        correctly engaging the trackside trip arm when required.
+    </p>
+
+    <p style="font-size: 22px;">
+        Controlled interaction tests are often performed at very low speeds.
+        During these tests, the train intentionally passes a restrictive signal
+        under controlled conditions to verify that the trip arm activates the
+        trip cock and initiates an automatic brake application.
+    </p>
+
+    <p style="font-size: 22px;">
+        Inductive ATS systems require testing of the trackside inductors,
+        transmitters, and onboard receivers. Technicians verify that the proper
+        signal information is transmitted and correctly received by the train.
+    </p>
+
+    <p style="font-size: 22px;">
+        Speed monitoring systems must also be calibrated and tested. Accurate
+        speed information is critical because ATS systems rely on train speed
+        to determine when warnings or brake applications are necessary.
+    </p>
+
+    <p style="font-size: 22px;">
+        Overspeed testing is typically performed in a controlled environment.
+        The train speed is gradually increased beyond a designated speed limit
+        while technicians verify that the ATS system issues warnings and applies
+        brakes when required.
+    </p>
+
+    <p style="font-size: 22px;">
+        Simulated SPAD testing may also be performed. These tests verify that
+        the ATS system correctly responds when the onboard equipment receives
+        information indicating a train has passed a stop signal.
+    </p>
+
+    <p style="font-size: 22px;">
+        Audible and visual warning systems must be tested to ensure train crews
+        receive proper notification before automatic brake intervention occurs.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most important parts of ATS testing is verifying that the
+        automatic brake application is effective. The system must be capable of
+        safely stopping the train when required.
+    </p>
+
+    <p style="font-size: 22px;">
+        Detailed records of all testing activities, results, adjustments, and
+        maintenance actions should be maintained to support system reliability
+        and regulatory compliance.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What are the key elements to check when testing a mechanical trip ATS system?</p>
+        <label><input type="radio" name="q1" value="wrong"> Passenger seating and station lighting</label><br>
+        <label><input type="radio" name="q1" value="correct"> Trip arm operation, trip cock condition, alignment, and brake application performance</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Locomotive paint quality</label><br><br>
+
+        <p>2. How is overspeed enforcement typically tested in an inductive ATS system?</p>
+        <label><input type="radio" name="q2" value="correct"> By gradually exceeding a monitored speed limit under controlled conditions and observing system response</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By turning off the ATS system completely</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By disconnecting the train brakes</label><br><br>
+
+        <p>3. Why is it important to verify the effectiveness of the automatic brake application during ATS testing?</p>
+        <label><input type="radio" name="q3" value="wrong"> To improve passenger comfort only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To reduce fuel consumption</label><br>
+        <label><input type="radio" name="q3" value="correct"> To ensure the train can be safely stopped when ATS intervention is required</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 25D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 25B.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <h3>Built From Real Railroad Experience</h3>
+        <p>Signal School 2026 Professional Railroad Signal Training</p>
+        <p>© 2026 Vantage Infrastructure LLC</p>
+    </footer>
+
+</body>
+
+</html>

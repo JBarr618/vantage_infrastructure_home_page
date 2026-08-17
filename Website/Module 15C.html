@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 15C - Testing an Electrologixs Unit</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 15C - Testing an Electrologixs Unit</h1>
+
+    <h2 style="color: darkblue;">
+        Factory Testing, Commissioning, and Maintenance Testing
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Testing an Electrologixs unit is a critical and systematic process performed
+        throughout its lifecycle to ensure safe and reliable railway signaling operation.
+        Testing verifies that the unit correctly executes the programmed vital interlocking
+        logic and properly interfaces with all connected field equipment.
+    </p>
+
+    <p style="font-size: 22px;">
+        Factory acceptance testing includes comprehensive checks of the Electrologixs hardware,
+        including the central processing unit, input and output modules, and communication
+        interfaces. Simulation tools are used to test the programmed logic under both normal
+        and fault conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        These simulations confirm that the software properly enforces the intended safety rules
+        and responds correctly to different inputs. Successful factory testing is required
+        before the Electrologixs unit is placed into railway service.
+    </p>
+
+    <p style="font-size: 22px;">
+        On-site testing and commissioning are performed after the unit is installed and
+        connected to real field equipment such as signals, switches, track circuits, and
+        level crossings. This includes checking wiring, communication, route locking,
+        signal aspects, switch positions, track occupancy, and crossing controls.
+    </p>
+
+    <p style="font-size: 22px;">
+        Manufacturer diagnostic tools are used to monitor system performance and identify
+        any discrepancies. Ongoing maintenance testing is also required to ensure the long-term
+        safety, reliability, and proper operation of Electrologixs systems.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/electrologixs-testing-laptop.png"
+    alt="Technician using Electrologixs diagnostic software connected to an Electrologixs unit"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/electrologixs-testing-software.png"
+    alt="Electrologixs testing software displaying real-time input and output status"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/electrologixs-field-connections.png"
+    alt="Diagram showing Electrologixs connections to signals switches track circuits and crossings"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the main goal of factory acceptance testing for an Electrologixs unit?</p>
+        <label><input type="radio" name="q1" value="wrong"> To prepare passenger schedules</label><br>
+        <label><input type="radio" name="q1" value="correct"> To verify hardware and programmed vital logic before the unit is placed into service</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To remove the need for commissioning</label><br><br>
+
+        <p>2. What is checked during on-site testing and commissioning?</p>
+        <label><input type="radio" name="q2" value="correct"> Wiring, communication, routes, locking, signal aspects, switch positions, track occupancy, and crossings</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Only the cabinet paint color</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Only the office computer keyboard</label><br><br>
+
+        <p>3. Why is ongoing maintenance testing important?</p>
+        <label><input type="radio" name="q3" value="wrong"> Because Electrologixs systems are not safety-critical</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Because it allows unsafe train movements to be tested in service</label><br>
+        <label><input type="radio" name="q3" value="correct"> It helps ensure continued safety, reliability, and proper operation over time</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Module 15D
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 15D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 15B.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

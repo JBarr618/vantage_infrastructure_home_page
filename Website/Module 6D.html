@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 6D - Testing AC Double Rail Track Circuits</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 6D - Testing AC Double Rail Track Circuits</h1>
+
+    <h2 style="color: darkblue;">
+        Testing AC Double Rail Track Circuits
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Testing AC double rail track circuits is important to verify proper operation and support safe train movement,
+        especially in electrified territory. Testing confirms the condition of the electrical circuit, receiver,
+        shunt sensitivity, phase relationship, impedance bonds, and insulation resistance.
+    </p>
+
+    <p style="font-size: 22px;">
+        One important test is measuring the voltage and current at the receiver end while the track is clear. These
+        readings must be within the specified operating range so the receiver can reliably indicate an unoccupied track.
+    </p>
+
+    <p style="font-size: 22px;">
+        Shunt sensitivity testing is also critical. A low-impedance shunt is applied across the rails at different
+        points in the block to simulate a train. The AC receiver should quickly and reliably de-energize when the shunt
+        is applied.
+    </p>
+
+    <p style="font-size: 22px;">
+        The phase relationship between the transmitted AC signal and the receiver reference must also be checked.
+        Incorrect phase can cause unreliable detection, weak operation, or incorrect receiver response.
+    </p>
+
+    <p style="font-size: 22px;">
+        Impedance bonds must be tested to verify that they allow traction return current to pass while helping protect
+        the track circuit signal. This may include measuring impedance at traction frequency and track circuit frequency.
+    </p>
+
+    <p style="font-size: 22px;">
+        Insulation resistance testing between the rails and ground is also performed to check for leakage paths.
+        All test results should be documented and compared with standards and previous readings to identify trends
+        or potential problems.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is measured under normal unoccupied conditions during AC double rail track circuit testing?</p>
+        <label><input type="radio" name="q1" value="wrong"> The number of trains scheduled per hour</label><br>
+        <label><input type="radio" name="q1" value="correct"> Voltage and current at the receiver</label><br>
+        <label><input type="radio" name="q1" value="wrong"> The length of the rail section only</label><br><br>
+
+        <p>2. Why is the phase relationship checked?</p>
+        <label><input type="radio" name="q2" value="wrong"> To adjust rail temperature for winter</label><br>
+        <label><input type="radio" name="q2" value="correct"> To support reliable detection and avoid receiver misreads</label><br>
+        <label><input type="radio" name="q2" value="wrong"> To test if signals are visible from far away</label><br><br>
+
+        <p>3. How is impedance bond effectiveness evaluated?</p>
+        <label><input type="radio" name="q3" value="correct"> By measuring impedance at both traction and track circuit frequencies</label><br>
+        <label><input type="radio" name="q3" value="wrong"> By removing them and only inspecting them visually</label><br>
+        <label><input type="radio" name="q3" value="wrong"> By tapping them with a hammer</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 6E.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 6C.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

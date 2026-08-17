@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 19A - What Moveable Block Is Used For</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 19A - What Moveable Block Is Used For</h1>
+
+    <h2 style="color: darkblue;">
+        Introduction to Moveable Block Signaling
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Moveable block signaling, especially in modern Communications-Based Train
+        Control (CBTC) systems, is used to improve railway efficiency, capacity,
+        and safety.
+    </p>
+
+    <p style="font-size: 22px;">
+        One major use of moveable block signaling is increasing capacity on existing
+        railroad lines. By allowing shorter headways between trains, more trains can
+        operate on the same track infrastructure.
+    </p>
+
+    <p style="font-size: 22px;">
+        This is especially important in busy urban areas where building new track,
+        tunnels, or rail corridors can be difficult and expensive.
+    </p>
+
+    <p style="font-size: 22px;">
+        Moveable block also improves operational efficiency by using real-time train
+        location and speed information. Central control can regulate train movement,
+        maintain proper spacing, reduce unnecessary braking, and improve schedule
+        performance.
+    </p>
+
+    <p style="font-size: 22px;">
+        Safety is another key purpose of moveable block signaling. Instead of relying
+        only on fixed blocks, the system continuously calculates a safe braking distance
+        based on train speed, location, track conditions, and other operating factors.
+    </p>
+
+    <p style="font-size: 22px;">
+        Many CBTC systems include Automatic Train Protection (ATP), which can
+        automatically apply the brakes if a train exceeds safe limits or gets too close
+        to another train.
+    </p>
+
+    <p style="font-size: 22px;">
+        Moveable block signaling also supports automation. Accurate train positioning
+        and continuous communication are essential for Automatic Train Operation (ATO)
+        and Unattended Train Operation (UTO).
+    </p>
+
+    <p style="font-size: 22px;">
+        In some systems, moveable block can reduce the need for certain wayside signals
+        because train movement authority and operating information may be displayed
+        directly in the cab.
+    </p>
+
+    <p style="font-size: 22px;">
+        Moveable block systems can also provide real-time train information to train
+        operators and passengers, including train locations, estimated arrival times,
+        and possible delays.
+    </p>
+
+    <p style="font-size: 22px;">
+        Moveable block signaling is most commonly used in metros, subways, and light
+        rail systems where frequent train service and high capacity are required.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/moveable-block-increased-capacity.png"
+    alt="Graphic showing increased train capacity with moveable block compared to fixed block"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/passenger-real-time-train-display.png"
+    alt="Passenger information display showing real-time train arrival information"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/cbtc-modern-metro-train.png"
+    alt="Modern metro train operating under CBTC moveable block signaling"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/dynamic-braking-distance-safety.png"
+    alt="Diagram showing dynamically adjusted braking distance in moveable block signaling"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary capacity benefit of moveable block signaling?</p>
+        <label><input type="radio" name="q1" value="correct"> It allows shorter headways so more trains can operate on the same track</label><br>
+        <label><input type="radio" name="q1" value="wrong"> It requires every train to stop at each fixed block signal</label><br>
+        <label><input type="radio" name="q1" value="wrong"> It eliminates the need for train separation</label><br><br>
+
+        <p>2. How does moveable block improve operational efficiency beyond shorter headways?</p>
+        <label><input type="radio" name="q2" value="wrong"> By removing all central control from train operations</label><br>
+        <label><input type="radio" name="q2" value="correct"> By using real-time train data to optimize speed, spacing, braking, and schedule performance</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By preventing trains from communicating with the control center</label><br><br>
+
+        <p>3. Where is moveable block signaling most commonly used?</p>
+        <label><input type="radio" name="q3" value="wrong"> Only in manual block freight territory</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Only on abandoned railroad lines</label><br>
+        <label><input type="radio" name="q3" value="correct"> In metros, subways, and light rail systems requiring frequent service and high capacity</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 19B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 19.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

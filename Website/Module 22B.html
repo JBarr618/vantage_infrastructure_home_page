@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 22B - What Are Indications?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 22B - What Are Indications?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Signal Indications
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        In railway signaling, indications are the meanings or instructions conveyed
+        to the train crew by the aspect displayed on a signal. While the aspect is
+        what the crew sees, the indication is what the crew must do in response to
+        that aspect.
+    </p>
+
+    <p style="font-size: 22px;">
+        A simple way to understand the relationship is to think of the aspect as
+        the language of the signal and the indication as the message being
+        communicated. The aspect provides the visual information, while the
+        indication provides the operating instruction.
+    </p>
+
+    <p style="font-size: 22px;">
+        Every signal aspect has a specific indication defined by the railroad's
+        operating rules. Train crews must know these rules thoroughly in order
+        to operate safely and comply with railroad regulations.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signal indications often provide instructions related to train speed.
+        Certain indications authorize maximum speed, while others require
+        reduced, medium, slow, or restricted speed operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        Indications also communicate movement authority. They tell crews whether
+        they are permitted to proceed beyond the signal, must prepare to stop,
+        or are required to stop immediately.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some indications prepare crews for conditions ahead. An approach
+        indication may require a train crew to proceed while preparing to stop
+        at the next signal if necessary.
+    </p>
+
+    <p style="font-size: 22px;">
+        Route information is another important function of signal indications.
+        At interlockings, signals may indicate whether a train will remain on
+        the main track or take a diverging route through switches and crossovers.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signal indications can also provide information about block occupancy.
+        More restrictive indications often warn crews that another train or
+        obstruction may exist ahead.
+    </p>
+
+    <p style="font-size: 22px;">
+        Examples of aspect and indication relationships include a steady green
+        aspect indicating "Proceed," a steady red aspect indicating "Stop,"
+        and a steady yellow aspect indicating "Approach."
+    </p>
+
+    <p style="font-size: 22px;">
+        Modern signaling systems often include a wide variety of aspects and
+        indications to improve safety, increase capacity, and manage train
+        movements more efficiently.
+    </p>
+
+    <!-- Suggested Images
+
+    <img src="images/aspect-indication-chart.jpg"
+    alt="Chart linking signal aspects to indications"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/train-crew-interpreting-signal.jpg"
+    alt="Train crew observing and interpreting a signal"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/aspect-versus-indication-diagram.jpg"
+    alt="Diagram showing aspect and indication relationship"
+    style="width:350px; border-radius:10px;">
+
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary purpose of a signal's indication?</p>
+        <label><input type="radio" name="q1" value="wrong"> To identify the signal manufacturer</label><br>
+        <label><input type="radio" name="q1" value="correct"> To communicate the action or instruction the train crew must follow</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To identify the train number</label><br><br>
+
+        <p>2. Where can a train crew find the definitive meaning of a specific signal aspect?</p>
+        <label><input type="radio" name="q2" value="wrong"> In the locomotive maintenance manual</label><br>
+        <label><input type="radio" name="q2" value="wrong"> On the signal mast nameplate</label><br>
+        <label><input type="radio" name="q2" value="correct"> In the railroad's operating rulebook</label><br><br>
+
+        <p>3. Which of the following is an example of an aspect and indication involving a speed instruction?</p>
+        <label><input type="radio" name="q3" value="wrong"> Steady red = Stop and inspect the signal</label><br>
+        <label><input type="radio" name="q3" value="correct"> Flashing yellow over green = Proceed on diverging route at medium speed</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Green over red = Contact the dispatcher immediately</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 22C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 22A.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

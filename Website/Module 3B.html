@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3B - Why is a DC Track Circuit Used?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 3B - Why is a DC Track Circuit Used?</h1>
+
+    <h2 style="color: darkblue;">
+        Why DC Track Circuits Are Used in Railroad Signaling
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        The primary reason for using a DC track circuit is to provide a reliable and continuous method
+        of detecting the presence of a train on a specific section of track. This function is fundamental
+        to the safe operation of railroads.
+    </p>
+
+    <p style="font-size: 22px;">
+        Without knowing whether a section of track is occupied, it would be impossible to safely control
+        train movements or prevent collisions between trains traveling on the same line. The track circuit
+        acts as the eyes of the signaling system by constantly monitoring track occupancy.
+    </p>
+
+    <img src="images/two trains on same track.webp"
+         alt="Two trains on the same track heading toward each other."
+         style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <p style="font-size: 22px;">
+        Beyond basic train detection, DC track circuits provide an important fail-safe characteristic.
+        In railroad signaling, fail-safe means the system is designed to default to the safest condition
+        when something goes wrong.
+    </p>
+
+    <p style="font-size: 22px;">
+        A loss of power, a broken rail, or another disruption to the circuit will cause the track relay
+        to de-energize. When the relay drops, the system indicates that the track is occupied or unsafe.
+        This helps reduce the risk of unsafe train movements caused by equipment failure.
+    </p>
+
+    <img src="images/Red signal with train in advance of signal.webp"
+         alt="Train passing a signal that changed from green to red."
+         style="width:350px; border-radius:10px;">
+
+    <p style="font-size: 22px;">
+        While a basic DC track circuit is primarily used for train detection, track circuits can also be
+        adapted to provide additional functionality. By varying voltage, current, or coded signals, track
+        circuits can transmit vital information such as signal aspects.
+    </p>
+
+    <p style="font-size: 22px;">
+        This ability to combine train detection with signal communication helped form the foundation for
+        more advanced railroad signaling and train control systems.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the most fundamental reason why DC track circuits are used in railroad signaling?</p>
+        <label><input type="radio" name="q1" value="wrong"> They are easy to install on the track circuit</label><br>
+        <label><input type="radio" name="q1" value="correct"> They continuously detect the presence of a train on a section of track</label><br>
+        <label><input type="radio" name="q1" value="wrong"> They require less equipment than all other signal systems</label><br><br>
+
+        <p>2. What is the fail-safe characteristic of a DC track circuit?</p>
+        <label><input type="radio" name="q2" value="wrong"> A broken rail does not affect the track circuit</label><br>
+        <label><input type="radio" name="q2" value="wrong"> The circuit continues to show clear even if power is lost</label><br>
+        <label><input type="radio" name="q2" value="correct"> Loss of power or a broken rail causes the relay to de-energize and default to a safe state</label><br><br>
+
+        <p>3. What other information can DC track circuits be adapted to transmit?</p>
+        <label><input type="radio" name="q3" value="correct"> Coded signals such as signal aspects</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Movement authority for switch machines only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Morse code messages to dispatch centers</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+            style="background-color:#0056b3; color:white; padding:15px 30px; font-size:18px; border:none; border-radius:10px; cursor:pointer; margin-top:20px;">
+            Submit Answers
+        </button>
+
+        <button type="button" onclick="checkPassword()"
+            style="background-color:#0056b3; color:white; padding:15px 30px; font-size:18px; border:none; border-radius:10px; cursor:pointer; margin-top:20px; margin-left:10px;">
+            Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+        function checkPassword() {
+            let password = prompt("Enter Password:");
+
+            if (password === "signal2026") {
+                window.location.href = "Module 3C.html";
+            } else {
+                alert("Incorrect Password");
+            }
+        }
+
+        function gradeQuiz() {
+            const answers = document.querySelectorAll('input[type="radio"]');
+
+            answers.forEach(answer => {
+                answer.disabled = true;
+
+                if (answer.checked && answer.value === "correct") {
+                    answer.parentElement.style.color = "green";
+                }
+
+                if (answer.checked && answer.value === "wrong") {
+                    answer.parentElement.style.color = "red";
+                }
+
+                if (answer.value === "correct") {
+                    answer.parentElement.style.fontWeight = "bold";
+                }
+            });
+
+            document.getElementById("continueButton").style.display = "block";
+        }
+    </script>
+
+    <hr>
+
+    <!-- <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444; color:white; padding:12px 25px; font-size:16px; border:none; border-radius:8px; cursor:pointer; margin-right:10px;">
+                Home
+            </button>
+        </a>
+
+        <a href="Module 3A.html">
+            <button style="background-color:#444; color:white; padding:12px 25px; font-size:16px; border:none; border-radius:8px; cursor:pointer;">
+                Back
+            </button>
+        </a>
+
+    </div>
+-->
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+

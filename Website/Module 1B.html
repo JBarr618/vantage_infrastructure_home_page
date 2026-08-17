@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Module 1B - Signal System Overview</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    h1 {
+      padding: 20px;
+    }
+
+    .intro-container {
+      overflow: auto;
+      padding: 20px;
+    }
+
+    .align-right-image {
+      float: right;
+      margin-left: 20px;
+      margin-bottom: 10px;
+      max-width: 300px;
+    }
+
+    .side-by-side-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .side-by-side-images img {
+      max-width: 400px;
+      height: 400px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .question-container {
+      margin-bottom: 20px;
+    }
+
+    .question {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .answer-option {
+      display: block;
+      margin-bottom: 5px;
+      cursor: pointer;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .answer-option:hover {
+      background-color: #e0e0e0;
+    }
+
+    .answer-option input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    #results-container {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .correct-answer {
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+      color: #155724;
+    }
+
+    .wrong-answer {
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+      color: #721c24;
+    }
+
+    #submit-button, #next-button, #back-button, #home-button, #purchase-button {
+      padding: 12px 25px;
+      font-size: 1.1em;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+      margin-right: 10px;
+    }
+
+    #submit-button:hover, #next-button:hover, #back-button:hover, #home-button:hover, #purchase-button:hover {
+      background-color: #0056b3;
+    }
+
+    #submit-button:disabled {
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
+
+    #next-button, #purchase-button {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Module 1B: Signal System Overview</h1>
+
+  <div class="intro-container">
+    <img
+      class="align-right-image"
+      src="images/ABS Diagram pic2.jpeg"
+      alt="Historical semaphore signal beside railroad tracks."
+    />
+
+    <p>This module expands on the basics of railroad signals by examining how signals interact with track circuits and interlocking logic. Track circuits are the backbone of occupancy detection and play a critical role in safe train separation.</p>
+
+    <p>Before Signals was the Time Table schedule which was how the block operators know where the train was suppose to be at a certain time. Then Signals came into paly and can be controlled manually from a signal tower or automatically through coded track circuits or a computer-based interlocking (CBI). Understanding these connections provides a deeper view of how trains are routed, held, or cleared to proceed safely.</p>
+    <div class="side-by-side-images">
+      <img src="images/Train Schedule 1954.jpg" alt="1940s Train Schedule" />
+    <p>We'll also look at fail-safe principles and redundancy in signal system design. These are crucial to ensuring that a failure of any single component defaults the system to a safe state, preventing unsafe train movements.</p>
+
+    <div class="side-by-side-images">
+      <img src="images/Positive-Train-Control-Capitol-Corridor_web-1-1024x631.jpg" alt="Positive Train Control diagram" />
+     
+    </div>
+  </div>
+
+  <h3>Module 1B Questions:</h3>
+  <div id="quiz-container">
+    <div class="question-container">
+      <p class="question">Question 1: What is the main purpose of a track circuit?</p>
+      <label class="answer-option"><input type="radio" name="q1" value="a" /> A) Detect train presence on the track</label>
+      <label class="answer-option"><input type="radio" name="q1" value="b" /> B) Provide power to locomotives</label>
+      <label class="answer-option"><input type="radio" name="q1" value="c" /> C) Measure train speed</label>
+    </div>
+
+    <div class="question-container">
+      <p class="question">Question 2: What happens when a signal system detects a failure?</p>
+      <label class="answer-option"><input type="radio" name="q2" value="a" /> A) It fails safe and stops train movement</label>
+      <label class="answer-option"><input type="radio" name="q2" value="b" /> B) It ignores the failure</label>
+      <label class="answer-option"><input type="radio" name="q2" value="c" /> C) It speeds up the train</label>
+    </div>
+
+    <div class="question-container">
+      <p class="question">Question 3: Which system determines whether a train can safely proceed?</p>
+      <label class="answer-option"><input type="radio" name="q3" value="a" /> A) Computer-based interlocking</label>
+      <label class="answer-option"><input type="radio" name="q3" value="b" /> B) The train's horn</label>
+      <label class="answer-option"><input type="radio" name="q3" value="c" /> C) The locomotive engine</label>
+    </div>
+
+    <button id="submit-button">Submit Answers</button>
+
+    <div id="results-container" style="display: none;">
+      Your Score: <span id="final-score">0</span> out of
+      <span id="max-score">3</span>
+    </div>
+
+    <button id="purchase-button">🔒 Purchase or Enter Password to Continue</button>
+    <button id="back-button">⬅️ Back</button>
+    <button id="home-button">🏠 Home</button>
+    <button id="next-button">Next ➡️</button>
+  </div>
+
+  <script>
+    const submitButton = document.getElementById("submit-button");
+    const resultsContainer = document.getElementById("results-container");
+    const finalScoreDisplay = document.getElementById("final-score");
+    const maxScoreDisplay = document.getElementById("max-score");
+    const nextButton = document.getElementById("next-button");
+    const purchaseButton = document.getElementById("purchase-button");
+    const backButton = document.getElementById("back-button");
+    const homeButton = document.getElementById("home-button");
+
+    const questions = [
+      { name: "q1", correctAnswer: "a" },
+      { name: "q2", correctAnswer: "a" },
+      { name: "q3", correctAnswer: "a" }
+    ];
+
+    submitButton.addEventListener("click", () => {
+      let score = 0;
+      maxScoreDisplay.textContent = questions.length;
+
+      document.querySelectorAll(".question-container").forEach((qContainer, index) => {
+        const selectedAnswer = document.querySelector(`input[name="${questions[index].name}"]:checked`);
+        const answerElements = qContainer.querySelectorAll(".answer-option");
+
+        if (selectedAnswer) {
+          if (selectedAnswer.value === questions[index].correctAnswer) {
+            score++;
+            answerElements.forEach((label) => {
+              const input = label.querySelector("input");
+              if (input.value === questions[index].correctAnswer) {
+                label.classList.add("correct-answer");
+              }
+            });
+          } else {
+            answerElements.forEach((label) => {
+              const input = label.querySelector("input");
+              if (input.value === selectedAnswer.value) {
+                label.classList.add("wrong-answer");
+              } else if (input.value === questions[index].correctAnswer) {
+                label.classList.add("correct-answer");
+              }
+            });
+          }
+        } else {
+          answerElements.forEach((label) => {
+            const input = label.querySelector("input");
+            if (input.value === questions[index].correctAnswer) {
+              label.classList.add("correct-answer");
+            }
+          });
+        }
+      });
+
+      finalScoreDisplay.textContent = score;
+      resultsContainer.style.display = "block";
+      document.querySelectorAll('input[type="radio"]').forEach(rb => rb.disabled = true);
+      submitButton.disabled = true;
+      localStorage.setItem("module1bScore", score);
+      localStorage.setItem("module1bMax", questions.length);
+      purchaseButton.style.display = "inline-block";
+    });
+
+    nextButton.addEventListener("click", () => {
+      window.location.href = "Module 2.html";
+    });
+
+    purchaseButton.addEventListener("click", () => {
+      const password = prompt("Enter password to unlock next module:");
+      if (password === "railroad2025") {
+        nextButton.style.display = "inline-block";
+        purchaseButton.style.display = "none";
+        alert("Access granted.");
+      } else {
+        alert("Incorrect password. Please purchase or try again.");
+      }
+    });
+
+    backButton.addEventListener("click", () => {
+      window.location.href = "Module 1A.html";
+    });
+
+    homeButton.addEventListener("click", () => {
+      window.location.href = "courses.html";
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

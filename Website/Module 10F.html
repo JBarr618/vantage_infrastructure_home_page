@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 10F - Troubleshooting Impedance Bonds</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 10F - Troubleshooting Impedance Bonds</h1>
+
+    <h2 style="color: darkblue;">
+        Finding Impedance Bond Problems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Troubleshooting impedance bonds requires understanding how one failed
+        bond can affect both the traction power system and the railroad signal
+        system.
+    </p>
+
+    <p style="font-size: 22px;">
+        One common problem is high DC resistance. This can reduce traction return
+        current flow, create voltage drops, cause heating, or allow current to
+        seek an unsafe return path.
+    </p>
+
+    <p style="font-size: 22px;">
+        High resistance can be caused by loose connections, corroded terminals,
+        damaged cables, broken rail bonds, poor hardware, or internal damage
+        inside the impedance bond.
+    </p>
+
+    <p style="font-size: 22px;">
+        Incorrect inductance can also create signaling problems. If the bond no
+        longer has the correct electrical characteristics, the track circuit may
+        not see the proper impedance at its operating frequency.
+    </p>
+
+    <p style="font-size: 22px;">
+        This can cause AC track circuits to become unstable, weak, falsely
+        occupied, or falsely clear depending on the failure and circuit design.
+    </p>
+
+    <p style="font-size: 22px;">
+        Low impedance at signaling frequencies can allow signal energy to leak
+        into adjacent track circuits. This can reduce track circuit separation
+        and create unreliable train detection.
+    </p>
+
+    <p style="font-size: 22px;">
+        Overheating is another serious warning sign. It may indicate excessive
+        traction return current, poor connections, internal bond damage, wrong
+        current rating, or abnormal current flow through the bond.
+    </p>
+
+    <p style="font-size: 22px;">
+        Visual inspection should include checking for corrosion, loose cables,
+        cracked cases, burned terminals, melted insulation, damaged mounting
+        hardware, water intrusion, and signs that the bond has been struck.
+    </p>
+
+    <p style="font-size: 22px;">
+        When troubleshooting, technicians should follow railroad maintenance
+        standards, use approved test equipment, compare readings to known good
+        values, and protect themselves from energized traction power equipment.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/impedance-bond-troubleshooting.png"
+    alt="Technician troubleshooting an impedance bond in electrified territory"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/overheated-impedance-bond.png"
+    alt="Overheated impedance bond terminal and damaged cable"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/impedance-bond-corrosion.png"
+    alt="Corroded impedance bond rail connection"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is a possible symptom of a faulty impedance bond affecting traction power?</p>
+        <label><input type="radio" name="q1" value="wrong"> The train stops instantly for no reason</label><br>
+        <label><input type="radio" name="q1" value="correct"> Poor traction return current flow and voltage drops</label><br>
+        <label><input type="radio" name="q1" value="wrong"> All nearby signal equipment always shorts out</label><br><br>
+
+        <p>2. How can incorrect inductance affect an AC track circuit?</p>
+        <label><input type="radio" name="q2" value="wrong"> It increases the train's stopping distance directly</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It blocks all radio communication signals</label><br>
+        <label><input type="radio" name="q2" value="correct"> It can cause false occupied or false clear track indications</label><br><br>
+
+        <p>3. What should be done if an impedance bond is overheating?</p>
+        <label><input type="radio" name="q3" value="correct"> Check for excessive current, inspect the bond, and replace it if necessary</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Disconnect the bond and leave it out of service without protection</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Wrap the bond in insulation to hold the heat in</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 11.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 10E.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

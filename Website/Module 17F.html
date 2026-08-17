@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 17F - Troubleshooting Gate Mechanisms</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 17F - Troubleshooting Gate Mechanisms</h1>
+
+    <h2 style="color: darkblue;">
+        Troubleshooting Highway Grade Crossing Gate Mechanisms
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Automatic gate mechanism failures at highway grade crossings can create serious
+        safety hazards. Troubleshooting these systems requires a systematic approach
+        to locate the problem and safely restore proper operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        One common problem is when the gate fails to lower. Possible causes include
+        power failures, missing control signals, motor failures, brake problems,
+        obstructions, or damaged linkage components.
+    </p>
+
+    <p style="font-size: 22px;">
+        Troubleshooting steps include checking the power supply and battery backup,
+        verifying signals from the crossing controller, inspecting wiring, and checking
+        for obstructions or mechanical binding inside the mechanism.
+    </p>
+
+    <p style="font-size: 22px;">
+        Gates may also lower or raise slowly or jerkily. Common causes include low
+        power supply voltage, worn motors or gearboxes, poor lubrication, damaged
+        linkage systems, or physical obstructions interfering with movement.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the gate fails to raise, technicians should verify that the controller
+        recognizes the train has cleared the crossing, inspect the reverse motor
+        operation, and check for brake or linkage problems.
+    </p>
+
+    <p style="font-size: 22px;">
+        Gates that fail to fully reach the up or down position may have improperly
+        adjusted limit switches, slipping drive mechanisms, or binding linkages.
+        Technicians must inspect and adjust these components carefully.
+    </p>
+
+    <p style="font-size: 22px;">
+        Gate arm breakaway mechanisms may activate after a vehicle collision or impact.
+        After activation, technicians inspect the mechanism for damage, replace broken
+        parts, and properly reinstall the gate arm according to manufacturer procedures.
+    </p>
+
+    <p style="font-size: 22px;">
+        General troubleshooting procedures include reviewing manufacturer manuals,
+        performing visual inspections, listening for unusual noises, checking electrical
+        connections, using test equipment such as multimeters, and following all safety
+        procedures before servicing the equipment.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/gate-obstruction-inspection.png"
+    alt="Technician inspecting crossing gate mechanism for obstructions"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/limit-switch-adjustment.png"
+    alt="Close-up of limit switch adjustment on gate mechanism"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/damaged-breakaway-mechanism.png"
+    alt="Damaged gate arm breakaway mechanism after vehicle impact"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/lubricating-gate-mechanism.png"
+    alt="Technician lubricating moving parts inside gate mechanism"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What are common reasons why an automatic gate may fail to lower?</p>
+        <label><input type="radio" name="q1" value="wrong"> Fresh paint on the gate arm</label><br>
+        <label><input type="radio" name="q1" value="correct"> Power failure, motor problems, linkage damage, or missing control signals</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Excessive train speed only</label><br><br>
+
+        <p>2. What are possible causes of a gate arm moving slowly or jerkily?</p>
+        <label><input type="radio" name="q2" value="correct"> Low voltage, worn motors, poor lubrication, or linkage binding</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Proper lubrication and correct voltage</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Newly installed warning signs</label><br><br>
+
+        <p>3. What should be done after a gate arm breakaway mechanism activates?</p>
+        <label><input type="radio" name="q3" value="wrong"> Ignore the damage and continue operation</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Permanently remove the gate arm</label><br>
+        <label><input type="radio" name="q3" value="correct"> Inspect for damage, replace broken parts, and properly reinstall the gate arm</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 17G.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 17E.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

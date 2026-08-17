@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 21C - What Do Color Signals Convey?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 21C - What Do Color Signals Convey?</h1>
+
+    <h2 style="color: darkblue;">
+        Information Conveyed by Color Light Signals
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Color light signals are one of the most important communication tools used
+        in railway operations. They provide train crews with critical information
+        that governs how trains are operated safely and efficiently throughout a
+        signaling territory.
+    </p>
+
+    <p style="font-size: 22px;">
+        The most basic information conveyed by a color signal is movement authority.
+        A signal indication informs train crews whether they are authorized to
+        proceed, must prepare to stop, or are required to stop immediately.
+    </p>
+
+    <p style="font-size: 22px;">
+        Green signal aspects generally indicate that a train is authorized to
+        proceed. This usually means the block ahead is clear and movement may
+        continue according to the applicable operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        Red signal aspects generally require a train to stop before passing the
+        signal. Movement beyond a stop indication is prohibited unless authorized
+        under specific operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        In Automatic Block Signaling (ABS) territory, color signals help maintain
+        safe separation between trains by indicating the occupancy status of the
+        block ahead. A restrictive signal warns crews that another train may be
+        occupying the track ahead.
+    </p>
+
+    <p style="font-size: 22px;">
+        Yellow signal aspects often provide advance warning that a more restrictive
+        signal lies ahead. This allows train crews to begin braking and adjust
+        train handling before reaching the next signal.
+    </p>
+
+    <p style="font-size: 22px;">
+        Color signals can also communicate speed restrictions. Certain signal
+        aspects require trains to operate at reduced speed when approaching
+        turnouts, crossovers, interlockings, or other restricted locations.
+    </p>
+
+    <p style="font-size: 22px;">
+        Route information is another important function of color signals. At
+        interlockings, signal aspects may indicate whether the train will continue
+        on the main track or follow a diverging route through switches and
+        crossovers.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some advanced signaling systems provide information about multiple blocks
+        ahead. This allows train crews to anticipate future operating conditions
+        and make smoother train handling decisions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Restricting aspects authorize movement at restricted speed while requiring
+        train crews to remain prepared to stop short of obstructions, occupied
+        tracks, broken rails, or improperly aligned switches.
+    </p>
+
+    <p style="font-size: 22px;">
+        Color signals also serve as warning devices. Approach indications provide
+        advance notice of conditions ahead and allow crews to safely adjust speed
+        and braking performance.
+    </p>
+
+    <p style="font-size: 22px;">
+        Every signal aspect has a specific meaning defined by the railroad's
+        operating rulebook. Safe train operation depends on the crew's ability to
+        correctly interpret and comply with these signal indications.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/red-yellow-green-meaning.png"
+    alt="Diagram showing stop, caution, and proceed signal meanings"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/color-signal-information-infographic.png"
+    alt="Infographic showing information conveyed by color signals"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/train-crew-signal-interpretation.jpg"
+    alt="Train crew interpreting a color signal and responding appropriately"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the most basic authority conveyed by a green color signal?</p>
+        <label><input type="radio" name="q1" value="wrong"> Stop immediately</label><br>
+        <label><input type="radio" name="q1" value="correct"> Authority to proceed according to operating rules</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Restricted speed movement only</label><br><br>
+
+        <p>2. How do color signals help maintain safe separation between trains in ABS territory?</p>
+        <label><input type="radio" name="q2" value="correct"> By indicating the occupancy condition of blocks ahead and warning crews of restrictive conditions</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By controlling locomotive horsepower</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By communicating directly with passengers</label><br><br>
+
+        <p>3. Besides movement authority and block occupancy, what are two other important types of information color signals can convey?</p>
+        <label><input type="radio" name="q3" value="wrong"> Payroll information and train schedules</label><br>
+        <label><input type="radio" name="q3" value="correct"> Speed restrictions and route information</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Weather forecasts and maintenance budgets</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 21D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 21B.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

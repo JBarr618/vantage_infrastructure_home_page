@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Module 9E: Testing Type C Track Circuits</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
+    .content-container { margin-bottom: 30px; }
+    .question-container { margin-bottom: 20px; }
+    .question { font-weight: bold; }
+    .answer-option { display: block; margin-bottom: 8px; }
+    .correct-answer { background-color: #d4edda; }
+    .wrong-answer { background-color: #f8d7da; }
+    #submit-button {
+      padding: 18px 36px;
+      font-size: 1.4em;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #submit-button:hover { background-color: #0056b3; }
+    #submit-button:disabled {
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Module 9E: Testing Type C Track Circuits</h1>
+
+  <div class="content-container">
+    <p>
+      Testing AC Type C track circuits involves a rigorous process to verify their ability to accurately detect trains and broken rails, while also ensuring their robustness against interference and other environmental factors. Here are the key steps:
+    </p>
+    <ol>
+      <li><strong>Baseline Phase Measurements:</strong> Establish phase references under clear track conditions for both frequencies used—one for train detection, the other for broken rail detection.</li>
+      <li><strong>Shunt Testing:</strong> Apply calibrated shunts at multiple locations to simulate train presence and verify receiver response on both frequencies without triggering false broken rail indications.</li>
+      <li><strong>Broken Rail Simulation:</strong> Introduce simulated breaks and verify the receiver accurately identifies changes in the broken rail detection frequency.</li>
+      <li><strong>Frequency Stability Checks:</strong> Monitor transmitter frequency output regularly. Frequency drift can compromise detection accuracy.</li>
+      <li><strong>Signal Level Monitoring:</strong> Measure amplitude of both transmitted and received signals to detect loss or circuit issues.</li>
+      <li><strong>Environmental Testing:</strong> Evaluate performance under temperature, moisture, and electromagnetic challenges.</li>
+      <li><strong>Interference Testing:</strong> Inject simulated AC traction interference to confirm the circuit’s immunity to noise.</li>
+    </ol>
+  </div>
+
+  <h2>Module 9E Questions</h2>
+  <div id="quiz-container">
+    <div class="question-container">
+      <p class="question">1. What are the two primary types of tests that are typically performed on a Type C track circuit to verify its functionality?</p>
+      <label class="answer-option"><input type="radio" name="q1" value="a"> A) Shunt testing and broken rail simulation</label>
+      <label class="answer-option"><input type="radio" name="q1" value="b"> B) Battery discharge and switch closure</label>
+      <label class="answer-option"><input type="radio" name="q1" value="c"> C) Relay testing and axle counter feedback</label>
+    </div>
+
+    <div class="question-container">
+      <p class="question">2. Why is it important to monitor the stability of the transmitter's output frequencies in a Type C track circuit system?</p>
+      <label class="answer-option"><input type="radio" name="q2" value="a"> A) To reduce power consumption in the receiver</label>
+      <label class="answer-option"><input type="radio" name="q2" value="b"> B) Because frequency drift can affect phase shift detection accuracy</label>
+      <label class="answer-option"><input type="radio" name="q2" value="c"> C) To allow for dynamic speed profiling</label>
+    </div>
+
+    <div class="question-container">
+      <p class="question">3. In addition to train occupancy and broken rails, what other potential issues can a Type C track circuit be configured to detect through its monitoring capabilities?</p>
+      <label class="answer-option"><input type="radio" name="q3" value="a"> A) Battery charge levels</label>
+      <label class="answer-option"><input type="radio" name="q3" value="b"> B) Switch point movement</label>
+      <label class="answer-option"><input type="radio" name="q3" value="c"> C) Signal loss or external interference effects</label>
+    </div>
+
+    <button id="submit-button">Submit Answers</button>
+    <div id="results-container" style="display: none;">
+      Your Score: <span id="final-score">0</span> out of <span id="max-score">3</span>
+    </div>
+  </div>
+
+  <script>
+    const questions = [
+      { name: "q1", correctAnswer: "a" },
+      { name: "q2", correctAnswer: "b" },
+      { name: "q3", correctAnswer: "c" }
+    ];
+
+    const submitButton = document.getElementById('submit-button');
+    const resultsContainer = document.getElementById('results-container');
+    const finalScoreDisplay = document.getElementById('final-score');
+    const maxScoreDisplay = document.getElementById('max-score');
+
+    submitButton.addEventListener('click', () => {
+      let score = 0;
+      const questionContainers = document.querySelectorAll('.question-container');
+      maxScoreDisplay.textContent = questions.length;
+
+      questionContainers.forEach((qContainer, index) => {
+        const selectedAnswer = document.querySelector(`input[name="${questions[index].name}"]:checked`);
+        const answerElements = qContainer.querySelectorAll('.answer-option');
+
+        if (selectedAnswer) {
+          if (selectedAnswer.value === questions[index].correctAnswer) {
+            score++;
+            answerElements.forEach(label => {
+              if (label.querySelector('input').value === questions[index].correctAnswer) {
+                label.classList.add('correct-answer');
+              }
+            });
+          } else {
+            answerElements.forEach(label => {
+              const input = label.querySelector('input');
+              if (input.value === selectedAnswer.value) {
+                label.classList.add('wrong-answer');
+              } else if (input.value === questions[index].correctAnswer) {
+                label.classList.add('correct-answer');
+              }
+            });
+          }
+        } else {
+          answerElements.forEach(label => {
+            const input = label.querySelector('input');
+            if (input.value === questions[index].correctAnswer) {
+              label.classList.add('correct-answer');
+            }
+          });
+        }
+      });
+
+      finalScoreDisplay.textContent = score;
+      resultsContainer.style.display = 'block';
+      document.querySelectorAll('input[type="radio"]').forEach(input => input.disabled = true);
+      submitButton.disabled = true;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 20G - How Are Aspects Displayed in Fixed Signals?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 20G - How Are Aspects Displayed in Fixed Signals?</h1>
+
+    <h2 style="color: darkblue;">
+        Displaying Aspects in Fixed Wayside Signals
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Fixed wayside signals communicate information to train crews by displaying
+        signal aspects. The method used to display these aspects depends on the
+        type of signal installed along the railroad.
+    </p>
+
+    <p style="font-size: 22px;">
+        Color light signals are the most common signal type used today. These
+        signals use colored lenses and light sources, typically LEDs, to create
+        different signal indications.
+    </p>
+
+    <p style="font-size: 22px;">
+        Different aspects are created by illuminating specific combinations of
+        red, yellow, green, lunar white, or other colored lights. The arrangement
+        and color of the illuminated lights determine the meaning of the signal.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some color light signals use flashing indications to provide additional
+        information. For example, a flashing yellow signal may convey a different
+        instruction than a steady yellow signal.
+    </p>
+
+    <p style="font-size: 22px;">
+        Multiple signal heads may be mounted on a single mast. These additional
+        heads allow the signal system to display route information, speed commands,
+        and more complex operating instructions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Semaphore signals display aspects using a movable arm mounted on a signal
+        mast. The position of the arm determines the signal indication.
+    </p>
+
+    <p style="font-size: 22px;">
+        A horizontal semaphore arm typically indicates stop, while downward arm
+        positions indicate various proceed or caution aspects depending on the
+        railroad's operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        Position light signals use rows of white or amber lights arranged in
+        specific patterns. The pattern created by the illuminated lights determines
+        the aspect being displayed.
+    </p>
+
+    <p style="font-size: 22px;">
+        Common position light aspects include a horizontal row of lights for stop,
+        a vertical row for proceed, and diagonal rows for approach indications.
+    </p>
+
+    <p style="font-size: 22px;">
+        Searchlight signals use a single lens and an internal mechanism that
+        changes the color projected through the lens. The signal can display
+        red, yellow, or green indications using the same signal head.
+    </p>
+
+    <p style="font-size: 22px;">
+        Regardless of signal type, all signal aspects are carefully standardized
+        and governed by railroad operating rules to ensure consistent and safe
+        communication with train crews.
+    </p>
+
+    <p style="font-size: 22px;">
+        Clear and unambiguous signal displays are essential for maintaining safe
+        train separation, efficient traffic flow, and compliance with railroad
+        operating regulations.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/color-light-signal-diagram.png"
+    alt="Diagram showing how color light signals create different aspects"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/semaphore-signal-mechanism.jpg"
+    alt="Semaphore signal mechanism and arm positions"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/position-light-patterns.jpg"
+    alt="Examples of position light signal patterns"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/multi-head-color-light-signal.jpg"
+    alt="Multiple signal heads mounted on a signal mast"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. How do color light signals create different aspects?</p>
+        <label><input type="radio" name="q1" value="wrong"> By moving a mechanical arm</label><br>
+        <label><input type="radio" name="q1" value="correct"> By illuminating specific combinations of colored lights and flashing patterns</label><br>
+        <label><input type="radio" name="q1" value="wrong"> By changing the height of the signal mast</label><br><br>
+
+        <p>2. What is the primary visual element that conveys aspects in semaphore signals?</p>
+        <label><input type="radio" name="q2" value="correct"> The position of the movable signal arm</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Colored LED lights only</label><br>
+        <label><input type="radio" name="q2" value="wrong"> A digital display screen</label><br><br>
+
+        <p>3. What color lights are commonly used in position light signals, and how are aspects differentiated?</p>
+        <label><input type="radio" name="q3" value="wrong"> Red, yellow, and green lights arranged vertically</label><br>
+        <label><input type="radio" name="q3" value="correct"> White or amber lights arranged in different patterns such as horizontal, vertical, and diagonal rows</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Blue lights displayed at different brightness levels</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 21.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 20F.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

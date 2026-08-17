@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 16C - What is a Wireless Crossing?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 16C - What is a Wireless Crossing?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Wireless Highway Grade Crossing Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        A wireless highway grade crossing system is a crossing warning system that uses
+        wireless communication technology instead of traditional wired connections between
+        train detection equipment and warning devices.
+    </p>
+
+    <p style="font-size: 22px;">
+        Traditional crossing systems normally use physical wiring to send signals from
+        track circuits or train detection equipment to the crossing controller and warning
+        devices such as lights, bells, and gates.
+    </p>
+
+    <p style="font-size: 22px;">
+        These wired systems can be expensive to install and maintain. The wiring may also
+        become damaged by weather conditions, vandalism, construction activities, or
+        environmental problems.
+    </p>
+
+    <p style="font-size: 22px;">
+        Wireless crossing systems use radio frequency (RF) communication to send train
+        detection information from field equipment near the tracks to the crossing control
+        equipment.
+    </p>
+
+    <p style="font-size: 22px;">
+        In a typical wireless system, trains are still detected using methods such as
+        track circuits or axle counters. Instead of using long wire runs, the train
+        detection information is transmitted wirelessly to the crossing controller.
+    </p>
+
+    <p style="font-size: 22px;">
+        Once the control unit receives the wireless signal, it activates the flashing
+        lights, bells, and automatic gates at the crossing to warn motorists and pedestrians.
+    </p>
+
+    <p style="font-size: 22px;">
+        Wireless crossing systems may reduce installation costs, simplify maintenance,
+        increase flexibility in difficult locations, and allow faster installation.
+        However, factors such as signal reliability, interference, security, and power
+        supply must still be carefully considered.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/wired-grade-crossing-system.png"
+    alt="Traditional wired highway grade crossing warning system showing physical wire connections"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/wireless-grade-crossing-system.png"
+    alt="Wireless highway grade crossing warning system using radio communication"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/wireless-field-unit.png"
+    alt="Wireless field transmitter unit near railroad tracks"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/wireless-control-unit.png"
+    alt="Wireless control receiver unit activating crossing warning devices"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What makes a wireless highway grade crossing system different from a traditional wired system?</p>
+        <label><input type="radio" name="q1" value="wrong"> Wireless systems do not use warning devices</label><br>
+        <label><input type="radio" name="q1" value="correct"> Wireless systems use radio communication instead of physical wiring for signal transmission</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Wireless systems only work with passenger trains</label><br><br>
+
+        <p>2. What is the general flow of information in a wireless crossing system?</p>
+        <label><input type="radio" name="q2" value="correct"> Train detection equipment sends wireless signals to the control unit, which activates warning devices</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Gates activate first and then trains are detected</label><br>
+        <label><input type="radio" name="q2" value="wrong"> The crossing controller manually contacts the train crew</label><br><br>
+
+        <p>3. What are some advantages and concerns of wireless crossing systems?</p>
+        <label><input type="radio" name="q3" value="wrong"> They eliminate all maintenance and power requirements</label><br>
+        <label><input type="radio" name="q3" value="wrong"> They only work in cities with strong cell phone service</label><br>
+        <label><input type="radio" name="q3" value="correct"> They can reduce installation costs and maintenance, but require reliable communication and security</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 16D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 16B.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 12C - What Types of Computer Based Train Control?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 12C - What Types of Computer Based Train Control?</h1>
+
+    <h2 style="color: darkblue;">
+        Introduction to Computer Based Train Control (CBTC) - Page 4
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Computer Based Train Control, commonly called CBTC, can be categorized
+        in several ways. These categories reflect system architecture, the
+        level of automation, and the communication technologies used.
+    </p>
+
+    <p style="font-size: 22px;">
+        Understanding these classifications helps explain the flexibility and
+        adaptability of CBTC in different railway environments.
+    </p>
+
+    <h3>1. Based on Architecture</h3>
+
+    <h3>Centralized CBTC</h3>
+
+    <p style="font-size: 22px;">
+        In a centralized CBTC architecture, a central control center acts as
+        the main processing hub.
+    </p>
+
+    <p style="font-size: 22px;">
+        The central system receives train location and status information from
+        all trains, calculates safe Movement Authorities and speed profiles,
+        and transmits these commands back to the trains.
+    </p>
+
+    <p style="font-size: 22px;">
+        This architecture depends heavily on a strong and reliable communication
+        link between the trains and the central control system.
+    </p>
+
+    <h3>Distributed CBTC (Train-Centric CBTC)</h3>
+
+    <p style="font-size: 22px;">
+        In a distributed CBTC architecture, more processing and decision-making
+        capability is shifted to the trains themselves.
+    </p>
+
+    <p style="font-size: 22px;">
+        Trains may communicate directly with each other to help maintain safe
+        separation and coordinate movements, reducing reliance on one central
+        entity for some critical functions.
+    </p>
+
+    <p style="font-size: 22px;">
+        This approach can offer advantages in scalability and resilience.
+    </p>
+
+    <h3>2. Based on Grade of Automation (GoA)</h3>
+
+    <p style="font-size: 22px;">
+        CBTC is a major technology that supports different Grades of Automation,
+        often called GoA, as defined by international standards such as IEC
+        62290.
+    </p>
+
+    <h3>GoA 1 - Manual Operation</h3>
+
+    <p style="font-size: 22px;">
+        In GoA 1, the driver is responsible for starting, stopping, speed
+        control, and door operation while following signals.
+    </p>
+
+    <p style="font-size: 22px;">
+        CBTC in this case mainly provides train protection and real-time
+        information to the driver.
+    </p>
+
+    <h3>GoA 2 - Semi-Automatic Operation (STO)</h3>
+
+    <p style="font-size: 22px;">
+        In GoA 2, the Automatic Train Operation subsystem can automate train
+        starting and stopping accurately at stations.
+    </p>
+
+    <p style="font-size: 22px;">
+        A driver is still typically responsible for door operation, handling
+        emergencies, and possibly manual operation during degraded conditions.
+    </p>
+
+    <h3>GoA 3 - Driverless Train Operation (DTO)</h3>
+
+    <p style="font-size: 22px;">
+        In GoA 3, the CBTC system controls starting, stopping, and door
+        operation automatically.
+    </p>
+
+    <p style="font-size: 22px;">
+        There is no driver onboard, but attendants may still be present to
+        assist passengers, handle emergencies, and take manual control if
+        required.
+    </p>
+
+    <h3>GoA 4 - Unattended Train Operation (UTO)</h3>
+
+    <p style="font-size: 22px;">
+        In GoA 4, the CBTC system fully automates train operation, including
+        starting, stopping, door operation, and handling planned contingencies.
+    </p>
+
+    <p style="font-size: 22px;">
+        No onboard operating staff are required for normal train movement, and
+        platform screen doors are often used for additional safety.
+    </p>
+
+    <h3>3. Based on Communication Technology</h3>
+
+    <p style="font-size: 22px;">
+        Reliable and continuous communication is essential for CBTC operation.
+    </p>
+
+    <h3>Radio-Based Systems</h3>
+
+    <p style="font-size: 22px;">
+        The most common modern CBTC systems are radio-based.
+    </p>
+
+    <p style="font-size: 22px;">
+        These systems may use Wi-Fi, cellular networks, or proprietary
+        industrial radio systems. Coverage is often provided by radio base
+        stations or leaky feeder cables installed along the railway.
+    </p>
+
+    <h3>Inductive Loops and Balises</h3>
+
+    <p style="font-size: 22px;">
+        Inductive loops and balises are not usually used for continuous
+        high-bandwidth communication in full CBTC systems, but they can still
+        be important for train positioning and for transmitting discrete data.
+    </p>
+
+    <p style="font-size: 22px;">
+        These devices help improve train location accuracy and support safe
+        operation.
+    </p>
+
+    <h3>4. Combining CBTC Types</h3>
+
+    <p style="font-size: 22px;">
+        These CBTC categories are not mutually exclusive. A railway may use a
+        centralized architecture, support GoA 4, and operate over a radio-based
+        communication network all at the same time.
+    </p>
+
+    <p style="font-size: 22px;">
+        The most suitable type of CBTC system depends on the needs of the
+        railway, such as whether it is an urban metro, mainline, or freight
+        operation.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p style="font-size: 20px;">
+            <strong>1. What is the primary difference between centralized and distributed CBTC architectures?</strong>
+        </p>
+
+        <label><input type="radio" name="q1" value="correct"> A. Centralized CBTC places most processing in a central control center, while distributed CBTC shifts more processing and decision-making to the trains.</label><br>
+        <label><input type="radio" name="q1" value="wrong"> B. Centralized CBTC uses no communication, while distributed CBTC uses only paper records.</label><br>
+        <label><input type="radio" name="q1" value="wrong"> C. Distributed CBTC only works on freight railroads.</label><br>
+        <label><input type="radio" name="q1" value="wrong"> D. Centralized CBTC does not calculate Movement Authorities.</label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>2. What is the key operational difference between GoA 2 (STO) and GoA 4 (UTO)?</strong>
+        </p>
+
+        <label><input type="radio" name="q2" value="wrong"> A. GoA 2 has no train automation, while GoA 4 only controls lighting.</label><br>
+        <label><input type="radio" name="q2" value="correct"> B. GoA 2 still has a driver responsible for some functions such as doors and emergencies, while GoA 4 is fully automated with no onboard operating staff required for normal service.</label><br>
+        <label><input type="radio" name="q2" value="wrong"> C. GoA 2 is for buses, while GoA 4 is for trains only.</label><br>
+        <label><input type="radio" name="q2" value="wrong"> D. GoA 4 always requires more manual driving than GoA 2.</label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>3. What are the most common communication technologies used in modern CBTC, and why is reliable communication important?</strong>
+        </p>
+
+        <label><input type="radio" name="q3" value="wrong"> A. Smoke signals and hand signals, because they reduce track maintenance.</label><br>
+        <label><input type="radio" name="q3" value="wrong"> B. Telegraph wires only, because trains do not need real-time updates.</label><br>
+        <label><input type="radio" name="q3" value="correct"> C. Radio-based systems such as Wi-Fi, cellular, and proprietary radio are most common, and reliable communication is critical because train data, Movement Authorities, and speed commands must be exchanged continuously.</label><br>
+        <label><input type="radio" name="q3" value="wrong"> D. Balises only, because they provide all continuous communication by themselves.</label><br><br>
+
+        <button type="button"
+        onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if (password === "signal2026") {
+            window.location.href = "Module 12D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+            answer.disabled = true;
+
+            if (answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if (answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if (answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+                answer.parentElement.style.fontWeight = "bold";
+            }
+        });
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 12B.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

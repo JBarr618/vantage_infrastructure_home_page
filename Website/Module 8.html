@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 8 - Introduction to Phase Shift Overlay Track Circuits</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 8 - Introduction to Phase Shift Overlay Track Circuits</h1>
+
+    <h2 style="color: darkblue;">
+        Introduction to Phase Shift Overlay Track Circuits
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Phase shift overlay track circuits are an advanced type of AC track circuit used in railroad signaling.
+        They are designed for locations where continuous train detection and broken rail detection are important,
+        especially in complex track layouts.
+    </p>
+
+    <p style="font-size: 22px;">
+        Unlike traditional AC track circuits that rely mainly on signal strength, phase shift overlay circuits detect
+        changes in the phase relationship of the AC signal. These phase changes help the receiver determine whether
+        the track section is clear or occupied.
+    </p>
+
+    <p style="font-size: 22px;">
+        In a basic setup, a continuous AC signal at a specific frequency is sent through the rails. At block boundaries,
+        phase shift overlay systems may use tuned circuits or impedance matching devices instead of relying only on
+        insulated rail joints.
+    </p>
+
+    <p style="font-size: 22px;">
+        When a train enters the block, the wheels and axles change the impedance of the track circuit. This changes
+        the phase of the received AC signal, and the receiver detects that change as an occupied track condition.
+    </p>
+
+    <p style="font-size: 22px;">
+        One major advantage of phase shift overlay track circuits is improved broken rail detection. A break in either
+        rail can change the impedance and phase characteristics of the circuit, allowing the system to detect an unsafe
+        rail condition.
+    </p>
+
+    <p style="font-size: 22px;">
+        These systems can also be overlaid on existing track circuits or used with other signaling systems, making them
+        useful in areas where flexibility and additional detection capability are needed.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What distinguishes phase shift overlay track circuits from many traditional AC track circuits?</p>
+        <label><input type="radio" name="q1" value="wrong"> They rely only on amplitude reduction</label><br>
+        <label><input type="radio" name="q1" value="correct"> They use phase changes along with signal changes for detection</label><br>
+        <label><input type="radio" name="q1" value="wrong"> They depend entirely on DC track circuits</label><br><br>
+
+        <p>2. What devices may be used at block boundaries instead of relying only on insulated joints?</p>
+        <label><input type="radio" name="q2" value="wrong"> Fuses and relays only</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Batteries and voltage converters</label><br>
+        <label><input type="radio" name="q2" value="correct"> Tuned circuits or impedance matching devices</label><br><br>
+
+        <p>3. What safety advantage can phase shift overlay track circuits provide?</p>
+        <label><input type="radio" name="q3" value="correct"> They can detect broken rails by sensing impedance and phase changes</label><br>
+        <label><input type="radio" name="q3" value="wrong"> They reduce axle counter calibration only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> They eliminate the need for field inspections</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 8A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 7F.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

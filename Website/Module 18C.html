@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 18C - How are Trains Governed in Manual Block?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 18C - How are Trains Governed in Manual Block?</h1>
+
+    <h2 style="color: darkblue;">
+        How Train Movements are Governed in Manual Block Signaling
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        In a manual block signaling system, train movements are governed through
+        communication and authorization between block operators. The main safety
+        principle is that only one train may occupy a block at any given time.
+    </p>
+
+    <p style="font-size: 22px;">
+        Before a train is allowed to enter a block, the block operator at the entrance
+        of the block must confirm with the operator at the far end that the block is
+        completely clear of other trains.
+    </p>
+
+    <p style="font-size: 22px;">
+        Communication between block operators may take place using telephones,
+        telegraphs, block bells, or specialized signaling instruments that indicate
+        the occupancy status of the block.
+    </p>
+
+    <p style="font-size: 22px;">
+        Once the receiving block operator confirms the block is clear, permission
+        can be granted for the approaching train to enter the block. This authority
+        is commonly given by displaying a clear signal indication or issuing a train order.
+    </p>
+
+    <p style="font-size: 22px;">
+        After the train enters the block, the block operator records the movement in
+        the block register or train sheet and informs the next operator that the train
+        has entered the section.
+    </p>
+
+    <p style="font-size: 22px;">
+        The block remains occupied until the entire train clears the far end of the
+        block. Once the train has completely exited the section, the receiving operator
+        communicates back that the block is clear again.
+    </p>
+
+    <p style="font-size: 22px;">
+        Only after this confirmation may another train be authorized to enter the
+        same block. This step-by-step communication and authorization process ensures
+        safe train separation and helps prevent collisions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Accurate communication, proper record keeping, and strict compliance with
+        operating rules are essential for safe operation under manual block signaling.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/manual-block-flowchart.png"
+    alt="Flowchart showing communication and authorization process in manual block signaling"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/train-entering-clear-block.png"
+    alt="Train entering manual block after receiving clear signal"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/block-operators-communicating.png"
+    alt="Block operators communicating train movements between stations"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/block-register-records.png"
+    alt="Block register recording train entry and exit times"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What condition must be met before a train is allowed to enter a block under manual block signaling?</p>
+        <label><input type="radio" name="q1" value="wrong"> Multiple trains must already occupy the block</label><br>
+        <label><input type="radio" name="q1" value="correct"> The block must be confirmed clear of other trains</label><br>
+        <label><input type="radio" name="q1" value="wrong"> The train must exceed track speed limits</label><br><br>
+
+        <p>2. What is the normal communication sequence between block operators during train movement?</p>
+        <label><input type="radio" name="q2" value="correct"> Operators confirm the block is clear, authorize entry, record occupancy, and report when the train clears the block</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Operators allow trains to proceed without communication</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Operators only communicate after an accident occurs</label><br><br>
+
+        <p>3. How is authority for a train to enter a block commonly conveyed to the train crew?</p>
+        <label><input type="radio" name="q3" value="wrong"> By removing all signals from the territory</label><br>
+        <label><input type="radio" name="q3" value="wrong"> By increasing train speed automatically</label><br>
+        <label><input type="radio" name="q3" value="correct"> By displaying a clear signal or issuing a train order</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 18D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 18B.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

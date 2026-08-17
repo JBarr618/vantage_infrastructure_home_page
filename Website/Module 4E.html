@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4E - Troubleshooting an Interlocking</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 4E - Troubleshooting an Interlocking</h1>
+
+    <h2 style="color: darkblue;">
+        Interlocking Troubleshooting Review
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Troubleshooting an interlocking can be complex because switches, signals, track circuits, power systems,
+        wiring, communications, and interlocking logic all work together. A problem in one part of the system can
+        affect the operation of the entire interlocking.
+    </p>
+
+    <p style="font-size: 22px;">
+        Common problems include malfunctioning switches or signals, faulty interlocking logic, power outages,
+        communication failures, wiring problems, and track circuit failures. A systematic troubleshooting method
+        is needed to safely locate and correct these issues.
+    </p>
+
+    <p style="font-size: 22px;">
+        One common technique is to isolate the problem area by dividing the interlocking into smaller sections and
+        testing each component individually. This may include checking wiring, verifying switch operation, testing
+        signal aspects, reviewing track circuit indications, and using diagnostic tools.
+    </p>
+
+    <p style="font-size: 22px;">
+        Computerized fault-finding systems can also help speed up troubleshooting. These systems may analyze alarms,
+        sensor data, event logs, and equipment status to identify the source of a problem more quickly.
+    </p>
+
+    <p style="font-size: 22px;">
+        Regular maintenance and inspections help prevent interlocking problems before they occur. This includes
+        inspecting switches and signals, checking wiring integrity, cleaning equipment, testing logic, performing
+        periodic tests, and documenting results.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is one common problem that can occur within an interlocking system?</p>
+        <label><input type="radio" name="q1" value="correct"> Malfunctioning switches or signals</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Dirty train wheels only</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Outdated train horns</label><br><br>
+
+        <p>2. Why is isolating the problem area important when troubleshooting an interlocking?</p>
+        <label><input type="radio" name="q2" value="wrong"> It helps clean the area better</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It improves signal strength</label><br>
+        <label><input type="radio" name="q2" value="correct"> It narrows down the cause of the issue for efficient diagnosis</label><br><br>
+
+        <p>3. How can computerized fault-finding systems help during troubleshooting?</p>
+        <label><input type="radio" name="q3" value="wrong"> They produce louder alerts only</label><br>
+        <label><input type="radio" name="q3" value="correct"> They can analyze sensor data and identify faults faster</label><br>
+        <label><input type="radio" name="q3" value="wrong"> They power the switches directly</label><br><br>
+
+        <p>4. Why are regular maintenance and inspections important?</p>
+        <label><input type="radio" name="q4" value="wrong"> To polish the rails only</label><br>
+        <label><input type="radio" name="q4" value="wrong"> To repaint the signals only</label><br>
+        <label><input type="radio" name="q4" value="correct"> To prevent issues and ensure long-term reliable operation</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 5.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 4D.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

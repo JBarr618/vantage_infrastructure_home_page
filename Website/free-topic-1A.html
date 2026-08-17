@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Topic 2: Introduction to DC Track Circuits</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Free Topic 2: Introduction to DC Track Circuits</h1>
+
+    <h2 style="color: darkblue;">
+        Free Topic 2: Introduction to DC Track Circuits
+    </h2>
+
+    <hr>
+
+    <img src="images/DC track Circuit Diagram.png"
+     alt="DC track circuit diagram showing battery end and relay end."
+     style="float:right; max-width:450px; margin-left:20px; margin-bottom:10px;">
+
+    <p style="font-size: 22px;">
+        DC track circuits are a fundamental building block of modern railway signaling systems. Their primary purpose is to detect the presence of a train on a section of track. This seemingly simple function is crucial for ensuring safe train operations, as it provides the basis for preventing collisions and controlling train movements through signaling.
+    </p>
+
+    <p style="font-size: 22px;">
+        At its core, a DC track circuit utilizes the steel rails of the railway track as a part of an electrical circuit. The main power source is a low-voltage DC power source connected to the rails at one end of a defined track section, and a relay is connected across the rails at the other end. This track section is electrically isolated from adjacent sections using insulated joints in the rails.
+    </p>
+
+    <p style="font-size: 22px;">
+        When the track section is clear, the DC current flows from the power source, through one rail, across the relay coil, and back through the other rail to complete the circuit. This current energizes the relay, causing its contacts to close or remain closed, indicating that the track section is unoccupied.
+    </p>
+
+    <p style="font-size: 22px;">
+        However, when a train enters the track section, its metal wheels and axles provide a low-resistance electrical path between the two rails. This short circuit diverts the majority of the DC current away from the relay coil. With insufficient current flowing through it, the relay de-energizes, causing its contacts to change state.
+    </p>
+
+    <p style="font-size: 22px;">
+        DC track circuits can also be adapted to provide additional information beyond simple occupancy detection. By using different voltage levels, current characteristics, or by adding additional components, track circuits can be configured to detect broken rails or transmit basic signaling information directly to the train.
+    </p>
+
+    <p style="font-size: 22px;">
+        In summary, the DC track circuit is a reliable and fail-safe method for detecting the presence of trains on a section of track. Its fundamental principle of using the rails as part of an electrical circuit to energize a relay provides a crucial input for railway signaling and safety systems.
+    </p>
+
+    <hr>
+
+    <h2>Topic Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary function of a DC Track Circuit?</p>
+        <label><input type="radio" name="q1" value="correct"> Detect the presence of a train</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Connect to the rails to create a circuit</label><br>
+        <label><input type="radio" name="q1" value="wrong"> De-energize a relay</label><br><br>
+
+        <p>2. What is the main source of power?</p>
+        <label><input type="radio" name="q2" value="wrong"> AC power</label><br>
+        <label><input type="radio" name="q2" value="correct"> Low Voltage DC Power</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Audio Frequencies 20 Hz - 690 kHz</label><br><br>
+
+        <p>3. What other information can DC Track Circuits provide?</p>
+        <label><input type="radio" name="q3" value="wrong"> Alert that signal has failed</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Detect interference from other sources</label><br>
+        <label><input type="radio" name="q3" value="correct"> Detect a broken rail</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button" onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+        <button type="button" onclick="goHome()"
+        style="background-color:#444;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Home
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button style="background-color:green;
+            color:white;
+            padding:15px 30px;
+            font-size:18px;
+            border:none;
+            border-radius:10px;
+            cursor:pointer;">
+            Continue to Full Course
+            </button>
+        </a>
+    </div>
+
+    <script>
+        function goHome() {
+            window.location.href = "index.html";
+        }
+
+        function checkPassword() {
+            let password = prompt("Enter your purchased password. If you do not have one, click Cancel, Click Home , and purchase the topic of your choice.");
+
+            if(password === "signal2026") {
+                window.location.href = "Module 3B.html";
+            } else {
+                alert("Incorrect Password");
+            }
+        }
+
+        function gradeQuiz() {
+            const answers = document.querySelectorAll('input[type="radio"]');
+
+            answers.forEach(answer => {
+                answer.disabled = true;
+
+                if(answer.checked && answer.value === "correct") {
+                    answer.parentElement.style.color = "green";
+                }
+
+                if(answer.checked && answer.value === "wrong") {
+                    answer.parentElement.style.color = "red";
+                }
+
+                if(answer.value === "correct") {
+                    answer.parentElement.style.fontWeight = "bold";
+                }
+            });
+
+            document.getElementById("continueButton").style.display = "block";
+        }
+    </script>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 21B - What Are the Aspects of a Color Signal?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 21B - What Are the Aspects of a Color Signal?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Color Signal Aspects
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        The aspects of a color signal are the visual indications displayed through
+        various combinations of colored lights. Each aspect has a specific meaning
+        and requires a specific response from the train crew.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signal aspects are created by illuminating one or more colored lights
+        within the signal head. The colors displayed, their arrangement, and
+        whether they are flashing or steady determine the meaning of the signal.
+    </p>
+
+    <p style="font-size: 22px;">
+        The most restrictive aspect is typically a red signal. A red aspect
+        requires the train to stop before passing the signal and remain stopped
+        until proper authority is received.
+    </p>
+
+    <p style="font-size: 22px;">
+        A green signal aspect generally indicates that the block ahead is clear
+        and the train may proceed at the authorized speed in accordance with
+        operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        Yellow aspects are commonly used as approach indications. These aspects
+        warn train crews that a more restrictive signal lies ahead and that they
+        should prepare to stop if necessary.
+    </p>
+
+    <p style="font-size: 22px;">
+        Flashing yellow aspects may indicate a less restrictive condition than a
+        steady yellow while still warning crews that conditions ahead require
+        attention. They are often associated with diverging routes or speed
+        restrictions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Restricting aspects authorize movement at restricted speed. Examples may
+        include red over yellow, yellow over red, flashing red, or lunar white,
+        depending upon the railroad's operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        When operating under a restricting aspect, train crews must proceed at
+        restricted speed and be prepared to stop short of any obstruction,
+        occupied track, broken rail, or improperly lined switch.
+    </p>
+
+    <p style="font-size: 22px;">
+        Diverging route aspects are commonly displayed at interlockings and
+        control points. These aspects inform train crews that the train will
+        travel through a turnout or crossover onto another route.
+    </p>
+
+    <p style="font-size: 22px;">
+        Examples of diverging route aspects may include combinations such as
+        yellow over green, green over yellow, or yellow over yellow depending
+        upon the railroad's signaling system and operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some aspects authorize movement while also imposing speed restrictions.
+        Examples include green over yellow or flashing green aspects that require
+        trains to proceed but at a specified speed.
+    </p>
+
+    <p style="font-size: 22px;">
+        Every railroad publishes detailed signal charts and operating rules that
+        define the exact meaning of every signal aspect. Proper interpretation of
+        these aspects is critical to safe railroad operations.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/color-light-aspect-chart.png"
+    alt="Comprehensive chart of color light signal aspects and meanings"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/color-signal-closeups.jpg"
+    alt="Examples of illuminated color signal aspects"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/signal-arrangement-diagram.png"
+    alt="Diagram showing how light arrangement affects signal meaning"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the most restrictive aspect displayed by a color signal, and what action does it require?</p>
+        <label><input type="radio" name="q1" value="wrong"> Green — proceed at authorized speed</label><br>
+        <label><input type="radio" name="q1" value="correct"> Red — stop before passing the signal and do not proceed without authority</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Yellow — proceed through the block without restriction</label><br><br>
+
+        <p>2. How do approach aspects prepare train crews for conditions ahead?</p>
+        <label><input type="radio" name="q2" value="correct"> They warn that a more restrictive signal lies ahead and the crew should prepare to stop or reduce speed</label><br>
+        <label><input type="radio" name="q2" value="wrong"> They indicate the track ahead is permanently clear</label><br>
+        <label><input type="radio" name="q2" value="wrong"> They authorize unrestricted movement through occupied blocks</label><br><br>
+
+        <p>3. Which of the following is an example of a diverging route aspect?</p>
+        <label><input type="radio" name="q3" value="wrong"> Single red</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Single green</label><br>
+        <label><input type="radio" name="q3" value="correct"> Yellow over Green</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 21C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 21A.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

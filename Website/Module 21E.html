@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 21E - Testing Color Signals</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 21E - Testing Color Signals</h1>
+
+    <h2 style="color: darkblue;">
+        Inspection and Testing of Color Light Signals
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Regular testing of color light signals is essential to ensure that signal
+        aspects are displayed correctly, reliably, and with sufficient visibility
+        for train crews. Signal testing helps maintain safe train operations and
+        compliance with railroad operating rules and maintenance standards.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most important inspections involves verifying lamp or LED
+        functionality. Each signal color, including red, yellow, and green,
+        must illuminate with the proper intensity and color. Flashing aspects
+        must also be checked to ensure the correct flash rate and duty cycle.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signal lenses must be inspected regularly for cracks, dirt, moisture,
+        or damage that could reduce visibility or distort the displayed color.
+        Clean lenses allow train crews to clearly identify signal indications
+        from the required distance.
+    </p>
+
+    <p style="font-size: 22px;">
+        Proper alignment of the signal head is also critical. Signals must be
+        visible from the required distance and viewing angle along the track.
+        Curves, vegetation, structures, or other obstructions must not interfere
+        with visibility.
+    </p>
+
+    <p style="font-size: 22px;">
+        Wiring and electrical connections must be inspected to ensure they are
+        secure and free from corrosion. Damaged wiring, loose terminals, or
+        deteriorated insulation can cause incorrect signal indications or
+        equipment failures.
+    </p>
+
+    <p style="font-size: 22px;">
+        The control circuitry governing the signal must also be tested. This
+        includes verifying that the proper signal aspect is displayed under
+        various operating conditions and that relays, contacts, and control
+        devices function correctly.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signal maintainers verify that aspect changes occur correctly when trains
+        occupy or clear track circuits. Timing and sequencing of signal changes
+        are important parts of system testing.
+    </p>
+
+    <p style="font-size: 22px;">
+        The signal power supply must be checked to ensure proper voltage levels
+        are available. Backup power systems should also be tested to confirm
+        reliable operation during commercial power failures.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some color light signals use automatic day and night dimming systems.
+        These systems adjust signal brightness based on ambient lighting
+        conditions and must be tested periodically to ensure proper operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        Accurate documentation is an important part of signal testing. Test
+        results, maintenance actions, repairs, and inspection dates should be
+        recorded and maintained for future reference and regulatory compliance.
+    </p>
+
+    <!-- Suggested Images
+
+    <img src="images/signal-maintainer-inspecting-lenses.jpg"
+    alt="Signal maintainer inspecting color signal lenses"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/testing-signal-voltage.jpg"
+    alt="Testing equipment checking voltage at signal head"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/day-night-dimming.jpg"
+    alt="Demonstration of day and night signal dimming"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/signal-testing-checklist.jpg"
+    alt="Color signal testing checklist"
+    style="width:350px; border-radius:10px;">
+
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Why is it important to check the alignment of a color light signal?</p>
+        <label><input type="radio" name="q1" value="wrong"> To reduce power consumption</label><br>
+        <label><input type="radio" name="q1" value="correct"> To ensure the signal is visible from the required distance and angle</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To improve radio communications</label><br><br>
+
+        <p>2. What aspects of the electrical system are typically tested on a color light signal?</p>
+        <label><input type="radio" name="q2" value="wrong"> Only the signal paint color</label><br>
+        <label><input type="radio" name="q2" value="wrong"> The train crew's communication equipment</label><br>
+        <label><input type="radio" name="q2" value="correct"> Wiring, electrical connections, power supply voltage, and lamp or LED operation</label><br><br>
+
+        <p>3. What is the purpose of testing the control circuit operation of a color light signal?</p>
+        <label><input type="radio" name="q3" value="correct"> To verify the correct signal aspects are displayed under various operating conditions</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To increase train speed</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To improve track drainage</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 21F.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 21D.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

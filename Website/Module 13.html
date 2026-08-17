@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 13 - Introduction to Microlok Programming</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 13 - Introduction to Microlok Programming</h1>
+
+    <h2 style="color: darkblue;">
+        Introduction to Microlok Programming
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Microlok is a vital microprocessor-based railroad signal control system.
+        It is commonly used to control interlockings, signals, switches, track
+        circuits, routes, and other railroad signal functions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Microlok programming is used to create the logic that tells the system
+        how the signal equipment should operate safely under different field
+        conditions.
+    </p>
+
+    <h3>1. Vital Signal Logic</h3>
+
+    <p style="font-size: 22px;">
+        Microlok programming is considered vital because it directly affects
+        safe train movement. The logic must prevent unsafe conditions such as
+        conflicting routes, improper signal clearing, or switch movement under
+        a train.
+    </p>
+
+    <h3>2. Proprietary Programming System</h3>
+
+    <p style="font-size: 22px;">
+        Microlok programming is performed using proprietary software and a
+        special programming language developed for railroad signal applications.
+    </p>
+
+    <p style="font-size: 22px;">
+        The original Microlok system was developed by GRS, which later became
+        part of Wabtec. Because the system is safety-critical, access to the
+        programming tools and detailed logic is controlled.
+    </p>
+
+    <h3>3. High-Level Signal Language</h3>
+
+    <p style="font-size: 22px;">
+        The Microlok programming language is designed around railroad signal
+        concepts. It allows engineers to build logic using ideas such as track
+        occupancy, signal aspects, switch correspondence, route locking,
+        approach locking, time locking, and traffic direction.
+    </p>
+
+    <h3>4. Programming Environment</h3>
+
+    <p style="font-size: 22px;">
+        Engineers use the Microlok development environment to write, check,
+        simulate, compile, and prepare the logic for installation into the
+        field unit.
+    </p>
+
+    <p style="font-size: 22px;">
+        Before the program is placed into service, it must be reviewed,
+        tested, verified, and approved according to railroad safety procedures.
+    </p>
+
+    <h3>5. Simulation and Testing</h3>
+
+    <p style="font-size: 22px;">
+        Microlok logic can be tested before being placed in service. Simulation
+        helps engineers confirm that routes lock correctly, signals clear only
+        when conditions are safe, and field inputs and outputs respond properly.
+    </p>
+
+    <h3>6. Field Deployment</h3>
+
+    <p style="font-size: 22px;">
+        After testing and approval, the compiled program is installed into the
+        Microlok unit. Field testing is then performed to verify that the
+        programmed logic matches the plans and operates safely with the actual
+        equipment.
+    </p>
+
+    <h3>7. Similar Systems</h3>
+
+    <p style="font-size: 22px;">
+        Other signal manufacturers also use proprietary vital logic systems.
+        Examples include Siemens, Alstom, Wabtec, and other railroad signal
+        equipment manufacturers.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p style="font-size: 20px;">
+            <strong>1. What company originally developed the Microlok programming system?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q1" value="wrong">
+            A. Siemens
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="correct">
+            B. Wabtec, formerly GRS
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="wrong">
+            C. Electrologixs
+        </label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>2. What is a major advantage of using a high-level language for Microlok programming?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q2" value="wrong">
+            A. It is easier for the train crew to repair.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q2" value="correct">
+            B. It helps signal engineers implement interlocking logic.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q2" value="wrong">
+            C. It works without any hardware.
+        </label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>3. Why are Microlok programming details proprietary?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q3" value="wrong">
+            A. To reduce development cost.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q3" value="wrong">
+            B. To prevent passenger delays.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q3" value="correct">
+            C. To protect system safety and control who can program the logic.
+        </label><br><br>
+
+        <button type="button"
+        onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if (password === "signal2026") {
+            window.location.href = "Module 13A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+            answer.disabled = true;
+
+            if (answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if (answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if (answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+                answer.parentElement.style.fontWeight = "bold";
+            }
+        });
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 12I.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

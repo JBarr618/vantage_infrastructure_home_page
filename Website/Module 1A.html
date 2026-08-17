@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1A - Introduction to Railroad Signal and Train Control</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 1A - Introduction to Railroad Signal and Train Control</h1>
+
+    <h2 style="color: darkblue;">
+        Railroad Signals and Train Control
+    </h2>
+
+    <hr>
+
+    <img src="images/semphore signal w mountain.png"
+         alt="Historical semaphore signal beside railroad tracks in a mountainous area."
+         style="float:right; max-width:300px; margin-left:20px; margin-bottom:10px;">
+
+    <p style="font-size: 22px;">
+        Railroad signals are the language of the railway, conveying essential information to train crews regarding track occupancy, authorized speed, and movement authority. These signals are strategically placed along the tracks and were sometimes mechanical indicators called semaphor signal, today in the modern day combination of lights, color are used to communicate these instructions 
+    </p>
+
+    <p style="font-size: 22px;">
+        The evolution of railroad signals has been a journey driven by the need for increased safety and efficiency. Early methods relied on manual flagmen and time-based train schedules, which were prone to human error and limited the capacity of the railway.
+    </p>
+    <img src="images/Evolution Train Control.png"
+    alt="Infographic of evolution from manual to modern train control systems."
+    style="max-width:400px; margin:10px;">
+    <p style="font-size: 22px;">
+        The introduction of electric light signals marked a significant advancement, offering better visibility in various weather conditions and allowing for more complex signaling aspects. Today, modern railroads utilize sophisticated color light signals and computer-based interlocking systems.
+    </p>
+
+    <div style="text-align:center; margin-top:25px;">
+     
+
+        <img src="images/Color Light Signal.png"
+             alt="Modern color light signal beside railway tracks at dusk."
+             style="max-width:400px; margin:10px;">
+    </div>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What are the primary ways railroad signals communicate information to train crews?</p>
+        <label><input type="radio" name="q1" value="correct"> Lights, colors, and mechanical indicators</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Audible bells and whistles</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Passenger announcements</label><br><br>
+
+        <p>2. What was one early method used to manage train movements before automated signaling systems?</p>
+        <label><input type="radio" name="q2" value="correct"> Manual flagmen and time-based schedules</label><br>
+        <label><input type="radio" name="q2" value="wrong"> GPS and wireless communication</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Remote dispatching from satellites</label><br><br>
+
+        <p>3. What was a key advantage of electric light signals?</p>
+        <label><input type="radio" name="q3" value="correct"> Better visibility in weather conditions and more complex aspects</label><br>
+        <label><input type="radio" name="q3" value="wrong"> More stylish appearance</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Less electricity usage</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+            style="background-color:#0056b3; color:white; padding:15px 30px; font-size:18px; border:none; border-radius:10px; cursor:pointer;">
+            Submit Answers
+        </button>
+
+        <button type="button" onclick="checkPassword()"
+            style="background-color:#0056b3; color:white; padding:15px 30px; font-size:18px; border:none; border-radius:10px; cursor:pointer; margin-left:10px;">
+            Next Module
+        </button>
+
+    </form>
+
+    <script>
+        function checkPassword() {
+            let password = prompt("Enter Password:");
+
+            if (password === "signal2026") {
+                window.location.href = "Module 3A.html";
+            } else {
+                alert("Incorrect Password");
+            }
+        }
+
+        function gradeQuiz() {
+            const answers = document.querySelectorAll('input[type="radio"]');
+
+            answers.forEach(answer => {
+                answer.disabled = true;
+
+                if (answer.checked && answer.value === "correct") {
+                    answer.parentElement.style.color = "green";
+                }
+
+                if (answer.checked && answer.value === "wrong") {
+                    answer.parentElement.style.color = "red";
+                }
+
+                if (answer.value === "correct") {
+                    answer.parentElement.style.fontWeight = "bold";
+                }
+            });
+        }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444; color:white; padding:12px 25px; font-size:16px; border:none; border-radius:8px; cursor:pointer; margin-right:10px;">
+                Home
+            </button>
+        </a>
+
+        <a href="module001.html">
+            <button style="background-color:#444; color:white; padding:12px 25px; font-size:16px; border:none; border-radius:8px; cursor:pointer;">
+                Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <h3>Built From Real Railroad Experience</h3>
+        <p>Signal School 2026 Professional Railroad Signal Training</p>
+        <p>© 2026 Vantage Infrastructure LLC</p>
+    </footer>
+
+</body>
+
+</html>

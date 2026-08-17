@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 26D - Troubleshooting Automatic Train Control</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 26D - Troubleshooting Automatic Train Control</h1>
+
+    <h2 style="color: darkblue;">
+        How to Troubleshoot ATC Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Troubleshooting Automatic Train Control (ATC) systems requires a detailed
+        understanding of both onboard and trackside equipment. ATC systems are
+        safety-critical, so faults must be diagnosed carefully using approved
+        procedures, system documentation, and specialized diagnostic tools.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the onboard ATC system has completely failed, the first step is to
+        check the power supply to the onboard ATC unit. Technicians should also
+        inspect cable connections, status indicators, fuses, circuit breakers,
+        and any error messages displayed on the Driver-Machine Interface.
+    </p>
+
+    <p style="font-size: 22px;">
+        Onboard diagnostic software should be used to identify fault codes and
+        system errors. Speed sensor data, location inputs, software versions,
+        configuration files, and train-specific data must also be verified.
+    </p>
+
+    <p style="font-size: 22px;">
+        Trackside system failures may appear when onboard equipment reports errors
+        or fails to receive information at specific locations. Technicians should
+        test transponders, beacons, inductive loops, radio transmitters, power
+        supplies, cabling, and signal interface equipment.
+    </p>
+
+    <p style="font-size: 22px;">
+        Physical damage, water intrusion, loose wiring, failed power supplies,
+        incorrect data encoding, or environmental conditions can prevent trackside
+        equipment from transmitting correct information to the train.
+    </p>
+
+    <p style="font-size: 22px;">
+        Communication problems may cause intermittent or complete loss of data
+        between the train and trackside equipment. Antennas, receivers, radios,
+        cables, connectors, communication logs, protocols, and data formats should
+        all be checked.
+    </p>
+
+    <p style="font-size: 22px;">
+        Incorrect speed enforcement may occur if the ATC system intervenes at the
+        wrong speed or fails to intervene when limits are exceeded. Possible causes
+        include miscalibrated speed sensors, incorrect speed limit data, faulty
+        speed profile logic, or incorrect configuration parameters.
+    </p>
+
+    <p style="font-size: 22px;">
+        Incorrect signal enforcement may occur if signal aspect data is encoded,
+        transmitted, or interpreted incorrectly. The signal control system,
+        interlocking interface, onboard interpretation logic, and braking curve
+        calculations must all be verified.
+    </p>
+
+    <p style="font-size: 22px;">
+        Unintended brake applications require careful review of event recorder
+        data and onboard logs. Technicians should look for false sensor inputs,
+        corrupted trackside data, communication issues, software faults, or
+        configuration errors.
+    </p>
+
+    <p style="font-size: 22px;">
+        System logs and fault codes are essential when troubleshooting ATC. These
+        records help identify the sequence of events leading to a fault and allow
+        technicians to isolate the affected subsystem.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because ATC systems vary by manufacturer and design, system-specific
+        manuals and vendor diagnostic tools must be used. Complex faults often
+        require support from engineering personnel, experienced technicians, or
+        the system vendor.
+    </p>
+
+    <p style="font-size: 22px;">
+        All ATC troubleshooting must follow railway safety procedures. The system
+        should never be returned to service until proper testing confirms that the
+        safety functions operate correctly.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the first step when troubleshooting a complete failure of the onboard ATC system?</p>
+        <label><input type="radio" name="q1" value="wrong"> Replace all trackside equipment immediately</label><br>
+        <label><input type="radio" name="q1" value="correct"> Check the power supply, connections, status indicators, and DMI error messages</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Increase the train speed</label><br><br>
+
+        <p>2. If an ATC system is incorrectly enforcing speed limits, what are some areas to investigate?</p>
+        <label><input type="radio" name="q2" value="correct"> Speed sensors, speed limit data, speed profile logic, and configuration parameters</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Passenger seating and station lighting</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Locomotive paint color</label><br><br>
+
+        <p>3. Why is system-specific documentation and diagnostic equipment necessary when troubleshooting ATC?</p>
+        <label><input type="radio" name="q3" value="wrong"> ATC systems are all identical and require no documentation</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Documentation is only used for cleaning equipment</label><br>
+        <label><input type="radio" name="q3" value="correct"> ATC systems are complex, safety-critical, and vary by manufacturer and design</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "courses.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 26B.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <h3>Built From Real Railroad Experience</h3>
+        <p>Signal School 2026 Professional Railroad Signal Training</p>
+        <p>© 2026 Vantage Infrastructure LLC</p>
+    </footer>
+
+</body>
+
+</html>

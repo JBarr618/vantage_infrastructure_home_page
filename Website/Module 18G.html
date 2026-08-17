@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 18G - Troubleshooting Manual Block Signaling</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 18G - Troubleshooting Manual Block Signaling</h1>
+
+    <h2 style="color: darkblue;">
+        How to Troubleshoot Manual Block Signaling
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Troubleshooting problems in a manual block signaling system mainly involves
+        investigating communication errors, incorrect signal indications, equipment
+        problems, and failures to follow established operating procedures.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because manual block signaling depends heavily on human communication and
+        accurate record keeping, operators must carefully verify all information
+        regarding train movements and block occupancy.
+    </p>
+
+    <p style="font-size: 22px;">
+        One common issue is communication failure between block operators. This may
+        include loss of telephone or telegraph communication, misunderstood messages,
+        or conflicting information regarding the status of a block.
+    </p>
+
+    <p style="font-size: 22px;">
+        Troubleshooting communication problems includes checking communication equipment,
+        verifying operators are using correct procedures, and reviewing block registers
+        for inconsistencies or missing information.
+    </p>
+
+    <p style="font-size: 22px;">
+        Another issue involves incorrect signal indications. If a signal does not match
+        the known status of the block, operators must immediately verify the block
+        condition with adjacent stations and inspect the signal mechanism for faults
+        or obstructions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Discrepancies in block register entries are also serious concerns. Operators
+        should compare records, review train movement times, and reconcile any conflicting
+        information. If uncertainty exists, the block must be treated as occupied until
+        it is positively confirmed clear.
+    </p>
+
+    <p style="font-size: 22px;">
+        Troubleshooting may also involve investigating failures to follow operating
+        rules. Improper communication, unauthorized train movements, or incorrect
+        procedures require immediate review, retraining, and operational oversight.
+    </p>
+
+    <p style="font-size: 22px;">
+        Equipment malfunctions involving signals or block instruments must be inspected
+        and repaired by qualified maintenance personnel. Temporary operating procedures
+        may be required until repairs are completed.
+    </p>
+
+    <p style="font-size: 22px;">
+        Safety is always the highest priority in manual block territory. Whenever
+        conflicting information or uncertainty exists, the safest and most restrictive
+        action must be taken to prevent collisions or unsafe train movements.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/manual-block-communication-troubleshooting.png"
+    alt="Block operators troubleshooting communication problems"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/block-register-discrepancy.png"
+    alt="Diagram showing discrepancies in block register entries"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/manual-block-signal-maintenance.png"
+    alt="Maintenance personnel inspecting manual block signal mechanism"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/manual-block-failure-flowchart.png"
+    alt="Flowchart for troubleshooting communication failures in manual block signaling"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is often the primary focus when troubleshooting manual block signaling systems?</p>
+        <label><input type="radio" name="q1" value="wrong"> Increasing train speed through the territory</label><br>
+        <label><input type="radio" name="q1" value="correct"> Verifying communication procedures, signal indications, and operating rule compliance</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Eliminating all communication between operators</label><br><br>
+
+        <p>2. What should operators do if discrepancies are found in block register entries?</p>
+        <label><input type="radio" name="q2" value="correct"> Compare records, verify train movements, and treat the block as occupied until proven clear</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Ignore the discrepancy and continue train movements normally</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Remove all signals from service immediately</label><br><br>
+
+        <p>3. Why is it critical to prioritize safety and follow procedures during troubleshooting?</p>
+        <label><input type="radio" name="q3" value="wrong"> Because manual block systems operate automatically without operators</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Because train crews do not rely on block operators</label><br>
+        <label><input type="radio" name="q3" value="correct"> Because communication errors or incorrect actions can create unsafe train movements and collisions</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 19.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 18F.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

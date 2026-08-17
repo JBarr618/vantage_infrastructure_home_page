@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 20E - What Do Fixed Signals Convey?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 20E - What Do Fixed Signals Convey?</h1>
+
+    <h2 style="color: darkblue;">
+        Information Conveyed by Fixed Wayside Signals
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Fixed wayside signals are the primary method used by the railroad signaling
+        system to communicate information and movement authority to train crews.
+        Every signal aspect provides specific instructions that must be understood
+        and obeyed by train operators.
+    </p>
+
+    <p style="font-size: 22px;">
+        The most fundamental function of a fixed signal is to indicate whether a
+        train is authorized to proceed or required to stop. A clear signal grants
+        authority to move forward, while a stop signal requires the train to stop
+        before passing the signal.
+    </p>
+
+    <p style="font-size: 22px;">
+        In Automatic Block Signaling (ABS) territory, signals often provide
+        information regarding the occupancy of the block ahead. A clear signal
+        generally indicates an unoccupied block, while more restrictive indications
+        may warn of an occupied block or the need to prepare to stop.
+    </p>
+
+    <p style="font-size: 22px;">
+        Fixed signals can also communicate speed restrictions. Certain signal
+        aspects require trains to reduce speed, approach the next signal prepared
+        to stop, or travel at a prescribed restricted speed.
+    </p>
+
+    <p style="font-size: 22px;">
+        At interlockings, signals provide route information. Different signal
+        aspects may indicate whether the train will continue on the main track,
+        enter a diverging route, cross over to another track, or proceed through
+        a complex track arrangement.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some signal systems provide information regarding multiple blocks ahead.
+        This advanced warning allows train crews to anticipate changing conditions
+        and adjust train handling accordingly.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signals may also authorize restricted movements under specific operating
+        conditions. These movements often require train crews to proceed at reduced
+        speed while remaining prepared to stop short of an obstruction, another
+        train, or improperly lined switches.
+    </p>
+
+    <p style="font-size: 22px;">
+        Interlocking signals convey information regarding the status of switches,
+        derails, and route locking mechanisms. These signals help ensure trains
+        move safely through controlled territories.
+    </p>
+
+    <p style="font-size: 22px;">
+        Certain signal aspects may provide warnings of hazards ahead, including
+        work zones, temporary speed restrictions, maintenance activities, or
+        unusual operating conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        The exact meaning of each signal aspect is defined by the railroad's
+        operating rules. Train crews must understand and comply with these
+        indications at all times.
+    </p>
+
+    <p style="font-size: 22px;">
+        Safe railroad operations depend on accurate interpretation of signal
+        indications and strict compliance with the authority and restrictions
+        conveyed by fixed wayside signals.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/stop-signal-train.jpg"
+    alt="Train stopped at a fixed signal displaying a stop indication"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/block-occupancy-signaling.png"
+    alt="Diagram showing signal indications for occupied and unoccupied blocks"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/speed-and-route-signals.jpg"
+    alt="Examples of signal aspects conveying speed and route information"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/signal-aspect-reference-chart.png"
+    alt="Reference chart showing common railroad signal aspects and meanings"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the most fundamental information conveyed by a fixed signal?</p>
+        <label><input type="radio" name="q1" value="wrong"> Passenger schedules</label><br>
+        <label><input type="radio" name="q1" value="correct"> Authority to proceed or a requirement to stop</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Track maintenance budgets</label><br><br>
+
+        <p>2. How do signals in ABS territory typically indicate block occupancy?</p>
+        <label><input type="radio" name="q2" value="correct"> Through signal aspects that indicate whether the block ahead is clear, occupied, or requires restricted operation</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By displaying train numbers only</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By transmitting radio messages directly to passengers</label><br><br>
+
+        <p>3. Besides stop and proceed authority, what other information can fixed signals convey?</p>
+        <label><input type="radio" name="q3" value="wrong"> Employee work schedules only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Weather forecasts only</label><br>
+        <label><input type="radio" name="q3" value="correct"> Speed restrictions, route information, block conditions, hazards, and restricted movement instructions</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 20F.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 20D.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

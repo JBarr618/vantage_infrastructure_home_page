@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 6A - What is an AC Double Rail Track Circuit?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 6A - What is an AC Double Rail Track Circuit?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding AC Double Rail Track Circuits
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        An AC double rail track circuit is a train detection system that uses alternating current and has both rails
+        electrically isolated from adjacent track sections by insulated rail joints. This creates a defined track
+        block with clear electrical boundaries on both running rails.
+    </p>
+
+    <p style="font-size: 22px;">
+        An AC power source is connected across the two insulated rails at one end of the block. An AC-sensitive relay
+        or electronic receiver is connected across the rails at the opposite end.
+    </p>
+
+    <p style="font-size: 22px;">
+        When the track section is clear, the AC signal flows from the source through the rails to the receiver. The
+        receiver energizes and indicates that the track section is unoccupied.
+    </p>
+
+    <p style="font-size: 22px;">
+        When a train enters the block, the metal wheels and axles create a low-impedance shunt across the two rails.
+        This shunt provides an easier path for current and reduces the current reaching the receiver.
+    </p>
+
+    <p style="font-size: 22px;">
+        When the receiver de-energizes, the track circuit indicates that the track section is occupied. This is the
+        basic train detection principle used by AC double rail track circuits.
+    </p>
+
+    <p style="font-size: 22px;">
+        The term double rail means that both rails are part of the signaling circuit and both rails are insulated at
+        the block boundaries.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. In an AC double rail track circuit, how many rails are insulated at the block boundaries?</p>
+        <label><input type="radio" name="q1" value="wrong"> One rail</label><br>
+        <label><input type="radio" name="q1" value="correct"> Both rails</label><br>
+        <label><input type="radio" name="q1" value="wrong"> None of the rails</label><br><br>
+
+        <p>2. How is a train detected electrically in an AC double rail track circuit?</p>
+        <label><input type="radio" name="q2" value="wrong"> The signal turns off when the train passes</label><br>
+        <label><input type="radio" name="q2" value="correct"> The train forms a shunt across the rails</label><br>
+        <label><input type="radio" name="q2" value="wrong"> The train activates a mechanical switch</label><br><br>
+
+        <p>3. What does double rail mean in this type of track circuit?</p>
+        <label><input type="radio" name="q3" value="wrong"> Two trains can use the block at the same time</label><br>
+        <label><input type="radio" name="q3" value="correct"> Both rails are part of the signaling circuit and insulated at the block boundaries</label><br>
+        <label><input type="radio" name="q3" value="wrong"> A redundant signal is included</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 6B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 6.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

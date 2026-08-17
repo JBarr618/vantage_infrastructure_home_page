@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 17H - Adjusting Gate Weights</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 17H - Adjusting Gate Weights</h1>
+
+    <h2 style="color: darkblue;">
+        Adjusting Gate Weights and Counterbalance Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        The term "adjusting gate weights" at a highway grade crossing usually refers
+        to adjusting the counterbalance or spring tension within the gate mechanism
+        rather than changing the actual physical weight of the gate arm.
+    </p>
+
+    <p style="font-size: 22px;">
+        Proper balancing is extremely important because it allows the gate arm to
+        move smoothly and reduces unnecessary strain on the motor, gearbox, linkage,
+        and other mechanical components.
+    </p>
+
+    <p style="font-size: 22px;">
+        A properly balanced gate arm helps ensure the gate lowers and raises at the
+        correct speed without slamming, bouncing, or overloading the mechanism.
+        Correct balancing also improves reliability and extends equipment life.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signs of an improperly balanced gate may include the gate dropping too quickly,
+        moving unevenly, excessive motor noise, difficulty remaining in the raised
+        position, or increased power consumption during operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        Most modern gate mechanisms use spring counterbalance systems. These systems
+        use adjustable springs that offset the weight of the gate arm. The spring
+        tension is adjusted using special adjustment nuts or screws.
+    </p>
+
+    <p style="font-size: 22px;">
+        Too much spring tension may cause the gate to rise too quickly or make the
+        motor struggle during lowering. Too little spring tension may allow the gate
+        to fall too quickly and overload the motor during raising.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some older or heavier gate mechanisms may use adjustable counterweights instead
+        of springs. These counterweights can be repositioned along a lever arm to
+        achieve proper gate balance.
+    </p>
+
+    <p style="font-size: 22px;">
+        After adjustments are completed, technicians perform multiple operational
+        tests to verify smooth gate movement, correct lowering and raising times,
+        and proper overall operation. Manufacturer service manuals must always be
+        followed during adjustment procedures.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/gate-spring-adjustment-diagram.png"
+    alt="Diagram showing adjustable spring counterbalance system on gate mechanism"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/gate-counterweights.png"
+    alt="Highway crossing gate mechanism using adjustable counterweights"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/spring-adjustment-nuts.png"
+    alt="Close-up of spring adjustment nuts on gate mechanism"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/technician-adjusting-gate-balance.png"
+    alt="Technician adjusting gate balance while reviewing service manual"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Why is proper balancing of a gate arm important?</p>
+        <label><input type="radio" name="q1" value="wrong"> It increases train speed through the crossing</label><br>
+        <label><input type="radio" name="q1" value="correct"> It allows smooth operation and reduces strain on the gate mechanism</label><br>
+        <label><input type="radio" name="q1" value="wrong"> It eliminates the need for motors and linkages</label><br><br>
+
+        <p>2. Which are common signs of an improperly balanced gate arm?</p>
+        <label><input type="radio" name="q2" value="correct"> Slamming movement, excessive motor noise, or failure to stay raised properly</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Improved efficiency and smooth movement</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Brighter flashing lights only</label><br><br>
+
+        <p>3. What are the two main methods commonly used to counterbalance the weight of a gate arm?</p>
+        <label><input type="radio" name="q3" value="wrong"> Air brakes and fuel pumps</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Signal relays and insulated joints</label><br>
+        <label><input type="radio" name="q3" value="correct"> Adjustable spring systems and counterweight systems</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 18.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 17G.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

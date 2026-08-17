@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 8D - Equipment Used in Phase Shift Overlay Track Circuits</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 8D - Equipment Used in Phase Shift Overlay Track Circuits</h1>
+
+    <h2 style="color: darkblue;">
+        Equipment Used in Phase Shift Overlay Track Circuits
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Setting up a Phase Shift Overlay track circuit requires specialized equipment designed to generate, transmit,
+        receive, and measure small changes in the phase of an AC signal.
+    </p>
+
+    <p style="font-size: 22px;">
+        The <b>PSO transmitter</b> generates a continuous AC signal at a specific stable frequency and power level.
+        It may also include phase control and output impedance matching.
+    </p>
+
+    <p style="font-size: 22px;">
+        The <b>PSO receiver</b> detects small changes in the phase of the received AC signal compared with a reference
+        signal. It may include phase comparators, filters, and processing circuitry to identify occupancy or broken rail
+        conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        <b>Tuned circuits</b> or <b>impedance matching units</b> are placed at track block boundaries. They help define
+        the electrical length of the track circuit and reduce signal reflections.
+    </p>
+
+    <p style="font-size: 22px;">
+        <b>Transmission lines and cables</b> connect the transmitter and receiver to the rails. Good cable quality helps
+        reduce signal distortion and loss.
+    </p>
+
+    <p style="font-size: 22px;">
+        A <b>phase meter</b> or <b>analyzer</b> is used during setup and testing to measure the phase relationship
+        between transmitted and received signals.
+    </p>
+
+    <p style="font-size: 22px;">
+        A calibrated <b>shunt application device</b> is used to simulate train occupancy and verify that the receiver
+        responds at the proper detection threshold.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary function of the PSO transmitter?</p>
+        <label><input type="radio" name="q1" value="wrong"> To apply a calibrated shunt across the railhead</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To detect phase distortion in the receiver circuit</label><br>
+        <label><input type="radio" name="q1" value="correct"> To generate a stable AC signal with precise phase control</label><br><br>
+
+        <p>2. What special capability does the PSO receiver have?</p>
+        <label><input type="radio" name="q2" value="correct"> It detects subtle phase shifts relative to a reference signal</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It filters out all DC voltage on the rail only</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It measures shunt current flow directly only</label><br><br>
+
+        <p>3. What role do tuned circuits or impedance matching units play?</p>
+        <label><input type="radio" name="q3" value="wrong"> They insulate the transmitter from voltage surges only</label><br>
+        <label><input type="radio" name="q3" value="correct"> They define the track circuit length and reduce signal reflections</label><br>
+        <label><input type="radio" name="q3" value="wrong"> They shunt the signal to ground during high load</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 8E.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 8C.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

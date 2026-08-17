@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 26C - Testing Automatic Train Control</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 26C - Testing Automatic Train Control</h1>
+
+    <h2 style="color: darkblue;">
+        How to Test Automatic Train Control Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Testing Automatic Train Control (ATC) systems is a detailed process
+        because ATC performs safety-critical train supervision and enforcement.
+        Testing verifies that trackside equipment, onboard equipment, braking
+        interfaces, speed supervision, and system logic operate correctly.
+    </p>
+
+    <p style="font-size: 22px;">
+        Trackside testing includes verifying that transponders, beacons, inductive
+        loops, radio transmitters, or other communication devices transmit the
+        correct information to the train. This information may include speed
+        limits, signal aspects, gradients, location data, and movement authority.
+    </p>
+
+    <p style="font-size: 22px;">
+        Location accuracy must also be checked. Trackside equipment must be
+        installed in the correct physical location, and the information transmitted
+        must match the exact point on the railway where the train receives it.
+    </p>
+
+    <p style="font-size: 22px;">
+        For ATC systems integrated with signaling, signal encoding must be tested
+        to confirm that signal aspects are correctly converted into data that the
+        onboard system can understand.
+    </p>
+
+    <p style="font-size: 22px;">
+        Onboard testing verifies that antennas and receivers reliably capture data
+        from the trackside system under normal operating conditions. Poor reception
+        or incorrect data can affect train supervision.
+    </p>
+
+    <p style="font-size: 22px;">
+        The train's speed and location systems must be calibrated and tested.
+        Odometers, tachometers, axle sensors, GPS, or other location systems must
+        provide accurate information to the ATC computer.
+    </p>
+
+    <p style="font-size: 22px;">
+        Braking curve calculations must be verified to ensure the onboard computer
+        correctly determines when braking must begin. These calculations consider
+        train speed, train characteristics, braking performance, track gradient,
+        and distance to the target point.
+    </p>
+
+    <p style="font-size: 22px;">
+        Warning systems must be tested to confirm that audible and visual alerts
+        are provided to the train operator when approaching speed restrictions,
+        restrictive signals, or braking limits.
+    </p>
+
+    <p style="font-size: 22px;">
+        Automatic brake application testing verifies that the ATC system commands
+        the brakes when safety limits are exceeded. These tests are usually
+        performed at low speeds and under controlled conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        The Driver-Machine Interface (DMI) must be checked to ensure permitted
+        speed, target speed, signal information, warnings, and system status are
+        clearly and accurately displayed.
+    </p>
+
+    <p style="font-size: 22px;">
+        Dynamic testing uses a moving train to verify ATC performance in realistic
+        operating conditions. These tests confirm speed enforcement, signal
+        adherence, braking performance, mode transitions, and system response to
+        changing track conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Failure and degraded-mode testing are also important. Technicians simulate
+        trackside or onboard failures to verify that the ATC system reacts safely,
+        such as reverting to a restrictive mode or initiating a controlled stop.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What are some key aspects of testing the trackside components of an ATC system?</p>
+        <label><input type="radio" name="q1" value="correct"> Verifying data transmission, location accuracy, and signal encoding integrity</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Checking passenger seating and station lighting</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Measuring locomotive paint thickness</label><br><br>
+
+        <p>2. Why is dynamic testing with a moving train important for ATC?</p>
+        <label><input type="radio" name="q2" value="wrong"> It replaces all static testing</label><br>
+        <label><input type="radio" name="q2" value="correct"> It verifies speed enforcement, braking, signal adherence, and system response under real operating conditions</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It is only used to test passenger announcements</label><br><br>
+
+        <p>3. What onboard functions need to be tested in an ATC system?</p>
+        <label><input type="radio" name="q3" value="wrong"> Interior lighting and seat controls only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Ticket machines and station signs</label><br>
+        <label><input type="radio" name="q3" value="correct"> Data reception, speed and location accuracy, braking curves, warnings, brake interface, and DMI display</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 26D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 26B.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <h3>Built From Real Railroad Experience</h3>
+        <p>Signal School 2026 Professional Railroad Signal Training</p>
+        <p>© 2026 Vantage Infrastructure LLC</p>
+    </footer>
+
+</body>
+
+</html>

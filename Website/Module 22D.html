@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 22D - Automatic Block Signals</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 22D - Introduction to Automatic Block Signals</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Automatic Block Signaling
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Automatic Block Signaling, also called ABS, is a railway signaling system
+        that automatically controls wayside signal aspects based on track occupancy
+        ahead of a train.
+    </p>
+
+    <p style="font-size: 22px;">
+        Unlike manual block signaling, which relies on communication between block
+        operators, ABS uses electrical track circuits and signal equipment to detect
+        trains and automatically provide safe train separation.
+    </p>
+
+    <p style="font-size: 22px;">
+        In ABS territory, the railroad is divided into a series of blocks. These
+        blocks are usually defined by the locations of wayside signals and protected
+        by track circuits.
+    </p>
+
+    <p style="font-size: 22px;">
+        A track circuit is an electrical circuit that uses the rails as part of the
+        circuit. When no train is present, the circuit remains complete and the
+        signaling equipment recognizes the block as clear.
+    </p>
+
+    <p style="font-size: 22px;">
+        When a train enters a block, the wheels and axles electrically connect the
+        two rails together. This is called shunting the track circuit. The shunt
+        changes the circuit condition and causes the signaling system to recognize
+        the block as occupied.
+    </p>
+
+    <p style="font-size: 22px;">
+        Once the block is detected as occupied, the ABS system automatically changes
+        the signal aspects for trains approaching that block. These signals display
+        more restrictive indications to keep following trains safely separated.
+    </p>
+
+    <p style="font-size: 22px;">
+        A following train approaching an occupied block may encounter a red signal
+        requiring it to stop, or a yellow approach signal requiring the crew to be
+        prepared to stop at the next signal.
+    </p>
+
+    <p style="font-size: 22px;">
+        After the leading train clears the block and the track circuit is no longer
+        shunted, the signaling system can automatically return the signals to more
+        permissive aspects, provided the blocks ahead are clear.
+    </p>
+
+    <p style="font-size: 22px;">
+        ABS improves safety and line capacity by providing continuous, automatic
+        train separation without requiring constant human intervention from block
+        operators.
+    </p>
+
+    <p style="font-size: 22px;">
+        The safe operation of ABS depends on reliable track circuits, properly
+        functioning signal equipment, and correct maintenance and testing by
+        qualified signal personnel.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the key difference between ABS and manual block signaling?</p>
+        <label><input type="radio" name="q1" value="wrong"> ABS uses handwritten orders only</label><br>
+        <label><input type="radio" name="q1" value="correct"> ABS automatically uses track circuits and signal equipment to detect trains and control signal aspects</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Manual block signaling does not use train crews</label><br><br>
+
+        <p>2. How does a track circuit detect the presence of a train in a block?</p>
+        <label><input type="radio" name="q2" value="correct"> The train wheels and axles shunt the rails, changing the electrical condition of the circuit</label><br>
+        <label><input type="radio" name="q2" value="wrong"> The engineer presses a button in the locomotive cab</label><br>
+        <label><input type="radio" name="q2" value="wrong"> The signal mast measures wind speed</label><br><br>
+
+        <p>3. What signal aspects might a following train encounter when approaching an occupied block in ABS territory?</p>
+        <label><input type="radio" name="q3" value="wrong"> Only green signals</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Only flashing white signals</label><br>
+        <label><input type="radio" name="q3" value="correct"> Restrictive aspects such as red stop or yellow approach</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 22E.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 22C.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 6E - Testing AC Double Rail Track Circuits Continued</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 6E - Testing AC Double Rail Track Circuits Continued</h1>
+
+    <h2 style="color: darkblue;">
+        Additional Testing for AC Double Rail Track Circuits
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        A critical part of AC double rail track circuit testing is verifying the integrity and balance of the impedance
+        bonds. This is especially important in electrified areas where traction return current may be present.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the impedance bonds are damaged, improperly connected, or imbalanced, unwanted traction current may affect
+        the receiver. This can create unsafe or unreliable indications, including the possibility of a false clear
+        condition.
+    </p>
+
+    <p style="font-size: 22px;">
+        Specialized testing equipment may be used to measure the impedance of each bond and confirm that the bonds are
+        within acceptable tolerance. Proper bond balance helps protect the track circuit signal and supports reliable
+        train detection.
+    </p>
+
+    <p style="font-size: 22px;">
+        Broken rail detection is another important test. A break in one rail should interrupt the AC signal path and
+        cause the receiver to de-energize, indicating an occupied or unsafe track condition.
+    </p>
+
+    <p style="font-size: 22px;">
+        Broken rail detection can be tested by simulating a rail break and observing whether the receiver drops as
+        expected. This fail-safe response is important for railroad safety.
+    </p>
+
+    <p style="font-size: 22px;">
+        Regular maintenance testing should include visual inspections of insulated joints, impedance bonds, wiring,
+        connections, and track circuit equipment. Maintainers should look for damage, corrosion, loose wiring, poor
+        bonding, and signs of deterioration.
+    </p>
+
+    <p style="font-size: 22px;">
+        Electrical testing should also be repeated periodically to confirm that the track circuit continues to operate
+        within specified limits. All test results should be documented and compared with previous readings to identify
+        trends before they become failures.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Why is it important to verify impedance bond integrity and balance?</p>
+        <label><input type="radio" name="q1" value="wrong"> It can cause excessive noise from the rails</label><br>
+        <label><input type="radio" name="q1" value="correct"> Imbalanced bonds may allow unwanted traction current into the receiver and cause false clear indications</label><br>
+        <label><input type="radio" name="q1" value="wrong"> It prevents track painting operations</label><br><br>
+
+        <p>2. How is broken rail detection typically tested?</p>
+        <label><input type="radio" name="q2" value="wrong"> By tapping the rail with a hammer only</label><br>
+        <label><input type="radio" name="q2" value="correct"> By simulating a rail break and checking whether the receiver de-energizes</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By increasing the signal voltage</label><br><br>
+
+        <p>3. What is included in regular maintenance testing?</p>
+        <label><input type="radio" name="q3" value="wrong"> Painting rails and testing internet connection</label><br>
+        <label><input type="radio" name="q3" value="correct"> Inspecting components, checking for damage or corrosion, and performing electrical tests</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Scheduling train arrivals manually</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 7.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 6D.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

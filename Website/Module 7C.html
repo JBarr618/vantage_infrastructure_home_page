@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 7C - Why is an AC Single Rail Track Circuit Used?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 7C - Why is an AC Single Rail Track Circuit Used?</h1>
+
+    <h2 style="color: darkblue;">
+        Purpose of AC Single Rail Track Circuits
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        AC single rail track circuits are used in specific railroad applications where cost, traction return,
+        and operating conditions make them suitable.
+    </p>
+
+    <p style="font-size: 22px;">
+        One major advantage is reduced cost. Since only one rail needs insulated rail joints, fewer insulated joints
+        are required compared to an AC double rail track circuit.
+    </p>
+
+    <p style="font-size: 22px;">
+        Fewer insulated joints can reduce installation time, material cost, inspection needs, and maintenance work.
+        This may be useful on long track sections where minimizing infrastructure cost is important.
+    </p>
+
+    <p style="font-size: 22px;">
+        AC single rail track circuits can also be useful in electrified territory. The continuous rail can serve as
+        a return path for traction current and track circuit current, helping simplify the return current path.
+    </p>
+
+    <p style="font-size: 22px;">
+        However, AC single rail track circuits have limitations. Since only one rail is insulated and actively
+        segmented for the track circuit, broken rail detection may be limited mainly to the insulated rail.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because of this limitation, AC single rail track circuits must be applied carefully based on operating needs,
+        safety requirements, traffic density, inspection practices, and the type of traction power used.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is one economic advantage of AC single rail track circuits?</p>
+        <label><input type="radio" name="q1" value="correct"> Fewer insulated joints can reduce cost</label><br>
+        <label><input type="radio" name="q1" value="wrong"> They use lower voltage sources only</label><br>
+        <label><input type="radio" name="q1" value="wrong"> They require more frequent testing</label><br><br>
+
+        <p>2. How can AC single rail track circuits support AC electric traction systems?</p>
+        <label><input type="radio" name="q2" value="correct"> The continuous rail can carry return current for traction and the track circuit</label><br>
+        <label><input type="radio" name="q2" value="wrong"> They eliminate the need for all bonding</label><br>
+        <label><input type="radio" name="q2" value="wrong"> They allow switching to DC at stations</label><br><br>
+
+        <p>3. What is one key limitation of AC single rail track circuits?</p>
+        <label><input type="radio" name="q3" value="correct"> Limited broken rail detection on the continuous rail</label><br>
+        <label><input type="radio" name="q3" value="wrong"> They require dual voltage transformers</label><br>
+        <label><input type="radio" name="q3" value="wrong"> They cannot be used on curved track</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 7D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 7B.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

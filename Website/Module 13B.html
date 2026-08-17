@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 13B - Testing Microlok Units</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 13B - Testing Microlok Units</h1>
+
+    <h2 style="color: darkblue;">
+        Testing Microlok Units
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Testing Microlok units is a critical part of railroad signal safety.
+        The purpose of testing is to make sure the Microlok hardware, software,
+        wiring, field equipment, and vital logic operate correctly.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because Microlok controls safety-critical signal functions, testing
+        must be performed carefully before the system is placed into service
+        and throughout the life of the equipment.
+    </p>
+
+    <h3>1. Factory Testing</h3>
+
+    <p style="font-size: 22px;">
+        Factory testing is performed before the equipment is installed in the
+        field. This testing checks the processing unit, input modules, output
+        modules, communication ports, power supplies, and system configuration.
+    </p>
+
+    <p style="font-size: 22px;">
+        Factory testing helps verify that the Microlok equipment is operating
+        correctly before it is shipped or installed.
+    </p>
+
+    <h3>2. Logic Testing</h3>
+
+    <p style="font-size: 22px;">
+        Logic testing verifies that the programmed interlocking logic works as
+        designed. This includes checking routes, signals, switches, track
+        circuits, locking, timers, and approach conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        The logic must prevent unsafe conditions such as conflicting routes,
+        signal clearing into occupied track, or switch movement under a train.
+    </p>
+
+    <h3>3. Simulation Testing</h3>
+
+    <p style="font-size: 22px;">
+        Simulation testing allows engineers to test Microlok logic before the
+        system controls real field equipment.
+    </p>
+
+    <p style="font-size: 22px;">
+        Simulated inputs can be used to represent track occupancy, switch
+        positions, signal requests, route requests, and failure conditions.
+    </p>
+
+    <h3>4. Field Testing</h3>
+
+    <p style="font-size: 22px;">
+        Field testing is performed after the Microlok equipment is installed.
+        This testing verifies the actual wiring, inputs, outputs, field devices,
+        and interlocking logic.
+    </p>
+
+    <p style="font-size: 22px;">
+        Field testing confirms that signals, switches, track circuits, relays,
+        lamps, cables, and control circuits operate according to the signal
+        plans.
+    </p>
+
+    <h3>5. Functional Testing</h3>
+
+    <p style="font-size: 22px;">
+        Functional testing confirms that the system performs the required
+        railroad signal functions. This includes route locking, signal clearing,
+        signal dropping, switch correspondence, approach locking, time locking,
+        and release functions.
+    </p>
+
+    <h3>6. Diagnostic Testing</h3>
+
+    <p style="font-size: 22px;">
+        Microlok diagnostic tools help technicians view system status, input
+        conditions, output states, alarms, event logs, communication status, and
+        fault information.
+    </p>
+
+    <p style="font-size: 22px;">
+        Diagnostics are useful during commissioning, troubleshooting, and
+        routine maintenance.
+    </p>
+
+    <h3>7. Maintenance Testing</h3>
+
+    <p style="font-size: 22px;">
+        Testing does not stop after the Microlok unit is placed into service.
+        Ongoing maintenance testing helps confirm continued safety,
+        reliability, and proper operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        Maintenance testing may include checking logs, verifying inputs and
+        outputs, testing field devices, confirming communication health, and
+        correcting any faults found during inspection.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p style="font-size: 20px;">
+            <strong>1. What is the main purpose of testing Microlok units?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q1" value="wrong">
+            A. To reduce maintenance costs only.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="correct">
+            B. To ensure reliable and safe operation.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="wrong">
+            C. To train new employees only.
+        </label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>2. What is typically verified during field testing?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q2" value="wrong">
+            A. Marketing materials.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q2" value="wrong">
+            B. Software documentation only.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q2" value="correct">
+            C. Wiring, field device interaction, and interlocking logic.
+        </label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>3. Why is ongoing maintenance testing important?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q3" value="wrong">
+            A. To find cheaper hardware options.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q3" value="correct">
+            B. To ensure continued compliance and reliability.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q3" value="wrong">
+            C. To improve system appearance.
+        </label><br><br>
+
+        <button type="button"
+        onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if (password === "signal2026") {
+            window.location.href = "Module 13C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+            answer.disabled = true;
+
+            if (answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if (answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if (answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+                answer.parentElement.style.fontWeight = "bold";
+            }
+        });
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 13AA.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

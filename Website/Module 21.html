@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 21 - Introduction to Color Light Signals</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 21 - Introduction to Color Light Signals</h1>
+
+    <h2 style="color: darkblue;">
+        What Are Color Light Signals?
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Color light signals are the most commonly used fixed wayside signals in
+        modern railway signaling systems. They communicate information to train
+        crews using colored lights that are displayed individually or in specific
+        combinations.
+    </p>
+
+    <p style="font-size: 22px;">
+        These signals have become the standard throughout much of the world because
+        they are reliable, highly visible, and easy for train crews to interpret
+        during both daytime and nighttime operations.
+    </p>
+
+    <p style="font-size: 22px;">
+        A typical color light signal contains multiple lenses mounted within a
+        signal head. Behind each lens is a light source, traditionally an
+        incandescent lamp and increasingly an LED module.
+    </p>
+
+    <p style="font-size: 22px;">
+        The primary colors used in color light signaling are red, yellow, and
+        green. These colors provide the basic instructions that govern train
+        movement throughout a signaling territory.
+    </p>
+
+    <p style="font-size: 22px;">
+        Red generally indicates stop. A train receiving a red signal must stop
+        before passing the signal unless authorized to proceed under specific
+        operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        Green generally indicates proceed. This aspect authorizes train movement
+        at the speed permitted by the signal indication and operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        Yellow commonly indicates approach or caution. This warns train crews that
+        a more restrictive signal lies ahead and that speed reductions or stopping
+        preparations may be required.
+    </p>
+
+    <p style="font-size: 22px;">
+        More complex information can be conveyed through combinations of lights,
+        flashing indications, multiple signal heads, and additional colors such as
+        lunar white, blue, or purple where permitted by operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        Color light signals are frequently used to communicate route information,
+        speed restrictions, block occupancy conditions, and movement authority
+        through interlockings and control points.
+    </p>
+
+    <p style="font-size: 22px;">
+        Their flexibility allows railroads to display a wide variety of signal
+        aspects while maintaining a consistent visual format that train crews can
+        quickly recognize and interpret.
+    </p>
+
+    <p style="font-size: 22px;">
+        Color light signals are used extensively in Automatic Block Signaling
+        (ABS), Traffic Control Systems (TCS), Centralized Traffic Control (CTC),
+        and interlocking systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because of their reliability, visibility, and versatility, color light
+        signals remain a cornerstone of modern railroad signaling and train control.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/color-light-green-aspect.jpg"
+    alt="Modern color light signal displaying a green proceed aspect"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/color-light-signal-head-diagram.png"
+    alt="Diagram showing the arrangement of lenses in a color light signal head"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/color-light-aspect-examples.jpg"
+    alt="Examples of red, yellow, green, and flashing signal aspects"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/interlocking-color-light-signal.jpg"
+    alt="Color light signal protecting a railway junction"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What are the primary colors used in color light signals and what do they generally indicate?</p>
+        <label><input type="radio" name="q1" value="wrong"> Blue = Stop, Purple = Proceed, White = Caution</label><br>
+        <label><input type="radio" name="q1" value="correct"> Red = Stop, Green = Proceed, Yellow = Approach/Caution</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Red = Proceed, Green = Stop, Yellow = Yard Limits</label><br><br>
+
+        <p>2. How can color light signals convey information beyond basic stop and proceed commands?</p>
+        <label><input type="radio" name="q2" value="correct"> Through combinations of lights, flashing aspects, multiple heads, and additional colors</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By changing the height of the signal mast</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By transmitting radio messages only</label><br><br>
+
+        <p>3. Why have color light signals become the standard in modern railway signaling?</p>
+        <label><input type="radio" name="q3" value="wrong"> Because they require no maintenance</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Because they eliminate all operating rules</label><br>
+        <label><input type="radio" name="q3" value="correct"> Because they are reliable, highly visible, versatile, and easy for train crews to interpret</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 21A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 20G.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

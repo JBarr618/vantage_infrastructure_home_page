@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 16B - Types of Highway Grade Crossing Warning Systems</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 16B - Types of Highway Grade Crossing Warning Systems</h1>
+
+    <h2 style="color: darkblue;">
+        What Types of Highway Grade Crossing Warning Systems Exist?
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Highway grade crossing warning systems are generally divided into two main categories:
+        passive warning systems and active warning systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        Passive warning systems rely on signs and roadway markings to warn drivers and
+        pedestrians about the presence of railroad tracks. These systems do not detect trains
+        or activate automatically when a train approaches.
+    </p>
+
+    <p style="font-size: 22px;">
+        Common passive warning devices include crossbuck signs, STOP signs, yield signs,
+        pavement markings, and advance warning signs placed before the crossing.
+    </p>
+
+    <p style="font-size: 22px;">
+        Passive systems depend on road users remaining alert, recognizing the signs, and
+        deciding when it is safe to cross the tracks.
+    </p>
+
+    <p style="font-size: 22px;">
+        Active warning systems use electrical and mechanical devices that automatically
+        activate when a train approaches or occupies the crossing. These systems are
+        controlled by train detection circuitry.
+    </p>
+
+    <p style="font-size: 22px;">
+        Common active warning devices include flashing red lights, audible warning bells,
+        and automatic gates that block roadway traffic when trains approach.
+    </p>
+
+    <p style="font-size: 22px;">
+        Active systems provide stronger and more direct warnings than passive systems
+        and significantly improve crossing safety by clearly alerting drivers and pedestrians
+        of an approaching train.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/passive-warning-signs.png"
+    alt="Collage of passive highway grade crossing warning signs including crossbuck stop sign and advance warning sign"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/pavement-markings-crossing.png"
+    alt="Pavement markings approaching a railroad crossing"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/active-warning-lights-bell.png"
+    alt="Active highway grade crossing warning system with flashing red lights and bell"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/lowered-crossing-gates.png"
+    alt="Automatic crossing gates lowered to block roadway traffic"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the key difference between passive and active warning systems?</p>
+        <label><input type="radio" name="q1" value="correct"> Active systems automatically warn road users when a train approaches, while passive systems rely on signs and markings</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Passive systems use electricity while active systems do not</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Passive systems lower gates while active systems only use signs</label><br><br>
+
+        <p>2. Which of the following are passive warning devices?</p>
+        <label><input type="radio" name="q2" value="wrong"> Flashing lights, bells, and gates</label><br>
+        <label><input type="radio" name="q2" value="correct"> Crossbuck signs, STOP signs, and pavement markings</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Switch machines and signal relays</label><br><br>
+
+        <p>3. What are the three primary active warning devices used at highway grade crossings?</p>
+        <label><input type="radio" name="q3" value="wrong"> Crossbucks, yield signs, and pavement markings</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Signal bridges, switch machines, and cab signals</label><br>
+        <label><input type="radio" name="q3" value="correct"> Flashing red lights, bells, and automatic gates</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 16C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 16A.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

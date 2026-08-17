@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 22C - How Aspects and Indications Are Displayed</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 22C - How Aspects and Indications Are Displayed</h1>
+
+    <h2 style="color: darkblue;">
+        Displaying Aspects and Interpreting Indications
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Aspects are displayed visually by the signal itself. The type of signal
+        determines how the aspect is physically shown to the train crew.
+    </p>
+
+    <p style="font-size: 22px;">
+        Color light signals display aspects by illuminating specific colors of
+        light, such as red, yellow, green, lunar white, or other colors. These
+        lights may be arranged vertically, horizontally, diagonally, or in other
+        patterns, and may be steady or flashing.
+    </p>
+
+    <p style="font-size: 22px;">
+        Semaphore signals display aspects by the physical position of a movable
+        arm or blade. A horizontal arm may represent one aspect, while an angled
+        arm may represent another. At night, lights are used so the aspect can
+        still be observed by the train crew.
+    </p>
+
+    <p style="font-size: 22px;">
+        Position light signals display aspects using patterns of illuminated
+        white or amber lights. A vertical pattern, horizontal pattern, or diagonal
+        pattern can each represent a different aspect.
+    </p>
+
+    <p style="font-size: 22px;">
+        Searchlight signals display aspects through a single lens that projects
+        different colors, such as red, yellow, or green, depending on the internal
+        mechanism or control system.
+    </p>
+
+    <p style="font-size: 22px;">
+        Indications are not directly displayed as words on the wayside signal.
+        The signal displays the aspect, and the train crew interprets that aspect
+        according to their training and the railroad's operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        The process has two steps. First, the signal physically displays an aspect.
+        Second, the train crew observes that aspect and applies their rulebook
+        knowledge to determine the indication.
+    </p>
+
+    <p style="font-size: 22px;">
+        The railroad rulebook or timetable special instructions define the
+        relationship between each aspect and its indication. This allows crews
+        to know the required action for each signal display.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some modern cab systems may provide additional visual or audible reminders
+        related to signal information. However, with wayside signals, the primary
+        display is still the aspect, and the crew remains responsible for knowing
+        the meaning of that aspect.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. How does a color light signal physically display its aspects?</p>
+        <label><input type="radio" name="q1" value="wrong"> By printing words on the signal mast</label><br>
+        <label><input type="radio" name="q1" value="correct"> By illuminating colored lights in specific arrangements, either steady or flashing</label><br>
+        <label><input type="radio" name="q1" value="wrong"> By changing the track gauge</label><br><br>
+
+        <p>2. Is the indication directly shown on a wayside signal?</p>
+        <label><input type="radio" name="q2" value="wrong"> Yes, the signal always displays written instructions</label><br>
+        <label><input type="radio" name="q2" value="correct"> No, the signal displays an aspect, and the crew interprets the indication from the rules</label><br>
+        <label><input type="radio" name="q2" value="wrong"> No, indications are only used by passengers</label><br><br>
+
+        <p>3. What is the role of the railroad rulebook in understanding signal indications?</p>
+        <label><input type="radio" name="q3" value="correct"> It defines the meaning of each signal aspect and the required crew action</label><br>
+        <label><input type="radio" name="q3" value="wrong"> It only lists locomotive fuel usage</label><br>
+        <label><input type="radio" name="q3" value="wrong"> It replaces the need to observe signals</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 22D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 22B.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

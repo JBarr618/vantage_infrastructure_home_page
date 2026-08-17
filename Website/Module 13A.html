@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 13A - Vital Microlok Programming</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 13A - Vital Microlok Programming</h1>
+
+    <h2 style="color: darkblue;">
+        The Vital Programming of Microlok Units
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        The programming inside a Microlok unit is called vital programming
+        because it controls safety-critical railroad signal functions.
+    </p>
+
+    <p style="font-size: 22px;">
+        This logic must make sure that trains are protected from unsafe
+        conditions such as conflicting routes, signals clearing incorrectly,
+        switches moving at the wrong time, or trains being authorized into an
+        occupied track.
+    </p>
+
+    <h3>1. Proprietary Programming System</h3>
+
+    <p style="font-size: 22px;">
+        Microlok programming uses proprietary software and a special
+        programming language developed for railroad signal control.
+    </p>
+
+    <p style="font-size: 22px;">
+        The system was originally developed by GRS and is now associated with
+        Wabtec. Because the system is safety-critical, access to the programming
+        tools and logic is controlled.
+    </p>
+
+    <h3>2. High-Level Programming Language</h3>
+
+    <p style="font-size: 22px;">
+        The Microlok programming language is considered high-level because it
+        allows signal engineers to work with railroad signal terms instead of
+        only low-level computer code.
+    </p>
+
+    <p style="font-size: 22px;">
+        Engineers can build logic using familiar concepts such as routes,
+        signals, switches, track occupancy, route locking, approach locking,
+        time locking, and signal aspects.
+    </p>
+
+    <h3>3. Safety-Oriented Logic</h3>
+
+    <p style="font-size: 22px;">
+        Microlok logic is designed with safety as the main priority. The program
+        must only allow safe signal and switch conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        For example, a signal should not clear unless the route is lined,
+        locked, unoccupied, and protected against conflicting movement.
+    </p>
+
+    <h3>4. Development Environment</h3>
+
+    <p style="font-size: 22px;">
+        Engineers use a Microlok development environment to write, review,
+        simulate, test, and compile the vital logic.
+    </p>
+
+    <p style="font-size: 22px;">
+        This environment helps verify that the programmed logic follows the
+        intended signal design and does not create unsafe operating conditions.
+    </p>
+
+    <h3>5. Simulation and Testing</h3>
+
+    <p style="font-size: 22px;">
+        Simulation tools allow engineers to test the logic before it is placed
+        into service. This helps confirm how the system responds during normal
+        operation, route requests, signal clearing, train occupancy, failures,
+        and abnormal conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Simulation does not replace field testing, but it helps catch logic
+        problems before equipment is installed or commissioned.
+    </p>
+
+    <h3>6. Controlled Access</h3>
+
+    <p style="font-size: 22px;">
+        Microlok programming tools are not open to everyone. Only trained and
+        authorized personnel should develop or modify vital logic.
+    </p>
+
+    <p style="font-size: 22px;">
+        This protects the safety of the railroad by controlling who can make
+        changes to the logic that controls train movement.
+    </p>
+
+    <h3>7. Field Verification</h3>
+
+    <p style="font-size: 22px;">
+        After programming is completed, the logic must be tested in the field.
+        Field verification confirms that the software logic matches the plans
+        and that inputs, outputs, signals, switches, and track circuits operate
+        correctly.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p style="font-size: 20px;">
+            <strong>1. Why is the Microlok programming language considered high-level?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q1" value="wrong">
+            A. It only runs on Windows XP.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="correct">
+            B. It uses familiar railroad signal terms to simplify complex logic.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="wrong">
+            C. It is written only in binary.
+        </label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>2. What do simulation and testing tools help engineers do?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q2" value="wrong">
+            A. Replace all real-world equipment.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q2" value="correct">
+            B. Verify logic under different conditions before field deployment.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q2" value="wrong">
+            C. Create CAD drawings only.
+        </label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>3. Why is Microlok programming software proprietary?</strong>
+        </p>
+
+        <label>
+            <input type="radio" name="q3" value="correct">
+            A. To protect safety and limit unauthorized changes.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q3" value="wrong">
+            B. Because it is cheaper than open-source software.
+        </label><br>
+
+        <label>
+            <input type="radio" name="q3" value="wrong">
+            C. So anyone can program the system.
+        </label><br><br>
+
+        <button type="button"
+        onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if (password === "signal2026") {
+            window.location.href = "Module 13AA.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+            answer.disabled = true;
+
+            if (answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if (answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if (answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+                answer.parentElement.style.fontWeight = "bold";
+            }
+        });
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 13.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

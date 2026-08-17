@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 7 - Introduction to AC Single Rail Track Circuits</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 7 - Introduction to AC Single Rail Track Circuits</h1>
+
+    <h2 style="color: darkblue;">
+        Introduction to AC Single Rail Track Circuits
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        AC single rail track circuits are different from AC double rail track circuits because only one of the two
+        running rails is insulated at the track circuit boundaries. The other rail remains electrically continuous
+        through multiple track circuit blocks.
+    </p>
+
+    <p style="font-size: 22px;">
+        The continuous rail is commonly used as the return path for AC traction power in electrified territory. It may
+        also serve as the return path for the AC track circuit current.
+    </p>
+
+    <p style="font-size: 22px;">
+        In a typical AC single rail track circuit, the AC power source is connected between the insulated rail and the
+        continuous rail at one end of the block. The AC receiver is connected between the same two rails at the opposite
+        end.
+    </p>
+
+    <p style="font-size: 22px;">
+        When the track is clear, the AC signal travels through the insulated rail, through the receiver, and returns by
+        way of the continuous rail. This keeps the receiver energized and indicates that the track section is clear.
+    </p>
+
+    <p style="font-size: 22px;">
+        When a train enters the block, the wheels and axles shunt the insulated rail to the continuous rail. This creates
+        a low-impedance path that bypasses the receiver, causing the receiver to de-energize and indicate occupancy.
+    </p>
+
+    <p style="font-size: 22px;">
+        One advantage of AC single rail track circuits is that they require fewer insulated rail joints than double rail
+        circuits. This can reduce installation and maintenance costs.
+    </p>
+
+    <p style="font-size: 22px;">
+        One disadvantage is that a single rail circuit may only detect breaks in the insulated rail. A break in the
+        continuous rail may not be detected by the track circuit, so additional safety measures may be required.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the key difference between AC single rail and AC double rail track circuits?</p>
+        <label><input type="radio" name="q1" value="wrong"> Double rail circuits use fewer insulated joints</label><br>
+        <label><input type="radio" name="q1" value="correct"> Single rail circuits insulate only one rail at the block boundaries</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Single rail circuits use wooden ties only</label><br><br>
+
+        <p>2. In an AC single rail track circuit, which rail is typically used as the return path?</p>
+        <label><input type="radio" name="q2" value="wrong"> The insulated rail</label><br>
+        <label><input type="radio" name="q2" value="correct"> The continuous rail</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Neither rail</label><br><br>
+
+        <p>3. What is one disadvantage of AC single rail track circuits?</p>
+        <label><input type="radio" name="q3" value="wrong"> They require more maintenance staff only</label><br>
+        <label><input type="radio" name="q3" value="correct"> They may not detect breaks in the continuous rail</label><br>
+        <label><input type="radio" name="q3" value="wrong"> They interfere with onboard train radios</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 7A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 6E.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

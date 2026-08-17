@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 14A - VPI Safety Logic</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 14A - VPI Safety Logic</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Vital Processor Interlocking Operation
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        A Vital Processor Interlocking, or VPI, is a modern, safety-critical electronic
+        system used in railway signaling to manage and control train movements within an
+        interlocking area. Its primary function is to prevent unsafe conditions, such as
+        conflicting routes that could lead to collisions or derailments.
+    </p>
+
+    <p style="font-size: 22px;">
+        The term vital means that the system is designed to the highest safety integrity
+        levels. In railroad signaling, vital equipment must operate safely because its
+        correct function is essential for the protection of life and train movement.
+    </p>
+
+    <p style="font-size: 22px;">
+        A VPI system uses one or more microprocessors to execute safety logic that controls
+        railway infrastructure such as signals and switches. This programmed logic replaces
+        the physical wiring used in traditional electromechanical relay interlockings.
+    </p>
+
+    <p style="font-size: 22px;">
+        The VPI receives real-time inputs from trackside equipment, including track circuits
+        that indicate train occupancy and switch position detection. Based on these inputs
+        and the programmed interlocking rules, the VPI determines safe signal aspects and
+        controls switches to establish safe routes for trains.
+    </p>
+
+    <p style="font-size: 22px;">
+        Key characteristics of VPI systems include fail-safe design, redundancy, and
+        self-checking. If a component failure occurs, the system is designed to default to
+        a safe condition, usually by preventing train movement. VPI systems also provide
+        flexibility, diagnostics, and easier adaptation to complex track layouts.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/vpi-processing-unit.png"
+    alt="Close-up of VPI processing unit inside a railway signal equipment cabinet"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/vpi-information-flow.png"
+    alt="Diagram showing VPI inputs from track circuits and switches, processor logic, and outputs to signals and switches"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/vpi-interlocking-area.png"
+    alt="Railway interlocking area controlled by VPI showing signals, switches, and track circuits"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What does the term vital mean in a VPI system?</p>
+        <label><input type="radio" name="q1" value="wrong"> It means the system is optional and used only for convenience</label><br>
+        <label><input type="radio" name="q1" value="correct"> It means the system is safety-critical and essential for protecting life and train movement</label><br>
+        <label><input type="radio" name="q1" value="wrong"> It means the system only controls station lighting</label><br><br>
+
+        <p>2. How does a VPI determine the safe state of signals and switches?</p>
+        <label><input type="radio" name="q2" value="correct"> It receives real-time inputs and applies programmed interlocking logic to control signals and switches safely</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It guesses based on the train schedule only</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It allows all signals to clear whenever a train approaches</label><br><br>
+
+        <p>3. What is one advantage of VPI compared to traditional relay-based interlocking?</p>
+        <label><input type="radio" name="q3" value="wrong"> It eliminates the need for safety checks</label><br>
+        <label><input type="radio" name="q3" value="wrong"> It operates without track circuits, switches, or signals</label><br>
+        <label><input type="radio" name="q3" value="correct"> It provides software-based flexibility, diagnostics, redundancy, and fail-safe operation</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Module 14B
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 14B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 14.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 11H - Troubleshooting Relays</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 11H - Troubleshooting Relays</h1>
+
+    <h2 style="color: darkblue;">
+        Finding Relay Problems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Troubleshooting relays in railway signaling circuits requires a careful
+        and organized approach because relay failures can affect signals,
+        switches, track circuits, interlocking logic, and safe train movement.
+    </p>
+
+    <p style="font-size: 22px;">
+        One common problem is a relay that does not energize. This may be caused
+        by incorrect coil voltage, an open relay coil, a blown fuse, a wiring
+        fault, poor terminal connection, or a problem in the control circuit.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the relay coil receives proper voltage but the relay does not pick up,
+        the coil resistance should be checked and compared to specifications.
+        An open coil or shorted coil usually requires relay replacement.
+    </p>
+
+    <p style="font-size: 22px;">
+        Another problem is a relay that energizes but the controlled circuit does
+        not respond. In this case, the technician should check armature movement,
+        contact condition, contact continuity, terminal wiring, and the load
+        side of the circuit.
+    </p>
+
+    <p style="font-size: 22px;">
+        Relay contacts can become dirty, burned, pitted, worn, stuck, or welded.
+        Contact problems can prevent current from flowing or cause a circuit to
+        remain energized when it should be open.
+    </p>
+
+    <p style="font-size: 22px;">
+        Intermittent relay operation may be caused by loose connections,
+        vibration, unstable voltage, weak batteries, poor grounds, moisture,
+        corrosion, or damaged wiring.
+    </p>
+
+    <p style="font-size: 22px;">
+        Contacts may stick or weld together when they switch loads beyond their
+        rated capacity. This can create dangerous circuit conditions, false
+        indications, signal failures, or unsafe equipment operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        Excessive relay noise, buzzing, or vibration may indicate low coil
+        voltage, poor AC supply, loose mounting hardware, damaged relay parts, or
+        contamination inside the relay.
+    </p>
+
+    <p style="font-size: 22px;">
+        Troubleshooting should always be performed using approved railroad
+        procedures, circuit plans, manufacturer specifications, and proper safety
+        practices. Power should be removed before inspecting or adjusting relay
+        equipment whenever required.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/relay-troubleshooting.png"
+    alt="Technician troubleshooting railroad signal relay circuit"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/relay-contact-failure.png"
+    alt="Relay contacts showing burned or damaged contact surfaces"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/relay-coil-testing.png"
+    alt="Meter testing relay coil voltage and resistance"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What are common reasons a relay may fail to energize?</p>
+        <label><input type="radio" name="q1" value="correct"> Incorrect coil voltage, open coil, or wiring fault in the control circuit</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Signal lamp color and relay case paint</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Poor label condition only</label><br><br>
+
+        <p>2. If a relay energizes but the controlled circuit does not respond, what should be checked?</p>
+        <label><input type="radio" name="q2" value="wrong"> The mounting label only</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Weatherproofing only</label><br>
+        <label><input type="radio" name="q2" value="correct"> Armature movement, contact condition, and continuity of the switched circuit</label><br><br>
+
+        <p>3. What can cause relay contacts to stick or weld together?</p>
+        <label><input type="radio" name="q3" value="wrong"> Cold weather only</label><br>
+        <label><input type="radio" name="q3" value="correct"> Switching loads beyond the rated contact capacity</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Grease missing from the relay contacts</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 12.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 11G.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

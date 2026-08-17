@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 19B - What Does Moveable Block Consist Of?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 19B - What Does Moveable Block Consist Of?</h1>
+
+    <h2 style="color: darkblue;">
+        Components of a Moveable Block Signaling System
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Moveable block signaling, commonly known as Communications-Based Train Control
+        (CBTC), is a highly integrated system that combines train positioning,
+        wireless communication, onboard computers, and central control systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        The first major component is precise train location determination. The system
+        must continuously know the exact location of every train operating within
+        the territory.
+    </p>
+
+    <p style="font-size: 22px;">
+        Various technologies are used to determine train position, including
+        transponders (balises), RFID tags, wheel speed sensors (tachometers),
+        GPS systems, and inertial measurement units (IMUs). These technologies
+        are often used together to improve accuracy and reliability.
+    </p>
+
+    <p style="font-size: 22px;">
+        Another critical component is the continuous communication system. Reliable
+        two-way digital communication allows trains and central control to exchange
+        information regarding train location, speed, movement authority, and system
+        status in real time.
+    </p>
+
+    <p style="font-size: 22px;">
+        Communication technologies commonly used include wireless LAN (WLAN),
+        ultra-wideband (UWB) systems, and cellular communication networks.
+    </p>
+
+    <p style="font-size: 22px;">
+        The central control system acts as the brain of the CBTC system. It receives
+        information from all trains, calculates safe braking distances, issues movement
+        authorities, monitors train performance, and responds to abnormal conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Each train contains an onboard train control system. This onboard computer
+        continuously determines train position, communicates with central control,
+        receives operating commands, and monitors train performance.
+    </p>
+
+    <p style="font-size: 22px;">
+        The onboard system also performs Automatic Train Protection (ATP) functions,
+        including overspeed protection, enforcement of movement authority limits,
+        and collision avoidance.
+    </p>
+
+    <p style="font-size: 22px;">
+        Train operators may receive information through cab displays that provide
+        speed commands, movement authorities, train status, and other operating data.
+    </p>
+
+    <p style="font-size: 22px;">
+        Although moveable block systems reduce dependence on traditional wayside
+        signaling, some trackside equipment remains necessary. This may include
+        zone controllers, transponders, communication equipment, and traditional
+        interlockings that interface with the CBTC system.
+    </p>
+
+    <p style="font-size: 22px;">
+        Together, these components create a dynamic signaling system capable of
+        continuously managing train movements using real-time train location and
+        communication data.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/cbtc-system-architecture.png"
+    alt="CBTC system architecture showing trains, wayside equipment, and central control"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/onboard-cbtc-equipment.png"
+    alt="Onboard CBTC antennas, computers, and cab display equipment"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/transponder-balise-trackside.png"
+    alt="Trackside transponder or balise used for train positioning"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/cbtc-control-center-display.png"
+    alt="Control center display showing train locations and speeds"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What technologies are commonly used to determine precise train location in a moveable block system?</p>
+        <label><input type="radio" name="q1" value="wrong"> Lantern signals and train orders only</label><br>
+        <label><input type="radio" name="q1" value="correct"> Transponders, RFID tags, wheel speed sensors, GPS, and IMUs</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Mileposts and station signs only</label><br><br>
+
+        <p>2. Why is a continuous communication system critical in moveable block signaling?</p>
+        <label><input type="radio" name="q2" value="correct"> It allows real-time exchange of train location, speed, movement authority, and control information</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It eliminates the need to know train locations</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It is only used for passenger announcements</label><br><br>
+
+        <p>3. What are the primary functions of the central control system and onboard train control system?</p>
+        <label><input type="radio" name="q3" value="wrong"> Managing station parking lots and ticket sales</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Replacing all railroad employees</label><br>
+        <label><input type="radio" name="q3" value="correct"> Calculating movement authorities, monitoring train performance, enforcing safety functions, and managing train operations</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 19C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 19A.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 18D - Signals Used in Manual Block</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 18D - Signals Used in Manual Block</h1>
+
+    <h2 style="color: darkblue;">
+        What Signals are Used in Manual Block?
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Manual block signaling systems use signals to communicate movement authority
+        from the block operator to the train crew. These signals indicate whether
+        a train may proceed into a block or must stop and wait for further authority.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most common signal types used in early manual block systems was
+        the semaphore signal. Semaphore signals use a movable arm to display different
+        signal indications based on the arm position.
+    </p>
+
+    <p style="font-size: 22px;">
+        In most semaphore systems, a horizontal arm position indicates "Stop,"
+        meaning the train must not pass the signal. An angled downward position,
+        commonly at 45 or 60 degrees, indicates "Clear" or "Proceed," allowing the
+        train to enter the block.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some manual block territories later used manually operated color light signals.
+        These signals display colored lights controlled by the block operator to indicate
+        movement authority.
+    </p>
+
+    <p style="font-size: 22px;">
+        In color light systems, a red light generally indicates "Stop," while a green
+        light indicates "Clear" or "Proceed." Some systems may also use yellow or other
+        colors for additional restricted indications depending on operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        Train order signals may also be used in manual block territory. These signals
+        inform train crews whether they must stop to receive train orders from the
+        block operator or may continue without stopping.
+    </p>
+
+    <p style="font-size: 22px;">
+        Marker boards and fixed signals are sometimes installed to identify the
+        physical boundaries of each block. These signs help train crews identify
+        block limits during operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        The meaning of signal indications is defined by railroad operating rules,
+        and train crews must strictly obey all displayed signal indications to ensure
+        safe train separation and operation.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/semaphore-stop-clear.png"
+    alt="Semaphore signals displaying stop and clear indications"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/manual-color-light-signals.png"
+    alt="Manually operated color light signals displaying red and green aspects"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/train-order-signal.png"
+    alt="Traditional train order signal used in manual block territory"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/manual-block-marker-boards.png"
+    alt="Marker boards and fixed signals identifying block limits"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary purpose of signals in a manual block signaling system?</p>
+        <label><input type="radio" name="q1" value="wrong"> To automatically control train speed without operators</label><br>
+        <label><input type="radio" name="q1" value="correct"> To convey movement authority for trains to proceed or stop</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To power the train locomotive</label><br><br>
+
+        <p>2. What are the typical "stop" and "clear" positions of a semaphore signal?</p>
+        <label><input type="radio" name="q2" value="correct"> Horizontal arm for stop and angled downward arm for clear</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Vertical arm for stop and horizontal arm for clear</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Flashing arm for stop and no arm movement for clear</label><br><br>
+
+        <p>3. How are train order signals commonly used in manual block territory?</p>
+        <label><input type="radio" name="q3" value="wrong"> To automatically switch tracks without dispatcher authority</label><br>
+        <label><input type="radio" name="q3" value="correct"> To indicate whether train crews must stop to receive train orders</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To measure train speed entering the block</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 18F.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 18C.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

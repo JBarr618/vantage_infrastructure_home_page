@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 9B - Why is a Type C Track Circuit Used?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 9B - Why is a Type C Track Circuit Used?</h1>
+
+    <h2 style="color: darkblue;">
+        Purpose of Type C Track Circuits
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Type C track circuits are used in railroad signaling because they provide strong train detection, reliable
+        broken rail detection, and better performance in difficult operating environments.
+    </p>
+
+    <p style="font-size: 22px;">
+        One major safety benefit is continuous broken rail detection. Type C circuits can detect rail breaks even when
+        a train is not occupying the track section.
+    </p>
+
+    <p style="font-size: 22px;">
+        Type C track circuits are also well suited for electrified railway territory. AC traction return current can
+        interfere with simpler track circuits, but Type C circuits use dual frequencies and filtering to reduce that
+        interference.
+    </p>
+
+    <p style="font-size: 22px;">
+        Their receiver equipment separates and analyzes the different frequencies so train detection and broken rail
+        detection can be monitored independently.
+    </p>
+
+    <p style="font-size: 22px;">
+        Type C circuits can also be more reliable in adverse conditions such as changing ballast resistance, moisture,
+        leakage, or electrical noise.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because of these safety and reliability benefits, Type C track circuits are often used in critical locations
+        such as high-speed lines, heavily trafficked corridors, and complex interlocking areas.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is a major safety benefit of Type C track circuits?</p>
+        <label><input type="radio" name="q1" value="wrong"> They eliminate the need for trackside relays</label><br>
+        <label><input type="radio" name="q1" value="correct"> They provide continuous broken rail detection even without a train present</label><br>
+        <label><input type="radio" name="q1" value="wrong"> They operate using solar-powered transmitters</label><br><br>
+
+        <p>2. Why are Type C track circuits useful in AC electrified territory?</p>
+        <label><input type="radio" name="q2" value="correct"> Their dual-frequency system and filtering help reject AC traction interference</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Their low-voltage threshold avoids track heating</label><br>
+        <label><input type="radio" name="q2" value="wrong"> They synchronize with wayside indicators only</label><br><br>
+
+        <p>3. Where are Type C track circuits commonly used?</p>
+        <label><input type="radio" name="q3" value="wrong"> In freight yards only for switch monitoring</label><br>
+        <label><input type="radio" name="q3" value="correct"> In high-speed and high-traffic areas for critical safety monitoring</label><br>
+        <label><input type="radio" name="q3" value="wrong"> In non-signaled branch lines to supplement ABS only</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 9C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 9A.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

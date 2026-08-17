@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 18F - Advantages and Disadvantages of Manual Block</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 18F - Advantages and Disadvantages of Manual Block</h1>
+
+    <h2 style="color: darkblue;">
+        Advantages and Disadvantages of Manual Block Signaling
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Manual block signaling played an important role in the development of railway
+        safety systems. While it provided a safer method of train separation than
+        earlier operating practices, it also has several limitations when compared
+        to modern automatic signaling systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        One major advantage of manual block signaling is its relative simplicity.
+        The system generally requires less complex equipment than automatic block
+        systems, making the initial installation cost lower, especially on low-density
+        rail lines.
+    </p>
+
+    <p style="font-size: 22px;">
+        Manual block systems also do not depend heavily on continuous track circuit
+        operation or advanced electronic equipment along the entire railway. Because
+        of this, they may be less vulnerable to certain failures such as ballast
+        contamination, broken rails affecting track circuits, or power failures to
+        wayside equipment.
+    </p>
+
+    <p style="font-size: 22px;">
+        Another advantage is that manual block systems can be used effectively on
+        non-electrified territory where installing automatic detection systems may
+        be too expensive or impractical.
+    </p>
+
+    <p style="font-size: 22px;">
+        Manual block signaling can also provide flexibility during unusual train
+        operations, track maintenance, or temporary operating conditions because
+        operators communicate directly and coordinate train movements manually.
+    </p>
+
+    <p style="font-size: 22px;">
+        However, manual block signaling also has important disadvantages. One of
+        the biggest disadvantages is the increased potential for human error.
+        Safe operation depends heavily on accurate communication, proper record
+        keeping, and strict adherence to operating rules by block operators and
+        train crews.
+    </p>
+
+    <p style="font-size: 22px;">
+        Manual block systems also reduce railway capacity because trains cannot
+        follow each other as closely as they can under automatic block signaling.
+        Each train movement requires communication and authorization between
+        operators, increasing the time interval between trains.
+    </p>
+
+    <p style="font-size: 22px;">
+        Train operations under manual block are generally slower and more labor
+        intensive because multiple staffed block stations are required along the
+        route. Train crews also receive less real-time information compared to
+        modern signaling systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        Due to these limitations, most busy railway main lines have replaced manual
+        block signaling with automatic block systems, centralized traffic control,
+        or more advanced train control technologies.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/manual-vs-automatic-capacity.png"
+    alt="Comparison of train capacity between manual block and automatic block systems"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/manual-block-human-error.png"
+    alt="Illustration showing possible human communication error in manual block signaling"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/manual-vs-automatic-infrastructure.png"
+    alt="Comparison between manual block stations and automatic wayside signaling"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/manual-block-advantages-disadvantages-chart.png"
+    alt="Chart summarizing advantages and disadvantages of manual block signaling"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is a primary advantage of manual block signaling?</p>
+        <label><input type="radio" name="q1" value="correct"> Lower initial cost and simpler infrastructure compared to automatic systems</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Elimination of all human involvement in train operation</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Unlimited train capacity on busy main lines</label><br><br>
+
+        <p>2. What is considered one of the most significant disadvantages of manual block signaling?</p>
+        <label><input type="radio" name="q2" value="wrong"> Excessive automatic train detection</label><br>
+        <label><input type="radio" name="q2" value="correct"> Increased potential for human error due to manual communication and record keeping</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Too much real-time information provided to train crews</label><br><br>
+
+        <p>3. How does manual block signaling typically affect train capacity and operating speed?</p>
+        <label><input type="radio" name="q3" value="wrong"> It allows trains to operate faster and closer together than automatic systems</label><br>
+        <label><input type="radio" name="q3" value="wrong"> It completely removes the need for communication between operators</label><br>
+        <label><input type="radio" name="q3" value="correct"> It generally reduces train capacity and results in slower operations compared to automatic signaling</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 18G.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 18D.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

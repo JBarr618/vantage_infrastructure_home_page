@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 10C - Setting Up Impedance Bonds</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 10C - Setting Up Impedance Bonds</h1>
+
+    <h2 style="color: darkblue;">
+        Installing and Testing Impedance Bonds
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Setting up impedance bonds requires careful installation, proper rail
+        connections, and testing to make sure they perform correctly for both
+        traction return current and signaling isolation.
+    </p>
+
+    <p style="font-size: 22px;">
+        Impedance bonds are normally installed near insulated rail joints or at
+        track circuit boundaries. These locations are selected based on the
+        signal design, track circuit layout, and traction return requirements.
+    </p>
+
+    <p style="font-size: 22px;">
+        The bond must be securely mounted so it can withstand vibration, weather,
+        train movement, and normal railroad operating conditions. A loose or
+        poorly mounted bond can create unreliable electrical connections.
+    </p>
+
+    <p style="font-size: 22px;">
+        Heavy-duty cables, straps, or rail bonds are used to connect the
+        impedance bond terminals to the running rails. These connections must
+        provide a low-resistance path for traction return current.
+    </p>
+
+    <p style="font-size: 22px;">
+        Good electrical contact is extremely important. Dirty, loose, damaged,
+        or corroded connections can cause voltage drop, heating, poor traction
+        return, or track circuit problems.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some impedance bond installations use a center-tapped configuration.
+        The center tap may be used for traction return, equalizing current, or
+        connection to other bonding equipment depending on the railroad design.
+    </p>
+
+    <p style="font-size: 22px;">
+        After installation, the impedance bond must be tested and verified.
+        Testing may include continuity checks, rail connection checks, impedance
+        measurements, and verification that the track circuit operates correctly.
+    </p>
+
+    <p style="font-size: 22px;">
+        The bond must allow traction return current to flow while still helping
+        maintain separation between adjacent track circuits. If the bond is wired
+        incorrectly, both traction power and signaling problems can occur.
+    </p>
+
+    <p style="font-size: 22px;">
+        Proper setup is critical because impedance bonds are part of both the
+        traction return system and the signal system. Errors can create unsafe
+        current paths, false track indications, or unreliable train detection.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/impedance-bond-installation.png"
+    alt="Impedance bond installed near insulated rail joints"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/impedance-bond-rail-connections.png"
+    alt="Heavy duty cables connecting impedance bond terminals to running rails"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/impedance-bond-testing.png"
+    alt="Technician testing impedance bond continuity and rail connections"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Where are impedance bonds typically installed?</p>
+        <label><input type="radio" name="q1" value="correct"> Near insulated joints or track circuit boundaries</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Inside the nearest relay bungalow only</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Only at the power substation</label><br><br>
+
+        <p>2. What type of connections are used to attach impedance bonds to the running rails?</p>
+        <label><input type="radio" name="q2" value="wrong"> Fiber optic jumpers</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Magnetically clamped wire looms</label><br>
+        <label><input type="radio" name="q2" value="correct"> Heavy-duty cables, straps, or rail bonds</label><br><br>
+
+        <p>3. What should be tested after an impedance bond is installed?</p>
+        <label><input type="radio" name="q3" value="wrong"> Paint color and sun exposure only</label><br>
+        <label><input type="radio" name="q3" value="correct"> Continuity, rail connections, impedance, and track circuit operation</label><br>
+        <label><input type="radio" name="q3" value="wrong"> The signal mast ladder height</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 10D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 10B.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

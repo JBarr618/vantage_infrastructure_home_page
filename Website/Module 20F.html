@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 20F - What Aspects Do Fixed Signals Display?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 20F - What Aspects Do Fixed Signals Display?</h1>
+
+    <h2 style="color: darkblue;">
+        Signal Aspects Displayed by Fixed Wayside Signals
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        The visual indications displayed by fixed wayside signals are known as
+        signal aspects. These aspects communicate specific instructions and
+        information to train crews regarding train movement, speed, routing,
+        and track conditions ahead.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signal aspects may be displayed using colored lights, semaphore arm
+        positions, or patterns of lights depending on the signal type used by
+        the railroad.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most important signal aspects is the stop aspect. In a color
+        light system, this is usually displayed as a red light. In semaphore
+        signaling, the arm is typically horizontal. This aspect requires a train
+        to stop before passing the signal.
+    </p>
+
+    <p style="font-size: 22px;">
+        Proceed aspects authorize train movement. In color light systems, a green
+        signal commonly indicates that the block ahead is clear and the train may
+        proceed at the authorized speed.
+    </p>
+
+    <p style="font-size: 22px;">
+        Semaphore signals often display proceed indications by lowering the signal
+        arm to a downward angle. Position light signals typically use a vertical
+        arrangement of lights to indicate a proceed aspect.
+    </p>
+
+    <p style="font-size: 22px;">
+        Approach aspects provide advance warning that a more restrictive signal
+        lies ahead. A yellow signal is commonly used for this purpose and informs
+        train crews to be prepared to stop at the next signal if necessary.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some approach aspects may also require speed reductions depending on the
+        operating rules of the railroad.
+    </p>
+
+    <p style="font-size: 22px;">
+        Restricting aspects authorize train movement under special conditions and
+        typically require operation at restricted speed. Train crews must be
+        prepared to stop short of obstructions, occupied tracks, improperly lined
+        switches, or other hazards.
+    </p>
+
+    <p style="font-size: 22px;">
+        At interlockings, signals often display diverging route aspects. These
+        aspects inform train crews that the train will follow a route through
+        switches onto another track or through a crossover.
+    </p>
+
+    <p style="font-size: 22px;">
+        Diverging route aspects are commonly displayed using combinations of
+        colored lights arranged in specific patterns. These aspects may also
+        include speed restrictions associated with the selected route.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signal aspects vary between railroads and operating territories. Train
+        crews must be thoroughly familiar with the signal rules, charts, and
+        operating instructions applicable to their territory.
+    </p>
+
+    <p style="font-size: 22px;">
+        Correct interpretation of signal aspects is essential for maintaining
+        safe train separation, preventing collisions, and ensuring efficient
+        railroad operations.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/color-light-signal-aspects-chart.png"
+    alt="Chart showing common color light signal aspects and meanings"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/semaphore-aspect-chart.jpg"
+    alt="Semaphore arm positions and corresponding signal aspects"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/position-light-aspects.jpg"
+    alt="Position light signal patterns and their meanings"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/interlocking-diverging-route-signal.jpg"
+    alt="Signal displaying a diverging route aspect at an interlocking"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What does a red light aspect typically indicate in a color light signaling system?</p>
+        <label><input type="radio" name="q1" value="wrong"> Proceed at maximum speed</label><br>
+        <label><input type="radio" name="q1" value="correct"> Stop before passing the signal</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Diverging route ahead</label><br><br>
+
+        <p>2. What does an approach aspect typically indicate, and what action is required?</p>
+        <label><input type="radio" name="q2" value="correct"> A more restrictive signal lies ahead and the train crew should prepare to stop or reduce speed as required</label><br>
+        <label><input type="radio" name="q2" value="wrong"> The train may ignore the next signal</label><br>
+        <label><input type="radio" name="q2" value="wrong"> The track ahead is permanently clear</label><br><br>
+
+        <p>3. How do signals at interlockings commonly convey information about diverging routes?</p>
+        <label><input type="radio" name="q3" value="wrong"> Through radio messages only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> By displaying train schedules</label><br>
+        <label><input type="radio" name="q3" value="correct"> Through specific combinations and arrangements of signal lights that indicate route selection and speed requirements</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 20G.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 20E.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

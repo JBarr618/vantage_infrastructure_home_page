@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 21F - Troubleshooting Color Signals</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 21F - Troubleshooting Color Signals</h1>
+
+    <h2 style="color: darkblue;">
+        How to Troubleshoot Color Light Signals
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Troubleshooting color light signals requires a systematic approach to
+        identify problems that cause incorrect, dim, intermittent, or missing
+        signal aspects. A signal maintainer must understand both the electrical
+        circuit and the control logic that commands the signal indication.
+    </p>
+
+    <p style="font-size: 22px;">
+        If a lamp or LED is out, the first step is to verify whether the light
+        unit is receiving proper voltage when that aspect should be illuminated.
+        The maintainer should inspect the lamp, LED module, socket, connector,
+        and wiring for damage, corrosion, or loose connections.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the wrong color is displayed, the maintainer should check for incorrect
+        lenses, damaged lenses, crossed wiring, shorts, or improper operation of
+        the control relays or solid-state outputs that energize each color circuit.
+    </p>
+
+    <p style="font-size: 22px;">
+        Flashing aspect problems may involve a light that stays steady when it
+        should flash, flashes when it should remain steady, or flashes at the
+        wrong rate. The flasher unit, control circuitry, and wiring between the
+        flasher and signal light must be checked.
+    </p>
+
+    <p style="font-size: 22px;">
+        Dim or intermittent lights are often caused by loose or corroded
+        connections, poor power supply voltage, voltage drops, water intrusion,
+        damaged wiring, or failing LED modules. These conditions must be corrected
+        before the signal can be considered reliable.
+    </p>
+
+    <p style="font-size: 22px;">
+        If a signal does not respond when track occupancy changes or when an
+        interlocking control is operated, the maintainer must inspect the control
+        system. This may include track circuits, relays, fuses, circuit breakers,
+        interlocking logic, wiring, and output circuits.
+    </p>
+
+    <p style="font-size: 22px;">
+        Multi-head signals should be troubleshot one head at a time. A problem
+        may be isolated to one signal head, one lamp circuit, one LED module, or
+        one section of the control wiring.
+    </p>
+
+    <p style="font-size: 22px;">
+        Wiring diagrams are essential because they show how power, control logic,
+        relays, outputs, and field wiring are connected. Without the proper plans,
+        it is easy to misidentify circuits or overlook the true source of the
+        failure.
+    </p>
+
+    <p style="font-size: 22px;">
+        A good troubleshooting process begins with a visual inspection, followed
+        by voltage, current, and continuity testing. The maintainer should isolate
+        the fault by checking one section of the circuit at a time.
+    </p>
+
+    <p style="font-size: 22px;">
+        All troubleshooting must follow railroad safety procedures. Circuits
+        should be de-energized when required, and testing must be performed only
+        by qualified personnel using approved tools and procedures.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is one of the first things to check if a color light signal is not illuminating at all?</p>
+        <label><input type="radio" name="q1" value="correct"> Whether proper voltage is present at the lamp socket or LED connector</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Whether the train schedule has changed</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Whether the ballast is clean</label><br><br>
+
+        <p>2. If a color signal is displaying the wrong color, what are some possible causes?</p>
+        <label><input type="radio" name="q2" value="wrong"> Excessive train speed only</label><br>
+        <label><input type="radio" name="q2" value="correct"> Incorrect lens, damaged lens, crossed wiring, shorts, or faulty control outputs</label><br>
+        <label><input type="radio" name="q2" value="wrong"> A missing milepost sign</label><br><br>
+
+        <p>3. Why are wiring diagrams important when troubleshooting color signals?</p>
+        <label><input type="radio" name="q3" value="wrong"> They replace the need for test equipment</label><br>
+        <label><input type="radio" name="q3" value="wrong"> They are only used for painting the signal mast</label><br>
+        <label><input type="radio" name="q3" value="correct"> They show how power, control logic, relays, outputs, and field wiring are connected</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 22.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 21E.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

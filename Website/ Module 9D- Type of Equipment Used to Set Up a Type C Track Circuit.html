@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Module 9D: Equipment Used in Type C Track Circuits</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
+    .content-container { margin-bottom: 30px; }
+    .question-container { margin-bottom: 20px; }
+    .question { font-weight: bold; }
+    .answer-option { display: block; margin-bottom: 8px; }
+    .correct-answer { background-color: #d4edda; }
+    .wrong-answer { background-color: #f8d7da; }
+    #submit-button {
+      padding: 18px 36px;
+      font-size: 1.4em;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #submit-button:hover { background-color: #0056b3; }
+    #submit-button:disabled {
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Module 9D: Type of Equipment Used to Set Up a Type C Track Circuit</h1>
+
+  <div class="content-container">
+    <p>Setting up a Type C track circuit necessitates the use of specialized equipment designed to generate, transmit, and analyze two distinct AC frequencies simultaneously:</p>
+    <ul>
+      <li><strong>Dual-Frequency Transmitter:</strong> Generates both the train detection and broken rail detection frequencies with stable and controlled output levels.</li>
+      <li><strong>Dual-Frequency Receiver:</strong> Separates and analyzes each frequency using filters and detection circuits to monitor changes in amplitude and/or phase.</li>
+      <li><strong>Insulated Rail Joints:</strong> Installed on both rails to provide electrical isolation for the signaling currents.</li>
+      <li><strong>Connecting Cables:</strong> Designed with impedance-matching characteristics to minimize loss and distortion of signals.</li>
+      <li><strong>Spectrum Analyzer:</strong> Visualizes the frequency spectrum, ensuring both signals are clean, stable, and at the correct levels during setup and troubleshooting.</li>
+      <li><strong>Oscilloscope:</strong> Examines waveform shape, phase relationships, and potential signal distortion or interference.</li>
+      <li><strong>Multimeter (AC Measurement):</strong> Measures voltage and current of each signal for basic circuit checks and calibration.</li>
+      <li><strong>Shunt Application Device:</strong> Simulates train presence for testing the response of the detection circuitry.</li>
+    </ul>
+  </div>
+
+  <h2>Module 9D Questions</h2>
+  <div id="quiz-container">
+    <div class="question-container">
+      <p class="question">1. What is the primary function of the dual-frequency transmitter in a Type C track circuit system? What kind of signal does it generate?</p>
+      <label class="answer-option"><input type="radio" name="q1" value="a"> A) It switches between DC and AC modes based on occupancy</label>
+      <label class="answer-option"><input type="radio" name="q1" value="b"> B) It generates a burst signal during shunt simulation only</label>
+      <label class="answer-option"><input type="radio" name="q1" value="c"> C) It simultaneously produces two distinct AC frequencies for detection</label>
+    </div>
+
+    <div class="question-container">
+      <p class="question">2. Describe the key internal components of a dual-frequency receiver and explain why they are necessary for the operation of a Type C track circuit.</p>
+      <label class="answer-option"><input type="radio" name="q2" value="a"> A) Filters and detection circuits to monitor each frequency independently</label>
+      <label class="answer-option"><input type="radio" name="q2" value="b"> B) Relays and timers to delay signals</label>
+      <label class="answer-option"><input type="radio" name="q2" value="c"> C) Surge arrestors and grounding rods</label>
+    </div>
+
+    <div class="question-container">
+      <p class="question">3. What specialized test equipment, beyond standard multimeters, is typically required for setting up and verifying the performance of a Type C track circuit? Why are these tools important?</p>
+      <label class="answer-option"><input type="radio" name="q3" value="a"> A) Wire strippers and crimp tools to make connections faster</label>
+      <label class="answer-option"><input type="radio" name="q3" value="b"> B) Spectrum analyzer and oscilloscope to visualize frequency and waveform behavior</label>
+      <label class="answer-option"><input type="radio" name="q3" value="c"> C) Relay logic meters to monitor interlocking functions</label>
+    </div>
+
+    <button id="submit-button">Submit Answers</button>
+    <div id="results-container" style="display: none;">
+      Your Score: <span id="final-score">0</span> out of <span id="max-score">3</span>
+    </div>
+  </div>
+
+  <script>
+    const questions = [
+      { name: "q1", correctAnswer: "c" },
+      { name: "q2", correctAnswer: "a" },
+      { name: "q3", correctAnswer: "b" }
+    ];
+
+    const submitButton = document.getElementById('submit-button');
+    const resultsContainer = document.getElementById('results-container');
+    const finalScoreDisplay = document.getElementById('final-score');
+    const maxScoreDisplay = document.getElementById('max-score');
+
+    submitButton.addEventListener('click', () => {
+      let score = 0;
+      const questionContainers = document.querySelectorAll('.question-container');
+      maxScoreDisplay.textContent = questions.length;
+
+      questionContainers.forEach((qContainer, index) => {
+        const selectedAnswer = document.querySelector(`input[name="${questions[index].name}"]:checked`);
+        const answerElements = qContainer.querySelectorAll('.answer-option');
+
+        if (selectedAnswer) {
+          if (selectedAnswer.value === questions[index].correctAnswer) {
+            score++;
+            answerElements.forEach(label => {
+              if (label.querySelector('input').value === questions[index].correctAnswer) {
+                label.classList.add('correct-answer');
+              }
+            });
+          } else {
+            answerElements.forEach(label => {
+              const input = label.querySelector('input');
+              if (input.value === selectedAnswer.value) {
+                label.classList.add('wrong-answer');
+              } else if (input.value === questions[index].correctAnswer) {
+                label.classList.add('correct-answer');
+              }
+            });
+          }
+        } else {
+          answerElements.forEach(label => {
+            const input = label.querySelector('input');
+            if (input.value === questions[index].correctAnswer) {
+              label.classList.add('correct-answer');
+            }
+          });
+        }
+      });
+
+      finalScoreDisplay.textContent = score;
+      resultsContainer.style.display = 'block';
+      document.querySelectorAll('input[type="radio"]').forEach(input => input.disabled = true);
+      submitButton.disabled = true;
+    });
+  </script>
+</body>
+</html>

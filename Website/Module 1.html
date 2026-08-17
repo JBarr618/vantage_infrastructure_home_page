@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topic 1 - Introduction to Railroad Signal and Train Control</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    h1 {
+      padding: 20px;
+    }
+
+    .intro-container {
+      overflow: auto;
+      padding: 20px;
+    }
+
+    .align-right-image {
+      float: right;
+      margin-left: 20px;
+      margin-bottom: 10px;
+      max-width: 300px;
+    }
+
+    .left-text {
+      text-align: left;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .question-container {
+      margin-bottom: 20px;
+    }
+
+    .question {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .answer-option {
+      display: block;
+      margin-bottom: 5px;
+      cursor: pointer;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .answer-option:hover {
+      background-color: #e0e0e0;
+    }
+
+    .answer-option input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    #results-container {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .correct-answer {
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+      color: #155724;
+    }
+
+    .wrong-answer {
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+      color: #721c24;
+    }
+
+    #submit-button,
+    #next-button,
+    #back-button,
+    #home-button {
+      padding: 12px 25px;
+      font-size: 1.1em;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      margin-right: 10px;
+    }
+
+    #submit-button:hover,
+    #next-button:hover,
+    #back-button:hover,
+    #home-button:hover {
+      background-color: #0056b3;
+    }
+
+    #submit-button:disabled {
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
+
+    #next-button {
+      display: none;
+      background-color: green;
+    }
+
+    #next-button:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Topic 1: Introduction to Railroad Signal and Train Control</h1>
+
+  <div class="intro-container">
+    <img
+      class="align-right-image"
+      src="images/BO Railroad.png"
+      alt="B&O Railroad historical image"
+    />
+
+    <p class="left-text">
+      Welcome to the fascinating world of railroad signals and train control! This course will guide you through the fundamental principles and technologies that ensure the safe and efficient movement of trains.
+      Understanding signal systems is crucial for anyone involved in the railroad signal industry, from engineers and conductors to maintenance personnel and safety officers.
+    </p>
+
+    <p class="left-text">
+      The story of railroads in America began in the early 19th century. The Baltimore and Ohio Railroad, also known as the B&O Railroad, is generally considered the first common carrier railroad in the United States.
+      Its construction began on July 4, 1828, and it officially opened its first section in 1830.
+    </p>
+
+    <p>
+      Trains came before the widespread adoption of cars in America. For nearly a century, railroads were the dominant mode of long-distance travel and freight transport across the United States.
+    </p>
+  </div>
+
+  <h3>Topic 1 Questions:</h3>
+
+  <div id="quiz-container">
+    <div class="question-container">
+      <p class="question">
+        Question 1: What is generally considered the first common carrier railroad in the United States, and in what year did its construction begin?
+      </p>
+
+      <label class="answer-option">
+        <input type="radio" name="q1" value="a" /> A) Reading Railroad, 1856
+      </label>
+
+      <label class="answer-option">
+        <input type="radio" name="q1" value="b" /> B) B&O Railroad, 1828
+      </label>
+
+      <label class="answer-option">
+        <input type="radio" name="q1" value="c" /> C) Pennsylvania Railroad, 1780
+      </label>
+    </div>
+
+    <div class="question-container">
+      <p class="question">
+        Question 2: Did widespread train travel happen before or after personal automobiles became common?
+      </p>
+
+      <label class="answer-option">
+        <input type="radio" name="q2" value="a" /> A) Same time
+      </label>
+
+      <label class="answer-option">
+        <input type="radio" name="q2" value="b" /> B) After
+      </label>
+
+      <label class="answer-option">
+        <input type="radio" name="q2" value="c" /> C) Before
+      </label>
+    </div>
+
+    <div class="question-container">
+      <p class="question">
+        Question 3: What is the primary purpose of railroad signal and train control systems?
+      </p>
+
+      <label class="answer-option">
+        <input type="radio" name="q3" value="a" /> A) Provide broken rail protection only
+      </label>
+
+      <label class="answer-option">
+        <input type="radio" name="q3" value="b" /> B) Replace train crews
+      </label>
+
+      <label class="answer-option">
+        <input type="radio" name="q3" value="c" /> C) Communicate train movement information and provide a layer of safety
+      </label>
+    </div>
+
+    <button id="submit-button">Submit Answers</button>
+
+    <div id="results-container" style="display: none;">
+      Your Score: <span id="final-score">0</span> out of
+      <span id="max-score">3</span>
+    </div>
+
+    <button id="back-button">Back</button>
+    <button id="home-button">Home</button>
+    <button id="next-button">Next Free Topic</button>
+    
+  </div>
+
+  <script>
+    const NEXT_PAGE = "free-topic-1.html";
+    const HOME_PAGE = "index.html";
+
+    const submitButton = document.getElementById("submit-button");
+    const resultsContainer = document.getElementById("results-container");
+    const finalScoreDisplay = document.getElementById("final-score");
+    const maxScoreDisplay = document.getElementById("max-score");
+    const nextButton = document.getElementById("next-button");
+    const backButton = document.getElementById("back-button");
+    const homeButton = document.getElementById("home-button");
+
+    const questions = [
+      { name: "q1", correctAnswer: "b" },
+      { name: "q2", correctAnswer: "c" },
+      { name: "q3", correctAnswer: "c" }
+    ];
+
+    submitButton.addEventListener("click", () => {
+      let score = 0;
+      maxScoreDisplay.textContent = questions.length;
+
+      const questionContainers = document.querySelectorAll(".question-container");
+
+      questionContainers.forEach((qContainer, index) => {
+        const selectedAnswer = document.querySelector(`input[name="${questions[index].name}"]:checked`);
+        const answerElements = qContainer.querySelectorAll(".answer-option");
+
+        answerElements.forEach((label) => {
+          label.classList.remove("correct-answer", "wrong-answer");
+        });
+
+        answerElements.forEach((label) => {
+          const input = label.querySelector("input");
+
+          if (input.value === questions[index].correctAnswer) {
+            label.classList.add("correct-answer");
+          }
+
+          if (selectedAnswer && input.value === selectedAnswer.value && selectedAnswer.value !== questions[index].correctAnswer) {
+            label.classList.add("wrong-answer");
+          }
+        });
+
+        if (selectedAnswer && selectedAnswer.value === questions[index].correctAnswer) {
+          score++;
+        }
+      });
+
+      finalScoreDisplay.textContent = score;
+      resultsContainer.style.display = "block";
+
+      document.querySelectorAll('input[type="radio"]').forEach((btn) => {
+        btn.disabled = true;
+      });
+
+      submitButton.disabled = true;
+      nextButton.style.display = "inline-block";
+    });
+
+    nextButton.addEventListener("click", () => {
+      window.location.href = NEXT_PAGE;
+    });
+
+    backButton.addEventListener("click", () => {
+      window.history.back();
+    });
+
+    homeButton.addEventListener("click", () => {
+      window.location.href = HOME_PAGE;
+    });
+  </script>
+</body>
+</html>

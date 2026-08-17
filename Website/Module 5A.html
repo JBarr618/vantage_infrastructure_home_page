@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 5A - Importance of a Control Point</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 5A - Importance of a Control Point</h1>
+
+    <h2 style="color: darkblue;">
+        Why Control Points Are Important
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Control points are essential for the safe, efficient, and flexible operation of railway systems. They provide
+        a centralized location for controlling and monitoring critical interlocking components such as signals,
+        switches, routes, and track circuits.
+    </p>
+
+    <p style="font-size: 22px;">
+        This centralized control helps prevent conflicting train movements and supports the safe passage of trains
+        through complex track layouts. Without control points, operators would need to manage individual switches and
+        signals separately, which would increase the chance of error.
+    </p>
+
+    <p style="font-size: 22px;">
+        Control points allow operators and dispatchers to manage train movements remotely and with greater precision.
+        They provide information about signal indications, switch positions, route status, alarms, and track occupancy.
+    </p>
+
+    <p style="font-size: 22px;">
+        Control points also improve traffic flow. By giving operators a clear overview of the interlocking and nearby
+        track, they can make better decisions about route selection, train sequencing, and movement priorities.
+    </p>
+
+    <p style="font-size: 22px;">
+        This helps reduce delays, increase throughput, and improve the overall efficiency of the railway network.
+        Control points also allow flexible train routing during maintenance, failures, service disruptions, or periods
+        of heavy train traffic.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary function of a control point?</p>
+        <label><input type="radio" name="q1" value="wrong"> To operate train brakes manually</label><br>
+        <label><input type="radio" name="q1" value="correct"> To control and monitor interlocking components</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To inspect train wheels</label><br><br>
+
+        <p>2. How do control points support safe train operation?</p>
+        <label><input type="radio" name="q2" value="wrong"> By lighting trackside lanterns</label><br>
+        <label><input type="radio" name="q2" value="correct"> By coordinating signals, switches, and routes to prevent conflicts</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By reducing signal visibility</label><br><br>
+
+        <p>3. How do control points help improve traffic flow?</p>
+        <label><input type="radio" name="q3" value="wrong"> By playing announcements only</label><br>
+        <label><input type="radio" name="q3" value="correct"> By giving operators an overview and helping with routing decisions</label><br>
+        <label><input type="radio" name="q3" value="wrong"> By stopping trains for long periods</label><br><br>
+
+        <p>4. How do control points help with flexible train routing?</p>
+        <label><input type="radio" name="q4" value="correct"> They allow remote and adaptive route adjustments during changing conditions</label><br>
+        <label><input type="radio" name="q4" value="wrong"> They operate vending machines for crew comfort</label><br>
+        <label><input type="radio" name="q4" value="wrong"> They increase the number of ticket counters</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 5B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 5.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

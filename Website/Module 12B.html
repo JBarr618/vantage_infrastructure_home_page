@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 12B - How Computer Based Train Control Functions</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 12B - How Computer Based Train Control Functions</h1>
+
+    <h2 style="color: darkblue;">
+        Introduction to Computer Based Train Control (CBTC) - Page 3
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Computer Based Train Control, commonly called CBTC, functions through a
+        continuous loop of data acquisition, processing, communication, and
+        action to ensure safe and efficient train movement.
+    </p>
+
+    <h3>1. Train Localization</h3>
+
+    <p style="font-size: 22px;">
+        Each train continuously determines its precise location using onboard
+        sensors such as odometers and speed sensors.
+    </p>
+
+    <p style="font-size: 22px;">
+        The train periodically calibrates its position using fixed reference
+        points such as balises or beacons.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some CBTC systems may also use radar or Radio Frequency Identification,
+        commonly called RFID, to improve location accuracy.
+    </p>
+
+    <h3>2. Data Transmission to Central Control</h3>
+
+    <p style="font-size: 22px;">
+        The train wirelessly transmits its real-time location, speed,
+        direction, and other operational data to the central control center.
+    </p>
+
+    <p style="font-size: 22px;">
+        This communication is continuous or very frequent so that the control
+        system always has current train information.
+    </p>
+
+    <h3>3. Centralized Data Processing and Calculation</h3>
+
+    <p style="font-size: 22px;">
+        The central control system receives and processes data from all trains
+        on the network.
+    </p>
+
+    <p style="font-size: 22px;">
+        Using advanced algorithms, the system considers track geometry,
+        gradients, speed restrictions, interlocking status, and the movement of
+        other trains.
+    </p>
+
+    <p style="font-size: 22px;">
+        Based on this information, the central system calculates the safe
+        braking distance required for each train and determines the maximum safe
+        speed and the extent of its Movement Authority, commonly called MA.
+    </p>
+
+    <h3>4. Movement Authority and Speed Profile Transmission</h3>
+
+    <p style="font-size: 22px;">
+        The central control system transmits the Movement Authority back to the
+        train.
+    </p>
+
+    <p style="font-size: 22px;">
+        The Movement Authority tells the train how far it is safely allowed to
+        proceed.
+    </p>
+
+    <p style="font-size: 22px;">
+        The system often also sends a speed profile, which gives target speeds
+        for different sections of the authorized movement.
+    </p>
+
+    <h3>5. Onboard Supervision and Control (ATP)</h3>
+
+    <p style="font-size: 22px;">
+        The onboard computer system receives the Movement Authority and speed
+        profile from the central control system.
+    </p>
+
+    <p style="font-size: 22px;">
+        The Automatic Train Protection system, commonly called ATP,
+        continuously monitors the train's actual speed and position against the
+        received limits.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the train exceeds the permitted speed or approaches the end of its
+        Movement Authority without proper braking, the ATP system automatically
+        applies the brakes to prevent overspeed or collision.
+    </p>
+
+    <h3>6. Dynamic Adjustments</h3>
+
+    <p style="font-size: 22px;">
+        The entire CBTC process is dynamic and continuous.
+    </p>
+
+    <p style="font-size: 22px;">
+        As train positions change, train speeds change, or track and operating
+        conditions change, the central control system continually recalculates
+        and updates the Movement Authorities and speed profiles for all trains.
+    </p>
+
+    <p style="font-size: 22px;">
+        This allows trains to operate with tighter spacing and more efficient
+        traffic flow than traditional fixed block systems.
+    </p>
+
+    <h3>7. Interface with Other Systems</h3>
+
+    <p style="font-size: 22px;">
+        CBTC systems often interface with other railway systems such as
+        interlocking systems and traffic management systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        Interlocking systems help with route setting and route protection at
+        junctions, while traffic management systems help optimize the overall
+        railway network.
+    </p>
+
+    <p style="font-size: 22px;">
+        This continuous cycle of localization, communication, centralized
+        processing, and onboard control gives CBTC its advanced capabilities,
+        increased safety, improved capacity, and enhanced operational
+        efficiency.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p style="font-size: 20px;">
+            <strong>1. Which answer best describes the continuous cycle of operations in a CBTC system?</strong>
+        </p>
+
+        <label><input type="radio" name="q1" value="correct"> A. Train localization, data transmission, central processing, MA and speed profile transmission, onboard ATP supervision, and continuous updating</label><br>
+        <label><input type="radio" name="q1" value="wrong"> B. Manual dispatching, paper train orders, and fixed signal clearance only</label><br>
+        <label><input type="radio" name="q1" value="wrong"> C. Train fueling, station cleaning, and ticket collection</label><br>
+        <label><input type="radio" name="q1" value="wrong"> D. One-time train location setup with no further updates</label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>2. How does the central control system determine a train's Movement Authority in CBTC?</strong>
+        </p>
+
+        <label><input type="radio" name="q2" value="wrong"> A. It gives every train the same fixed distance all day long</label><br>
+        <label><input type="radio" name="q2" value="wrong"> B. It only uses station schedules and ignores train positions</label><br>
+        <label><input type="radio" name="q2" value="correct"> C. It uses train data and considers factors such as track geometry, gradients, speed restrictions, interlocking status, and the movement of other trains</label><br>
+        <label><input type="radio" name="q2" value="wrong"> D. It is decided only by the train operator inside the cab</label><br><br>
+
+        <p style="font-size: 20px;">
+            <strong>3. What is the role of the Automatic Train Protection (ATP) system in CBTC?</strong>
+        </p>
+
+        <label><input type="radio" name="q3" value="wrong"> A. It controls station air conditioning systems</label><br>
+        <label><input type="radio" name="q3" value="correct"> B. It monitors the train's speed and position against its limits and automatically applies the brakes if necessary</label><br>
+        <label><input type="radio" name="q3" value="wrong"> C. It replaces all communication between the train and control center</label><br>
+        <label><input type="radio" name="q3" value="wrong"> D. It is used only for passenger announcements</label><br><br>
+
+        <button type="button"
+        onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if (password === "signal2026") {
+            window.location.href = "Module 12C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+            answer.disabled = true;
+
+            if (answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if (answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if (answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+                answer.parentElement.style.fontWeight = "bold";
+            }
+        });
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 12A.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

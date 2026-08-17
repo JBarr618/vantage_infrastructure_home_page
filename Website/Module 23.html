@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 23 - Where Are Automatic Block Signals Used?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 23 - Where Are Automatic Block Signals Used?</h1>
+
+    <h2 style="color: darkblue;">
+        Applications of Automatic Block Signaling
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Automatic Block Signaling (ABS) is one of the most common railway signaling
+        systems in use today. It is found in many different types of railroad
+        operations where safe train separation, increased capacity, and efficient
+        train movement are required.
+    </p>
+
+    <p style="font-size: 22px;">
+        ABS is widely used on main line railways carrying both freight and passenger
+        traffic. On busy routes, the system automatically controls train separation
+        and allows trains to operate closer together while maintaining safety.
+    </p>
+
+    <p style="font-size: 22px;">
+        Commuter rail systems frequently use ABS because they often operate many
+        trains throughout the day. Automatic train separation helps maintain
+        schedules and provides safe spacing between trains.
+    </p>
+
+    <p style="font-size: 22px;">
+        High-speed rail systems commonly utilize ABS, often combined with cab
+        signaling and other advanced train control technologies. These systems
+        help ensure safe operation at higher speeds.
+    </p>
+
+    <p style="font-size: 22px;">
+        Heavy freight corridors also benefit from ABS. Long and heavy freight
+        trains require significant stopping distances, making automatic train
+        separation an important safety feature.
+    </p>
+
+    <p style="font-size: 22px;">
+        ABS may also be used in areas adjacent to interlockings where multiple
+        tracks, junctions, and complex track layouts exist. The system helps
+        regulate train flow and reduce delays.
+    </p>
+
+    <p style="font-size: 22px;">
+        On single-track railroads, ABS can help prevent trains from entering
+        occupied sections of track. Special signal arrangements and operating
+        rules allow trains to move safely in either direction while preventing
+        head-on collisions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Tunnels, sharp curves, and areas with restricted visibility are excellent
+        applications for ABS. Since crews may not be able to visually observe
+        conditions far ahead, the signaling system provides continuous protection.
+    </p>
+
+    <p style="font-size: 22px;">
+        ABS increases both safety and efficiency by continuously monitoring track
+        occupancy and automatically communicating conditions ahead through wayside
+        signals.
+    </p>
+
+    <p style="font-size: 22px;">
+        Whether used on freight railroads, passenger railroads, commuter systems,
+        or high-speed rail operations, ABS remains one of the most important
+        technologies for modern railway operations.
+    </p>
+
+    <!-- Suggested Images
+
+    <img src="images/mainline-abs-signals.jpg"
+    alt="Busy mainline railroad equipped with ABS signals"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/commuter-rail-abs.jpg"
+    alt="Commuter rail line utilizing automatic block signals"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/single-track-abs-diagram.jpg"
+    alt="Diagram showing ABS operation on a single-track railroad"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/high-speed-rail-signals.jpg"
+    alt="High-speed rail system using ABS"
+    style="width:350px; border-radius:10px;">
+
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Why is ABS particularly beneficial on railway lines with moderate to high traffic density?</p>
+        <label><input type="radio" name="q1" value="wrong"> It eliminates the need for train crews</label><br>
+        <label><input type="radio" name="q1" value="correct"> It provides automatic train separation and improves line capacity</label><br>
+        <label><input type="radio" name="q1" value="wrong"> It replaces all track maintenance activities</label><br><br>
+
+        <p>2. How does ABS contribute to safety on single-track railway lines?</p>
+        <label><input type="radio" name="q2" value="correct"> It helps prevent trains from entering occupied track sections and reduces the risk of head-on collisions</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It allows unlimited train speeds</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It eliminates the need for signals</label><br><br>
+
+        <p>3. What is a major advantage of using ABS in tunnels or areas with restricted visibility?</p>
+        <label><input type="radio" name="q3" value="wrong"> It improves cellular phone reception</label><br>
+        <label><input type="radio" name="q3" value="wrong"> It reduces locomotive fuel consumption</label><br>
+        <label><input type="radio" name="q3" value="correct"> It provides continuous protection and information when crews cannot easily see conditions ahead</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 23A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 22E.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

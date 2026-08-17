@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 24B - Where is Automatic Train Protection Used?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 24B - Where is Automatic Train Protection Used?</h1>
+
+    <h2 style="color: darkblue;">
+        Applications of Automatic Train Protection
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Automatic Train Protection (ATP) systems are used throughout the world
+        to improve railway safety and reduce accidents caused by human error.
+        The type of ATP system and the level of protection provided depend on
+        the railway's operating requirements and safety regulations.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATP is particularly important on high-speed rail lines. At high speeds,
+        train crews have less time to react to signal changes, speed restrictions,
+        and hazards. ATP provides continuous supervision and can automatically
+        intervene if necessary to prevent unsafe operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        Many main line passenger railroads utilize ATP systems to reduce the
+        risk of Signal Passed At Danger (SPAD) incidents and overspeed conditions.
+        These systems provide an additional layer of safety for passenger service.
+    </p>
+
+    <p style="font-size: 22px;">
+        Commuter rail systems commonly use ATP because of the high number of
+        trains operating within a relatively small area. ATP helps maintain safe
+        separation between trains and supports reliable service.
+    </p>
+
+    <p style="font-size: 22px;">
+        Freight railroads are increasingly adopting ATP technologies, especially
+        on heavily used routes and corridors shared with passenger trains.
+        ATP helps improve safety while supporting efficient freight operations.
+    </p>
+
+    <p style="font-size: 22px;">
+        Urban transit systems, including metro and light rail networks, often
+        incorporate ATP functions within larger train control systems such as
+        Communications-Based Train Control (CBTC). These systems provide speed
+        supervision and collision prevention.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATP can also provide additional protection on single-track railways by
+        helping prevent trains from entering occupied track sections and reducing
+        the risk of conflicting train movements.
+    </p>
+
+    <p style="font-size: 22px;">
+        Railroads may prioritize ATP installation in locations where there is a
+        higher risk of human error, such as busy junctions, complex interlockings,
+        or areas with a history of signal violations.
+    </p>
+
+    <p style="font-size: 22px;">
+        In the United States, Positive Train Control (PTC) is a form of ATP
+        that includes additional capabilities. The Rail Safety Improvement Act
+        of 2008 required PTC implementation on many freight and passenger rail
+        lines throughout the country.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATP continues to play a critical role in modern railway operations by
+        improving safety, reducing risk, and supporting more efficient train
+        movements.
+    </p>
+
+    <!-- Suggested Images
+
+    <img src="images/world-atp-map.jpg"
+    alt="Map showing ATP deployment around the world"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/high-speed-train-atp.jpg"
+    alt="High-speed train operating with ATP protection"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/ptc-trackside-equipment.jpg"
+    alt="PTC trackside equipment in the United States"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/atp-sign.jpg"
+    alt="Railway territory protected by ATP"
+    style="width:350px; border-radius:10px;">
+
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Why is ATP considered particularly important for high-speed rail lines?</p>
+        <label><input type="radio" name="q1" value="wrong"> High-speed trains do not use signals</label><br>
+        <label><input type="radio" name="q1" value="correct"> ATP helps prevent overspeed conditions and enforces safe operation when reaction times are reduced</label><br>
+        <label><input type="radio" name="q1" value="wrong"> ATP replaces all train operators</label><br><br>
+
+        <p>2. What is Positive Train Control (PTC), and where is it mandated in the United States?</p>
+        <label><input type="radio" name="q2" value="wrong"> A station announcement system required at airports</label><br>
+        <label><input type="radio" name="q2" value="correct"> A form of ATP mandated on many freight and passenger rail lines under the Rail Safety Improvement Act of 2008</label><br>
+        <label><input type="radio" name="q2" value="wrong"> A locomotive fuel management system</label><br><br>
+
+        <p>3. Besides high-speed rail lines, which of the following are commonly protected by ATP systems?</p>
+        <label><input type="radio" name="q3" value="wrong"> Parking lots and highway intersections</label><br>
+        <label><input type="radio" name="q3" value="correct"> Main line passenger railroads, commuter rail systems, freight railroads, and urban transit systems</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Airports and shipping ports only</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 24C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 24A.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

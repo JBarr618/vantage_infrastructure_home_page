@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 22A - What Are Aspects?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 22A - What Are Aspects?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Signal Aspects
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        In railway signaling, an aspect is the visual appearance of a signal as
+        seen by the train crew. It is the method used by the signal system to
+        communicate information to train operators through visual displays.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signal aspects can be created using several visual elements, including
+        the color of lights, the number of lights illuminated, the arrangement
+        of those lights, whether the lights are steady or flashing, and the
+        position of mechanical signal arms.
+    </p>
+
+    <p style="font-size: 22px;">
+        Common signal colors include red, yellow, green, lunar white, blue,
+        and other colors depending on the railroad and signal system. Different
+        combinations of these colors create different aspects.
+    </p>
+
+    <p style="font-size: 22px;">
+        The arrangement of lights is also important. Lights may be displayed
+        vertically, horizontally, diagonally, or in other patterns that help
+        communicate specific operating conditions to train crews.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some aspects use flashing lights rather than steady lights. Flashing
+        aspects often provide additional information such as speed restrictions
+        or advance warning of conditions ahead.
+    </p>
+
+    <p style="font-size: 22px;">
+        Semaphore signals create aspects by changing the position of a movable
+        arm. The angle of the arm determines the aspect being displayed and
+        therefore the information being communicated.
+    </p>
+
+    <p style="font-size: 22px;">
+        Position light signals use patterns of lights arranged in specific
+        shapes. Searchlight signals use a single lens that changes color to
+        display different aspects.
+    </p>
+
+    <p style="font-size: 22px;">
+        Every signal system is designed to provide aspects that are clear,
+        recognizable, and easy to distinguish under various operating conditions,
+        including daylight, darkness, rain, fog, and other environmental factors.
+    </p>
+
+    <p style="font-size: 22px;">
+        The aspect itself is only the visual display. The meaning associated
+        with that display is called the indication, which is defined in the
+        railroad's operating rules.
+    </p>
+
+    <!-- Suggested Images
+
+    <img src="images/signal-aspect-glossary.jpg"
+    alt="Examples of signal aspects from various signal types"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/color-light-signal-head.jpg"
+    alt="Color light signal head showing colored lenses"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/semaphore-arm-positions.jpg"
+    alt="Semaphore arm positions representing different aspects"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/position-light-signal.jpg"
+    alt="Position light signal displaying a signal aspect"
+    style="width:350px; border-radius:10px;">
+
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What are the primary visual elements that make up a signal aspect?</p>
+        <label><input type="radio" name="q1" value="wrong"> Only signal color</label><br>
+        <label><input type="radio" name="q1" value="correct"> Colors, number of lights, arrangement, flashing or steady state, and arm position</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Track circuits and switch machines</label><br><br>
+
+        <p>2. How does a semaphore signal create different aspects?</p>
+        <label><input type="radio" name="q2" value="wrong"> By changing light bulb colors</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By changing radio frequencies</label><br>
+        <label><input type="radio" name="q2" value="correct"> By changing the position or angle of its movable arm</label><br><br>
+
+        <p>3. Why is it important for signal aspects to be clear and distinct?</p>
+        <label><input type="radio" name="q3" value="correct"> So train crews can quickly and accurately interpret signal information</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To reduce fuel consumption</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To improve radio reception</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 22B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 22.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 Professional Railroad Signal Training
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

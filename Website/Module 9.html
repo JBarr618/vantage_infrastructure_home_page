@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 9 - Introduction to Type C Track Circuits</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 9 - Introduction to Type C Track Circuits</h1>
+
+    <h2 style="color: darkblue;">
+        Introduction to Type C Track Circuits
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Type C track circuits are an advanced form of AC track circuit technology used for reliable train detection and
+        broken rail detection in difficult railroad environments.
+    </p>
+
+    <p style="font-size: 22px;">
+        They are especially useful in electrified territory where high levels of AC traction return current can interfere
+        with simpler track circuit designs.
+    </p>
+
+    <p style="font-size: 22px;">
+        A key feature of Type C track circuits is that they often use two different AC frequencies transmitted through
+        the rails at the same time.
+    </p>
+
+    <p style="font-size: 22px;">
+        One frequency may be used primarily for train detection, while another frequency may be used for broken rail
+        detection. The receiver uses filters and detection circuits to analyze these frequencies separately.
+    </p>
+
+    <p style="font-size: 22px;">
+        When a train enters the block, its wheels and axles shunt the track circuit and change the received signal
+        characteristics used for train detection.
+    </p>
+
+    <p style="font-size: 22px;">
+        A broken rail can affect the second frequency by changing the impedance, signal level, or phase of the circuit.
+        This allows the system to detect a possible broken rail even when no train is present.
+    </p>
+
+    <p style="font-size: 22px;">
+        Type C track circuits are known for strong immunity to AC traction interference because they use distinct
+        frequencies and filtering techniques. Although they are more complex than simpler AC or DC circuits, they provide
+        high reliability in demanding signaling environments.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is a key feature of Type C track circuits?</p>
+        <label><input type="radio" name="q1" value="correct"> They transmit two different AC frequencies simultaneously</label><br>
+        <label><input type="radio" name="q1" value="wrong"> They operate using battery-powered relays only</label><br>
+        <label><input type="radio" name="q1" value="wrong"> They use audio tones instead of AC signals</label><br><br>
+
+        <p>2. How does a Type C track circuit help separate train detection and broken rail detection?</p>
+        <label><input type="radio" name="q2" value="wrong"> By using the same signal at different voltages only</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By checking relay current under load only</label><br>
+        <label><input type="radio" name="q2" value="correct"> By analyzing two separate frequencies, each serving a specific function</label><br><br>
+
+        <p>3. What is a major advantage of Type C track circuits in electrified railway environments?</p>
+        <label><input type="radio" name="q3" value="wrong"> They are always cheaper to install than DC circuits</label><br>
+        <label><input type="radio" name="q3" value="correct"> They are highly resistant to AC traction interference</label><br>
+        <label><input type="radio" name="q3" value="wrong"> They can operate without any insulated joints</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 9A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 8E.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

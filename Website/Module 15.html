@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 15 - Introduction to Electrologixs</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 15 - Introduction to Electrologixs</h1>
+
+    <h2 style="color: darkblue;">
+        Modern Vital Electronic Interlocking Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Electrologixs is a family of vital electronic interlocking systems widely used in
+        railway signaling. These systems represent the transition from traditional relay-based
+        interlockings to modern microprocessor-based control systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        The primary function of Electrologixs systems is to safely control railway
+        infrastructure such as signals, switches (points), and grade crossings by implementing
+        complex interlocking logic through software.
+    </p>
+
+    <p style="font-size: 22px;">
+        Electrologixs systems are designed with a strong emphasis on safety and reliability.
+        This is accomplished through redundant processors, self-monitoring features, and
+        compliance with strict Safety Integrity Levels (SIL). If an internal failure occurs,
+        the system is designed to fail to a safe state to prevent unsafe train movements.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because the interlocking logic is software-based, Electrologixs systems can be adapted
+        to different track layouts and operating requirements with greater flexibility than
+        traditional relay-based systems. Many changes and expansions can be completed through
+        software modifications instead of extensive hardware rewiring.
+    </p>
+
+    <p style="font-size: 22px;">
+        The Electrologixs product line has been developed and supported by companies including
+        Safetran Systems and Siemens Mobility. Different generations of Electrologixs systems
+        are used throughout the railway industry, ranging from small interlockings to large,
+        complex control territories integrated with other signaling systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        Electrologixs systems are an important part of modern railway signaling because they
+        improve safety, operational efficiency, diagnostics, and maintainability.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/electrologixs-cabinet.png"
+    alt="Electrologixs electronic interlocking cabinet in signal equipment room"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/electrologixs-system-diagram.png"
+    alt="Diagram showing Electrologixs interfaces with signals switches and track circuits"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/electrologixs-control-area.png"
+    alt="Railway control territory operated by Electrologixs interlocking system"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the primary function of Electrologixs systems?</p>
+        <label><input type="radio" name="q1" value="wrong"> To provide passenger ticket sales</label><br>
+        <label><input type="radio" name="q1" value="correct"> To safely control signals, switches, and railway interlocking functions</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To replace locomotives with automation</label><br><br>
+
+        <p>2. How do Electrologixs systems achieve high safety and reliability?</p>
+        <label><input type="radio" name="q2" value="correct"> Through redundancy, self-monitoring, fail-safe operation, and SIL compliance</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By operating without safety rules</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By removing all diagnostic capabilities</label><br><br>
+
+        <p>3. Which company has been associated with Electrologixs systems?</p>
+        <label><input type="radio" name="q3" value="wrong"> Tesla</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Boeing</label><br>
+        <label><input type="radio" name="q3" value="correct"> Safetran Systems and Siemens Mobility</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Module 15A
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 15A.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 14C.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

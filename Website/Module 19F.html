@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 19F - Troubleshooting Moveable Block Signaling</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 19F - Troubleshooting Moveable Block Signaling</h1>
+
+    <h2 style="color: darkblue;">
+        How to Troubleshoot Moveable Block Signaling
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Troubleshooting a moveable block signaling system, commonly known as
+        Communications-Based Train Control (CBTC), requires specialized knowledge
+        of communication systems, computer networks, train control software, and
+        railway signaling principles.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most common issues encountered is loss of communication between
+        a train and the central control system. This may result in loss of movement
+        authority, degraded operation, or automatic safety interventions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Troubleshooting communication failures typically involves checking onboard
+        radio equipment, antennas, wireless access points, base stations, and
+        communication network infrastructure. Communication logs are reviewed to
+        determine where the failure occurred.
+    </p>
+
+    <p style="font-size: 22px;">
+        Train positioning errors are another significant concern. If the reported
+        train location does not match the train's actual position, movement authority
+        calculations may become inaccurate and trigger safety-related system actions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Positioning problems may be caused by faulty transponder readers, wheel
+        speed sensors, GPS equipment, inertial measurement units, or calibration
+        errors. Diagnostic logs are used to identify inconsistencies in position
+        reporting.
+    </p>
+
+    <p style="font-size: 22px;">
+        Central control system issues may include slow performance, software errors,
+        incorrect movement authority calculations, or failures in train conflict
+        resolution. Maintenance personnel review system logs and monitor server
+        performance to identify the root cause.
+    </p>
+
+    <p style="font-size: 22px;">
+        Onboard train control systems may also experience failures involving speed
+        monitoring, movement authority enforcement, Automatic Train Protection (ATP),
+        or cab display operation. Diagnostic software is used to analyze faults and
+        perform system testing.
+    </p>
+
+    <p style="font-size: 22px;">
+        Integration issues can occur when information exchanged between onboard
+        equipment, wayside devices, and central control systems is delayed,
+        corrupted, or incorrectly interpreted.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most important troubleshooting tools in a CBTC environment is
+        log analysis. System logs provide a detailed record of events, alarms,
+        communications, and equipment status that can help identify the sequence
+        of events leading to a failure.
+    </p>
+
+    <p style="font-size: 22px;">
+        Real-time monitoring systems allow maintainers and control center personnel
+        to observe train locations, communication status, movement authorities,
+        and system health while troubleshooting active issues.
+    </p>
+
+    <p style="font-size: 22px;">
+        Troubleshooting must always follow a systematic process and maintain clear
+        communication between train operators, dispatchers, maintenance personnel,
+        and control center staff.
+    </p>
+
+    <p style="font-size: 22px;">
+        Because CBTC directly affects train safety, unresolved issues may require
+        operation in a degraded mode or suspension of service until safe operation
+        can be confirmed.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/cbtc-diagnostic-testing.jpg"
+    alt="Technician connecting diagnostic equipment to onboard CBTC system"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/control-center-fault-screen.jpg"
+    alt="Central control display showing CBTC alarms and system faults"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/cbtc-communication-troubleshooting.png"
+    alt="Diagram showing troubleshooting of communication failures in CBTC"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/trackside-radio-inspection.jpg"
+    alt="Maintenance personnel inspecting CBTC communication equipment"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Why is log analysis important when troubleshooting a moveable block system?</p>
+        <label><input type="radio" name="q1" value="wrong"> It is only used for payroll records</label><br>
+        <label><input type="radio" name="q1" value="correct"> It helps identify alarms, communication failures, error patterns, and the sequence of events leading to a fault</label><br>
+        <label><input type="radio" name="q1" value="wrong"> It replaces all diagnostic testing</label><br><br>
+
+        <p>2. What are potential consequences of train positioning errors in a moveable block environment?</p>
+        <label><input type="radio" name="q2" value="correct"> Incorrect movement authority calculations, safety interventions, and possible degraded operation</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Improved train performance and higher speeds</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Elimination of communication requirements</label><br><br>
+
+        <p>3. Why is specialized training required for personnel troubleshooting moveable block systems?</p>
+        <label><input type="radio" name="q3" value="wrong"> Because only software engineers can operate trains</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Because no diagnostic tools are available</label><br>
+        <label><input type="radio" name="q3" value="correct"> Because CBTC combines signaling, communications, networking, software, train control, and safety-critical systems</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 20.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 19E.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 16E - Testing Highway Grade Crossing Warning Systems</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 16E - Testing Highway Grade Crossing Warning Systems</h1>
+
+    <h2 style="color: darkblue;">
+        How to Test Highway Grade Crossing Warning Systems
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Highway grade crossing warning systems must be tested regularly to ensure they
+        operate safely and reliably. Proper testing verifies that warning devices activate
+        correctly and provide adequate warning time to motorists and pedestrians.
+    </p>
+
+    <p style="font-size: 22px;">
+        One important part of testing involves activation timing. Technicians verify that
+        the flashing lights, bells, and gates activate early enough before a train reaches
+        the crossing. They also check cut-out timing to ensure the warning devices turn
+        off properly after the train clears the crossing.
+    </p>
+
+    <p style="font-size: 22px;">
+        Warning device functionality must also be tested. Flashing red lights are checked
+        for brightness, flash rate, and visibility during both day and night conditions.
+        Bells are tested to ensure they sound clearly and loudly enough to warn road users.
+    </p>
+
+    <p style="font-size: 22px;">
+        Automatic gates are tested by observing the complete lowering and raising cycle.
+        Technicians ensure the gates fully block roadway traffic, move smoothly, and do
+        not encounter obstructions during operation.
+    </p>
+
+    <p style="font-size: 22px;">
+        Train detection circuitry must also be verified. Track circuits are tested for
+        proper train shunt detection, ballast resistance, and broken rail conditions.
+        Motion detectors are checked to ensure they accurately detect trains at the proper
+        speed and distance.
+    </p>
+
+    <p style="font-size: 22px;">
+        Power supply testing is critical. The main power supply voltage and current are
+        checked, and battery backup systems are tested by simulating power failures to
+        ensure the crossing system continues operating properly.
+    </p>
+
+    <p style="font-size: 22px;">
+        Wiring, insulation, and system sequencing are also inspected. Technicians verify
+        the proper operating sequence of lights, bells, and gates while checking for loose
+        wiring, damaged insulation, and faulty interlocks or safety features.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/testing-warning-timing.png"
+    alt="Technician measuring activation timing at a highway grade crossing"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/testing-crossing-lights.png"
+    alt="Flashing red crossing lights being checked for visibility"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/testing-control-cabinet-wiring.png"
+    alt="Technician inspecting crossing control cabinet wiring and connections"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/gate-sequence-diagram.png"
+    alt="Diagram showing proper activation sequence of crossing lights bell and gates"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What timing functions are checked during testing of a highway grade crossing warning system?</p>
+        <label><input type="radio" name="q1" value="wrong"> Train fuel timing and dispatch timing</label><br>
+        <label><input type="radio" name="q1" value="correct"> Warning activation timing and cut-out timing</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Signal painting and track lubrication timing</label><br><br>
+
+        <p>2. How are visual and audible warning devices tested?</p>
+        <label><input type="radio" name="q2" value="wrong"> By replacing all equipment regardless of condition</label><br>
+        <label><input type="radio" name="q2" value="wrong"> By shutting off the crossing completely</label><br>
+        <label><input type="radio" name="q2" value="correct"> By checking light visibility, flash rate, bell volume, and gate operation</label><br><br>
+
+        <p>3. Why is testing the battery backup system important?</p>
+        <label><input type="radio" name="q3" value="correct"> To ensure the warning system continues operating during a power outage</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To make trains move faster through crossings</label><br>
+        <label><input type="radio" name="q3" value="wrong"> To eliminate the need for warning lights and gates</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 16F.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 16D.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

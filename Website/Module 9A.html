@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 9A - What is a Type C Track Circuit?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 9A - What is a Type C Track Circuit?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Type C Track Circuits
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        A Type C track circuit is an advanced AC track circuit designed to provide reliable train detection and strong
+        broken rail detection, especially in electrified railway territory with AC traction return current.
+    </p>
+
+    <p style="font-size: 22px;">
+        The main feature of a Type C track circuit is the use of two separate AC frequencies transmitted through the
+        rails at the same time.
+    </p>
+
+    <p style="font-size: 22px;">
+        One frequency is used mainly for train detection. When a train enters the block, the wheels and axles shunt the
+        rails and change the received signal used for occupancy detection.
+    </p>
+
+    <p style="font-size: 22px;">
+        The second frequency is used mainly for broken rail detection. A break in either rail changes the impedance of
+        the circuit and causes a detectable change in the signal level or phase of that frequency.
+    </p>
+
+    <p style="font-size: 22px;">
+        The receiver separates and analyzes both frequencies. It uses filters and independent detection circuits to
+        determine whether the track is occupied or whether a broken rail condition may exist.
+    </p>
+
+    <p style="font-size: 22px;">
+        This dual-frequency design helps Type C track circuits resist interference from AC traction currents and provides
+        a more complete method of monitoring track occupancy and rail integrity.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the defining characteristic of a Type C track circuit?</p>
+        <label><input type="radio" name="q1" value="wrong"> It uses direct current for train detection</label><br>
+        <label><input type="radio" name="q1" value="wrong"> It uses a frequency sweep method for detection</label><br>
+        <label><input type="radio" name="q1" value="correct"> It transmits two distinct AC frequencies simultaneously</label><br><br>
+
+        <p>2. How does a Type C track circuit separate train detection from broken rail detection?</p>
+        <label><input type="radio" name="q2" value="wrong"> Train detection uses polarity and broken rail detection uses temperature</label><br>
+        <label><input type="radio" name="q2" value="correct"> One frequency is affected by train shunting and the other by rail impedance from a break</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Both rely only on voltage amplitude</label><br><br>
+
+        <p>3. What allows the receiver to analyze the two frequencies independently?</p>
+        <label><input type="radio" name="q3" value="correct"> Filters and independent detection circuits</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Capacitor banks and transducers only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Axle counters and sensors</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 9B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 9.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

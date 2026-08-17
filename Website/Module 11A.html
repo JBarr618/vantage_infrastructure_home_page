@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 11A - Relay Fundamentals</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 11A - Relay Fundamentals</h1>
+
+    <h2 style="color: darkblue;">
+        Basic Relay Operation
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        To understand how relays are used in railway signaling, it is important
+        to understand the basic characteristics that control how a relay
+        operates.
+    </p>
+
+    <p style="font-size: 22px;">
+        A relay coil requires the correct voltage and current to operate
+        properly. If the voltage is too low, the relay may fail to pick up. If
+        the voltage is too high, the relay coil may overheat or become damaged.
+    </p>
+
+    <p style="font-size: 22px;">
+        Relay contacts are the parts of the relay that open and close electrical
+        circuits. These contacts may be normally open, normally closed, or part
+        of a changeover contact arrangement.
+    </p>
+
+    <p style="font-size: 22px;">
+        A normally open contact is open when the relay is de-energized and
+        closes when the relay picks up. This allows current to flow only after
+        the relay is energized.
+    </p>
+
+    <p style="font-size: 22px;">
+        A normally closed contact is closed when the relay is de-energized and
+        opens when the relay picks up. This allows current to flow until the
+        relay is energized.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some relays use changeover contacts. These contacts transfer a circuit
+        from one path to another when the relay changes position.
+    </p>
+
+    <p style="font-size: 22px;">
+        Operating time is the amount of time it takes for a relay to respond
+        after voltage is applied to the coil. In many relay circuits, this time
+        is measured in milliseconds.
+    </p>
+
+    <p style="font-size: 22px;">
+        Contact rating is another important relay characteristic. It tells the
+        maximum voltage and current that the relay contacts can safely switch.
+        Exceeding this rating can damage or weld the contacts.
+    </p>
+
+    <p style="font-size: 22px;">
+        Fail-safe design is critical in railroad signaling. A relay circuit is
+        often designed so that loss of power, broken wiring, or relay failure
+        causes the system to move toward a safer condition, such as displaying a
+        Stop signal.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/relay-no-nc-contacts.png"
+    alt="Normally open and normally closed relay contacts"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/relay-coil-voltage.png"
+    alt="Relay coil energized by proper voltage"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/fail-safe-relay-design.png"
+    alt="Fail safe relay circuit returning signal to stop condition"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Why is it important to apply the correct voltage to a relay coil?</p>
+        <label><input type="radio" name="q1" value="wrong"> The relay will always remain energized</label><br>
+        <label><input type="radio" name="q1" value="wrong"> The armature will become permanently magnetized every time</label><br>
+        <label><input type="radio" name="q1" value="correct"> Too little voltage may not energize the coil, and too much may damage it</label><br><br>
+
+        <p>2. What is the difference between normally open and normally closed contacts?</p>
+        <label><input type="radio" name="q2" value="wrong"> Normally open contacts close when de-energized</label><br>
+        <label><input type="radio" name="q2" value="correct"> Normally open contacts close when energized, and normally closed contacts open when energized</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Normally closed contacts only conduct DC current</label><br><br>
+
+        <p>3. What does fail-safe design mean in railway signaling relays?</p>
+        <label><input type="radio" name="q3" value="correct"> The circuit moves to a safer condition during power loss or failure</label><br>
+        <label><input type="radio" name="q3" value="wrong"> The relay automatically resets itself every five minutes</label><br>
+        <label><input type="radio" name="q3" value="wrong"> The relay ignores all input voltage changes</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 11B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 11.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

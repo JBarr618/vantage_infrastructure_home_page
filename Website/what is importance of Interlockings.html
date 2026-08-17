@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4A: What is the Importance of an Interlocking?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .content-container {
+            margin-bottom: 30px;
+        }
+        .image-container {
+            margin: 15px 0;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .image-caption {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .question-container {
+            margin-bottom: 20px;
+        }
+        .question {
+            font-weight: bold;
+        }
+        .answer-option {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .correct-answer {
+            background-color: #d4edda;
+        }
+        .wrong-answer {
+            background-color: #f8d7da;
+        }
+        #submit-button {
+            padding: 18px 36px;
+            font-size: 1.4em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #submit-button:hover {
+            background-color: #0056b3;
+        }
+        #submit-button:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Module 4A: Introduction to Interlockings - What is the Importance of an Interlocking?</h1>
+
+    <div class="content-container">
+        <p>Interlockings are of paramount importance to railroad safety and efficiency. They are the cornerstone of preventing train collisions at locations where train routes intersect or converge. Without interlockings, the risk of trains running into each other would be unacceptably high, especially in areas with frequent train traffic. They provide a centralized and automated system for managing train movements, eliminating the potential for human error in setting conflicting routes.</p>
+        <div class="image-container">
+            <img src="Pictures/Module4A/interlocking-comparison.jpg" alt="Comparison of a junction without and with interlocking">
+            <div class="image-caption">Visual comparison of a chaotic junction without interlocking vs. an organized one with interlocking.</div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <p>Beyond safety, interlockings also optimize traffic flow. By allowing multiple trains to operate in a complex area without interfering with each other, they increase the throughput of the railway network. This is particularly crucial in busy terminals, junctions, and crossings where trains need to move efficiently to maintain schedules and minimize delays. A well-designed interlocking can significantly increase the capacity of a railway line.</p>
+        <div class="image-container">
+            <img src="Pictures/Module4A/interlocking-throughput-chart.jpg" alt="Chart showing train throughput improvement">
+            <div class="image-caption">Graph showing how interlockings improve train throughput and reduce delays.</div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <p>Furthermore, interlockings facilitate flexible train routing. They allow train dispatchers to direct trains along different paths depending on traffic conditions, maintenance schedules, or other operational needs. This flexibility is essential for managing disruptions and keeping the railway system running smoothly. In essence, interlockings are not just safety devices; they are also vital tools for maximizing the efficiency and operational flexibility of a railroad.</p>
+        <div class="image-container">
+            <img src="Pictures/Module4A/interlocking-map.jpg" alt="Map with interlockings shown across a complex rail network">
+            <div class="image-caption">Map showing interlockings placed strategically to manage traffic flow.</div>
+        </div>
+    </div>
+
+    <h2>Module 4A Questions</h2>
+    <div id="quiz-container">
+        <div class="question-container">
+            <p class="question">1. What is the most fundamental reason why interlockings are so important to railroad operation?</p>
+            <label class="answer-option"><input type="radio" name="q1" value="a"> A) To reduce the number of switches in a yard</label>
+            <label class="answer-option"><input type="radio" name="q1" value="b"> B) To prevent train collisions at junctions and crossings</label>
+            <label class="answer-option"><input type="radio" name="q1" value="c"> C) To increase the number of trains on a track</label>
+        </div>
+
+        <div class="question-container">
+            <p class="question">2. Besides safety, how else do interlockings contribute to the efficient operation of a railway?</p>
+            <label class="answer-option"><input type="radio" name="q2" value="a"> A) By eliminating the need for train dispatchers</label>
+            <label class="answer-option"><input type="radio" name="q2" value="b"> B) By increasing train throughput and reducing delays</label>
+            <label class="answer-option"><input type="radio" name="q2" value="c"> C) By slowing trains down through complex areas</label>
+        </div>
+
+        <div class="question-container">
+            <p class="question">3. Explain how interlockings provide flexibility in train routing. Why is this important?</p>
+            <label class="answer-option"><input type="radio" name="q3" value="a"> A) They allow dispatchers to reroute trains for better traffic management</label>
+            <label class="answer-option"><input type="radio" name="q3" value="b"> B) They let trains drive themselves without input</label>
+            <label class="answer-option"><input type="radio" name="q3" value="c"> C) They provide signal lights for each block section</label>
+        </div>
+
+        <button id="submit-button">Submit Answers</button>
+        <div id="results-container" style="display: none;">
+            Your Score: <span id="final-score">0</span> out of <span id="max-score">3</span>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            { name: "q1", correctAnswer: "b" },
+            { name: "q2", correctAnswer: "b" },
+            { name: "q3", correctAnswer: "a" }
+        ];
+
+        const submitButton = document.getElementById('submit-button');
+        const resultsContainer = document.getElementById('results-container');
+        const finalScoreDisplay = document.getElementById('final-score');
+        const maxScoreDisplay = document.getElementById('max-score');
+
+        submitButton.addEventListener('click', () => {
+            let score = 0;
+            const questionContainers = document.querySelectorAll('.question-container');
+            maxScoreDisplay.textContent = questions.length;
+
+            questionContainers.forEach((qContainer, index) => {
+                const selectedAnswer = document.querySelector(`input[name="${questions[index].name}"]:checked`);
+                const answerElements = qContainer.querySelectorAll('.answer-option');
+
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === questions[index].correctAnswer) {
+                        score++;
+                        answerElements.forEach(label => {
+                            if (label.querySelector('input').value === questions[index].correctAnswer) {
+                                label.classList.add('correct-answer');
+                            }
+                        });
+                    } else {
+                        answerElements.forEach(label => {
+                            const input = label.querySelector('input');
+                            if (input.value === selectedAnswer.value) {
+                                label.classList.add('wrong-answer');
+                            } else if (input.value === questions[index].correctAnswer) {
+                                label.classList.add('correct-answer');
+                            }
+                        });
+                    }
+                } else {
+                    answerElements.forEach(label => {
+                        const input = label.querySelector('input');
+                        if (input.value === questions[index].correctAnswer) {
+                            label.classList.add('correct-answer');
+                        }
+                    });
+                }
+            });
+
+            finalScoreDisplay.textContent = score;
+            resultsContainer.style.display = 'block';
+            document.querySelectorAll('input[type="radio"]').forEach(input => input.disabled = true);
+            submitButton.disabled = true;
+        });
+    </script>
+</body>
+</html>
+

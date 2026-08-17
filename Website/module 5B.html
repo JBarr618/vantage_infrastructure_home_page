@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 5B - Control Point Complexity</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 5B - Control Point Complexity</h1>
+
+    <h2 style="color: darkblue;">
+        How Complex a Control Point Can Become
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Control points can vary greatly in complexity depending on the size of the interlocking they serve.
+        A simple control point may manage only a few switches and signals, while a large control point may
+        control many routes, signals, switches, track circuits, and communication systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        One major factor is the number of switches and signals. The more equipment that must be controlled,
+        the more complex the control logic, wiring, indications, testing, and operator interface become.
+    </p>
+
+    <p style="font-size: 22px;">
+        Track layout also affects complexity. Junctions, crossings, sidings, yards, crossovers, and multiple
+        routes create more possible movements and more potential conflicts that must be protected by the
+        interlocking system.
+    </p>
+
+    <p style="font-size: 22px;">
+        Automation also increases complexity. Manual systems may rely more on operator actions, while automated
+        systems use computer controls, software logic, diagnostics, event logs, and communication networks.
+    </p>
+
+    <p style="font-size: 22px;">
+        Additional features such as speed control, route setting displays, remote control, alarms, diagnostics,
+        and data recording can also increase the complexity of a control point.
+    </p>
+
+    <p style="font-size: 22px;">
+        The more complex the control point becomes, the more important proper design, testing, documentation,
+        training, and maintenance become. Larger control points may also require more operators or additional
+        support systems to manage train movements safely.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What factors contribute to control point complexity?</p>
+        <label><input type="radio" name="q1" value="wrong"> The amount of sunshine at the location</label><br>
+        <label><input type="radio" name="q1" value="correct"> Switches, signals, track layout, automation, and added features</label><br>
+        <label><input type="radio" name="q1" value="wrong"> The length of trains only</label><br><br>
+
+        <p>2. How does the number of switches and signals affect complexity?</p>
+        <label><input type="radio" name="q2" value="correct"> More switches and signals increase logic, wiring, and interface complexity</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Fewer switches make systems more complicated</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It has no effect on complexity</label><br><br>
+
+        <p>3. What is one tradeoff of using a fully automated control point?</p>
+        <label><input type="radio" name="q3" value="correct"> Automation can improve efficiency but adds software and hardware complexity</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Manual systems are always faster and more modern</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Automation removes the need for control logic</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 5C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 5A.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

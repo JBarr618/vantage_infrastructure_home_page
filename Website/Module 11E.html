@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 11E - Setting Up Relays</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 11E - Setting Up Relays</h1>
+
+    <h2 style="color: darkblue;">
+        Installing and Verifying Relays
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Setting up relays in railway signaling circuits requires careful
+        attention to the relay type, coil voltage, wiring, mounting, testing,
+        and documentation.
+    </p>
+
+    <p style="font-size: 22px;">
+        The relay coil must match the voltage and current requirements of the
+        control circuit. If the wrong coil voltage is used, the relay may fail
+        to operate correctly or the coil may become damaged.
+    </p>
+
+    <p style="font-size: 22px;">
+        Relay contacts must be wired to the correct terminals. Normally open,
+        normally closed, and common contacts all perform different functions in
+        the circuit.
+    </p>
+
+    <p style="font-size: 22px;">
+        The wire size, insulation rating, terminal connections, and contact
+        ratings must be suitable for the circuit being controlled. Poor wiring
+        can cause heat, voltage drop, failed operation, or unsafe conditions.
+    </p>
+
+    <p style="font-size: 22px;">
+        Relays should be mounted securely in a proper location. The mounting
+        location should protect the relay from vibration, moisture, dirt,
+        excessive heat, and physical damage.
+    </p>
+
+    <p style="font-size: 22px;">
+        Some relays must be installed in a specific orientation. Manufacturer
+        instructions and railroad standards should be followed so the relay
+        operates correctly.
+    </p>
+
+    <p style="font-size: 22px;">
+        In some control circuits, a diode may be installed across the relay coil
+        to suppress voltage spikes when the coil is de-energized. This voltage
+        spike is called back EMF.
+    </p>
+
+    <p style="font-size: 22px;">
+        Contacts may also require protection when switching inductive loads.
+        Snubber circuits or other protective devices may be used to reduce
+        arcing and extend contact life.
+    </p>
+
+    <p style="font-size: 22px;">
+        After wiring a relay, the circuit must be tested. The technician should
+        verify coil operation, contact movement, continuity, and proper circuit
+        behavior in both energized and de-energized states.
+    </p>
+
+    <p style="font-size: 22px;">
+        Accurate documentation is also important. Wiring diagrams, relay
+        specifications, terminal numbers, and test results should be kept up to
+        date for maintenance and troubleshooting.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/relay-installation.png"
+    alt="Relay installed in a railroad signal circuit"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/relay-terminal-wiring.png"
+    alt="Relay terminal wiring showing normally open normally closed and common contacts"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/relay-testing-continuity.png"
+    alt="Technician testing relay continuity and contact operation"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What should be considered when selecting a relay mounting location?</p>
+        <label><input type="radio" name="q1" value="correct"> Vibration resistance, environmental protection, and proper orientation</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Color coding, touch-screen access, and decoration only</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Looping wire under the relay base</label><br><br>
+
+        <p>2. Why may a diode be installed across a relay coil?</p>
+        <label><input type="radio" name="q2" value="wrong"> To heat the coil evenly</label><br>
+        <label><input type="radio" name="q2" value="wrong"> To amplify contact signals</label><br>
+        <label><input type="radio" name="q2" value="correct"> To suppress voltage spikes caused by back EMF</label><br><br>
+
+        <p>3. What should be done after wiring a relay into a circuit?</p>
+        <label><input type="radio" name="q3" value="wrong"> Adjust the contacts by hand until they click</label><br>
+        <label><input type="radio" name="q3" value="correct"> Test coil operation, verify contact switching, and check continuity</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Re-solder every wire for appearance only</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 11F.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 11D.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

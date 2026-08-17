@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 8B - Transmitter and Receiver Roles in PSO Circuits</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 8B - Transmitter and Receiver Roles in PSO Circuits</h1>
+
+    <h2 style="color: darkblue;">
+        Transmitter and Receiver Roles in Phase Shift Overlay Circuits
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        In a Phase Shift Overlay track circuit, the transmitter and receiver work together to provide reliable train
+        detection. Each device has a specific role in sending, receiving, and interpreting the track circuit signal.
+    </p>
+
+    <p style="font-size: 22px;">
+        The transmitter generates a continuous low-voltage AC signal at a designated frequency. This signal is fed into
+        the track at one end of the block and travels through the rails toward the receiver at the opposite end.
+    </p>
+
+    <p style="font-size: 22px;">
+        The receiver is tuned to detect the proper frequency and the phase angle of the received signal. It compares the
+        received signal against a reference signal to determine whether the phase has changed.
+    </p>
+
+    <p style="font-size: 22px;">
+        When a train enters the block, the wheels and axles shunt the rails. This changes the impedance of the track
+        circuit and causes a phase shift in the signal.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the phase shift reaches the designed threshold, the receiver indicates that the track is occupied. This allows
+        the PSO system to detect train presence using changes in phase rather than relying only on signal strength.
+    </p>
+
+    <p style="font-size: 22px;">
+        The transmitter must provide a stable frequency, and the receiver must be properly calibrated. If either device
+        is unstable, poorly adjusted, or not maintained, false indications or unreliable operation may occur.
+    </p>
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is the function of the transmitter in a PSO track circuit?</p>
+        <label><input type="radio" name="q1" value="wrong"> To generate a DC reference voltage for the signal relay</label><br>
+        <label><input type="radio" name="q1" value="correct"> To inject a low-voltage AC signal into the track</label><br>
+        <label><input type="radio" name="q1" value="wrong"> To monitor track impedance in real time only</label><br><br>
+
+        <p>2. How does the receiver detect train presence in a PSO circuit?</p>
+        <label><input type="radio" name="q2" value="wrong"> It listens for track relay clicks</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It measures signal amplitude only</label><br>
+        <label><input type="radio" name="q2" value="correct"> It compares received phase against a reference signal</label><br><br>
+
+        <p>3. What can cause false indications in a PSO circuit?</p>
+        <label><input type="radio" name="q3" value="correct"> Unstable frequency or a poorly calibrated receiver</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Excess ballast resistance only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Strong sunlight on the rails</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()" 
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 8C.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 8A.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

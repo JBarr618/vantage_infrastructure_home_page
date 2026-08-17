@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 20A - What Are Fixed Signals?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 20A - What Are Fixed Signals?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Fixed Railway Signals
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Fixed signals are signaling devices that are permanently installed at
+        designated locations along a railway line. Their purpose is to provide
+        train crews with movement authority and information about track conditions
+        ahead.
+    </p>
+
+    <p style="font-size: 22px;">
+        The term "fixed" refers to the fact that these signals remain at a
+        permanent location and do not move with the train. Train crews must
+        observe and interpret the signal indications as they pass each signal
+        location.
+    </p>
+
+    <p style="font-size: 22px;">
+        Fixed signals are commonly mounted on signal masts, cantilever structures,
+        signal bridges, or other permanent installations located beside or above
+        the track.
+    </p>
+
+    <p style="font-size: 22px;">
+        These signals communicate information through visual indications. Modern
+        signals typically use colored lights such as red, yellow, green, lunar
+        white, or blue. Older systems may use semaphore arms or position light
+        arrangements to display signal indications.
+    </p>
+
+    <p style="font-size: 22px;">
+        Every signal indication displayed by a fixed signal is known as a signal
+        aspect. Each aspect has a specific meaning that is defined by the railroad's
+        operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        Signal aspects may instruct a train to stop, proceed, reduce speed,
+        approach the next signal prepared to stop, or follow a specific route
+        through an interlocking.
+    </p>
+
+    <p style="font-size: 22px;">
+        Fixed signals also provide information about conditions ahead, including
+        occupied blocks, track conditions, switch alignments, and movement
+        authorities granted by the signaling system.
+    </p>
+
+    <p style="font-size: 22px;">
+        At interlockings and control points, fixed signals may display route
+        information indicating which track or path a train has been authorized
+        to follow.
+    </p>
+
+    <p style="font-size: 22px;">
+        Safe train operation depends on train crews correctly interpreting signal
+        aspects and complying with all operating rules associated with those
+        indications.
+    </p>
+
+    <p style="font-size: 22px;">
+        Failure to obey a fixed signal can result in serious operational and safety
+        consequences, including train collisions, derailments, or violations of
+        operating rules.
+    </p>
+
+    <p style="font-size: 22px;">
+        Fixed signals remain one of the most important safety devices used in
+        railroad operations and continue to provide the foundation for many modern
+        signaling systems.
+    </p>
+
+    <!-- Image placeholders for later -->
+    <!--
+    <img src="images/fixed-signals-variety.jpg"
+    alt="Various types of fixed railway signals along a railroad"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/color-light-signal-components.png"
+    alt="Diagram showing major components of a color light signal"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/fixed-signal-mast.jpg"
+    alt="Permanently mounted fixed signal beside railroad track"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/signal-aspect-chart.png"
+    alt="Chart showing various signal aspects and their meanings"
+    style="width:350px; border-radius:10px;">
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What does the term "fixed" refer to in fixed railway signals?</p>
+        <label><input type="radio" name="q1" value="wrong"> The signal never changes indication</label><br>
+        <label><input type="radio" name="q1" value="correct"> The signal remains permanently installed at a specific location along the railroad</label><br>
+        <label><input type="radio" name="q1" value="wrong"> The signal is attached to the locomotive</label><br><br>
+
+        <p>2. How do fixed signals primarily communicate information to train crews?</p>
+        <label><input type="radio" name="q2" value="correct"> Through visual indications such as colored lights, semaphore arms, or position light arrangements</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Through text messages sent to train crews</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Through radio announcements only</label><br><br>
+
+        <p>3. What types of information can fixed signals communicate?</p>
+        <label><input type="radio" name="q3" value="wrong"> Passenger ticket prices and schedules</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Weather forecasts and maintenance reports</label><br>
+        <label><input type="radio" name="q3" value="correct"> Stop, proceed, speed restrictions, route information, and conditions ahead</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="continueButton" style="display:none;">
+        <a href="purchase.html">
+            <button>Continue to Full Course</button>
+        </a>
+    </div>
+
+    <script>
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module20B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+        document.getElementById("continueButton").style.display = "block";
+    }
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        margin-right:10px;">
+        Home
+        </button>
+        </a>
+
+        <a href="Module 20.html">
+        <button style="background-color:#444;
+        color:white;
+        padding:12px 25px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        Back
+        </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <h3>Built From Real Railroad Experience</h3>
+
+        <p>
+            Signal School 2026 professional railroad signal training.
+        </p>
+
+        <p>
+            © 2026 Vantage Infrastructure LLC
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

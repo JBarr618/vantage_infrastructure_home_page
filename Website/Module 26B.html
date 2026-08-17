@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 26B - Where is Automatic Train Control Used?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 26B - Where is Automatic Train Control Used?</h1>
+
+    <h2 style="color: darkblue;">
+        Applications of Automatic Train Control
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Automatic Train Control (ATC) systems are commonly used on railway
+        networks where a high level of safety, operational efficiency, and
+        train performance is required. ATC is particularly valuable in
+        environments where train speeds are high, traffic density is heavy,
+        or operating conditions are complex.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most important applications of ATC is on high-speed rail
+        lines. At very high operating speeds, train crews have less time to
+        react to signal indications and speed restrictions. ATC provides
+        continuous supervision and automatic enforcement to help maintain
+        safe operations.
+    </p>
+
+    <p style="font-size: 22px;">
+        Busy passenger corridors also benefit from ATC. Railroads carrying
+        large numbers of passenger trains often rely on ATC to improve safety,
+        reduce the risk of human error, and support efficient train movement.
+    </p>
+
+    <p style="font-size: 22px;">
+        Many urban transit systems, including subway, metro, and rapid transit
+        operations, utilize ATC technology. These systems often operate trains
+        at high frequencies and require precise train spacing to maximize
+        capacity while maintaining safety.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATC is frequently integrated into advanced train control systems such
+        as Communications-Based Train Control (CBTC), allowing for automated
+        supervision and enforcement of train operations.
+    </p>
+
+    <p style="font-size: 22px;">
+        Rail lines equipped with cab signaling often use ATC as the enforcement
+        component. Cab signaling provides information directly to the train
+        crew, while ATC ensures that train operation remains within safe limits.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATC is especially valuable in areas that experience frequent fog,
+        heavy rain, snow, dust storms, or other conditions that reduce
+        visibility. Since train crews may have difficulty seeing wayside
+        signals, ATC provides an additional layer of protection by enforcing
+        signal compliance and speed restrictions automatically.
+    </p>
+
+    <p style="font-size: 22px;">
+        Tunnels, bridges, complex interlockings, and areas with complicated
+        track layouts are also common locations for ATC deployment. These
+        environments often require precise control of train movements and
+        strict compliance with operating restrictions.
+    </p>
+
+    <p style="font-size: 22px;">
+        In many countries, railway regulations require ATC systems on certain
+        classes of railway lines, particularly those operating at higher
+        speeds or carrying large volumes of passenger traffic.
+    </p>
+
+    <p style="font-size: 22px;">
+        Although ATC systems require significant investment in equipment,
+        communications, maintenance, and training, the safety and operational
+        benefits often justify the cost, especially on heavily used railway
+        corridors.
+    </p>
+
+    <!-- Suggested Images
+
+    <img src="images/high-speed-train-atc.jpg"
+    alt="High-speed train operating under ATC"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/metro-atc-cab.jpg"
+    alt="Metro train cab with ATC display"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/wayside-signals-atc.jpg"
+    alt="Railway line equipped with ATC"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/atc-network-map.jpg"
+    alt="Map showing ATC implementation"
+    style="width:350px; border-radius:10px;">
+
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. Why is ATC particularly important for high-speed rail lines?</p>
+        <label><input type="radio" name="q1" value="wrong"> High-speed trains do not use signals</label><br>
+        <label><input type="radio" name="q1" value="correct"> It provides continuous supervision and enforcement when train crews have less time to react</label><br>
+        <label><input type="radio" name="q1" value="wrong"> It reduces locomotive fuel consumption</label><br><br>
+
+        <p>2. How does ATC enhance safety in areas with frequent fog or poor visibility?</p>
+        <label><input type="radio" name="q2" value="correct"> It automatically enforces signal compliance and speed restrictions even when signals are difficult to see</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It eliminates the need for train crews</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It removes all wayside signals</label><br><br>
+
+        <p>3. What is the relationship between ATC and cab signaling?</p>
+        <label><input type="radio" name="q3" value="wrong"> They are unrelated systems</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Cab signaling replaces ATC entirely</label><br>
+        <label><input type="radio" name="q3" value="correct"> Cab signaling provides information to the crew, while ATC enforces compliance with that information</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 26D.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 26A.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <h3>Built From Real Railroad Experience</h3>
+        <p>Signal School 2026 Professional Railroad Signal Training</p>
+        <p>© 2026 Vantage Infrastructure LLC</p>
+    </footer>
+
+</body>
+
+</html>

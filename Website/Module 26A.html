@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 26A - What is Automatic Train Control?</title>
+</head>
+
+<body style="font-family: Arial; background-color: white; padding: 30px;">
+
+    <h1>🚦 Module 26A - What is Automatic Train Control?</h1>
+
+    <h2 style="color: darkblue;">
+        Understanding Automatic Train Control (ATC)
+    </h2>
+
+    <hr>
+
+    <p style="font-size: 22px;">
+        Automatic Train Control (ATC) is an advanced railway safety system
+        designed to automatically monitor and enforce safe train operation.
+        ATC provides a higher level of protection than simpler systems by
+        continuously supervising train movement and intervening when unsafe
+        conditions occur.
+    </p>
+
+    <p style="font-size: 22px;">
+        The primary purpose of ATC is to prevent accidents caused by human
+        error, including overspeed conditions, failure to obey signal
+        indications, and unauthorized train movements into restricted areas.
+    </p>
+
+    <p style="font-size: 22px;">
+        Unlike Automatic Train Stop (ATS), which typically acts only at
+        specific locations, ATC provides continuous or near-continuous
+        supervision of train operations. This allows the system to monitor
+        changing operating conditions in real time.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATC systems continuously exchange information between trackside
+        equipment and onboard train equipment. This communication allows the
+        train to receive updated information about signal conditions, speed
+        restrictions, movement authorities, gradients, curves, and other
+        operating requirements.
+    </p>
+
+    <p style="font-size: 22px;">
+        One of the most important features of ATC is speed profile
+        enforcement. Rather than enforcing only fixed speed limits, ATC
+        continuously compares the train's actual speed against a dynamic
+        speed profile that changes according to conditions ahead.
+    </p>
+
+    <p style="font-size: 22px;">
+        If the train exceeds the permitted speed profile, the ATC system
+        normally issues warnings to the train operator. If corrective action
+        is not taken, the system automatically applies the brakes.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATC also enforces compliance with signal indications. If a train
+        approaches a restrictive signal too quickly or attempts to pass a
+        stop signal without authority, the system can intervene to prevent
+        an unsafe movement.
+    </p>
+
+    <p style="font-size: 22px;">
+        Many ATC systems are integrated with cab signaling. Signal
+        information is displayed directly inside the locomotive cab,
+        providing train crews with continuous awareness of conditions ahead,
+        even when wayside signals may be difficult to see.
+    </p>
+
+    <p style="font-size: 22px;">
+        Advanced ATC systems calculate braking curves in real time. These
+        calculations consider train speed, train weight, braking
+        characteristics, track gradients, curvature, and distance to speed
+        restrictions or stop points.
+    </p>
+
+    <p style="font-size: 22px;">
+        ATC systems use a variety of communication technologies including
+        coded track circuits, inductive loops, balises, transponders, and
+        radio-based communication systems.
+    </p>
+
+    <p style="font-size: 22px;">
+        By continuously monitoring train movement and enforcing safe
+        operation, ATC significantly improves railway safety while helping
+        railroads increase operational efficiency and network capacity.
+    </p>
+
+    <!-- Suggested Images
+
+    <img src="images/atc-feedback-loop.jpg"
+    alt="Continuous feedback loop between track and train in ATC"
+    style="width:350px; float:right; margin-left:20px; border-radius:10px;">
+
+    <img src="images/atc-cab-display.jpg"
+    alt="Cab display showing ATC speed profile information"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/atc-braking-curve.jpg"
+    alt="Real-time braking curve calculation"
+    style="width:350px; border-radius:10px;">
+
+    <img src="images/atc-communications.jpg"
+    alt="ATC communication technologies"
+    style="width:350px; border-radius:10px;">
+
+    -->
+
+    <hr>
+
+    <h2>Module Quiz</h2>
+
+    <form id="quizForm">
+
+        <p>1. What is a key difference in the level of supervision provided by ATC compared to ATS?</p>
+        <label><input type="radio" name="q1" value="wrong"> ATC only works at stations</label><br>
+        <label><input type="radio" name="q1" value="correct"> ATC provides continuous supervision while ATS typically acts at specific locations</label><br>
+        <label><input type="radio" name="q1" value="wrong"> ATC does not use train brakes</label><br><br>
+
+        <p>2. How does ATC enforce speed limits in a more dynamic way than some other safety systems?</p>
+        <label><input type="radio" name="q2" value="correct"> It continuously compares train speed against a changing speed profile based on operating conditions</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It uses only fixed speed signs</label><br>
+        <label><input type="radio" name="q2" value="wrong"> It allows unlimited speed between signals</label><br><br>
+
+        <p>3. What are some factors that an ATC system may consider when calculating a braking curve?</p>
+        <label><input type="radio" name="q3" value="wrong"> Passenger count and weather forecasts only</label><br>
+        <label><input type="radio" name="q3" value="wrong"> Locomotive paint color and train schedule</label><br>
+        <label><input type="radio" name="q3" value="correct"> Train speed, train weight, braking performance, gradients, curves, and distance to restrictions</label><br><br>
+
+        <button type="button" onclick="gradeQuiz()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;">
+        Submit Answers
+        </button>
+
+        <button type="button"
+        onclick="checkPassword()"
+        style="background-color:#0056b3;
+        color:white;
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-left:10px;">
+        Next Module
+        </button>
+
+    </form>
+
+    <br>
+
+    <script>
+
+    function checkPassword() {
+        let password = prompt("Enter Password:");
+
+        if(password === "signal2026") {
+            window.location.href = "Module 26B.html";
+        } else {
+            alert("Incorrect Password");
+        }
+    }
+
+    function gradeQuiz() {
+
+        const answers = document.querySelectorAll('input[type="radio"]');
+
+        answers.forEach(answer => {
+
+            answer.disabled = true;
+
+            if(answer.checked && answer.value === "correct") {
+                answer.parentElement.style.color = "green";
+            }
+
+            if(answer.checked && answer.value === "wrong") {
+                answer.parentElement.style.color = "red";
+            }
+
+            if(answer.value === "correct") {
+                answer.parentElement.style.fontWeight = "bold";
+            }
+
+        });
+
+    }
+
+    </script>
+
+    <hr>
+
+    <div style="margin-top:30px;">
+
+        <a href="courses.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-right:10px;">
+            Home
+            </button>
+        </a>
+
+        <a href="Module 26.html">
+            <button style="background-color:#444;
+            color:white;
+            padding:12px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;">
+            Back
+            </button>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <h3>Built From Real Railroad Experience</h3>
+        <p>Signal School 2026 Professional Railroad Signal Training</p>
+        <p>© 2026 Vantage Infrastructure LLC</p>
+    </footer>
+
+</body>
+
+</html>

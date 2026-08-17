@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purchase Signal School Topics</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      padding: 30px;
+      font-size: 22px;
+    }
+
+    h1 {
+      font-size: 42px;
+    }
+
+    h2 {
+      color: darkblue;
+    }
+
+    .section {
+      border-top: 2px solid #555;
+      padding-top: 25px;
+      margin-top: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    select,
+    input {
+      font-size: 20px;
+      padding: 10px;
+      width: 100%;
+      max-width: 500px;
+      margin-top: 8px;
+    }
+
+    button {
+      color: white;
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+      margin-right: 10px;
+    }
+
+    .green-button {
+      background-color: green;
+    }
+
+    .blue-button {
+      background-color: #0056b3;
+    }
+
+    .gray-button {
+      background-color: #444;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🚦 Purchase Signal School Training</h1>
+
+  <h2>Choose Your Training Option</h2>
+
+  <p>
+    Select the railroad signal training option you would like to purchase.
+    After purchase, you will receive access information and a password for your topic.
+  </p>
+
+  <div class="section">
+    <h2>Single Topic - $49</h2>
+
+    <label for="singleTopic">Choose One Topic:</label>
+    <select id="singleTopic">
+      <option value="">Select a topic</option>
+      <option>Topic 4 - Interlockings</option>
+      <option>Topic 5 - Control Points</option>
+      <option>Topic 6 - AC Double Rail Track Circuits</option>
+      <option>Topic 7 - AC Single Rail Track Circuits</option>
+      <option>Topic 8 - Phase Shift Overlay Track Circuits</option>
+      <option>Topic 9 - Type C Track Circuits</option>
+      <option>Topic 10 - Impedance Bonds</option>
+      <option>Topic 11 - Relays</option>
+      <option>Topic 12 - Computer Based Train Control</option>
+      <option>Topic 13 - Microlok Programming</option>
+      <option>Topic 14 - VPI</option>
+      <option>Topic 15 - Electrologixs</option>
+      <option>Topic 16 - Highway Grade Crossing Warning Systems</option>
+      <option>Topic 17 - Gate Mechanisms</option>
+      <option>Topic 18 - Manual Block Signaling</option>
+      <option>Topic 19 - Moveable Block Signaling</option>
+      <option>Topic 20 - Fixed Wayside Signals</option>
+      <option>Topic 21 - Color Light Signals</option>
+      <option>Topic 23 - Automatic Block Signals</option>
+      <option>Topic 24 - Automatic Train Protection</option>
+      <option>Topic 25 - Automatic Train Stop</option>
+      <option>Topic 26 - Automatic Train Control</option>
+    </select>
+
+    <button class="green-button" onclick="purchaseSingleTopic()">Purchase Single Topic - $49</button>
+  </div>
+
+  <div class="section">
+    <h2>3-Topic Bundle - $129</h2>
+
+    <label for="bundleTopic1">Choose Topic 1:</label>
+    <select id="bundleTopic1">
+      <option value="">Select first topic</option>
+      <option>Topic 4 - Interlockings</option>
+      <option>Topic 5 - Control Points</option>
+      <option>Topic 6 - AC Double Rail Track Circuits</option>
+      <option>Topic 7 - AC Single Rail Track Circuits</option>
+      <option>Topic 8 - Phase Shift Overlay Track Circuits</option>
+      <option>Topic 9 - Type C Track Circuits</option>
+      <option>Topic 10 - Impedance Bonds</option>
+      <option>Topic 11 - Relays</option>
+      <option>Topic 12 - Computer Based Train Control</option>
+      <option>Topic 13 - Microlok Programming</option>
+      <option>Topic 14 - VPI</option>
+      <option>Topic 15 - Electrologixs</option>
+      <option>Topic 16 - Highway Grade Crossing Warning Systems</option>
+      <option>Topic 17 - Gate Mechanisms</option>
+      <option>Topic 18 - Manual Block Signaling</option>
+      <option>Topic 19 - Moveable Block Signaling</option>
+      <option>Topic 20 - Fixed Wayside Signals</option>
+      <option>Topic 21 - Color Light Signals</option>
+      <option>Topic 23 - Automatic Block Signals</option>
+      <option>Topic 24 - Automatic Train Protection</option>
+      <option>Topic 25 - Automatic Train Stop</option>
+      <option>Topic 26 - Automatic Train Control</option>
+    </select>
+
+    <label for="bundleTopic2">Choose Topic 2:</label>
+    <select id="bundleTopic2">
+      <option value="">Select second topic</option>
+      <option>Topic 4 - Interlockings</option>
+      <option>Topic 5 - Control Points</option>
+      <option>Topic 6 - AC Double Rail Track Circuits</option>
+      <option>Topic 7 - AC Single Rail Track Circuits</option>
+      <option>Topic 8 - Phase Shift Overlay Track Circuits</option>
+      <option>Topic 9 - Type C Track Circuits</option>
+      <option>Topic 10 - Impedance Bonds</option>
+      <option>Topic 11 - Relays</option>
+      <option>Topic 12 - Computer Based Train Control</option>
+      <option>Topic 13 - Microlok Programming</option>
+      <option>Topic 14 - VPI</option>
+      <option>Topic 15 - Electrologixs</option>
+      <option>Topic 16 - Highway Grade Crossing Warning Systems</option>
+      <option>Topic 17 - Gate Mechanisms</option>
+      <option>Topic 18 - Manual Block Signaling</option>
+      <option>Topic 19 - Moveable Block Signaling</option>
+      <option>Topic 20 - Fixed Wayside Signals</option>
+      <option>Topic 21 - Color Light Signals</option>
+      <option>Topic 23 - Automatic Block Signals</option>
+      <option>Topic 24 - Automatic Train Protection</option>
+      <option>Topic 25 - Automatic Train Stop</option>
+      <option>Topic 26 - Automatic Train Control</option>
+    </select>
+
+    <label for="bundleTopic3">Choose Topic 3:</label>
+    <select id="bundleTopic3">
+      <option value="">Select third topic</option>
+      <option>Topic 4 - Interlockings</option>
+      <option>Topic 5 - Control Points</option>
+      <option>Topic 6 - AC Double Rail Track Circuits</option>
+      <option>Topic 7 - AC Single Rail Track Circuits</option>
+      <option>Topic 8 - Phase Shift Overlay Track Circuits</option>
+      <option>Topic 9 - Type C Track Circuits</option>
+      <option>Topic 10 - Impedance Bonds</option>
+      <option>Topic 11 - Relays</option>
+      <option>Topic 12 - Computer Based Train Control</option>
+      <option>Topic 13 - Microlok Programming</option>
+      <option>Topic 14 - VPI</option>
+      <option>Topic 15 - Electrologixs</option>
+      <option>Topic 16 - Highway Grade Crossing Warning Systems</option>
+      <option>Topic 17 - Gate Mechanisms</option>
+      <option>Topic 18 - Manual Block Signaling</option>
+      <option>Topic 19 - Moveable Block Signaling</option>
+      <option>Topic 20 - Fixed Wayside Signals</option>
+      <option>Topic 21 - Color Light Signals</option>
+      <option>Topic 23 - Automatic Block Signals</option>
+      <option>Topic 24 - Automatic Train Protection</option>
+      <option>Topic 25 - Automatic Train Stop</option>
+      <option>Topic 26 - Automatic Train Control</option>
+    </select>
+
+    <button class="green-button" onclick="purchaseBundle()">Purchase 3-Topic Bundle - $129</button>
+  </div>
+
+  <div class="section">
+    <h2>Full Signal School - $499</h2>
+    <p>Includes access to all 26 railroad signal training topics.</p>
+
+    <button class="green-button" onclick="purchaseFullCourse()">Purchase Full Signal School - $499</button>
+  </div>
+
+  <div class="section">
+    <h2>Company / Contractor Access - $999+</h2>
+    <p>Team pricing may change based on company size and training needs.</p>
+
+    <button class="blue-button" onclick="companyAccess()">Request Company Access</button>
+  </div>
+
+  <div class="section">
+    <a href="index.html">
+      <button class="gray-button">Home</button>
+    </a>
+
+    <a href="courses.html">
+      <button class="gray-button">Back to Courses</button>
+    </a>
+  </div>
+
+  <footer class="section">
+    <h3>Built From Real Railroad Experience</h3>
+    <p>Signal School 2026 professional railroad signal training.</p>
+    <p>© 2026 Vantage Infrastructure LLC</p>
+  </footer>
+
+  <script>
+    const singleTopicPaymentLink = "https://buy.stripe.com/YOUR_SINGLE_TOPIC_LINK";
+    const bundlePaymentLink = "https://buy.stripe.com/YOUR_3_TOPIC_BUNDLE_LINK";
+    const fullCoursePaymentLink = "https://buy.stripe.com/YOUR_FULL_SIGNAL_SCHOOL_LINK";
+    const companyEmail = "office@vantage-infrastructure.com";
+  
+    function purchaseSingleTopic() {
+      const topic = document.getElementById("singleTopic").value;
+  
+      if (topic === "") {
+        alert("Please select a topic before purchasing.");
+        return;
+      }
+  
+      alert("You selected: " + topic + "\n\nAfter payment, email this topic name so access can be sent.");
+      window.location.href = singleTopicPaymentLink;
+    }
+  
+    function purchaseBundle() {
+      const topic1 = document.getElementById("bundleTopic1").value;
+      const topic2 = document.getElementById("bundleTopic2").value;
+      const topic3 = document.getElementById("bundleTopic3").value;
+  
+      if (topic1 === "" || topic2 === "" || topic3 === "") {
+        alert("Please select all three topics before purchasing.");
+        return;
+      }
+  
+      if (topic1 === topic2 || topic1 === topic3 || topic2 === topic3) {
+        alert("Please choose three different topics.");
+        return;
+      }
+  
+      alert(
+        "You selected:\n" +
+        topic1 + "\n" +
+        topic2 + "\n" +
+        topic3 + "\n\nAfter payment, email these topic names so access can be sent."
+      );
+  
+      window.location.href = bundlePaymentLink;
+    }
+  
+    function purchaseFullCourse() {
+      window.location.href = fullCoursePaymentLink;
+    }
+  
+    function companyAccess() {
+      window.location.href =
+        "mailto:" + companyEmail +
+        "?subject=Company Contractor Access Request" +
+        "&body=Hello,%0D%0A%0D%0AI am interested in company/contractor access for Signal School.%0D%0A%0D%0ACompany Name:%0D%0ANumber of Users:%0D%0ATraining Needs:";
+    }
+  </script>
+
+</body>
+</html>
